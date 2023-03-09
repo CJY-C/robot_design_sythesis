@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="input_connector_l.SLDASM">
+  <link
+    name="ci_o">
+    <inertial>
+      <origin
+        xyz="0 -4.2001E-18 -0.005"
+        rpy="0 0 0" />
+      <mass
+        value="0" />
+      <inertia
+        ixx="0.00065331"
+        ixy="0"
+        ixz="-4.3848E-37"
+        iyy="0.00065331"
+        iyz="0"
+        izz="0.0012933" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://input_connector_l.SLDASM/meshes/ci_o.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://input_connector_l.SLDASM/meshes/ci_o.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="ci_b">
+    <inertial>
+      <origin
+        xyz="0 -4.2001E-18 -0.005"
+        rpy="0 0 0" />
+      <mass
+        value="0.79615" />
+      <inertia
+        ixx="0.00065331"
+        ixy="0"
+        ixz="-4.3848E-37"
+        iyy="0.00065331"
+        iyz="0"
+        izz="0.0012933" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://input_connector_l.SLDASM/meshes/ci_b.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0 0 0.58824 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://input_connector_l.SLDASM/meshes/ci_b.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="ci_f_1"
+    type="fixed">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="ci_o" />
+    <child
+      link="ci_b" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="ci_i">
+    <inertial>
+      <origin
+        xyz="5.5075E-34 1.7044E-17 0.005"
+        rpy="0 0 0" />
+      <mass
+        value="0" />
+      <inertia
+        ixx="0.00065331"
+        ixy="0"
+        ixz="-4.3848E-37"
+        iyy="0.00065331"
+        iyz="0"
+        izz="0.0012933" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://input_connector_l.SLDASM/meshes/ci_i.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0 0 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://input_connector_l.SLDASM/meshes/ci_i.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="ci_f_2"
+    type="fixed">
+    <origin
+      xyz="0 0 -0.01"
+      rpy="0 0 0" />
+    <parent
+      link="ci_b" />
+    <child
+      link="ci_i" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+</robot>

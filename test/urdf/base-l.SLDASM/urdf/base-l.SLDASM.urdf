@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="base-l.SLDASM">
+  <link
+    name="b_b">
+    <inertial>
+      <origin
+        xyz="-8.5773E-18 -1.7168E-18 0.020302"
+        rpy="0 0 0" />
+      <mass
+        value="6.3779" />
+      <inertia
+        ixx="0.011031"
+        ixy="1.5011E-18"
+        ixz="-4.0932E-19"
+        iyy="0.011031"
+        iyz="-2.3898E-19"
+        izz="0.019686" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://base-l.SLDASM/meshes/b_b.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.64706 0.61961 0.58824 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://base-l.SLDASM/meshes/b_b.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="b_i">
+    <inertial>
+      <origin
+        xyz="8.5773E-18 -1.2339E-17 0.029698"
+        rpy="0 0 0" />
+      <mass
+        value="6.3779" />
+      <inertia
+        ixx="0.011031"
+        ixy="-1.5011E-18"
+        ixz="-4.0932E-19"
+        iyy="0.011031"
+        iyz="2.3898E-19"
+        izz="0.019686" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://base-l.SLDASM/meshes/b_i.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0 0 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://base-l.SLDASM/meshes/b_i.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="b_f"
+    type="fixed">
+    <origin
+      xyz="0 0 0.05"
+      rpy="3.14159265358979 0 3.14159265358979" />
+    <parent
+      link="b_b" />
+    <child
+      link="b_i" />
+    <axis
+      xyz="0 0 -1" />
+  </joint>
+</robot>

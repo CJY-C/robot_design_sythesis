@@ -1,0 +1,1095 @@
+<?xml version="1.0"?>
+<robot  name="UNNAMED_0" >
+ <link  name="BaseLModule0_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_b_b" >
+  <inertial >
+   <origin  rpy="0 0 0"  xyz="-8.5773E-18 -1.7168E-18 0.020302" />
+   <mass  value="6.3779" />
+   <inertia  ixx="0.011031"  ixz="-4.0932E-19"  iyz="-2.3898E-19"  ixy="1.5011E-18"  iyy="0.011031"  izz="0.019686" />
+  </inertial>
+  <visual >
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+   <geometry >
+    <mesh  filename="package://base-l.SLDASM/meshes/b_b.STL" />
+   </geometry>
+   <material  name="" >
+    <color  rgba="0.64706 0.61961 0.58824 1" />
+   </material>
+  </visual>
+  <collision >
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+   <geometry >
+    <mesh  filename="package://base-l.SLDASM/meshes/b_b.STL" />
+   </geometry>
+  </collision>
+ </link>
+ <link  name="BaseLModule0_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_b_i" >
+  <inertial >
+   <origin  rpy="0 0 0"  xyz="8.5773E-18 -1.2339E-17 0.029698" />
+   <mass  value="6.3779" />
+   <inertia  ixx="0.011031"  ixz="-4.0932E-19"  iyz="2.3898E-19"  ixy="-1.5011E-18"  iyy="0.011031"  izz="0.019686" />
+  </inertial>
+  <visual >
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+   <geometry >
+    <mesh  filename="package://base-l.SLDASM/meshes/b_i.STL" />
+   </geometry>
+   <material  name="" >
+    <color  rgba="0 0 0.93333 1" />
+   </material>
+  </visual>
+  <collision >
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+   <geometry >
+    <mesh  filename="package://base-l.SLDASM/meshes/b_i.STL" />
+   </geometry>
+  </collision>
+ </link>
+ <link  name="BaseLModule0_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_inputUnit59_ci_b" >
+  <inertial >
+   <origin  rpy="0 0 0"  xyz="0 -4.2001E-18 -0.005" />
+   <mass  value="0.79615" />
+   <inertia  ixx="0.00065331"  ixz="-4.3848E-37"  iyz="0"  ixy="0"  iyy="0.00065331"  izz="0.0012933" />
+  </inertial>
+  <visual >
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+   <geometry >
+    <mesh  filename="package://input_connector_l.SLDASM/meshes/ci_b.STL" />
+   </geometry>
+   <material  name="" >
+    <color  rgba="0 0 0.58824 1" />
+   </material>
+  </visual>
+  <collision >
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+   <geometry >
+    <mesh  filename="package://input_connector_l.SLDASM/meshes/ci_b.STL" />
+   </geometry>
+  </collision>
+ </link>
+ <link  name="BaseLModule0_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_inputUnit59_ci_i" >
+  <inertial >
+   <origin  rpy="0 0 0"  xyz="5.5075E-34 1.7044E-17 0.005" />
+   <mass  value="0" />
+   <inertia  ixx="0.00065331"  ixz="-4.3848E-37"  iyz="0"  ixy="0"  iyy="0.00065331"  izz="0.0012933" />
+  </inertial>
+  <visual >
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+   <geometry >
+    <mesh  filename="package://input_connector_l.SLDASM/meshes/ci_i.STL" />
+   </geometry>
+   <material  name="" >
+    <color  rgba="0 0 0.93333 1" />
+   </material>
+  </visual>
+  <collision >
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+   <geometry >
+    <mesh  filename="package://input_connector_l.SLDASM/meshes/ci_i.STL" />
+   </geometry>
+  </collision>
+ </link>
+ <link  name="BaseLModule0_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_jointTUnit35_j_body_Link" >
+  <inertial >
+   <origin  rpy="0 0 0"  xyz="1.52664311235792E-18 -0.0036666955828649 -1.95928421400108E-09" />
+   <mass  value="4.5" />
+   <inertia  ixx="0.00805845360293144"  ixz="-3.96496819617181E-10"  iyz="-1.64429599543498E-10"  ixy="-1.8484514920056E-18"  iyy="0.0115814093224894"  izz="0.0118834658362195" />
+  </inertial>
+  <visual >
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+   <geometry >
+    <mesh  filename="package://joint-T-l.SLDASM/meshes/j_body_Link.STL" />
+   </geometry>
+   <material  name="" >
+    <color  rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+   </material>
+  </visual>
+  <collision >
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+   <geometry >
+    <mesh  filename="package://joint-T-l.SLDASM/meshes/j_body_Link.STL" />
+   </geometry>
+  </collision>
+ </link>
+ <link  name="BaseLModule0_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_jointTUnit35_j_virtual_Link_2" >
+  <inertial >
+   <origin  rpy="0 0 0"  xyz="1.5266E-18 -0.0036667 -1.9593E-09" />
+   <mass  value="4.5" />
+   <inertia  ixx="0.0080585"  ixz="-3.965E-10"  iyz="-1.6443E-10"  ixy="-1.8485E-18"  iyy="0.011581"  izz="0.011883" />
+  </inertial>
+  <visual >
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+   <geometry >
+    <mesh  filename="package://joint-T-l.SLDASM/meshes/j_virtual_Link_2.STL" />
+   </geometry>
+   <material  name="" >
+    <color  rgba="0 0 0.93333 1" />
+   </material>
+  </visual>
+  <collision >
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+   <geometry >
+    <mesh  filename="package://joint-T-l.SLDASM/meshes/j_virtual_Link_2.STL" />
+   </geometry>
+  </collision>
+ </link>
+ <link  name="BaseLModule0_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_inputUnit60_ci_b" >
+  <inertial >
+   <origin  rpy="0 0 0"  xyz="0 -4.2001E-18 -0.005" />
+   <mass  value="0.79615" />
+   <inertia  ixx="0.00065331"  ixz="-4.3848E-37"  iyz="0"  ixy="0"  iyy="0.00065331"  izz="0.0012933" />
+  </inertial>
+  <visual >
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+   <geometry >
+    <mesh  filename="package://input_connector_l.SLDASM/meshes/ci_b.STL" />
+   </geometry>
+   <material  name="" >
+    <color  rgba="0 0 0.58824 1" />
+   </material>
+  </visual>
+  <collision >
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+   <geometry >
+    <mesh  filename="package://input_connector_l.SLDASM/meshes/ci_b.STL" />
+   </geometry>
+  </collision>
+ </link>
+ <link  name="BaseLModule0_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_inputUnit60_ci_i" >
+  <inertial >
+   <origin  rpy="0 0 0"  xyz="5.5075E-34 1.7044E-17 0.005" />
+   <mass  value="0" />
+   <inertia  ixx="0.00065331"  ixz="-4.3848E-37"  iyz="0"  ixy="0"  iyy="0.00065331"  izz="0.0012933" />
+  </inertial>
+  <visual >
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+   <geometry >
+    <mesh  filename="package://input_connector_l.SLDASM/meshes/ci_i.STL" />
+   </geometry>
+   <material  name="" >
+    <color  rgba="0 0 0.93333 1" />
+   </material>
+  </visual>
+  <collision >
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+   <geometry >
+    <mesh  filename="package://input_connector_l.SLDASM/meshes/ci_i.STL" />
+   </geometry>
+  </collision>
+ </link>
+ <link  name="BaseLModule0_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_jointTUnit36_j_body_Link" >
+  <inertial >
+   <origin  rpy="0 0 0"  xyz="1.52664311235792E-18 -0.0036666955828649 -1.95928421400108E-09" />
+   <mass  value="4.5" />
+   <inertia  ixx="0.00805845360293144"  ixz="-3.96496819617181E-10"  iyz="-1.64429599543498E-10"  ixy="-1.8484514920056E-18"  iyy="0.0115814093224894"  izz="0.0118834658362195" />
+  </inertial>
+  <visual >
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+   <geometry >
+    <mesh  filename="package://joint-T-l.SLDASM/meshes/j_body_Link.STL" />
+   </geometry>
+   <material  name="" >
+    <color  rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+   </material>
+  </visual>
+  <collision >
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+   <geometry >
+    <mesh  filename="package://joint-T-l.SLDASM/meshes/j_body_Link.STL" />
+   </geometry>
+  </collision>
+ </link>
+ <link  name="BaseLModule0_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_jointTUnit36_j_virtual_Link_2" >
+  <inertial >
+   <origin  rpy="0 0 0"  xyz="1.5266E-18 -0.0036667 -1.9593E-09" />
+   <mass  value="4.5" />
+   <inertia  ixx="0.0080585"  ixz="-3.965E-10"  iyz="-1.6443E-10"  ixy="-1.8485E-18"  iyy="0.011581"  izz="0.011883" />
+  </inertial>
+  <visual >
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+   <geometry >
+    <mesh  filename="package://joint-T-l.SLDASM/meshes/j_virtual_Link_2.STL" />
+   </geometry>
+   <material  name="" >
+    <color  rgba="0 0 0.93333 1" />
+   </material>
+  </visual>
+  <collision >
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+   <geometry >
+    <mesh  filename="package://joint-T-l.SLDASM/meshes/j_virtual_Link_2.STL" />
+   </geometry>
+  </collision>
+ </link>
+ <link  name="BaseLModule0_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_inputUnit61_ci_b" >
+  <inertial >
+   <origin  rpy="0 0 0"  xyz="0 -4.2001E-18 -0.005" />
+   <mass  value="0.79615" />
+   <inertia  ixx="0.00065331"  ixz="-4.3848E-37"  iyz="0"  ixy="0"  iyy="0.00065331"  izz="0.0012933" />
+  </inertial>
+  <visual >
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+   <geometry >
+    <mesh  filename="package://input_connector_l.SLDASM/meshes/ci_b.STL" />
+   </geometry>
+   <material  name="" >
+    <color  rgba="0 0 0.58824 1" />
+   </material>
+  </visual>
+  <collision >
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+   <geometry >
+    <mesh  filename="package://input_connector_l.SLDASM/meshes/ci_b.STL" />
+   </geometry>
+  </collision>
+ </link>
+ <link  name="BaseLModule0_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_inputUnit61_ci_i" >
+  <inertial >
+   <origin  rpy="0 0 0"  xyz="5.5075E-34 1.7044E-17 0.005" />
+   <mass  value="0" />
+   <inertia  ixx="0.00065331"  ixz="-4.3848E-37"  iyz="0"  ixy="0"  iyy="0.00065331"  izz="0.0012933" />
+  </inertial>
+  <visual >
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+   <geometry >
+    <mesh  filename="package://input_connector_l.SLDASM/meshes/ci_i.STL" />
+   </geometry>
+   <material  name="" >
+    <color  rgba="0 0 0.93333 1" />
+   </material>
+  </visual>
+  <collision >
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+   <geometry >
+    <mesh  filename="package://input_connector_l.SLDASM/meshes/ci_i.STL" />
+   </geometry>
+  </collision>
+ </link>
+ <link  name="BaseLModule0_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_straightLinkUnitL12_body" >
+  <inertial >
+   <origin  rpy="0 0 0"  xyz="-5.77295559734162E-18 -2.95909178492858E-34 -0.075" />
+   <mass  value="0.577267650097125" />
+   <inertia  ixx="0.00125916506177435"  ixz="-3.3881317890172E-20"  iyz="-1.46416110952065E-36"  ixy="-1.00460897098603E-36"  iyy="0.00125916506177435"  izz="0.000353576435684489" />
+  </inertial>
+  <visual >
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+   <geometry >
+    <mesh  filename="package://straight_link.SLDASM/meshes/body.STL" />
+   </geometry>
+   <material  name="" >
+    <color  rgba="1 1 1 1" />
+   </material>
+  </visual>
+  <collision >
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+   <geometry >
+    <mesh  filename="package://straight_link.SLDASM/meshes/body.STL" />
+   </geometry>
+  </collision>
+ </link>
+ <link  name="BaseLModule0_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_inputUnit62_reverse_inputUnit62_ci_i" >
+  <inertial >
+   <origin  rpy="0 0 0"  xyz="5.5075E-34 1.7044E-17 0.005" />
+   <mass  value="0" />
+   <inertia  ixx="0.00065331"  ixz="-4.3848E-37"  iyz="0"  ixy="0"  iyy="0.00065331"  izz="0.0012933" />
+  </inertial>
+  <visual >
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+   <geometry >
+    <mesh  filename="package://input_connector_l.SLDASM/meshes/ci_i.STL" />
+   </geometry>
+   <material  name="" >
+    <color  rgba="0 0 0.93333 1" />
+   </material>
+  </visual>
+  <collision >
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+   <geometry >
+    <mesh  filename="package://input_connector_l.SLDASM/meshes/ci_i.STL" />
+   </geometry>
+  </collision>
+ </link>
+ <link  name="BaseLModule0_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_inputUnit62_reverse_inputUnit62_ci_b" >
+  <inertial >
+   <origin  rpy="0 0 0"  xyz="0 -4.2001E-18 -0.005" />
+   <mass  value="0.79615" />
+   <inertia  ixx="0.00065331"  ixz="-4.3848E-37"  iyz="0"  ixy="0"  iyy="0.00065331"  izz="0.0012933" />
+  </inertial>
+  <visual >
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+   <geometry >
+    <mesh  filename="package://input_connector_l.SLDASM/meshes/ci_b.STL" />
+   </geometry>
+   <material  name="" >
+    <color  rgba="0 0 0.58824 1" />
+   </material>
+  </visual>
+  <collision >
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+   <geometry >
+    <mesh  filename="package://input_connector_l.SLDASM/meshes/ci_b.STL" />
+   </geometry>
+  </collision>
+ </link>
+ <link  name="BaseLModule0_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_cornerLinkLUnit7_i_1" >
+  <inertial >
+   <origin  rpy="0 0 0"  xyz="3.9185E-16 -1.9593E-09 0.056333" />
+   <mass  value="1.619" />
+   <inertia  ixx="0.0028993"  ixz="9.5159E-18"  iyz="-5.9158E-11"  ixy="1.4265E-10"  iyy="0.0042754"  izz="0.0041668" />
+  </inertial>
+  <visual >
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+   <geometry >
+    <mesh  filename="package://corner_link.SLDASM/meshes/i_1.STL" />
+   </geometry>
+   <material  name="" >
+    <color  rgba="0 0 0.93333 1" />
+   </material>
+  </visual>
+  <collision >
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+   <geometry >
+    <mesh  filename="package://corner_link.SLDASM/meshes/i_1.STL" />
+   </geometry>
+  </collision>
+ </link>
+ <link  name="BaseLModule0_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_cornerLinkLUnit7_b" >
+  <inertial >
+   <origin  rpy="0 0 0"  xyz="3.91846719143235E-16 -1.95928459675233E-09 0.0563333044171351" />
+   <mass  value="1.61900837748787" />
+   <inertia  ixx="0.00289926753172073"  ixz="9.51585578018144E-18"  iyz="-5.91584212784467E-11"  ixy="1.42651482801669E-10"  iyy="0.00427542905387338"  izz="0.00416675527027252" />
+  </inertial>
+  <visual >
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+   <geometry >
+    <mesh  filename="package://corner_link.SLDASM/meshes/b.STL" />
+   </geometry>
+   <material  name="" >
+    <color  rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+   </material>
+  </visual>
+  <collision >
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+   <geometry >
+    <mesh  filename="package://corner_link.SLDASM/meshes/b.STL" />
+   </geometry>
+  </collision>
+ </link>
+ <link  name="BaseLModule0_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_cornerLinkLUnit7_i_2" >
+  <inertial >
+   <origin  rpy="0 0 0"  xyz="0.0036667 -1.9593E-09 0.0735" />
+   <mass  value="1.619" />
+   <inertia  ixx="0.0041668"  ixz="-4.3193E-19"  iyz="1.4265E-10"  ixy="5.9158E-11"  iyy="0.0042754"  izz="0.0028993" />
+  </inertial>
+  <visual >
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+   <geometry >
+    <mesh  filename="package://corner_link.SLDASM/meshes/i_2.STL" />
+   </geometry>
+   <material  name="" >
+    <color  rgba="0 0 0.93333 1" />
+   </material>
+  </visual>
+  <collision >
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+   <geometry >
+    <mesh  filename="package://corner_link.SLDASM/meshes/i_2.STL" />
+   </geometry>
+  </collision>
+ </link>
+ <link  name="BaseLModule0_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_inputUnit63_ci_b" >
+  <inertial >
+   <origin  rpy="0 0 0"  xyz="0 -4.2001E-18 -0.005" />
+   <mass  value="0.79615" />
+   <inertia  ixx="0.00065331"  ixz="-4.3848E-37"  iyz="0"  ixy="0"  iyy="0.00065331"  izz="0.0012933" />
+  </inertial>
+  <visual >
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+   <geometry >
+    <mesh  filename="package://input_connector_l.SLDASM/meshes/ci_b.STL" />
+   </geometry>
+   <material  name="" >
+    <color  rgba="0 0 0.58824 1" />
+   </material>
+  </visual>
+  <collision >
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+   <geometry >
+    <mesh  filename="package://input_connector_l.SLDASM/meshes/ci_b.STL" />
+   </geometry>
+  </collision>
+ </link>
+ <link  name="BaseLModule0_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_inputUnit63_ci_i" >
+  <inertial >
+   <origin  rpy="0 0 0"  xyz="5.5075E-34 1.7044E-17 0.005" />
+   <mass  value="0" />
+   <inertia  ixx="0.00065331"  ixz="-4.3848E-37"  iyz="0"  ixy="0"  iyy="0.00065331"  izz="0.0012933" />
+  </inertial>
+  <visual >
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+   <geometry >
+    <mesh  filename="package://input_connector_l.SLDASM/meshes/ci_i.STL" />
+   </geometry>
+   <material  name="" >
+    <color  rgba="0 0 0.93333 1" />
+   </material>
+  </visual>
+  <collision >
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+   <geometry >
+    <mesh  filename="package://input_connector_l.SLDASM/meshes/ci_i.STL" />
+   </geometry>
+  </collision>
+ </link>
+ <link  name="BaseLModule0_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_jointTUnit37_j_body_Link" >
+  <inertial >
+   <origin  rpy="0 0 0"  xyz="1.52664311235792E-18 -0.0036666955828649 -1.95928421400108E-09" />
+   <mass  value="4.5" />
+   <inertia  ixx="0.00805845360293144"  ixz="-3.96496819617181E-10"  iyz="-1.64429599543498E-10"  ixy="-1.8484514920056E-18"  iyy="0.0115814093224894"  izz="0.0118834658362195" />
+  </inertial>
+  <visual >
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+   <geometry >
+    <mesh  filename="package://joint-T-l.SLDASM/meshes/j_body_Link.STL" />
+   </geometry>
+   <material  name="" >
+    <color  rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+   </material>
+  </visual>
+  <collision >
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+   <geometry >
+    <mesh  filename="package://joint-T-l.SLDASM/meshes/j_body_Link.STL" />
+   </geometry>
+  </collision>
+ </link>
+ <link  name="BaseLModule0_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_jointTUnit37_j_virtual_Link_2" >
+  <inertial >
+   <origin  rpy="0 0 0"  xyz="1.5266E-18 -0.0036667 -1.9593E-09" />
+   <mass  value="4.5" />
+   <inertia  ixx="0.0080585"  ixz="-3.965E-10"  iyz="-1.6443E-10"  ixy="-1.8485E-18"  iyy="0.011581"  izz="0.011883" />
+  </inertial>
+  <visual >
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+   <geometry >
+    <mesh  filename="package://joint-T-l.SLDASM/meshes/j_virtual_Link_2.STL" />
+   </geometry>
+   <material  name="" >
+    <color  rgba="0 0 0.93333 1" />
+   </material>
+  </visual>
+  <collision >
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+   <geometry >
+    <mesh  filename="package://joint-T-l.SLDASM/meshes/j_virtual_Link_2.STL" />
+   </geometry>
+  </collision>
+ </link>
+ <link  name="BaseLModule0_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_inputUnit64_ci_b" >
+  <inertial >
+   <origin  rpy="0 0 0"  xyz="0 -4.2001E-18 -0.005" />
+   <mass  value="0.79615" />
+   <inertia  ixx="0.00065331"  ixz="-4.3848E-37"  iyz="0"  ixy="0"  iyy="0.00065331"  izz="0.0012933" />
+  </inertial>
+  <visual >
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+   <geometry >
+    <mesh  filename="package://input_connector_l.SLDASM/meshes/ci_b.STL" />
+   </geometry>
+   <material  name="" >
+    <color  rgba="0 0 0.58824 1" />
+   </material>
+  </visual>
+  <collision >
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+   <geometry >
+    <mesh  filename="package://input_connector_l.SLDASM/meshes/ci_b.STL" />
+   </geometry>
+  </collision>
+ </link>
+ <link  name="BaseLModule0_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_inputUnit64_ci_i" >
+  <inertial >
+   <origin  rpy="0 0 0"  xyz="5.5075E-34 1.7044E-17 0.005" />
+   <mass  value="0" />
+   <inertia  ixx="0.00065331"  ixz="-4.3848E-37"  iyz="0"  ixy="0"  iyy="0.00065331"  izz="0.0012933" />
+  </inertial>
+  <visual >
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+   <geometry >
+    <mesh  filename="package://input_connector_l.SLDASM/meshes/ci_i.STL" />
+   </geometry>
+   <material  name="" >
+    <color  rgba="0 0 0.93333 1" />
+   </material>
+  </visual>
+  <collision >
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+   <geometry >
+    <mesh  filename="package://input_connector_l.SLDASM/meshes/ci_i.STL" />
+   </geometry>
+  </collision>
+ </link>
+ <link  name="BaseLModule0_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_straightLinkUnitL13_body" >
+  <inertial >
+   <origin  rpy="0 0 0"  xyz="-5.77295559734162E-18 -2.95909178492858E-34 -0.075" />
+   <mass  value="0.577267650097125" />
+   <inertia  ixx="0.00125916506177435"  ixz="-3.3881317890172E-20"  iyz="-1.46416110952065E-36"  ixy="-1.00460897098603E-36"  iyy="0.00125916506177435"  izz="0.000353576435684489" />
+  </inertial>
+  <visual >
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+   <geometry >
+    <mesh  filename="package://straight_link.SLDASM/meshes/body.STL" />
+   </geometry>
+   <material  name="" >
+    <color  rgba="1 1 1 1" />
+   </material>
+  </visual>
+  <collision >
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+   <geometry >
+    <mesh  filename="package://straight_link.SLDASM/meshes/body.STL" />
+   </geometry>
+  </collision>
+ </link>
+ <link  name="BaseLModule0_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_inputUnit65_reverse_ci_i" >
+  <inertial >
+   <origin  rpy="0 0 0"  xyz="5.5075E-34 1.7044E-17 0.005" />
+   <mass  value="0" />
+   <inertia  ixx="0.00065331"  ixz="-4.3848E-37"  iyz="0"  ixy="0"  iyy="0.00065331"  izz="0.0012933" />
+  </inertial>
+  <visual >
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+   <geometry >
+    <mesh  filename="package://input_connector_l.SLDASM/meshes/ci_i.STL" />
+   </geometry>
+   <material  name="" >
+    <color  rgba="0 0 0.93333 1" />
+   </material>
+  </visual>
+  <collision >
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+   <geometry >
+    <mesh  filename="package://input_connector_l.SLDASM/meshes/ci_i.STL" />
+   </geometry>
+  </collision>
+ </link>
+ <link  name="BaseLModule0_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_inputUnit65_reverse_ci_b" >
+  <inertial >
+   <origin  rpy="0 0 0"  xyz="0 -4.2001E-18 -0.005" />
+   <mass  value="0.79615" />
+   <inertia  ixx="0.00065331"  ixz="-4.3848E-37"  iyz="0"  ixy="0"  iyy="0.00065331"  izz="0.0012933" />
+  </inertial>
+  <visual >
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+   <geometry >
+    <mesh  filename="package://input_connector_l.SLDASM/meshes/ci_b.STL" />
+   </geometry>
+   <material  name="" >
+    <color  rgba="0 0 0.58824 1" />
+   </material>
+  </visual>
+  <collision >
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+   <geometry >
+    <mesh  filename="package://input_connector_l.SLDASM/meshes/ci_b.STL" />
+   </geometry>
+  </collision>
+ </link>
+ <link  name="BaseLModule0_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_jointTUnit38_reverse_j_virtual_Link_2" >
+  <inertial >
+   <origin  rpy="0 0 0"  xyz="1.5266E-18 -0.0036667 -1.9593E-09" />
+   <mass  value="4.5" />
+   <inertia  ixx="0.0080585"  ixz="-3.965E-10"  iyz="-1.6443E-10"  ixy="-1.8485E-18"  iyy="0.011581"  izz="0.011883" />
+  </inertial>
+  <visual >
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+   <geometry >
+    <mesh  filename="package://joint-T-l.SLDASM/meshes/j_virtual_Link_2.STL" />
+   </geometry>
+   <material  name="" >
+    <color  rgba="0 0 0.93333 1" />
+   </material>
+  </visual>
+  <collision >
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+   <geometry >
+    <mesh  filename="package://joint-T-l.SLDASM/meshes/j_virtual_Link_2.STL" />
+   </geometry>
+  </collision>
+ </link>
+ <link  name="BaseLModule0_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_jointTUnit38_reverse_j_body_Link" >
+  <inertial >
+   <origin  rpy="0 0 0"  xyz="1.52664311235792E-18 -0.0036666955828649 -1.95928421400108E-09" />
+   <mass  value="4.5" />
+   <inertia  ixx="0.00805845360293144"  ixz="-3.96496819617181E-10"  iyz="-1.64429599543498E-10"  ixy="-1.8484514920056E-18"  iyy="0.0115814093224894"  izz="0.0118834658362195" />
+  </inertial>
+  <visual >
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+   <geometry >
+    <mesh  filename="package://joint-T-l.SLDASM/meshes/j_body_Link.STL" />
+   </geometry>
+   <material  name="" >
+    <color  rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+   </material>
+  </visual>
+  <collision >
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+   <geometry >
+    <mesh  filename="package://joint-T-l.SLDASM/meshes/j_body_Link.STL" />
+   </geometry>
+  </collision>
+ </link>
+ <link  name="BaseLModule0_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_inputUnit66_reverse_ci_i" >
+  <inertial >
+   <origin  rpy="0 0 0"  xyz="5.5075E-34 1.7044E-17 0.005" />
+   <mass  value="0" />
+   <inertia  ixx="0.00065331"  ixz="-4.3848E-37"  iyz="0"  ixy="0"  iyy="0.00065331"  izz="0.0012933" />
+  </inertial>
+  <visual >
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+   <geometry >
+    <mesh  filename="package://input_connector_l.SLDASM/meshes/ci_i.STL" />
+   </geometry>
+   <material  name="" >
+    <color  rgba="0 0 0.93333 1" />
+   </material>
+  </visual>
+  <collision >
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+   <geometry >
+    <mesh  filename="package://input_connector_l.SLDASM/meshes/ci_i.STL" />
+   </geometry>
+  </collision>
+ </link>
+ <link  name="BaseLModule0_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_inputUnit66_reverse_ci_b" >
+  <inertial >
+   <origin  rpy="0 0 0"  xyz="0 -4.2001E-18 -0.005" />
+   <mass  value="0.79615" />
+   <inertia  ixx="0.00065331"  ixz="-4.3848E-37"  iyz="0"  ixy="0"  iyy="0.00065331"  izz="0.0012933" />
+  </inertial>
+  <visual >
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+   <geometry >
+    <mesh  filename="package://input_connector_l.SLDASM/meshes/ci_b.STL" />
+   </geometry>
+   <material  name="" >
+    <color  rgba="0 0 0.58824 1" />
+   </material>
+  </visual>
+  <collision >
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+   <geometry >
+    <mesh  filename="package://input_connector_l.SLDASM/meshes/ci_b.STL" />
+   </geometry>
+  </collision>
+ </link>
+ <link  name="BaseLModule0_baseUnit10_baseUnit10_baseUnit10_baseUnit10_jointTUnit39_reverse_j_virtual_Link_2" >
+  <inertial >
+   <origin  rpy="0 0 0"  xyz="1.5266E-18 -0.0036667 -1.9593E-09" />
+   <mass  value="4.5" />
+   <inertia  ixx="0.0080585"  ixz="-3.965E-10"  iyz="-1.6443E-10"  ixy="-1.8485E-18"  iyy="0.011581"  izz="0.011883" />
+  </inertial>
+  <visual >
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+   <geometry >
+    <mesh  filename="package://joint-T-l.SLDASM/meshes/j_virtual_Link_2.STL" />
+   </geometry>
+   <material  name="" >
+    <color  rgba="0 0 0.93333 1" />
+   </material>
+  </visual>
+  <collision >
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+   <geometry >
+    <mesh  filename="package://joint-T-l.SLDASM/meshes/j_virtual_Link_2.STL" />
+   </geometry>
+  </collision>
+ </link>
+ <link  name="BaseLModule0_baseUnit10_baseUnit10_baseUnit10_baseUnit10_jointTUnit39_reverse_j_body_Link" >
+  <inertial >
+   <origin  rpy="0 0 0"  xyz="1.52664311235792E-18 -0.0036666955828649 -1.95928421400108E-09" />
+   <mass  value="4.5" />
+   <inertia  ixx="0.00805845360293144"  ixz="-3.96496819617181E-10"  iyz="-1.64429599543498E-10"  ixy="-1.8484514920056E-18"  iyy="0.0115814093224894"  izz="0.0118834658362195" />
+  </inertial>
+  <visual >
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+   <geometry >
+    <mesh  filename="package://joint-T-l.SLDASM/meshes/j_body_Link.STL" />
+   </geometry>
+   <material  name="" >
+    <color  rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+   </material>
+  </visual>
+  <collision >
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+   <geometry >
+    <mesh  filename="package://joint-T-l.SLDASM/meshes/j_body_Link.STL" />
+   </geometry>
+  </collision>
+ </link>
+ <link  name="BaseLModule0_baseUnit10_baseUnit10_baseUnit10_inputUnit67_reverse_ci_i" >
+  <inertial >
+   <origin  rpy="0 0 0"  xyz="5.5075E-34 1.7044E-17 0.005" />
+   <mass  value="0" />
+   <inertia  ixx="0.00065331"  ixz="-4.3848E-37"  iyz="0"  ixy="0"  iyy="0.00065331"  izz="0.0012933" />
+  </inertial>
+  <visual >
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+   <geometry >
+    <mesh  filename="package://input_connector_l.SLDASM/meshes/ci_i.STL" />
+   </geometry>
+   <material  name="" >
+    <color  rgba="0 0 0.93333 1" />
+   </material>
+  </visual>
+  <collision >
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+   <geometry >
+    <mesh  filename="package://input_connector_l.SLDASM/meshes/ci_i.STL" />
+   </geometry>
+  </collision>
+ </link>
+ <link  name="BaseLModule0_baseUnit10_baseUnit10_baseUnit10_inputUnit67_reverse_ci_b" >
+  <inertial >
+   <origin  rpy="0 0 0"  xyz="0 -4.2001E-18 -0.005" />
+   <mass  value="0.79615" />
+   <inertia  ixx="0.00065331"  ixz="-4.3848E-37"  iyz="0"  ixy="0"  iyy="0.00065331"  izz="0.0012933" />
+  </inertial>
+  <visual >
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+   <geometry >
+    <mesh  filename="package://input_connector_l.SLDASM/meshes/ci_b.STL" />
+   </geometry>
+   <material  name="" >
+    <color  rgba="0 0 0.58824 1" />
+   </material>
+  </visual>
+  <collision >
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+   <geometry >
+    <mesh  filename="package://input_connector_l.SLDASM/meshes/ci_b.STL" />
+   </geometry>
+  </collision>
+ </link>
+ <link  name="BaseLModule0_baseUnit10_baseUnit10_jointTUnit40_reverse_j_virtual_Link_2" >
+  <inertial >
+   <origin  rpy="0 0 0"  xyz="1.5266E-18 -0.0036667 -1.9593E-09" />
+   <mass  value="4.5" />
+   <inertia  ixx="0.0080585"  ixz="-3.965E-10"  iyz="-1.6443E-10"  ixy="-1.8485E-18"  iyy="0.011581"  izz="0.011883" />
+  </inertial>
+  <visual >
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+   <geometry >
+    <mesh  filename="package://joint-T-l.SLDASM/meshes/j_virtual_Link_2.STL" />
+   </geometry>
+   <material  name="" >
+    <color  rgba="0 0 0.93333 1" />
+   </material>
+  </visual>
+  <collision >
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+   <geometry >
+    <mesh  filename="package://joint-T-l.SLDASM/meshes/j_virtual_Link_2.STL" />
+   </geometry>
+  </collision>
+ </link>
+ <link  name="BaseLModule0_baseUnit10_baseUnit10_jointTUnit40_reverse_j_body_Link" >
+  <inertial >
+   <origin  rpy="0 0 0"  xyz="1.52664311235792E-18 -0.0036666955828649 -1.95928421400108E-09" />
+   <mass  value="4.5" />
+   <inertia  ixx="0.00805845360293144"  ixz="-3.96496819617181E-10"  iyz="-1.64429599543498E-10"  ixy="-1.8484514920056E-18"  iyy="0.0115814093224894"  izz="0.0118834658362195" />
+  </inertial>
+  <visual >
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+   <geometry >
+    <mesh  filename="package://joint-T-l.SLDASM/meshes/j_body_Link.STL" />
+   </geometry>
+   <material  name="" >
+    <color  rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+   </material>
+  </visual>
+  <collision >
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+   <geometry >
+    <mesh  filename="package://joint-T-l.SLDASM/meshes/j_body_Link.STL" />
+   </geometry>
+  </collision>
+ </link>
+ <link  name="BaseLModule0_baseUnit10_endEffectorLinkUnit1_i" >
+  <inertial >
+   <origin  rpy="0 0 0"  xyz="5.6766E-35 -7.1251E-18 0.005" />
+   <mass  value="0" />
+   <inertia  ixx="0.00030345"  ixz="-1.2291E-37"  iyz="3.6451E-21"  ixy="1.6987E-36"  iyy="0.00030345"  izz="0.00059787" />
+  </inertial>
+  <visual >
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+   <geometry >
+    <mesh  filename="package://end_effector_1.SLDASM/meshes/i.STL" />
+   </geometry>
+   <material  name="" >
+    <color  rgba="0 0 0.93333 1" />
+   </material>
+  </visual>
+  <collision >
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+   <geometry >
+    <mesh  filename="package://end_effector_1.SLDASM/meshes/i.STL" />
+   </geometry>
+  </collision>
+ </link>
+ <link  name="BaseLModule0_baseUnit10_endEffectorLinkUnit1_b" >
+  <inertial >
+   <origin  rpy="0 0 0"  xyz="5.6766E-35 -7.1251E-18 0.005" />
+   <mass  value="0.5413" />
+   <inertia  ixx="0.00030345"  ixz="-1.2291E-37"  iyz="3.6451E-21"  ixy="1.6987E-36"  iyy="0.00030345"  izz="0.00059787" />
+  </inertial>
+  <visual >
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+   <geometry >
+    <mesh  filename="package://end_effector_1.SLDASM/meshes/b.STL" />
+   </geometry>
+   <material  name="" >
+    <color  rgba="0.79216 0 0 1" />
+   </material>
+  </visual>
+  <collision >
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+   <geometry >
+    <mesh  filename="package://end_effector_1.SLDASM/meshes/b.STL" />
+   </geometry>
+  </collision>
+ </link>
+ <joint  name="BaseLModule0_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_b_f"  type="fixed" >
+  <origin  rpy="3.14159265358979 0 3.14159265358979"  xyz="0 0 0.05" />
+  <parent  link="BaseLModule0_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_b_b" />
+  <child  link="BaseLModule0_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_b_i" />
+  <axis  xyz="0 0 -1" />
+ </joint>
+ <joint  name="BaseLModule0_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_inputUnit59_ci_f_1"  type="fixed" >
+  <origin  rpy="0 0 0"  xyz="0 0 0" />
+  <parent  link="BaseLModule0_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_b_i" />
+  <child  link="BaseLModule0_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_inputUnit59_ci_b" />
+  <axis  xyz="0 0 0" />
+ </joint>
+ <joint  name="BaseLModule0_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_inputUnit59_ci_f_2"  type="fixed" >
+  <origin  rpy="0 0 0"  xyz="0 0 -0.01" />
+  <parent  link="BaseLModule0_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_inputUnit59_ci_b" />
+  <child  link="BaseLModule0_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_inputUnit59_ci_i" />
+  <axis  xyz="0 0 0" />
+ </joint>
+ <joint  name="BaseLModule0_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_jointTUnit35_j_revolute_joint"  type="revolute" >
+  <origin  rpy="0.0 0.0 1.5707963267948966"  xyz="0.0 0.0 0.0" />
+  <parent  link="BaseLModule0_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_inputUnit59_ci_i" />
+  <child  link="BaseLModule0_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_jointTUnit35_j_body_Link" />
+  <axis  xyz="0 0 -1" />
+  <limit  velocity="0.33"  lower="-3.14"  effort="60.5"  upper="3.14" />
+ </joint>
+ <joint  name="BaseLModule0_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_jointTUnit35_j_fixed_joint"  type="fixed" >
+  <origin  rpy="0 1.5707963267949 0"  xyz="-0.06 0 -0.0735" />
+  <parent  link="BaseLModule0_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_jointTUnit35_j_body_Link" />
+  <child  link="BaseLModule0_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_jointTUnit35_j_virtual_Link_2" />
+  <axis  xyz="0 0 0" />
+ </joint>
+ <joint  name="BaseLModule0_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_inputUnit60_ci_f_1"  type="fixed" >
+  <origin  rpy="0 0 0"  xyz="0 0 0" />
+  <parent  link="BaseLModule0_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_jointTUnit35_j_virtual_Link_2" />
+  <child  link="BaseLModule0_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_inputUnit60_ci_b" />
+  <axis  xyz="0 0 0" />
+ </joint>
+ <joint  name="BaseLModule0_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_inputUnit60_ci_f_2"  type="fixed" >
+  <origin  rpy="0 0 0"  xyz="0 0 -0.01" />
+  <parent  link="BaseLModule0_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_inputUnit60_ci_b" />
+  <child  link="BaseLModule0_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_inputUnit60_ci_i" />
+  <axis  xyz="0 0 0" />
+ </joint>
+ <joint  name="BaseLModule0_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_jointTUnit36_j_revolute_joint"  type="revolute" >
+  <origin  rpy="0.0 0.0 1.5707963267948966"  xyz="0.0 0.0 0.0" />
+  <parent  link="BaseLModule0_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_inputUnit60_ci_i" />
+  <child  link="BaseLModule0_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_jointTUnit36_j_body_Link" />
+  <axis  xyz="0 0 -1" />
+  <limit  velocity="0.33"  lower="-3.14"  effort="60.5"  upper="3.14" />
+ </joint>
+ <joint  name="BaseLModule0_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_jointTUnit36_j_fixed_joint"  type="fixed" >
+  <origin  rpy="0 1.5707963267949 0"  xyz="-0.06 0 -0.0735" />
+  <parent  link="BaseLModule0_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_jointTUnit36_j_body_Link" />
+  <child  link="BaseLModule0_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_jointTUnit36_j_virtual_Link_2" />
+  <axis  xyz="0 0 0" />
+ </joint>
+ <joint  name="BaseLModule0_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_inputUnit61_ci_f_1"  type="fixed" >
+  <origin  rpy="0 0 0"  xyz="0 0 0" />
+  <parent  link="BaseLModule0_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_jointTUnit36_j_virtual_Link_2" />
+  <child  link="BaseLModule0_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_inputUnit61_ci_b" />
+  <axis  xyz="0 0 0" />
+ </joint>
+ <joint  name="BaseLModule0_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_inputUnit61_ci_f_2"  type="fixed" >
+  <origin  rpy="0 0 0"  xyz="0 0 -0.01" />
+  <parent  link="BaseLModule0_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_inputUnit61_ci_b" />
+  <child  link="BaseLModule0_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_inputUnit61_ci_i" />
+  <axis  xyz="0 0 0" />
+ </joint>
+ <joint  name="BaseLModule0_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_straightLinkUnitL12_fixed_1"  type="fixed" >
+  <origin  rpy="0 0 0"  xyz="0 0 0" />
+  <parent  link="BaseLModule0_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_inputUnit61_ci_i" />
+  <child  link="BaseLModule0_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_straightLinkUnitL12_body" />
+  <axis  xyz="0 0 0" />
+ </joint>
+ <joint  name="BaseLModule0_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_straightLinkUnitL12_fixed_2"  type="fixed" >
+  <origin  rpy="3.14159265358979 0 0"  xyz="0 0 -0.15" />
+  <parent  link="BaseLModule0_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_straightLinkUnitL12_body" />
+  <child  link="BaseLModule0_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_inputUnit62_reverse_inputUnit62_ci_i" />
+  <axis  xyz="0 0 0" />
+ </joint>
+ <joint  name="BaseLModule0_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_inputUnit62_reverse_inputUnit62_ci_f_2"  type="fixed" >
+  <origin  rpy="0.0 0.0 0.0"  xyz="-0.0 -0.0 0.01" />
+  <parent  link="BaseLModule0_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_inputUnit62_reverse_inputUnit62_ci_i" />
+  <child  link="BaseLModule0_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_inputUnit62_reverse_inputUnit62_ci_b" />
+  <axis  xyz="0 0 0" />
+ </joint>
+ <joint  name="BaseLModule0_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_inputUnit62_reverse_inputUnit62_ci_f_1"  type="fixed" >
+  <origin  rpy="0.0 0.0 0.0"  xyz="-0.0 -0.0 -0.0" />
+  <parent  link="BaseLModule0_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_inputUnit62_reverse_inputUnit62_ci_b" />
+  <child  link="BaseLModule0_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_cornerLinkLUnit7_i_1" />
+  <axis  xyz="0 0 0" />
+ </joint>
+ <joint  name="BaseLModule0_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_cornerLinkLUnit7_f_1"  type="fixed" >
+  <origin  rpy="0.0 0.0 3.141592653589793"  xyz="0.0 0.0 0.0" />
+  <parent  link="BaseLModule0_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_cornerLinkLUnit7_i_1" />
+  <child  link="BaseLModule0_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_cornerLinkLUnit7_b" />
+  <axis  xyz="0 0 0" />
+ </joint>
+ <joint  name="BaseLModule0_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_cornerLinkLUnit7_f_2"  type="fixed" >
+  <origin  rpy="0 1.5707963267949 0"  xyz="-0.0734999999999996 0 0.0600000000000005" />
+  <parent  link="BaseLModule0_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_cornerLinkLUnit7_b" />
+  <child  link="BaseLModule0_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_cornerLinkLUnit7_i_2" />
+  <axis  xyz="0 0 0" />
+ </joint>
+ <joint  name="BaseLModule0_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_inputUnit63_ci_f_1"  type="fixed" >
+  <origin  rpy="0 0 0"  xyz="0 0 0" />
+  <parent  link="BaseLModule0_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_cornerLinkLUnit7_i_2" />
+  <child  link="BaseLModule0_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_inputUnit63_ci_b" />
+  <axis  xyz="0 0 0" />
+ </joint>
+ <joint  name="BaseLModule0_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_inputUnit63_ci_f_2"  type="fixed" >
+  <origin  rpy="0 0 0"  xyz="0 0 -0.01" />
+  <parent  link="BaseLModule0_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_inputUnit63_ci_b" />
+  <child  link="BaseLModule0_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_inputUnit63_ci_i" />
+  <axis  xyz="0 0 0" />
+ </joint>
+ <joint  name="BaseLModule0_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_jointTUnit37_j_revolute_joint"  type="revolute" >
+  <origin  rpy="0.0 0.0 1.5707963267948966"  xyz="0.0 0.0 0.0" />
+  <parent  link="BaseLModule0_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_inputUnit63_ci_i" />
+  <child  link="BaseLModule0_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_jointTUnit37_j_body_Link" />
+  <axis  xyz="0 0 -1" />
+  <limit  velocity="0.33"  lower="-3.14"  effort="60.5"  upper="3.14" />
+ </joint>
+ <joint  name="BaseLModule0_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_jointTUnit37_j_fixed_joint"  type="fixed" >
+  <origin  rpy="0 1.5707963267949 0"  xyz="-0.06 0 -0.0735" />
+  <parent  link="BaseLModule0_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_jointTUnit37_j_body_Link" />
+  <child  link="BaseLModule0_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_jointTUnit37_j_virtual_Link_2" />
+  <axis  xyz="0 0 0" />
+ </joint>
+ <joint  name="BaseLModule0_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_inputUnit64_ci_f_1"  type="fixed" >
+  <origin  rpy="0 0 0"  xyz="0 0 0" />
+  <parent  link="BaseLModule0_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_jointTUnit37_j_virtual_Link_2" />
+  <child  link="BaseLModule0_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_inputUnit64_ci_b" />
+  <axis  xyz="0 0 0" />
+ </joint>
+ <joint  name="BaseLModule0_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_inputUnit64_ci_f_2"  type="fixed" >
+  <origin  rpy="0 0 0"  xyz="0 0 -0.01" />
+  <parent  link="BaseLModule0_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_inputUnit64_ci_b" />
+  <child  link="BaseLModule0_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_inputUnit64_ci_i" />
+  <axis  xyz="0 0 0" />
+ </joint>
+ <joint  name="BaseLModule0_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_straightLinkUnitL13_fixed_1"  type="fixed" >
+  <origin  rpy="0 0 0"  xyz="0 0 0" />
+  <parent  link="BaseLModule0_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_inputUnit64_ci_i" />
+  <child  link="BaseLModule0_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_straightLinkUnitL13_body" />
+  <axis  xyz="0 0 0" />
+ </joint>
+ <joint  name="BaseLModule0_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_straightLinkUnitL13_fixed_2"  type="fixed" >
+  <origin  rpy="3.14159265358979 0 0"  xyz="0 0 -0.15" />
+  <parent  link="BaseLModule0_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_straightLinkUnitL13_body" />
+  <child  link="BaseLModule0_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_inputUnit65_reverse_ci_i" />
+  <axis  xyz="0 0 0" />
+ </joint>
+ <joint  name="BaseLModule0_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_inputUnit65_reverse_ci_f_2"  type="fixed" >
+  <origin  rpy="0.0 0.0 0.0"  xyz="-0.0 -0.0 0.01" />
+  <parent  link="BaseLModule0_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_inputUnit65_reverse_ci_i" />
+  <child  link="BaseLModule0_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_inputUnit65_reverse_ci_b" />
+  <axis  xyz="0 0 0" />
+ </joint>
+ <joint  name="BaseLModule0_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_inputUnit65_reverse_ci_f_1"  type="fixed" >
+  <origin  rpy="0.0 0.0 0.0"  xyz="-0.0 -0.0 -0.0" />
+  <parent  link="BaseLModule0_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_inputUnit65_reverse_ci_b" />
+  <child  link="BaseLModule0_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_jointTUnit38_reverse_j_virtual_Link_2" />
+  <axis  xyz="0 0 0" />
+ </joint>
+ <joint  name="BaseLModule0_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_jointTUnit38_reverse_j_fixed_joint"  type="fixed" >
+  <origin  rpy="0.0 -1.5707963267949 0.0"  xyz="-0.0735000000000002 -0.0 0.059999999999999734" />
+  <parent  link="BaseLModule0_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_jointTUnit38_reverse_j_virtual_Link_2" />
+  <child  link="BaseLModule0_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_jointTUnit38_reverse_j_body_Link" />
+  <axis  xyz="0 0 0" />
+ </joint>
+ <joint  name="BaseLModule0_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_jointTUnit38_reverse_j_revolute_joint"  type="revolute" >
+  <origin  rpy="0.0 0.0 -1.5707963267948966"  xyz="-0.0 -0.0 -0.0" />
+  <parent  link="BaseLModule0_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_jointTUnit38_reverse_j_body_Link" />
+  <child  link="BaseLModule0_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_inputUnit66_reverse_ci_i" />
+  <axis  xyz="0 0 -1" />
+  <limit  velocity="0.33"  lower="-3.14"  effort="60.5"  upper="3.14" />
+ </joint>
+ <joint  name="BaseLModule0_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_inputUnit66_reverse_ci_f_2"  type="fixed" >
+  <origin  rpy="0.0 0.0 0.0"  xyz="-0.0 -0.0 0.01" />
+  <parent  link="BaseLModule0_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_inputUnit66_reverse_ci_i" />
+  <child  link="BaseLModule0_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_inputUnit66_reverse_ci_b" />
+  <axis  xyz="0 0 0" />
+ </joint>
+ <joint  name="BaseLModule0_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_inputUnit66_reverse_ci_f_1"  type="fixed" >
+  <origin  rpy="0.0 0.0 0.0"  xyz="-0.0 -0.0 -0.0" />
+  <parent  link="BaseLModule0_baseUnit10_baseUnit10_baseUnit10_baseUnit10_baseUnit10_inputUnit66_reverse_ci_b" />
+  <child  link="BaseLModule0_baseUnit10_baseUnit10_baseUnit10_baseUnit10_jointTUnit39_reverse_j_virtual_Link_2" />
+  <axis  xyz="0 0 0" />
+ </joint>
+ <joint  name="BaseLModule0_baseUnit10_baseUnit10_baseUnit10_baseUnit10_jointTUnit39_reverse_j_fixed_joint"  type="fixed" >
+  <origin  rpy="0.0 -1.5707963267949 0.0"  xyz="-0.0735000000000002 -0.0 0.059999999999999734" />
+  <parent  link="BaseLModule0_baseUnit10_baseUnit10_baseUnit10_baseUnit10_jointTUnit39_reverse_j_virtual_Link_2" />
+  <child  link="BaseLModule0_baseUnit10_baseUnit10_baseUnit10_baseUnit10_jointTUnit39_reverse_j_body_Link" />
+  <axis  xyz="0 0 0" />
+ </joint>
+ <joint  name="BaseLModule0_baseUnit10_baseUnit10_baseUnit10_baseUnit10_jointTUnit39_reverse_j_revolute_joint"  type="revolute" >
+  <origin  rpy="0.0 0.0 -1.5707963267948966"  xyz="-0.0 -0.0 -0.0" />
+  <parent  link="BaseLModule0_baseUnit10_baseUnit10_baseUnit10_baseUnit10_jointTUnit39_reverse_j_body_Link" />
+  <child  link="BaseLModule0_baseUnit10_baseUnit10_baseUnit10_inputUnit67_reverse_ci_i" />
+  <axis  xyz="0 0 -1" />
+  <limit  velocity="0.33"  lower="-3.14"  effort="60.5"  upper="3.14" />
+ </joint>
+ <joint  name="BaseLModule0_baseUnit10_baseUnit10_baseUnit10_inputUnit67_reverse_ci_f_2"  type="fixed" >
+  <origin  rpy="0.0 0.0 0.0"  xyz="-0.0 -0.0 0.01" />
+  <parent  link="BaseLModule0_baseUnit10_baseUnit10_baseUnit10_inputUnit67_reverse_ci_i" />
+  <child  link="BaseLModule0_baseUnit10_baseUnit10_baseUnit10_inputUnit67_reverse_ci_b" />
+  <axis  xyz="0 0 0" />
+ </joint>
+ <joint  name="BaseLModule0_baseUnit10_baseUnit10_baseUnit10_inputUnit67_reverse_ci_f_1"  type="fixed" >
+  <origin  rpy="0.0 0.0 0.0"  xyz="-0.0 -0.0 -0.0" />
+  <parent  link="BaseLModule0_baseUnit10_baseUnit10_baseUnit10_inputUnit67_reverse_ci_b" />
+  <child  link="BaseLModule0_baseUnit10_baseUnit10_jointTUnit40_reverse_j_virtual_Link_2" />
+  <axis  xyz="0 0 0" />
+ </joint>
+ <joint  name="BaseLModule0_baseUnit10_baseUnit10_jointTUnit40_reverse_j_fixed_joint"  type="fixed" >
+  <origin  rpy="0.0 -1.5707963267949 0.0"  xyz="-0.0735000000000002 -0.0 0.059999999999999734" />
+  <parent  link="BaseLModule0_baseUnit10_baseUnit10_jointTUnit40_reverse_j_virtual_Link_2" />
+  <child  link="BaseLModule0_baseUnit10_baseUnit10_jointTUnit40_reverse_j_body_Link" />
+  <axis  xyz="0 0 0" />
+ </joint>
+ <joint  name="BaseLModule0_baseUnit10_baseUnit10_jointTUnit40_reverse_j_revolute_joint"  type="revolute" >
+  <origin  rpy="0.0 0.0 -1.5707963267948966"  xyz="-0.0 -0.0 -0.0" />
+  <parent  link="BaseLModule0_baseUnit10_baseUnit10_jointTUnit40_reverse_j_body_Link" />
+  <child  link="BaseLModule0_baseUnit10_endEffectorLinkUnit1_i" />
+  <axis  xyz="0 0 -1" />
+  <limit  velocity="0.33"  lower="-3.14"  effort="60.5"  upper="3.14" />
+ </joint>
+ <joint  name="BaseLModule0_baseUnit10_endEffectorLinkUnit1_f"  type="fixed" >
+  <origin  rpy="0 0 0"  xyz="0 0 0" />
+  <parent  link="BaseLModule0_baseUnit10_endEffectorLinkUnit1_i" />
+  <child  link="BaseLModule0_baseUnit10_endEffectorLinkUnit1_b" />
+  <axis  xyz="0 0 0" />
+ </joint>
+</robot>

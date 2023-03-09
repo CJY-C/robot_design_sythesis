@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="output-connector-l.SLDASM">
+  <link
+    name="o_virtual_Link_1">
+    <inertial>
+      <origin
+        xyz="-3.9736E-34 -1.0335E-17 0.005"
+        rpy="0 0 0" />
+      <mass
+        value="0" />
+      <inertia
+        ixx="0.00030345"
+        ixy="-1.6987E-36"
+        ixz="1.2291E-37"
+        iyy="0.00030345"
+        iyz="3.6451E-21"
+        izz="0.00059787" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://output-connector-l.SLDASM/meshes/o_virtual_Link_1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://output-connector-l.SLDASM/meshes/o_virtual_Link_1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="o_body_Link">
+    <inertial>
+      <origin
+        xyz="-3.9736E-34 -1.0335E-17 0.005"
+        rpy="0 0 0" />
+      <mass
+        value="0.5413" />
+      <inertia
+        ixx="0.00030345"
+        ixy="-1.6987E-36"
+        ixz="1.2291E-37"
+        iyy="0.00030345"
+        iyz="3.6451E-21"
+        izz="0.00059787" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://output-connector-l.SLDASM/meshes/o_body_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://output-connector-l.SLDASM/meshes/o_body_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="o_fixed_Joint_1"
+    type="fixed">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="o_virtual_Link_1" />
+    <child
+      link="o_body_Link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="o_virtual_Link_2">
+    <inertial>
+      <origin
+        xyz="-5.6766E-35 7.1251E-18 0.005"
+        rpy="0 0 0" />
+      <mass
+        value="0" />
+      <inertia
+        ixx="0.00030345"
+        ixy="1.6987E-36"
+        ixz="1.2291E-37"
+        iyy="0.00030345"
+        iyz="-3.6451E-21"
+        izz="0.00059787" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://output-connector-l.SLDASM/meshes/o_virtual_Link_2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://output-connector-l.SLDASM/meshes/o_virtual_Link_2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="o_fixed_Joint_2"
+    type="fixed">
+    <origin
+      xyz="0 0 0.01"
+      rpy="3.1416 0 3.1416" />
+    <parent
+      link="o_body_Link" />
+    <child
+      link="o_virtual_Link_2" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+</robot>

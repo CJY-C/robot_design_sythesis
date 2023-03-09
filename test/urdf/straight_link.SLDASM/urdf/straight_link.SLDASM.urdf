@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="straight_link.SLDASM">
+  <link
+    name="output_1">
+    <inertial>
+      <origin
+        xyz="-5.773E-18 -2.9591E-34 -0.075"
+        rpy="0 0 0" />
+      <mass
+        value="0.57727" />
+      <inertia
+        ixx="0.0012592"
+        ixy="-1.0046E-36"
+        ixz="-3.3881E-20"
+        iyy="0.0012592"
+        iyz="-1.4642E-36"
+        izz="0.00035358" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://straight_link.SLDASM/meshes/output_1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://straight_link.SLDASM/meshes/output_1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="body">
+    <inertial>
+      <origin
+        xyz="-5.77295559734162E-18 -2.95909178492858E-34 -0.075"
+        rpy="0 0 0" />
+      <mass
+        value="0.577267650097125" />
+      <inertia
+        ixx="0.00125916506177435"
+        ixy="-1.00460897098603E-36"
+        ixz="-3.3881317890172E-20"
+        iyy="0.00125916506177435"
+        iyz="-1.46416110952065E-36"
+        izz="0.000353576435684489" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://straight_link.SLDASM/meshes/body.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://straight_link.SLDASM/meshes/body.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="fixed_1"
+    type="fixed">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="output_1" />
+    <child
+      link="body" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="output_2">
+    <inertial>
+      <origin
+        xyz="-5.773E-18 -4.2273E-35 -0.075"
+        rpy="0 0 0" />
+      <mass
+        value="0.57727" />
+      <inertia
+        ixx="0.0012592"
+        ixy="1.0046E-36"
+        ixz="3.3881E-20"
+        iyy="0.0012592"
+        iyz="-1.4642E-36"
+        izz="0.00035358" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://straight_link.SLDASM/meshes/output_2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://straight_link.SLDASM/meshes/output_2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="fixed_2"
+    type="fixed">
+    <origin
+      xyz="0 0 -0.15"
+      rpy="3.14159265358979 0 0" />
+    <parent
+      link="body" />
+    <child
+      link="output_2" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+</robot>
