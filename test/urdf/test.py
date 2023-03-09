@@ -38,7 +38,6 @@ if __name__ == '__main__':
     a1.addModule(ModuleType.JOINTL)
     a1.addModule(ModuleType.ENDEFFECTORL)
 
-    # a1.exportURDF(__file__, 'arrangement1')
     mj = None
 
     import pybullet as p
