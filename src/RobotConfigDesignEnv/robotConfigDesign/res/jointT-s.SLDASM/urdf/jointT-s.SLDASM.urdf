@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="jointT-s.SLDASM">
+  <link
+    name="tj_out">
+    <inertial>
+      <origin
+        xyz="-0.0013817 6.5484E-09 -0.0575"
+        rpy="0 0 0" />
+      <mass
+        value="0.50441" />
+      <inertia
+        ixx="0.00071191"
+        ixy="2.7679E-10"
+        ixz="4.7522E-20"
+        iyy="0.00071638"
+        iyz="-7.6335E-11"
+        izz="0.00035776" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://jointT-s.SLDASM/meshes/tj_out.STL" />
+      </geometry>
+      <material
+        name="red">
+        <color
+          rgba="0.5 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://jointT-s.SLDASM/meshes/tj_out.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="tj_body">
+    <inertial>
+      <origin
+        xyz="-0.0013808 -7.3281E-08 -0.0575"
+        rpy="0 0 0" />
+      <mass
+        value="0.50441" />
+      <inertia
+        ixx="0.00071191"
+        ixy="2.7679E-10"
+        ixz="4.9663E-20"
+        iyy="0.00071638"
+        iyz="-7.6335E-11"
+        izz="0.00035776" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://jointT-s.SLDASM/meshes/tj_body.STL" />
+      </geometry>
+      <material
+        name="body">
+        <color
+          rgba="0.5 0.5 0.5 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://jointT-s.SLDASM/meshes/tj_body.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="tj_small_1"
+    type="revolute">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="tj_out" />
+    <child
+      link="tj_body" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-3.1416"
+      upper="3.1416"
+      effort="4.5"
+      velocity="0.4" />
+  </joint>
+  <link
+    name="tj_in">
+    <inertial>
+      <origin
+        xyz="1.1276E-17 6.5484E-09 0.035118"
+        rpy="0 0 0" />
+      <mass
+        value="0.50441" />
+      <inertia
+        ixx="0.00035776"
+        ixy="7.6335E-11"
+        ixz="1.7534E-20"
+        iyy="0.00071638"
+        iyz="2.7679E-10"
+        izz="0.00071191" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://jointT-s.SLDASM/meshes/tj_in.STL" />
+      </geometry>
+      <material
+        name="blue">
+        <color
+          rgba="0 0 0.5 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://jointT-s.SLDASM/meshes/tj_in.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="tj_small_2"
+    type="fixed">
+    <origin
+      xyz="-0.0365 0 -0.0575"
+      rpy="0 1.5707963267949 0" />
+    <parent
+      link="tj_body" />
+    <child
+      link="tj_in" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+</robot>

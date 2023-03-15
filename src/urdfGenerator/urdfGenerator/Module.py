@@ -1,5 +1,5 @@
 from urdfGenerator.UnitConfig import generateUnit
-from urdfGenerator.Enums import UnitType, UnitOrder, LinkType, reverse_order
+from urdfGenerator.Enums import UnitType, UnitOrder, LinkType, reverse_order, MountingAngle
 
 from copy import deepcopy
 
@@ -8,11 +8,15 @@ from urdfGenerator.JointPlus import Joint
 
 from functools import reduce
 
+import numpy as np
+
 class Module:
-    def __init__(self, name, unitTypeList, unitOrder=None) -> None:
+    def __init__(self, name, unitTypeList, mountingAngle=None, unitOrder=None) -> None:
         self.unitTypeList = unitTypeList
         self.unitList = []
         self.unitOrderList = [UnitOrder.NORMAL] * len(unitTypeList) if unitOrder is None else unitOrder
+        self.mountingAngle = [MountingAngle.ZERO] * len(unitTypeList) if mountingAngle is None else mountingAngle
+        # self.rotate_tail(mountingAngle)
         self.generateUnitList()
         # self.module = reduce(lambda x, y: x + y, self.unitList)
         self.set_name(name)
@@ -20,9 +24,11 @@ class Module:
     def __add__(self, other) -> 'Module':
         unitTypeList = deepcopy(self.unitTypeList)
         otherUnitTypeList = deepcopy(other.unitTypeList)
+        mountingAngleList = deepcopy(self.mountingAngle)
+        otherMountingAngleList = deepcopy(other.mountingAngle)
         unitOrderList = deepcopy(self.unitOrderList)
         otherUnitOrderList = deepcopy(other.unitOrderList)
-        return Module(self.name, unitTypeList + otherUnitTypeList, unitOrderList + otherUnitOrderList)
+        return Module(self.name, unitTypeList + otherUnitTypeList, mountingAngleList + otherMountingAngleList, unitOrderList + otherUnitOrderList)
         # return Module(self.name + "+" + other.name, unitTypeList + otherUnitTypeList, unitOrderList + otherUnitOrderList)
 
     def __str__(self) -> str:
@@ -48,16 +54,31 @@ class Module:
         unitOrderList = deepcopy(self.unitOrderList)
         unitOrderList = list(map(reverse_order,list(reversed(unitOrderList))))
         unitTypeList = deepcopy(list(reversed(self.unitTypeList)))
-        return Module(self.name + "_reverse", unitTypeList, unitOrderList)
+        mountingAngleList = deepcopy(self.mountingAngle)
+        return Module(self.name + "_reverse", unitTypeList, mountingAngleList, unitOrderList)
 
-    def rotate(self, angle):
-        self.unitList[0].rotate(angle)
+    def rotate_head(self, angle):
+        self.mountingAngle[0] = angle
+        # self.unitList[0].rotate(angle)
+
+    def rotate_tail(self, angle):
+        self.mountingAngle[-1] = angle
+        # self.unitList[-1].rotate(angle)
 
     def generateUnitList(self):
-        zipTO = list(zip(self.unitTypeList, self.unitOrderList))
+        zipTO = list(zip(self.unitTypeList, self.unitOrderList, self.mountingAngle))
 
-        for unitType, unitOrder in zipTO:
-            self.unitList.append(generateUnit(unitType, unitOrder))
+        for unitType, unitOrder, mountingAngle in zipTO:
+            unit = generateUnit(unitType, unitOrder)
+            if mountingAngle != MountingAngle.ZERO:
+                if mountingAngle == MountingAngle.NINETY:
+                    unit.rotate(np.math.pi / 2)
+                elif mountingAngle == MountingAngle.ONEEIGHTY:
+                    unit.rotate(np.math.pi)
+                elif mountingAngle == MountingAngle.TWOSEVENTY:
+                    unit.rotate(np.math.pi * 3 / 2)
+            self.unitList.append(unit)
+
         self.module = reduce(lambda x, y: x + y, self.unitList)
         # return [generateUnit(unitType) for unitType in self.unitTypeList]
 

@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="corner_link-ms.SLDASM">
+  <link
+    name="ic_in_1">
+    <inertial>
+      <origin
+        xyz="-4.0653E-10 -2.7764E-08 0.046224"
+        rpy="0 0 0" />
+      <mass
+        value="0.89759" />
+      <inertia
+        ixx="0.0010141"
+        ixy="3.7229E-10"
+        ixz="3.7341E-11"
+        iyy="0.0017044"
+        iyz="-1.9973E-09"
+        izz="0.0016859" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://corner_link-ms.SLDASM/meshes/ic_in_1.STL" />
+      </geometry>
+      <material
+        name="blue">
+        <color
+          rgba="0 0 0.5 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://corner_link-ms.SLDASM/meshes/ic_in_1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="ic_body">
+    <inertial>
+      <origin
+        xyz="3.018E-09 -2.3038E-08 0.046224"
+        rpy="0 0 0" />
+      <mass
+        value="0.89759" />
+      <inertia
+        ixx="0.0010141"
+        ixy="3.7229E-10"
+        ixz="3.7341E-11"
+        iyy="0.0017044"
+        iyz="-1.9973E-09"
+        izz="0.0016859" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://corner_link-ms.SLDASM/meshes/ic_body.STL" />
+      </geometry>
+      <material
+        name="body">
+        <color
+          rgba="0.5 0.5 0.5 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://corner_link-ms.SLDASM/meshes/ic_body.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="ic_small"
+    type="fixed">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="ic_in_1" />
+    <child
+      link="ic_body" />
+    <axis
+      xyz="0 0 0" />
+    <limit
+      lower="-3.1416"
+      upper="3.1416"
+      effort="4.5"
+      velocity="0.5" />
+  </joint>
+  <link
+    name="ic_in_2">
+    <inertial>
+      <origin
+        xyz="0.00077637 -2.7764E-08 0.0635"
+        rpy="0 0 0" />
+      <mass
+        value="0.89759" />
+      <inertia
+        ixx="0.0016859"
+        ixy="1.9973E-09"
+        ixz="-3.7341E-11"
+        iyy="0.0017044"
+        iyz="3.7229E-10"
+        izz="0.0010141" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://corner_link-ms.SLDASM/meshes/ic_in_2.STL" />
+      </geometry>
+      <material
+        name="blue">
+        <color
+          rgba="0 0 0.5 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://corner_link-ms.SLDASM/meshes/ic_in_2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="ic_medium"
+    type="fixed">
+    <origin
+      xyz="-0.0635 0 0.047"
+      rpy="0 1.5707963267949 0" />
+    <parent
+      link="ic_body" />
+    <child
+      link="ic_in_2" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+</robot>

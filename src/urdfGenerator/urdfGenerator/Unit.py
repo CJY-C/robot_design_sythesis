@@ -15,64 +15,115 @@ from functools import reduce
 
 # 模块基本单元类
 class Unit:
-    def __init__(self, name, linkList, linkTypeList, jointList, order=UnitOrder.NORMAL) -> None:
+    def __init__(self, name, linkList, linkTypeList, jointList, interfaceSize, order=UnitOrder.NORMAL) -> None:
         self.linkDeque = deque(linkList)
         self.linkTypeDeque = deque(linkTypeList)
+
         self.jointDeque = deque(jointList)
-        self.set_name(name=name)
-        self.order = order
+        self.interfaceSizeDeque = deque(interfaceSize)
+
         self.prefix = ""
+        self.set_name(name=name)
 
-    def __add__(self, other):
+        self.order = order
+
+    def __add__(self, other: 'Unit') -> 'Unit':
         # 深拷贝防止修改原始数据
-        if self.linkTypeDeque[-1] == LinkType.OUTPUT and other.linkTypeDeque[0] == LinkType.INPUT:
-            linkDeque = deepcopy(self.linkDeque); otherLinkDeque = deepcopy(other.linkDeque)
-            linkTypeDeque = deepcopy(self.linkTypeDeque); otherLinkTypeDeque = deepcopy(other.linkTypeDeque)
-            jointDeque = deepcopy(self.jointDeque); otherJointDeque = deepcopy(other.jointDeque)
+        if self.check_attachable(other):
+            if self.check_head_type(LinkType.OUTPUT):
+                linkDeque = deepcopy(self.linkDeque); otherLinkDeque = deepcopy(other.linkDeque)
+                linkTypeDeque = deepcopy(self.linkTypeDeque); otherLinkTypeDeque = deepcopy(other.linkTypeDeque)
+                jointDeque = deepcopy(self.jointDeque); otherJointDeque = deepcopy(other.jointDeque)
+                interfaceSizeDeque = deepcopy(self.interfaceSizeDeque); otherInterfaceSizeDeque = deepcopy(other.interfaceSizeDeque)
 
-            linkDeque.pop(); linkTypeDeque.pop()
-            inputLinkName = otherLinkDeque[0].name
-            jointDeque[-1].set_child(inputLinkName)
+                linkDeque.pop(); linkTypeDeque.pop(); interfaceSizeDeque.pop()
+                inputLinkName = otherLinkDeque[0].name
+                jointDeque[-1].set_child(inputLinkName)
 
-            return Unit(self.name, list(linkDeque + otherLinkDeque), list(linkTypeDeque + otherLinkTypeDeque), list(jointDeque + otherJointDeque))
-            # return Unit(self.name + '+' + other.name, list(linkDeque + otherLinkDeque), list(linkTypeDeque + otherLinkTypeDeque), list(jointDeque + otherJointDeque))
-        elif other.linkTypeDeque[0] == LinkType.OUTPUT and self.linkTypeDeque[-1] == LinkType.INPUT:
-            linkDeque = deepcopy(self.linkDeque); otherLinkDeque = deepcopy(other.linkDeque)
-            linkTypeDeque = deepcopy(self.linkTypeDeque); otherLinkTypeDeque = deepcopy(other.linkTypeDeque)
-            jointDeque = deepcopy(self.jointDeque); otherJointDeque = deepcopy(other.jointDeque)
+                return Unit(self.name, 
+                            list(linkDeque + otherLinkDeque), 
+                            list(linkTypeDeque + otherLinkTypeDeque), 
+                            list(jointDeque + otherJointDeque),
+                            list(interfaceSizeDeque + otherInterfaceSizeDeque))
+            elif other.check_tail_type(LinkType.OUTPUT):
+                linkDeque = deepcopy(self.linkDeque); otherLinkDeque = deepcopy(other.linkDeque)
+                linkTypeDeque = deepcopy(self.linkTypeDeque); otherLinkTypeDeque = deepcopy(other.linkTypeDeque)
+                jointDeque = deepcopy(self.jointDeque); otherJointDeque = deepcopy(other.jointDeque)
+                interfaceSizeDeque = deepcopy(self.interfaceSizeDeque); otherInterfaceSizeDeque = deepcopy(other.interfaceSizeDeque)
 
-            otherLinkDeque.popleft(); otherLinkTypeDeque.popleft()
-            inputLinkName = linkDeque[-1].name
-            otherJointDeque[0].set_parent(inputLinkName)
+                otherLinkDeque.popleft(); otherLinkTypeDeque.popleft(); otherInterfaceSizeDeque.popleft()
+                inputLinkName = linkDeque[-1].name
+                otherJointDeque[0].set_parent(inputLinkName)
 
-            return Unit(self.name, list(linkDeque + otherLinkDeque), list(linkTypeDeque + otherLinkTypeDeque), list(jointDeque + otherJointDeque))
-            # return Unit(self.name + '+' + other.name, list(linkDeque + otherLinkDeque), list(linkTypeDeque + otherLinkTypeDeque), list(jointDeque + otherJointDeque))
-        elif (self.linkTypeDeque[-1] == LinkType.OUTPUT and other.linkTypeDeque[-1] == LinkType.INPUT) or\
-            (self.linkTypeDeque[-1] == LinkType.INPUT and other.linkTypeDeque[-1] == LinkType.OUTPUT):
+                return Unit(self.name, 
+                            list(linkDeque + otherLinkDeque), 
+                            list(linkTypeDeque + otherLinkTypeDeque), 
+                            list(jointDeque + otherJointDeque),
+                            list(interfaceSizeDeque + otherInterfaceSizeDeque))
+        elif self.check_attachable(other.reverse()):
             otherR = other.reverse()
-            linkDeque = deepcopy(self.linkDeque); otherLinkDeque = deepcopy(otherR.linkDeque)
-            linkTypeDeque = deepcopy(self.linkTypeDeque); otherLinkTypeDeque = deepcopy(otherR.linkTypeDeque)
-            jointDeque = deepcopy(self.jointDeque); otherJointDeque = deepcopy(otherR.jointDeque)
+            if self.check_head_type(LinkType.OUTPUT):
+                linkDeque = deepcopy(self.linkDeque); otherLinkDeque = deepcopy(otherR.linkDeque)
+                linkTypeDeque = deepcopy(self.linkTypeDeque); otherLinkTypeDeque = deepcopy(otherR.linkTypeDeque)
+                jointDeque = deepcopy(self.jointDeque); otherJointDeque = deepcopy(otherR.jointDeque)
+                interfaceSizeDeque = deepcopy(self.interfaceSizeDeque); otherInterfaceSizeDeque = deepcopy(otherR.interfaceSizeDeque)
 
-            linkDeque.pop(); linkTypeDeque.pop()
-            inputLinkName = otherLinkDeque[0].name
-            jointDeque[-1].set_child(inputLinkName)
+                linkDeque.pop(); linkTypeDeque.pop(); interfaceSizeDeque.pop()
+                inputLinkName = otherLinkDeque[0].name
+                jointDeque[-1].set_child(inputLinkName)
 
-            return Unit(self.name, list(linkDeque + otherLinkDeque), list(linkTypeDeque + otherLinkTypeDeque), list(jointDeque + otherJointDeque))
-            # return Unit(self.name + '+' + other.name, list(linkDeque + otherLinkDeque), list(linkTypeDeque + otherLinkTypeDeque), list(jointDeque + otherJointDeque))
-        elif (other.linkTypeDeque[0] == LinkType.OUTPUT and self.linkTypeDeque[0] == LinkType.INPUT) or \
-            (other.linkTypeDeque[0] == LinkType.INPUT and self.linkTypeDeque[0] == LinkType.OUTPUT):
+                return Unit(self.name, 
+                            list(linkDeque + otherLinkDeque), 
+                            list(linkTypeDeque + otherLinkTypeDeque), 
+                            list(jointDeque + otherJointDeque),
+                            list(interfaceSizeDeque + otherInterfaceSizeDeque))
+            elif otherR.check_tail_type(LinkType.OUTPUT):
+                linkDeque = deepcopy(self.linkDeque); otherLinkDeque = deepcopy(otherR.linkDeque)
+                linkTypeDeque = deepcopy(self.linkTypeDeque); otherLinkTypeDeque = deepcopy(otherR.linkTypeDeque)
+                jointDeque = deepcopy(self.jointDeque); otherJointDeque = deepcopy(otherR.jointDeque)
+                interfaceSizeDeque = deepcopy(self.interfaceSizeDeque); otherInterfaceSizeDeque = deepcopy(otherR.interfaceSizeDeque)
+
+                otherLinkDeque.popleft(); otherLinkTypeDeque.popleft(); otherInterfaceSizeDeque.popleft()
+                inputLinkName = linkDeque[-1].name
+                otherJointDeque[0].set_parent(inputLinkName)
+
+                return Unit(self.name, 
+                            list(linkDeque + otherLinkDeque), 
+                            list(linkTypeDeque + otherLinkTypeDeque), 
+                            list(jointDeque + otherJointDeque),
+                            list(interfaceSizeDeque + otherInterfaceSizeDeque))
+        elif self.reverse().check_attachable(other):
             selfR = self.reverse()
-            linkDeque = deepcopy(selfR.linkDeque); otherLinkDeque = deepcopy(other.linkDeque)
-            linkTypeDeque = deepcopy(selfR.linkTypeDeque); otherLinkTypeDeque = deepcopy(other.linkTypeDeque)
-            jointDeque = deepcopy(selfR.jointDeque); otherJointDeque = deepcopy(other.jointDeque)
+            if selfR.check_head_type(LinkType.OUTPUT):
+                linkDeque = deepcopy(selfR.linkDeque); otherLinkDeque = deepcopy(other.linkDeque)
+                linkTypeDeque = deepcopy(selfR.linkTypeDeque); otherLinkTypeDeque = deepcopy(other.linkTypeDeque)
+                jointDeque = deepcopy(selfR.jointDeque); otherJointDeque = deepcopy(other.jointDeque)
+                interfaceSizeDeque = deepcopy(selfR.interfaceSizeDeque); otherInterfaceSizeDeque = deepcopy(other.interfaceSizeDeque)
 
-            otherLinkDeque.popleft(); otherLinkTypeDeque.popleft()
-            inputLinkName = linkDeque[-1].name
-            otherJointDeque[0].set_parent(inputLinkName)
+                linkDeque.pop(); linkTypeDeque.pop(); interfaceSizeDeque.pop()
+                inputLinkName = otherLinkDeque[0].name
+                jointDeque[-1].set_child(inputLinkName)
 
-            return Unit(self.name, list(linkDeque + otherLinkDeque), list(linkTypeDeque + otherLinkTypeDeque), list(jointDeque + otherJointDeque))
-            # return Unit(self.name + '+' + other.name, list(linkDeque + otherLinkDeque), list(linkTypeDeque + otherLinkTypeDeque), list(jointDeque + otherJointDeque))
+                return Unit(self.name, 
+                            list(linkDeque + otherLinkDeque), 
+                            list(linkTypeDeque + otherLinkTypeDeque), 
+                            list(jointDeque + otherJointDeque),
+                            list(interfaceSizeDeque + otherInterfaceSizeDeque))
+            elif other.check_tail_type(LinkType.OUTPUT):
+                linkDeque = deepcopy(selfR.linkDeque); otherLinkDeque = deepcopy(other.linkDeque)
+                linkTypeDeque = deepcopy(selfR.linkTypeDeque); otherLinkTypeDeque = deepcopy(other.linkTypeDeque)
+                jointDeque = deepcopy(selfR.jointDeque); otherJointDeque = deepcopy(other.jointDeque)
+                interfaceSizeDeque = deepcopy(selfR.interfaceSizeDeque); otherInterfaceSizeDeque = deepcopy(other.interfaceSizeDeque)
+
+                otherLinkDeque.popleft(); otherLinkTypeDeque.popleft(); otherInterfaceSizeDeque.popleft()
+                inputLinkName = linkDeque[-1].name
+                otherJointDeque[0].set_parent(inputLinkName)
+
+                return Unit(self.name, 
+                            list(linkDeque + otherLinkDeque), 
+                            list(linkTypeDeque + otherLinkTypeDeque), 
+                            list(jointDeque + otherJointDeque),
+                            list(interfaceSizeDeque + otherInterfaceSizeDeque))
         return None
 
     def __str__(self):
@@ -101,19 +152,23 @@ class Unit:
         linkDeque = deepcopy(self.linkDeque)
         linkTypeDeque = deepcopy(self.linkTypeDeque)
         jointDeque = deepcopy(self.jointDeque)
+        interfaceSizeDeque = deepcopy(self.interfaceSizeDeque)
         if self.order == UnitOrder.REVERSE:
             self.order = UnitOrder.NORMAL
         else:
             self.order = UnitOrder.REVERSE
         for joint in jointDeque:
             joint.reverse_joint()
-        return Unit(self.name + "_reverse", list(reversed(linkDeque)), list(reversed(linkTypeDeque)), list(reversed(jointDeque)))
+        return Unit(self.name + "_reverse", list(reversed(linkDeque)), list(reversed(linkTypeDeque)), list(reversed(jointDeque)), list(reversed(interfaceSizeDeque)))
 
     def check_attachable(self, other: 'Unit'):
-        if self.check_head_type(LinkType.OUTPUT) and other.check_tail_type(LinkType.INPUT):
-            return True
-        elif self.check_head_type(LinkType.INPUT) and other.check_tail_type(LinkType.OUTPUT):
-            return True
+        # TODO: 添加接口大小判断
+        if self.check_head_type(LinkType.OUTPUT) and other.check_tail_type(LinkType.INPUT) \
+            and self.interfaceSizeDeque[-1] == other.interfaceSizeDeque[0]:
+                return True
+        elif self.check_head_type(LinkType.INPUT) and other.check_tail_type(LinkType.OUTPUT) \
+            and self.interfaceSizeDeque[-1] == other.interfaceSizeDeque[0]:
+                return True
         return False
 
     def check_head_type(self, linkType):
@@ -129,10 +184,15 @@ class Unit:
 if __name__ == '__main__':
     from urdfGenerator.UnitConfig import generateUnit
     print("Unit class test")
-    ju = generateUnit(UnitType.JOINTL)
+    b =generateUnit(UnitType.CONNECTORL)
+    c = generateUnit(UnitType.CORNERLINKLL)
+    print(b.linkTypeDeque)
+    print(c.linkTypeDeque)
+    print(b+c)
+    # ju = generateUnit(UnitType.JOINTL)
 
-    ju.rotate(0.5)
-    print(ju)
+    # ju.rotate(0.5)
+    # print(ju)
 
-    print(ju.check_head_type(LinkType.OUTPUT))
-    print(ju.check_tail_type(LinkType.OUTPUT))
+    # print(ju.check_head_type(LinkType.OUTPUT))
+    # print(ju.check_tail_type(LinkType.OUTPUT))

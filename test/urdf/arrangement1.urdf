@@ -1,645 +1,586 @@
 <?xml version="1.0"?>
-<robot  name="UNNAMED_6" >
- <link  name="BaseLModule760_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_b_b" >
+<robot  name="UNNAMED_21" >
+ <link  name="BLM232_BLU170_BLU170_BLU170_BLU170_BLU170_BLU170_BLU170_BLU170_BLU170_BLU170_BLU170_U_b_body" >
   <inertial >
-   <origin  xyz="-8.5773E-18 -1.7168E-18 0.020302"  rpy="0 0 0" />
-   <mass  value="6.3779" />
-   <inertia  ixx="0.011031"  ixz="-4.0932E-19"  iyy="0.011031"  izz="0.019686"  iyz="-2.3898E-19"  ixy="1.5011E-18" />
+   <origin  rpy="0 0 0"  xyz="-9.4624E-18 1.1154E-17 0.022042" />
+   <mass  value="5.9754" />
+   <inertia  ixx="0.009154"  iyy="0.009154"  ixz="-3.4018E-19"  iyz="3.3647E-19"  izz="0.015925"  ixy="1.7613E-19" />
   </inertial>
   <visual >
-   <origin  xyz="0 0 0"  rpy="0 0 0" />
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
    <geometry >
-    <mesh  filename="package://base-l.SLDASM/meshes/b_b.STL" />
+    <mesh  filename="package://base-l.SLDASM/meshes/b_body.STL" />
    </geometry>
-   <material  name="" >
-    <color  rgba="0.64706 0.61961 0.58824 1" />
+   <material  name="body" >
+    <color  rgba="0.5 0.5 0.5 1" />
    </material>
   </visual>
   <collision >
-   <origin  xyz="0 0 0"  rpy="0 0 0" />
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
    <geometry >
-    <mesh  filename="package://base-l.SLDASM/meshes/b_b.STL" />
+    <mesh  filename="package://base-l.SLDASM/meshes/b_body.STL" />
    </geometry>
   </collision>
  </link>
- <link  name="BaseLModule760_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_b_i" >
+ <link  name="BLM232_BLU170_BLU170_BLU170_BLU170_BLU170_BLU170_BLU170_BLU170_BLU170_BLU170_BLU170_U_b_in" >
   <inertial >
-   <origin  xyz="8.5773E-18 -1.2339E-17 0.029698"  rpy="0 0 0" />
-   <mass  value="6.3779" />
-   <inertia  ixx="0.011031"  ixz="-4.0932E-19"  iyy="0.011031"  izz="0.019686"  iyz="2.3898E-19"  ixy="-1.5011E-18" />
+   <origin  rpy="0 0 0"  xyz="-9.4624E-18 -5.3214E-19 0.029258" />
+   <mass  value="5.9754" />
+   <inertia  ixx="0.009154"  iyy="0.009154"  ixz="3.3605E-19"  iyz="3.3422E-19"  izz="0.015925"  ixy="-1.7613E-19" />
   </inertial>
   <visual >
-   <origin  xyz="0 0 0"  rpy="0 0 0" />
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
    <geometry >
-    <mesh  filename="package://base-l.SLDASM/meshes/b_i.STL" />
+    <mesh  filename="package://base-l.SLDASM/meshes/b_in.STL" />
    </geometry>
-   <material  name="" >
-    <color  rgba="0 0 0.93333 1" />
+   <material  name="blue" >
+    <color  rgba="0 0 0.5 1" />
    </material>
   </visual>
   <collision >
-   <origin  xyz="0 0 0"  rpy="0 0 0" />
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
    <geometry >
-    <mesh  filename="package://base-l.SLDASM/meshes/b_i.STL" />
+    <mesh  filename="package://base-l.SLDASM/meshes/b_in.STL" />
    </geometry>
   </collision>
  </link>
- <link  name="BaseLModule760_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_inputUnit1431_ci_b" >
+ <link  name="BLM232_BLU170_BLU170_BLU170_BLU170_BLU170_BLU170_BLU170_BLU170_BLU170_BLU170_ILU593_U_ci_body" >
   <inertial >
-   <origin  xyz="0 -4.2001E-18 -0.005"  rpy="0 0 0" />
-   <mass  value="0.79615" />
-   <inertia  ixx="0.00065331"  ixz="-4.3848E-37"  iyy="0.00065331"  izz="0.0012933"  iyz="0"  ixy="0" />
+   <origin  rpy="0 0 0"  xyz="0 4.2001E-18 -0.0057" />
+   <mass  value="0.90761" />
+   <inertia  ixx="0.00074704"  iyy="0.00074704"  ixz="5.6985E-37"  iyz="1.7343E-36"  izz="0.0014744"  ixy="0" />
   </inertial>
   <visual >
-   <origin  xyz="0 0 0"  rpy="0 0 0" />
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
    <geometry >
-    <mesh  filename="package://input_connector_l.SLDASM/meshes/ci_b.STL" />
+    <mesh  filename="package://input_connector_l.SLDASM/meshes/ci_body.STL" />
    </geometry>
-   <material  name="" >
-    <color  rgba="0 0 0.58824 1" />
+   <material  name="blue" >
+    <color  rgba="0 0 0.5 1" />
    </material>
   </visual>
   <collision >
-   <origin  xyz="0 0 0"  rpy="0 0 0" />
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
    <geometry >
-    <mesh  filename="package://input_connector_l.SLDASM/meshes/ci_b.STL" />
+    <mesh  filename="package://input_connector_l.SLDASM/meshes/ci_body.STL" />
    </geometry>
   </collision>
  </link>
- <link  name="BaseLModule760_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_inputUnit1431_ci_i" >
+ <link  name="BLM232_BLU170_BLU170_BLU170_BLU170_BLU170_BLU170_BLU170_BLU170_BLU170_BLU170_ILU593_U_ci_in" >
   <inertial >
-   <origin  xyz="5.5075E-34 1.7044E-17 0.005"  rpy="0 0 0" />
+   <origin  rpy="0 0 0"  xyz="-5.5075E-34 -1.7044E-17 0.0057" />
    <mass  value="0" />
-   <inertia  ixx="0.00065331"  ixz="-4.3848E-37"  iyy="0.00065331"  izz="0.0012933"  iyz="0"  ixy="0" />
+   <inertia  ixx="0.00074704"  iyy="0.00074704"  ixz="5.6985E-37"  iyz="1.7343E-36"  izz="0.0014744"  ixy="0" />
   </inertial>
   <visual >
-   <origin  xyz="0 0 0"  rpy="0 0 0" />
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
    <geometry >
-    <mesh  filename="package://input_connector_l.SLDASM/meshes/ci_i.STL" />
+    <mesh  filename="package://input_connector_l.SLDASM/meshes/ci_in.STL" />
    </geometry>
-   <material  name="" >
-    <color  rgba="0 0 0.93333 1" />
+   <material  name="blue" >
+    <color  rgba="0 0 0.5 1" />
    </material>
   </visual>
   <collision >
-   <origin  xyz="0 0 0"  rpy="0 0 0" />
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
    <geometry >
-    <mesh  filename="package://input_connector_l.SLDASM/meshes/ci_i.STL" />
+    <mesh  filename="package://input_connector_l.SLDASM/meshes/ci_in.STL" />
    </geometry>
   </collision>
  </link>
- <link  name="BaseLModule760_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_jointTUnit337_j_body_Link" >
+ <link  name="BLM232_BLU170_BLU170_BLU170_BLU170_BLU170_BLU170_BLU170_BLU170_BLU170_SLU77_U_sl_body" >
   <inertial >
-   <origin  xyz="1.52664311235792E-18 -0.0036666955828649 -1.95928421400108E-09"  rpy="0 0 0" />
-   <mass  value="4.5" />
-   <inertia  ixz="-3.96496819617181E-10"  ixx="0.00805845360293144"  iyy="0.0115814093224894"  izz="0.0118834658362195"  iyz="-1.64429599543498E-10"  ixy="-1.8484514920056E-18" />
+   <origin  rpy="0 0 0"  xyz="-6.238E-18 -3.0195E-34 -0.075" />
+   <mass  value="0.42412" />
+   <inertia  ixx="0.00089064"  iyy="0.00089064"  ixz="-3.3881E-20"  iyz="-9.2204E-37"  izz="0.00019085"  ixy="-5.4226E-37" />
   </inertial>
   <visual >
-   <origin  xyz="0 0 0"  rpy="0 0 0" />
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
    <geometry >
-    <mesh  filename="package://joint-T-l.SLDASM/meshes/j_body_Link.STL" />
+    <mesh  filename="package://straight_link-l.SLDASM/meshes/sl_body.STL" />
    </geometry>
-   <material  name="" >
-    <color  rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+   <material  name="body" >
+    <color  rgba="0.5 0.5 0.5 1" />
    </material>
   </visual>
   <collision >
-   <origin  xyz="0 0 0"  rpy="0 0 0" />
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
    <geometry >
-    <mesh  filename="package://joint-T-l.SLDASM/meshes/j_body_Link.STL" />
+    <mesh  filename="package://straight_link-l.SLDASM/meshes/sl_body.STL" />
    </geometry>
   </collision>
  </link>
- <link  name="BaseLModule760_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_jointTUnit337_j_virtual_Link_2" >
+ <link  name="BLM232_BLU170_BLU170_BLU170_BLU170_BLU170_BLU170_BLU170_BLU170_ILU594_U_reverse_U_ci_in" >
   <inertial >
-   <origin  xyz="1.5266E-18 -0.0036667 -1.9593E-09"  rpy="0 0 0" />
-   <mass  value="4.5" />
-   <inertia  ixz="-3.965E-10"  ixx="0.0080585"  iyy="0.011581"  izz="0.011883"  iyz="-1.6443E-10"  ixy="-1.8485E-18" />
-  </inertial>
-  <visual >
-   <origin  xyz="0 0 0"  rpy="0 0 0" />
-   <geometry >
-    <mesh  filename="package://joint-T-l.SLDASM/meshes/j_virtual_Link_2.STL" />
-   </geometry>
-   <material  name="" >
-    <color  rgba="0 0 0.93333 1" />
-   </material>
-  </visual>
-  <collision >
-   <origin  xyz="0 0 0"  rpy="0 0 0" />
-   <geometry >
-    <mesh  filename="package://joint-T-l.SLDASM/meshes/j_virtual_Link_2.STL" />
-   </geometry>
-  </collision>
- </link>
- <link  name="BaseLModule760_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_inputUnit1432_ci_b" >
-  <inertial >
-   <origin  xyz="0 -4.2001E-18 -0.005"  rpy="0 0 0" />
-   <mass  value="0.79615" />
-   <inertia  ixx="0.00065331"  ixz="-4.3848E-37"  iyy="0.00065331"  izz="0.0012933"  iyz="0"  ixy="0" />
-  </inertial>
-  <visual >
-   <origin  xyz="0 0 0"  rpy="0 0 0" />
-   <geometry >
-    <mesh  filename="package://input_connector_l.SLDASM/meshes/ci_b.STL" />
-   </geometry>
-   <material  name="" >
-    <color  rgba="0 0 0.58824 1" />
-   </material>
-  </visual>
-  <collision >
-   <origin  xyz="0 0 0"  rpy="0 0 0" />
-   <geometry >
-    <mesh  filename="package://input_connector_l.SLDASM/meshes/ci_b.STL" />
-   </geometry>
-  </collision>
- </link>
- <link  name="BaseLModule760_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_inputUnit1432_ci_i" >
-  <inertial >
-   <origin  xyz="5.5075E-34 1.7044E-17 0.005"  rpy="0 0 0" />
+   <origin  rpy="0 0 0"  xyz="-5.5075E-34 -1.7044E-17 0.0057" />
    <mass  value="0" />
-   <inertia  ixx="0.00065331"  ixz="-4.3848E-37"  iyy="0.00065331"  izz="0.0012933"  iyz="0"  ixy="0" />
+   <inertia  ixx="0.00074704"  iyy="0.00074704"  ixz="5.6985E-37"  iyz="1.7343E-36"  izz="0.0014744"  ixy="0" />
   </inertial>
   <visual >
-   <origin  xyz="0 0 0"  rpy="0 0 0" />
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
    <geometry >
-    <mesh  filename="package://input_connector_l.SLDASM/meshes/ci_i.STL" />
+    <mesh  filename="package://input_connector_l.SLDASM/meshes/ci_in.STL" />
    </geometry>
-   <material  name="" >
-    <color  rgba="0 0 0.93333 1" />
+   <material  name="blue" >
+    <color  rgba="0 0 0.5 1" />
    </material>
   </visual>
   <collision >
-   <origin  xyz="0 0 0"  rpy="0 0 0" />
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
    <geometry >
-    <mesh  filename="package://input_connector_l.SLDASM/meshes/ci_i.STL" />
+    <mesh  filename="package://input_connector_l.SLDASM/meshes/ci_in.STL" />
    </geometry>
   </collision>
  </link>
- <link  name="BaseLModule760_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_jointTUnit338_j_body_Link" >
+ <link  name="BLM232_BLU170_BLU170_BLU170_BLU170_BLU170_BLU170_BLU170_BLU170_ILU594_U_reverse_U_ci_body" >
   <inertial >
-   <origin  xyz="1.52664311235792E-18 -0.0036666955828649 -1.95928421400108E-09"  rpy="0 0 0" />
-   <mass  value="4.5" />
-   <inertia  ixz="-3.96496819617181E-10"  ixx="0.00805845360293144"  iyy="0.0115814093224894"  izz="0.0118834658362195"  iyz="-1.64429599543498E-10"  ixy="-1.8484514920056E-18" />
+   <origin  rpy="0 0 0"  xyz="0 4.2001E-18 -0.0057" />
+   <mass  value="0.90761" />
+   <inertia  ixx="0.00074704"  iyy="0.00074704"  ixz="5.6985E-37"  iyz="1.7343E-36"  izz="0.0014744"  ixy="0" />
   </inertial>
   <visual >
-   <origin  xyz="0 0 0"  rpy="0 0 0" />
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
    <geometry >
-    <mesh  filename="package://joint-T-l.SLDASM/meshes/j_body_Link.STL" />
+    <mesh  filename="package://input_connector_l.SLDASM/meshes/ci_body.STL" />
    </geometry>
-   <material  name="" >
-    <color  rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+   <material  name="blue" >
+    <color  rgba="0 0 0.5 1" />
    </material>
   </visual>
   <collision >
-   <origin  xyz="0 0 0"  rpy="0 0 0" />
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
    <geometry >
-    <mesh  filename="package://joint-T-l.SLDASM/meshes/j_body_Link.STL" />
+    <mesh  filename="package://input_connector_l.SLDASM/meshes/ci_body.STL" />
    </geometry>
   </collision>
  </link>
- <link  name="BaseLModule760_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_jointTUnit338_j_virtual_Link_2" >
+ <link  name="BLM232_BLU170_BLU170_BLU170_BLU170_BLU170_BLU170_BLU170_CLMU98_U_reverse_U_cl_in_2" >
   <inertial >
-   <origin  xyz="1.5266E-18 -0.0036667 -1.9593E-09"  rpy="0 0 0" />
-   <mass  value="4.5" />
-   <inertia  ixz="-3.965E-10"  ixx="0.0080585"  iyy="0.011581"  izz="0.011883"  iyz="-1.6443E-10"  ixy="-1.8485E-18" />
+   <origin  rpy="0 0 0"  xyz="0.0012458 -1.2003E-08 0.0735" />
+   <mass  value="1.5378" />
+   <inertia  ixx="0.0039765"  iyy="0.0040307"  ixz="-1.124E-09"  iyz="1.529E-09"  izz="0.0025767"  ixy="3.8294E-09" />
   </inertial>
   <visual >
-   <origin  xyz="0 0 0"  rpy="0 0 0" />
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
    <geometry >
-    <mesh  filename="package://joint-T-l.SLDASM/meshes/j_virtual_Link_2.STL" />
+    <mesh  filename="package://corner_link-lm.SLDASM/meshes/cl_in_2.STL" />
    </geometry>
-   <material  name="" >
-    <color  rgba="0 0 0.93333 1" />
+   <material  name="blue" >
+    <color  rgba="0 0 0.5 1" />
    </material>
   </visual>
   <collision >
-   <origin  xyz="0 0 0"  rpy="0 0 0" />
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
    <geometry >
-    <mesh  filename="package://joint-T-l.SLDASM/meshes/j_virtual_Link_2.STL" />
+    <mesh  filename="package://corner_link-lm.SLDASM/meshes/cl_in_2.STL" />
    </geometry>
   </collision>
  </link>
- <link  name="BaseLModule760_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_inputUnit1433_ci_b" >
+ <link  name="BLM232_BLU170_BLU170_BLU170_BLU170_BLU170_BLU170_BLU170_CLMU98_U_reverse_U_cl_body" >
   <inertial >
-   <origin  xyz="0 -4.2001E-18 -0.005"  rpy="0 0 0" />
-   <mass  value="0.79615" />
-   <inertia  ixx="0.00065331"  ixz="-4.3848E-37"  iyy="0.00065331"  izz="0.0012933"  iyz="0"  ixy="0" />
+   <origin  rpy="0 0 0"  xyz="9.2117E-09 2.0894E-08 0.055754" />
+   <mass  value="1.5378" />
+   <inertia  ixx="0.0025767"  iyy="0.0040307"  ixz="1.124E-09"  iyz="-3.8294E-09"  izz="0.0039765"  ixy="1.529E-09" />
   </inertial>
   <visual >
-   <origin  xyz="0 0 0"  rpy="0 0 0" />
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
    <geometry >
-    <mesh  filename="package://input_connector_l.SLDASM/meshes/ci_b.STL" />
+    <mesh  filename="package://corner_link-lm.SLDASM/meshes/cl_body.STL" />
    </geometry>
-   <material  name="" >
-    <color  rgba="0 0 0.58824 1" />
+   <material  name="body" >
+    <color  rgba="0.5 0.5 0.5 1" />
    </material>
   </visual>
   <collision >
-   <origin  xyz="0 0 0"  rpy="0 0 0" />
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
    <geometry >
-    <mesh  filename="package://input_connector_l.SLDASM/meshes/ci_b.STL" />
+    <mesh  filename="package://corner_link-lm.SLDASM/meshes/cl_body.STL" />
    </geometry>
   </collision>
  </link>
- <link  name="BaseLModule760_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_inputUnit1433_ci_i" >
+ <link  name="BLM232_BLU170_BLU170_BLU170_BLU170_BLU170_BLU170_BLU170_CLMU98_U_reverse_U_cl_in_1" >
   <inertial >
-   <origin  xyz="5.5075E-34 1.7044E-17 0.005"  rpy="0 0 0" />
-   <mass  value="0" />
-   <inertia  ixx="0.00065331"  ixz="-4.3848E-37"  iyy="0.00065331"  izz="0.0012933"  iyz="0"  ixy="0" />
+   <origin  rpy="0 0 0"  xyz="9.773E-09 -1.2003E-08 0.055754" />
+   <mass  value="1.5378" />
+   <inertia  ixx="0.0025767"  iyy="0.0040307"  ixz="1.124E-09"  iyz="-3.8294E-09"  izz="0.0039765"  ixy="1.529E-09" />
   </inertial>
   <visual >
-   <origin  xyz="0 0 0"  rpy="0 0 0" />
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
    <geometry >
-    <mesh  filename="package://input_connector_l.SLDASM/meshes/ci_i.STL" />
+    <mesh  filename="package://corner_link-lm.SLDASM/meshes/cl_in_1.STL" />
    </geometry>
-   <material  name="" >
-    <color  rgba="0 0 0.93333 1" />
+   <material  name="blue" >
+    <color  rgba="0 0 0.5 1" />
    </material>
   </visual>
   <collision >
-   <origin  xyz="0 0 0"  rpy="0 0 0" />
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
    <geometry >
-    <mesh  filename="package://input_connector_l.SLDASM/meshes/ci_i.STL" />
+    <mesh  filename="package://corner_link-lm.SLDASM/meshes/cl_in_1.STL" />
    </geometry>
   </collision>
  </link>
- <link  name="BaseLModule760_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_jointTUnit339_j_body_Link" >
+ <link  name="BLM232_BLU170_BLU170_BLU170_BLU170_BLU170_BLU170_IMU570_reverse_IMU570_U_reverse_U_ic_body" >
   <inertial >
-   <origin  xyz="1.52664311235792E-18 -0.0036666955828649 -1.95928421400108E-09"  rpy="0 0 0" />
-   <mass  value="4.5" />
-   <inertia  ixz="-3.96496819617181E-10"  ixx="0.00805845360293144"  iyy="0.0115814093224894"  izz="0.0118834658362195"  iyz="-1.64429599543498E-10"  ixy="-1.8484514920056E-18" />
+   <origin  rpy="0 0 0"  xyz="0 -4.8218E-18 -0.0047" />
+   <mass  value="0.50882" />
+   <inertia  ixx="0.00028474"  iyy="0.00028474"  ixz="2.1721E-37"  iyz="0"  izz="0.000562"  ixy="0" />
   </inertial>
   <visual >
-   <origin  xyz="0 0 0"  rpy="0 0 0" />
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
    <geometry >
-    <mesh  filename="package://joint-T-l.SLDASM/meshes/j_body_Link.STL" />
+    <mesh  filename="package://input_connector_m.SLDASM/meshes/ic_body.STL" />
    </geometry>
-   <material  name="" >
-    <color  rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+   <material  name="blue" >
+    <color  rgba="0 0 0.5 1" />
    </material>
   </visual>
   <collision >
-   <origin  xyz="0 0 0"  rpy="0 0 0" />
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
    <geometry >
-    <mesh  filename="package://joint-T-l.SLDASM/meshes/j_body_Link.STL" />
+    <mesh  filename="package://input_connector_m.SLDASM/meshes/ic_body.STL" />
    </geometry>
   </collision>
  </link>
- <link  name="BaseLModule760_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_jointTUnit339_j_virtual_Link_2" >
+ <link  name="BLM232_BLU170_BLU170_BLU170_BLU170_BLU170_BLU170_IMU570_reverse_IMU570_U_reverse_U_ic_in" >
   <inertial >
-   <origin  xyz="1.5266E-18 -0.0036667 -1.9593E-09"  rpy="0 0 0" />
-   <mass  value="4.5" />
-   <inertia  ixz="-3.965E-10"  ixx="0.0080585"  iyy="0.011581"  izz="0.011883"  iyz="-1.6443E-10"  ixy="-1.8485E-18" />
+   <origin  rpy="0 0 0"  xyz="-4.5413E-34 1.0801E-17 0.0047" />
+   <mass  value="0.50882" />
+   <inertia  ixx="0.00028474"  iyy="0.00028474"  ixz="2.1721E-37"  iyz="0"  izz="0.000562"  ixy="0" />
   </inertial>
   <visual >
-   <origin  xyz="0 0 0"  rpy="0 0 0" />
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
    <geometry >
-    <mesh  filename="package://joint-T-l.SLDASM/meshes/j_virtual_Link_2.STL" />
+    <mesh  filename="package://input_connector_m.SLDASM/meshes/ic_in.STL" />
    </geometry>
-   <material  name="" >
-    <color  rgba="0 0 0.93333 1" />
+   <material  name="blue" >
+    <color  rgba="0 0 0.5 1" />
    </material>
   </visual>
   <collision >
-   <origin  xyz="0 0 0"  rpy="0 0 0" />
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
    <geometry >
-    <mesh  filename="package://joint-T-l.SLDASM/meshes/j_virtual_Link_2.STL" />
+    <mesh  filename="package://input_connector_m.SLDASM/meshes/ic_in.STL" />
    </geometry>
   </collision>
  </link>
- <link  name="BaseLModule760_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_inputUnit1434_ci_b" >
+ <link  name="BLM232_BLU170_BLU170_BLU170_BLU170_BLU170_SMSU54_U_sl_body" >
   <inertial >
-   <origin  xyz="0 -4.2001E-18 -0.005"  rpy="0 0 0" />
-   <mass  value="0.79615" />
-   <inertia  ixx="0.00065331"  ixz="-4.3848E-37"  iyy="0.00065331"  izz="0.0012933"  iyz="0"  ixy="0" />
+   <origin  rpy="0 0 0"  xyz="-2.61E-07 7.571E-07 -0.097144" />
+   <mass  value="0.86346" />
+   <inertia  ixx="0.0033145"  iyy="0.0033145"  ixz="-3.4917E-09"  iyz="9.5259E-09"  izz="0.00060028"  ixy="3.4516E-09" />
   </inertial>
   <visual >
-   <origin  xyz="0 0 0"  rpy="0 0 0" />
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
    <geometry >
-    <mesh  filename="package://input_connector_l.SLDASM/meshes/ci_b.STL" />
+    <mesh  filename="package://straight_link-ms.SLDASM/meshes/sl_body.STL" />
    </geometry>
-   <material  name="" >
-    <color  rgba="0 0 0.58824 1" />
+   <material  name="body" >
+    <color  rgba="0.5 0.5 0.5 1" />
    </material>
   </visual>
   <collision >
-   <origin  xyz="0 0 0"  rpy="0 0 0" />
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
    <geometry >
-    <mesh  filename="package://input_connector_l.SLDASM/meshes/ci_b.STL" />
+    <mesh  filename="package://straight_link-ms.SLDASM/meshes/sl_body.STL" />
    </geometry>
   </collision>
  </link>
- <link  name="BaseLModule760_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_inputUnit1434_ci_i" >
+ <link  name="BLM232_BLU170_BLU170_BLU170_BLU170_ISU269_U_reverse_U_ic_in" >
   <inertial >
-   <origin  xyz="5.5075E-34 1.7044E-17 0.005"  rpy="0 0 0" />
-   <mass  value="0" />
-   <inertia  ixx="0.00065331"  ixz="-4.3848E-37"  iyy="0.00065331"  izz="0.0012933"  iyz="0"  ixy="0" />
+   <origin  rpy="0 0 0"  xyz="-3.5268E-34 -1.0426E-17 0.00365" />
+   <mass  value="0.23832" />
+   <inertia  ixx="8.0432E-05"  iyy="8.0432E-05"  ixz="6.1355E-38"  iyz="0"  izz="0.00015875"  ixy="0" />
   </inertial>
   <visual >
-   <origin  xyz="0 0 0"  rpy="0 0 0" />
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
    <geometry >
-    <mesh  filename="package://input_connector_l.SLDASM/meshes/ci_i.STL" />
+    <mesh  filename="package://input_connector_s.SLDASM/meshes/ic_in.STL" />
    </geometry>
-   <material  name="" >
-    <color  rgba="0 0 0.93333 1" />
+   <material  name="blue" >
+    <color  rgba="0 0 0.5 1" />
    </material>
   </visual>
   <collision >
-   <origin  xyz="0 0 0"  rpy="0 0 0" />
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
    <geometry >
-    <mesh  filename="package://input_connector_l.SLDASM/meshes/ci_i.STL" />
+    <mesh  filename="package://input_connector_s.SLDASM/meshes/ic_in.STL" />
    </geometry>
   </collision>
  </link>
- <link  name="BaseLModule760_baseUnit398_baseUnit398_baseUnit398_baseUnit398_jointTUnit340_j_body_Link" >
+ <link  name="BLM232_BLU170_BLU170_BLU170_BLU170_ISU269_U_reverse_U_ic_body" >
   <inertial >
-   <origin  xyz="1.52664311235792E-18 -0.0036666955828649 -1.95928421400108E-09"  rpy="0 0 0" />
-   <mass  value="4.5" />
-   <inertia  ixz="-3.96496819617181E-10"  ixx="0.00805845360293144"  iyy="0.0115814093224894"  izz="0.0118834658362195"  iyz="-1.64429599543498E-10"  ixy="-1.8484514920056E-18" />
+   <origin  rpy="0 0 0"  xyz="0 2.5266E-18 -0.00365" />
+   <mass  value="0.23832" />
+   <inertia  ixx="8.0432E-05"  iyy="8.0432E-05"  ixz="6.1355E-38"  iyz="0"  izz="0.00015875"  ixy="0" />
   </inertial>
   <visual >
-   <origin  xyz="0 0 0"  rpy="0 0 0" />
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
    <geometry >
-    <mesh  filename="package://joint-T-l.SLDASM/meshes/j_body_Link.STL" />
+    <mesh  filename="package://input_connector_s.SLDASM/meshes/ic_body.STL" />
    </geometry>
-   <material  name="" >
-    <color  rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+   <material  name="blue" >
+    <color  rgba="0 0 0.5 1" />
    </material>
   </visual>
   <collision >
-   <origin  xyz="0 0 0"  rpy="0 0 0" />
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
    <geometry >
-    <mesh  filename="package://joint-T-l.SLDASM/meshes/j_body_Link.STL" />
+    <mesh  filename="package://input_connector_s.SLDASM/meshes/ic_body.STL" />
    </geometry>
   </collision>
  </link>
- <link  name="BaseLModule760_baseUnit398_baseUnit398_baseUnit398_baseUnit398_jointTUnit340_j_virtual_Link_2" >
+ <link  name="BLM232_BLU170_BLU170_BLU170_JSU72_U_reverse_U_tj_in" >
   <inertial >
-   <origin  xyz="1.5266E-18 -0.0036667 -1.9593E-09"  rpy="0 0 0" />
-   <mass  value="4.5" />
-   <inertia  ixz="-3.965E-10"  ixx="0.0080585"  iyy="0.011581"  izz="0.011883"  iyz="-1.6443E-10"  ixy="-1.8485E-18" />
+   <origin  rpy="0 0 0"  xyz="1.1276E-17 6.5484E-09 0.035118" />
+   <mass  value="0.50441" />
+   <inertia  ixx="0.00035776"  iyy="0.00071638"  ixz="1.7534E-20"  iyz="2.7679E-10"  izz="0.00071191"  ixy="7.6335E-11" />
   </inertial>
   <visual >
-   <origin  xyz="0 0 0"  rpy="0 0 0" />
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
    <geometry >
-    <mesh  filename="package://joint-T-l.SLDASM/meshes/j_virtual_Link_2.STL" />
+    <mesh  filename="package://jointT-s.SLDASM/meshes/tj_in.STL" />
    </geometry>
-   <material  name="" >
-    <color  rgba="0 0 0.93333 1" />
+   <material  name="blue" >
+    <color  rgba="0 0 0.5 1" />
    </material>
   </visual>
   <collision >
-   <origin  xyz="0 0 0"  rpy="0 0 0" />
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
    <geometry >
-    <mesh  filename="package://joint-T-l.SLDASM/meshes/j_virtual_Link_2.STL" />
+    <mesh  filename="package://jointT-s.SLDASM/meshes/tj_in.STL" />
    </geometry>
   </collision>
  </link>
- <link  name="BaseLModule760_baseUnit398_baseUnit398_baseUnit398_inputUnit1435_ci_b" >
+ <link  name="BLM232_BLU170_BLU170_BLU170_JSU72_U_reverse_U_tj_body" >
   <inertial >
-   <origin  xyz="0 -4.2001E-18 -0.005"  rpy="0 0 0" />
-   <mass  value="0.79615" />
-   <inertia  ixx="0.00065331"  ixz="-4.3848E-37"  iyy="0.00065331"  izz="0.0012933"  iyz="0"  ixy="0" />
+   <origin  rpy="0 0 0"  xyz="-0.0013808 -7.3281E-08 -0.0575" />
+   <mass  value="0.50441" />
+   <inertia  ixx="0.00071191"  iyy="0.00071638"  ixz="4.9663E-20"  iyz="-7.6335E-11"  izz="0.00035776"  ixy="2.7679E-10" />
   </inertial>
   <visual >
-   <origin  xyz="0 0 0"  rpy="0 0 0" />
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
    <geometry >
-    <mesh  filename="package://input_connector_l.SLDASM/meshes/ci_b.STL" />
+    <mesh  filename="package://jointT-s.SLDASM/meshes/tj_body.STL" />
    </geometry>
-   <material  name="" >
-    <color  rgba="0 0 0.58824 1" />
+   <material  name="body" >
+    <color  rgba="0.5 0.5 0.5 1" />
    </material>
   </visual>
   <collision >
-   <origin  xyz="0 0 0"  rpy="0 0 0" />
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
    <geometry >
-    <mesh  filename="package://input_connector_l.SLDASM/meshes/ci_b.STL" />
+    <mesh  filename="package://jointT-s.SLDASM/meshes/tj_body.STL" />
    </geometry>
   </collision>
  </link>
- <link  name="BaseLModule760_baseUnit398_baseUnit398_baseUnit398_inputUnit1435_ci_i" >
+ <link  name="BLM232_BLU170_BLU170_ISU270_reverse_ISU270_U_ic_in" >
   <inertial >
-   <origin  xyz="5.5075E-34 1.7044E-17 0.005"  rpy="0 0 0" />
-   <mass  value="0" />
-   <inertia  ixx="0.00065331"  ixz="-4.3848E-37"  iyy="0.00065331"  izz="0.0012933"  iyz="0"  ixy="0" />
+   <origin  rpy="0 0 0"  xyz="-3.5268E-34 -1.0426E-17 0.00365" />
+   <mass  value="0.23832" />
+   <inertia  ixx="8.0432E-05"  iyy="8.0432E-05"  ixz="6.1355E-38"  iyz="0"  izz="0.00015875"  ixy="0" />
   </inertial>
   <visual >
-   <origin  xyz="0 0 0"  rpy="0 0 0" />
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
    <geometry >
-    <mesh  filename="package://input_connector_l.SLDASM/meshes/ci_i.STL" />
+    <mesh  filename="package://input_connector_s.SLDASM/meshes/ic_in.STL" />
    </geometry>
-   <material  name="" >
-    <color  rgba="0 0 0.93333 1" />
+   <material  name="blue" >
+    <color  rgba="0 0 0.5 1" />
    </material>
   </visual>
   <collision >
-   <origin  xyz="0 0 0"  rpy="0 0 0" />
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
    <geometry >
-    <mesh  filename="package://input_connector_l.SLDASM/meshes/ci_i.STL" />
+    <mesh  filename="package://input_connector_s.SLDASM/meshes/ic_in.STL" />
    </geometry>
   </collision>
  </link>
- <link  name="BaseLModule760_baseUnit398_baseUnit398_straightLinkUnitL258_body" >
+ <link  name="BLM232_BLU170_BLU170_ISU270_reverse_ISU270_U_ic_body" >
   <inertial >
-   <origin  xyz="-5.77295559734162E-18 -2.95909178492858E-34 -0.075"  rpy="0 0 0" />
-   <mass  value="0.577267650097125" />
-   <inertia  ixz="-3.3881317890172E-20"  ixx="0.00125916506177435"  iyy="0.00125916506177435"  izz="0.000353576435684489"  iyz="-1.46416110952065E-36"  ixy="-1.00460897098603E-36" />
+   <origin  rpy="0 0 0"  xyz="0 2.5266E-18 -0.00365" />
+   <mass  value="0.23832" />
+   <inertia  ixx="8.0432E-05"  iyy="8.0432E-05"  ixz="6.1355E-38"  iyz="0"  izz="0.00015875"  ixy="0" />
   </inertial>
   <visual >
-   <origin  xyz="0 0 0"  rpy="0 0 0" />
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
    <geometry >
-    <mesh  filename="package://straight_link.SLDASM/meshes/body.STL" />
+    <mesh  filename="package://input_connector_s.SLDASM/meshes/ic_body.STL" />
    </geometry>
-   <material  name="" >
-    <color  rgba="1 1 1 1" />
+   <material  name="blue" >
+    <color  rgba="0 0 0.5 1" />
    </material>
   </visual>
   <collision >
-   <origin  xyz="0 0 0"  rpy="0 0 0" />
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
    <geometry >
-    <mesh  filename="package://straight_link.SLDASM/meshes/body.STL" />
+    <mesh  filename="package://input_connector_s.SLDASM/meshes/ic_body.STL" />
    </geometry>
   </collision>
  </link>
- <link  name="BaseLModule760_baseUnit398_endEffectorLink2Unit383_e_i" >
+ <link  name="BLM232_BLU170_ESU128_U_e_in" >
   <inertial >
-   <origin  xyz="-2.2788E-07 0.00016942 0.048642"  rpy="0 0 0" />
-   <mass  value="0.36353" />
-   <inertia  ixx="0.0010771"  ixz="8.577E-08"  iyy="0.0010868"  izz="0.00197"  iyz="-9.2008E-07"  ixy="-0.00079673" />
+   <origin  rpy="0 0 0"  xyz="-0.00013632 -0.00018091 0.054387" />
+   <mass  value="1.1173" />
+   <inertia  ixx="0.0010053"  iyy="0.0070466"  ixz="1.2559E-06"  iyz="1.9517E-07"  izz="0.0072069"  ixy="3.4757E-05" />
   </inertial>
   <visual >
-   <origin  xyz="0 0 0"  rpy="0 0 0" />
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
    <geometry >
-    <mesh  filename="package://end_effector_2.SLDASM/meshes/e_i.STL" />
+    <mesh  filename="package://end_effector_s.SLDASM/meshes/e_in.STL" />
    </geometry>
-   <material  name="" >
-    <color  rgba="0 0 0.93333 1" />
+   <material  name="blue" >
+    <color  rgba="0 0 0.5 1" />
    </material>
   </visual>
   <collision >
-   <origin  xyz="0 0 0"  rpy="0 0 0" />
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
    <geometry >
-    <mesh  filename="package://end_effector_2.SLDASM/meshes/e_i.STL" />
+    <mesh  filename="package://end_effector_s.SLDASM/meshes/e_in.STL" />
    </geometry>
   </collision>
  </link>
- <link  name="BaseLModule760_baseUnit398_endEffectorLink2Unit383_e_b" >
+ <link  name="BLM232_BLU170_ESU128_U_e_body" >
   <inertial >
-   <origin  xyz="-2.2728E-07 0.00016942 0.048642"  rpy="0 0 0" />
-   <mass  value="0.36353" />
-   <inertia  ixx="0.00049959"  ixz="4.1101E-08"  iyy="0.00049979"  izz="0.00093275"  iyz="-1.4951E-07"  ixy="-0.00031438" />
+   <origin  rpy="0 0 0"  xyz="-0.00013632 -0.00018091 0.054387" />
+   <mass  value="1.1173" />
+   <inertia  ixx="0.00074573"  iyy="0.0021948"  ixz="4.1405E-08"  iyz="1.351E-07"  izz="0.0025137"  ixy="9.4322E-08" />
   </inertial>
   <visual >
-   <origin  xyz="0 0 0"  rpy="0 0 0" />
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
    <geometry >
-    <mesh  filename="package://end_effector_2.SLDASM/meshes/e_b.STL" />
+    <mesh  filename="package://end_effector_s.SLDASM/meshes/e_body.STL" />
    </geometry>
-   <material  name="" >
-    <color  rgba="0.75294 0.75294 0.75294 1" />
+   <material  name="body" >
+    <color  rgba="0.5 0.5 0.5 1" />
    </material>
   </visual>
   <collision >
-   <origin  xyz="0 0 0"  rpy="0 0 0" />
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
    <geometry >
-    <mesh  filename="package://end_effector_2.SLDASM/meshes/e_b.STL" />
+    <mesh  filename="package://end_effector_s.SLDASM/meshes/e_body.STL" />
    </geometry>
   </collision>
  </link>
- <joint  name="BaseLModule760_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_b_f"  type="fixed" >
-  <origin  xyz="0 0 0.05"  rpy="3.14159265358979 0 3.14159265358979" />
-  <parent  link="BaseLModule760_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_b_b" />
-  <child  link="BaseLModule760_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_b_i" />
-  <axis  xyz="0 0 -1" />
+ <joint  type="fixed"  name="BLM232_BLU170_BLU170_BLU170_BLU170_BLU170_BLU170_BLU170_BLU170_BLU170_BLU170_BLU170_U_b_large" >
+  <origin  rpy="3.14159265358979 0 0"  xyz="0 0 0.0513" />
+  <parent  link="BLM232_BLU170_BLU170_BLU170_BLU170_BLU170_BLU170_BLU170_BLU170_BLU170_BLU170_BLU170_U_b_body" />
+  <child  link="BLM232_BLU170_BLU170_BLU170_BLU170_BLU170_BLU170_BLU170_BLU170_BLU170_BLU170_BLU170_U_b_in" />
+  <axis  xyz="0 0 1" />
  </joint>
- <joint  name="BaseLModule760_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_inputUnit1431_ci_f_1"  type="fixed" >
-  <origin  xyz="0 0 0"  rpy="0 0 0" />
-  <parent  link="BaseLModule760_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_b_i" />
-  <child  link="BaseLModule760_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_inputUnit1431_ci_b" />
+ <joint  type="fixed"  name="BLM232_BLU170_BLU170_BLU170_BLU170_BLU170_BLU170_BLU170_BLU170_BLU170_BLU170_ILU593_U_ci_large_1" >
+  <origin  rpy="0 0 0"  xyz="0 0 0" />
+  <parent  link="BLM232_BLU170_BLU170_BLU170_BLU170_BLU170_BLU170_BLU170_BLU170_BLU170_BLU170_BLU170_U_b_in" />
+  <child  link="BLM232_BLU170_BLU170_BLU170_BLU170_BLU170_BLU170_BLU170_BLU170_BLU170_BLU170_ILU593_U_ci_body" />
   <axis  xyz="0 0 0" />
  </joint>
- <joint  name="BaseLModule760_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_inputUnit1431_ci_f_2"  type="fixed" >
-  <origin  xyz="0 0 -0.01"  rpy="0 0 0" />
-  <parent  link="BaseLModule760_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_inputUnit1431_ci_b" />
-  <child  link="BaseLModule760_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_inputUnit1431_ci_i" />
+ <joint  type="fixed"  name="BLM232_BLU170_BLU170_BLU170_BLU170_BLU170_BLU170_BLU170_BLU170_BLU170_BLU170_ILU593_U_ci_large_2" >
+  <origin  rpy="0 0 0"  xyz="0 0 -0.0114" />
+  <parent  link="BLM232_BLU170_BLU170_BLU170_BLU170_BLU170_BLU170_BLU170_BLU170_BLU170_BLU170_ILU593_U_ci_body" />
+  <child  link="BLM232_BLU170_BLU170_BLU170_BLU170_BLU170_BLU170_BLU170_BLU170_BLU170_BLU170_ILU593_U_ci_in" />
   <axis  xyz="0 0 0" />
  </joint>
- <joint  name="BaseLModule760_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_jointTUnit337_j_revolute_joint"  type="revolute" >
-  <origin  xyz="0.0 0.0 0.0"  rpy="0.0 0.0 1.5707963267948966" />
-  <parent  link="BaseLModule760_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_inputUnit1431_ci_i" />
-  <child  link="BaseLModule760_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_jointTUnit337_j_body_Link" />
-  <axis  xyz="0 0 -1" />
-  <limit  effort="60.5"  velocity="0.33"  upper="3.14"  lower="-3.14" />
- </joint>
- <joint  name="BaseLModule760_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_jointTUnit337_j_fixed_joint"  type="fixed" >
-  <origin  xyz="-0.06 0 -0.0735"  rpy="0 1.5707963267949 0" />
-  <parent  link="BaseLModule760_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_jointTUnit337_j_body_Link" />
-  <child  link="BaseLModule760_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_jointTUnit337_j_virtual_Link_2" />
+ <joint  type="fixed"  name="BLM232_BLU170_BLU170_BLU170_BLU170_BLU170_BLU170_BLU170_BLU170_BLU170_SLU77_U_sl_large_1" >
+  <origin  rpy="0 0 0"  xyz="0 0 0" />
+  <parent  link="BLM232_BLU170_BLU170_BLU170_BLU170_BLU170_BLU170_BLU170_BLU170_BLU170_BLU170_ILU593_U_ci_in" />
+  <child  link="BLM232_BLU170_BLU170_BLU170_BLU170_BLU170_BLU170_BLU170_BLU170_BLU170_SLU77_U_sl_body" />
   <axis  xyz="0 0 0" />
  </joint>
- <joint  name="BaseLModule760_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_inputUnit1432_ci_f_1"  type="fixed" >
-  <origin  xyz="0 0 0"  rpy="0 0 0" />
-  <parent  link="BaseLModule760_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_jointTUnit337_j_virtual_Link_2" />
-  <child  link="BaseLModule760_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_inputUnit1432_ci_b" />
+ <joint  type="fixed"  name="BLM232_BLU170_BLU170_BLU170_BLU170_BLU170_BLU170_BLU170_BLU170_BLU170_SLU77_U_sl_large_2" >
+  <origin  rpy="3.14159265358979 0 0"  xyz="0 0 -0.15" />
+  <parent  link="BLM232_BLU170_BLU170_BLU170_BLU170_BLU170_BLU170_BLU170_BLU170_BLU170_SLU77_U_sl_body" />
+  <child  link="BLM232_BLU170_BLU170_BLU170_BLU170_BLU170_BLU170_BLU170_BLU170_ILU594_U_reverse_U_ci_in" />
   <axis  xyz="0 0 0" />
  </joint>
- <joint  name="BaseLModule760_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_inputUnit1432_ci_f_2"  type="fixed" >
-  <origin  xyz="0 0 -0.01"  rpy="0 0 0" />
-  <parent  link="BaseLModule760_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_inputUnit1432_ci_b" />
-  <child  link="BaseLModule760_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_inputUnit1432_ci_i" />
+ <joint  type="fixed"  name="BLM232_BLU170_BLU170_BLU170_BLU170_BLU170_BLU170_BLU170_BLU170_ILU594_U_reverse_U_ci_large_2" >
+  <origin  rpy="0.0 0.0 1.5707963267948966"  xyz="0.0 0.0 0.0114" />
+  <parent  link="BLM232_BLU170_BLU170_BLU170_BLU170_BLU170_BLU170_BLU170_BLU170_ILU594_U_reverse_U_ci_in" />
+  <child  link="BLM232_BLU170_BLU170_BLU170_BLU170_BLU170_BLU170_BLU170_BLU170_ILU594_U_reverse_U_ci_body" />
   <axis  xyz="0 0 0" />
  </joint>
- <joint  name="BaseLModule760_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_jointTUnit338_j_revolute_joint"  type="revolute" >
-  <origin  xyz="0.0 0.0 0.0"  rpy="0.0 0.0 1.5707963267948966" />
-  <parent  link="BaseLModule760_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_inputUnit1432_ci_i" />
-  <child  link="BaseLModule760_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_jointTUnit338_j_body_Link" />
-  <axis  xyz="0 0 -1" />
-  <limit  effort="60.5"  velocity="0.33"  upper="3.14"  lower="-3.14" />
- </joint>
- <joint  name="BaseLModule760_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_jointTUnit338_j_fixed_joint"  type="fixed" >
-  <origin  xyz="-0.06 0 -0.0735"  rpy="0 1.5707963267949 0" />
-  <parent  link="BaseLModule760_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_jointTUnit338_j_body_Link" />
-  <child  link="BaseLModule760_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_jointTUnit338_j_virtual_Link_2" />
+ <joint  type="fixed"  name="BLM232_BLU170_BLU170_BLU170_BLU170_BLU170_BLU170_BLU170_BLU170_ILU594_U_reverse_U_ci_large_1" >
+  <origin  rpy="0.0 0.0 0.0"  xyz="-0.0 -0.0 -0.0" />
+  <parent  link="BLM232_BLU170_BLU170_BLU170_BLU170_BLU170_BLU170_BLU170_BLU170_ILU594_U_reverse_U_ci_body" />
+  <child  link="BLM232_BLU170_BLU170_BLU170_BLU170_BLU170_BLU170_BLU170_CLMU98_U_reverse_U_cl_in_2" />
   <axis  xyz="0 0 0" />
  </joint>
- <joint  name="BaseLModule760_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_inputUnit1433_ci_f_1"  type="fixed" >
-  <origin  xyz="0 0 0"  rpy="0 0 0" />
-  <parent  link="BaseLModule760_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_jointTUnit338_j_virtual_Link_2" />
-  <child  link="BaseLModule760_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_inputUnit1433_ci_b" />
+ <joint  type="fixed"  name="BLM232_BLU170_BLU170_BLU170_BLU170_BLU170_BLU170_BLU170_CLMU98_U_reverse_U_cl_large" >
+  <origin  rpy="0.0 -1.5707963267949 0.0"  xyz="0.05699999999999974 -0.0 0.0735000000000002" />
+  <parent  link="BLM232_BLU170_BLU170_BLU170_BLU170_BLU170_BLU170_BLU170_CLMU98_U_reverse_U_cl_in_2" />
+  <child  link="BLM232_BLU170_BLU170_BLU170_BLU170_BLU170_BLU170_BLU170_CLMU98_U_reverse_U_cl_body" />
   <axis  xyz="0 0 0" />
  </joint>
- <joint  name="BaseLModule760_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_inputUnit1433_ci_f_2"  type="fixed" >
-  <origin  xyz="0 0 -0.01"  rpy="0 0 0" />
-  <parent  link="BaseLModule760_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_inputUnit1433_ci_b" />
-  <child  link="BaseLModule760_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_inputUnit1433_ci_i" />
+ <joint  type="fixed"  name="BLM232_BLU170_BLU170_BLU170_BLU170_BLU170_BLU170_BLU170_CLMU98_U_reverse_U_cl_medium" >
+  <origin  rpy="0.0 0.0 0.0"  xyz="-0.0 -0.0 -0.0" />
+  <parent  link="BLM232_BLU170_BLU170_BLU170_BLU170_BLU170_BLU170_BLU170_CLMU98_U_reverse_U_cl_body" />
+  <child  link="BLM232_BLU170_BLU170_BLU170_BLU170_BLU170_BLU170_BLU170_CLMU98_U_reverse_U_cl_in_1" />
   <axis  xyz="0 0 0" />
  </joint>
- <joint  name="BaseLModule760_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_jointTUnit339_j_revolute_joint"  type="revolute" >
-  <origin  xyz="0.0 0.0 0.0"  rpy="0.0 0.0 1.5707963267948966" />
-  <parent  link="BaseLModule760_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_inputUnit1433_ci_i" />
-  <child  link="BaseLModule760_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_jointTUnit339_j_body_Link" />
-  <axis  xyz="0 0 -1" />
-  <limit  effort="60.5"  velocity="0.33"  upper="3.14"  lower="-3.14" />
- </joint>
- <joint  name="BaseLModule760_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_jointTUnit339_j_fixed_joint"  type="fixed" >
-  <origin  xyz="-0.06 0 -0.0735"  rpy="0 1.5707963267949 0" />
-  <parent  link="BaseLModule760_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_jointTUnit339_j_body_Link" />
-  <child  link="BaseLModule760_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_jointTUnit339_j_virtual_Link_2" />
+ <joint  type="fixed"  name="BLM232_BLU170_BLU170_BLU170_BLU170_BLU170_BLU170_IMU570_reverse_IMU570_U_reverse_U_ic_medium_1" >
+  <origin  rpy="0.0 0.0 0.0"  xyz="-0.0 -0.0 -0.0" />
+  <parent  link="BLM232_BLU170_BLU170_BLU170_BLU170_BLU170_BLU170_BLU170_CLMU98_U_reverse_U_cl_in_1" />
+  <child  link="BLM232_BLU170_BLU170_BLU170_BLU170_BLU170_BLU170_IMU570_reverse_IMU570_U_reverse_U_ic_body" />
   <axis  xyz="0 0 0" />
  </joint>
- <joint  name="BaseLModule760_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_inputUnit1434_ci_f_1"  type="fixed" >
-  <origin  xyz="0 0 0"  rpy="0 0 0" />
-  <parent  link="BaseLModule760_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_jointTUnit339_j_virtual_Link_2" />
-  <child  link="BaseLModule760_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_inputUnit1434_ci_b" />
+ <joint  type="fixed"  name="BLM232_BLU170_BLU170_BLU170_BLU170_BLU170_BLU170_IMU570_reverse_IMU570_U_reverse_U_ic_medium_2" >
+  <origin  rpy="0.0 0.0 0.0"  xyz="-0.0 -0.0 -0.0094" />
+  <parent  link="BLM232_BLU170_BLU170_BLU170_BLU170_BLU170_BLU170_IMU570_reverse_IMU570_U_reverse_U_ic_body" />
+  <child  link="BLM232_BLU170_BLU170_BLU170_BLU170_BLU170_BLU170_IMU570_reverse_IMU570_U_reverse_U_ic_in" />
   <axis  xyz="0 0 0" />
  </joint>
- <joint  name="BaseLModule760_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_inputUnit1434_ci_f_2"  type="fixed" >
-  <origin  xyz="0 0 -0.01"  rpy="0 0 0" />
-  <parent  link="BaseLModule760_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_inputUnit1434_ci_b" />
-  <child  link="BaseLModule760_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_inputUnit1434_ci_i" />
+ <joint  type="fixed"  name="BLM232_BLU170_BLU170_BLU170_BLU170_BLU170_SMSU54_U_sl_medium" >
+  <origin  rpy="0 0 0"  xyz="0 0 0" />
+  <parent  link="BLM232_BLU170_BLU170_BLU170_BLU170_BLU170_BLU170_IMU570_reverse_IMU570_U_reverse_U_ic_in" />
+  <child  link="BLM232_BLU170_BLU170_BLU170_BLU170_BLU170_SMSU54_U_sl_body" />
   <axis  xyz="0 0 0" />
  </joint>
- <joint  name="BaseLModule760_baseUnit398_baseUnit398_baseUnit398_baseUnit398_jointTUnit340_j_revolute_joint"  type="revolute" >
-  <origin  xyz="0.0 0.0 0.0"  rpy="0.0 0.0 1.5707963267948966" />
-  <parent  link="BaseLModule760_baseUnit398_baseUnit398_baseUnit398_baseUnit398_baseUnit398_inputUnit1434_ci_i" />
-  <child  link="BaseLModule760_baseUnit398_baseUnit398_baseUnit398_baseUnit398_jointTUnit340_j_body_Link" />
-  <axis  xyz="0 0 -1" />
-  <limit  effort="60.5"  velocity="0.33"  upper="3.14"  lower="-3.14" />
- </joint>
- <joint  name="BaseLModule760_baseUnit398_baseUnit398_baseUnit398_baseUnit398_jointTUnit340_j_fixed_joint"  type="fixed" >
-  <origin  xyz="-0.06 0 -0.0735"  rpy="0 1.5707963267949 0" />
-  <parent  link="BaseLModule760_baseUnit398_baseUnit398_baseUnit398_baseUnit398_jointTUnit340_j_body_Link" />
-  <child  link="BaseLModule760_baseUnit398_baseUnit398_baseUnit398_baseUnit398_jointTUnit340_j_virtual_Link_2" />
+ <joint  type="fixed"  name="BLM232_BLU170_BLU170_BLU170_BLU170_BLU170_SMSU54_U_sl_small" >
+  <origin  rpy="3.1416 0 0"  xyz="0 0 -0.2" />
+  <parent  link="BLM232_BLU170_BLU170_BLU170_BLU170_BLU170_SMSU54_U_sl_body" />
+  <child  link="BLM232_BLU170_BLU170_BLU170_BLU170_ISU269_U_reverse_U_ic_in" />
   <axis  xyz="0 0 0" />
  </joint>
- <joint  name="BaseLModule760_baseUnit398_baseUnit398_baseUnit398_inputUnit1435_ci_f_1"  type="fixed" >
-  <origin  xyz="0 0 0"  rpy="0 0 0" />
-  <parent  link="BaseLModule760_baseUnit398_baseUnit398_baseUnit398_baseUnit398_jointTUnit340_j_virtual_Link_2" />
-  <child  link="BaseLModule760_baseUnit398_baseUnit398_baseUnit398_inputUnit1435_ci_b" />
+ <joint  type="fixed"  name="BLM232_BLU170_BLU170_BLU170_BLU170_ISU269_U_reverse_U_ic_small_2" >
+  <origin  rpy="0.0 0.0 1.5707963267948966"  xyz="0.0 0.0 0.0073" />
+  <parent  link="BLM232_BLU170_BLU170_BLU170_BLU170_ISU269_U_reverse_U_ic_in" />
+  <child  link="BLM232_BLU170_BLU170_BLU170_BLU170_ISU269_U_reverse_U_ic_body" />
   <axis  xyz="0 0 0" />
  </joint>
- <joint  name="BaseLModule760_baseUnit398_baseUnit398_baseUnit398_inputUnit1435_ci_f_2"  type="fixed" >
-  <origin  xyz="0 0 -0.01"  rpy="0 0 0" />
-  <parent  link="BaseLModule760_baseUnit398_baseUnit398_baseUnit398_inputUnit1435_ci_b" />
-  <child  link="BaseLModule760_baseUnit398_baseUnit398_baseUnit398_inputUnit1435_ci_i" />
+ <joint  type="fixed"  name="BLM232_BLU170_BLU170_BLU170_BLU170_ISU269_U_reverse_U_ic_small_1" >
+  <origin  rpy="0.0 0.0 0.0"  xyz="-0.0 -0.0 -0.0" />
+  <parent  link="BLM232_BLU170_BLU170_BLU170_BLU170_ISU269_U_reverse_U_ic_body" />
+  <child  link="BLM232_BLU170_BLU170_BLU170_JSU72_U_reverse_U_tj_in" />
   <axis  xyz="0 0 0" />
  </joint>
- <joint  name="BaseLModule760_baseUnit398_baseUnit398_straightLinkUnitL258_fixed_1"  type="fixed" >
-  <origin  xyz="0 0 0"  rpy="0 0 0" />
-  <parent  link="BaseLModule760_baseUnit398_baseUnit398_baseUnit398_inputUnit1435_ci_i" />
-  <child  link="BaseLModule760_baseUnit398_baseUnit398_straightLinkUnitL258_body" />
+ <joint  type="fixed"  name="BLM232_BLU170_BLU170_BLU170_JSU72_U_reverse_U_tj_small_2" >
+  <origin  rpy="0.0 -1.5707963267949 0.0"  xyz="-0.057500000000000134 -0.0 0.036499999999999796" />
+  <parent  link="BLM232_BLU170_BLU170_BLU170_JSU72_U_reverse_U_tj_in" />
+  <child  link="BLM232_BLU170_BLU170_BLU170_JSU72_U_reverse_U_tj_body" />
   <axis  xyz="0 0 0" />
  </joint>
- <joint  name="BaseLModule760_baseUnit398_baseUnit398_straightLinkUnitL258_fixed_2"  type="fixed" >
-  <origin  xyz="0 0 -0.15"  rpy="3.14159265358979 0 0" />
-  <parent  link="BaseLModule760_baseUnit398_baseUnit398_straightLinkUnitL258_body" />
-  <child  link="BaseLModule760_baseUnit398_endEffectorLink2Unit383_e_i" />
+ <joint  type="revolute"  name="BLM232_BLU170_BLU170_BLU170_JSU72_U_reverse_U_tj_small_1" >
+  <origin  rpy="0.0 0.0 0.0"  xyz="-0.0 -0.0 -0.0" />
+  <parent  link="BLM232_BLU170_BLU170_BLU170_JSU72_U_reverse_U_tj_body" />
+  <child  link="BLM232_BLU170_BLU170_ISU270_reverse_ISU270_U_ic_in" />
+  <axis  xyz="0 0 1" />
+  <limit  effort="4.5"  velocity="0.4"  upper="3.1416"  lower="-3.1416" />
+ </joint>
+ <joint  type="fixed"  name="BLM232_BLU170_BLU170_ISU270_reverse_ISU270_U_ic_small_2" >
+  <origin  rpy="0.0 0.0 0.0"  xyz="-0.0 -0.0 0.0073" />
+  <parent  link="BLM232_BLU170_BLU170_ISU270_reverse_ISU270_U_ic_in" />
+  <child  link="BLM232_BLU170_BLU170_ISU270_reverse_ISU270_U_ic_body" />
   <axis  xyz="0 0 0" />
  </joint>
- <joint  name="BaseLModule760_baseUnit398_endEffectorLink2Unit383_e_f_j"  type="fixed" >
-  <origin  xyz="0 0 0"  rpy="0 0 0" />
-  <parent  link="BaseLModule760_baseUnit398_endEffectorLink2Unit383_e_i" />
-  <child  link="BaseLModule760_baseUnit398_endEffectorLink2Unit383_e_b" />
+ <joint  type="fixed"  name="BLM232_BLU170_BLU170_ISU270_reverse_ISU270_U_ic_small_1" >
+  <origin  rpy="0.0 0.0 0.0"  xyz="-0.0 -0.0 -0.0" />
+  <parent  link="BLM232_BLU170_BLU170_ISU270_reverse_ISU270_U_ic_body" />
+  <child  link="BLM232_BLU170_ESU128_U_e_in" />
+  <axis  xyz="0 0 0" />
+ </joint>
+ <joint  type="fixed"  name="BLM232_BLU170_ESU128_U_e_small" >
+  <origin  rpy="0 0 0"  xyz="0 0 0" />
+  <parent  link="BLM232_BLU170_ESU128_U_e_in" />
+  <child  link="BLM232_BLU170_ESU128_U_e_body" />
   <axis  xyz="0 0 0" />
  </joint>
 </robot>
