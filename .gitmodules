@@ -1,4 +1,0 @@
-[submodule "Vender/spinningup"]
-	path = Vender/spinningup
-	url = CJY:Masarity/spinningup.git
-	branch = masarity-dev
