@@ -11,6 +11,16 @@ from urdfGenerator.Unit import Unit
 
 from functools import reduce
 
+import os
+# 获取执行文件所在目录的绝对路径
+CURRENT_DIR = os.path.dirname(os.path.abspath(__file__))  
+# 获取上级目录的绝对路径
+PARENT_DIR = os.path.abspath(os.path.join(CURRENT_DIR, os.pardir))  
+# 获取上上级目录的绝对路径
+GRANDPA_DIR = os.path.abspath(os.path.join(PARENT_DIR, os.pardir))
+
+RES_PATH = GRANDPA_DIR + '/RobotConfigDesignEnv/robotConfigDesign/res/'
+print(RES_PATH)
 
 def list_to_dict(lst):
     if len(lst) == 0:
@@ -146,103 +156,103 @@ def parseURDF(filepath):
 # basic units
 
 baseLUnitCnt = 0
-baseLUnitFilepath = "/home/masa/learning/rl/undergraduate/cjy/robot_design_sythesis/test/urdf/base-l.SLDASM/urdf/base-l.SLDASM.urdf"
+baseLUnitFilepath = RES_PATH + "base-l.SLDASM/urdf/base-l.SLDASM.urdf"
 baseLLinkList, baseLLinkTypeList, baseLJointList, baseLInterfaceSizeList = parseURDF(baseLUnitFilepath)
 BaseLUnit = Unit("BaseL_U", baseLLinkList, baseLLinkTypeList, baseLJointList, baseLInterfaceSizeList)
 BaseLUnit.mass = 0
 
 baseMUnitCnt = 0
-baseMUnitFilepath = "/home/masa/learning/rl/undergraduate/cjy/robot_design_sythesis/test/urdf/base-m.SLDASM/urdf/base-m.SLDASM.urdf"
+baseMUnitFilepath = RES_PATH + "base-m.SLDASM/urdf/base-m.SLDASM.urdf"
 baseMLinkList, baseMLinkTypeList, baseMJointList, baseMInterfaceSizeList = parseURDF(baseMUnitFilepath)
 BaseMUnit = Unit("BaseM_U", baseMLinkList, baseMLinkTypeList, baseMJointList, baseMInterfaceSizeList)
 BaseMUnit.mass = 0
 
 inputLUnitCnt = 0
-inputLUnitFilepath = "/home/masa/learning/rl/undergraduate/cjy/robot_design_sythesis/test/urdf/input_connector_l.SLDASM/urdf/input_connector_l.SLDASM.urdf"
+inputLUnitFilepath = RES_PATH + "input_connector_l.SLDASM/urdf/input_connector_l.SLDASM.urdf"
 inputLLinkList, inputLLinkTypeList, inputLJointList, inputLInterfaceSizeList = parseURDF(inputLUnitFilepath)
 InputLUnit = Unit("InputL_U", inputLLinkList, inputLLinkTypeList, inputLJointList, inputLInterfaceSizeList)
 InputLUnit.mass = 0
 
 inputMUnitCnt = 0
-inputMUnitFilepath = "/home/masa/learning/rl/undergraduate/cjy/robot_design_sythesis/test/urdf/input_connector_m.SLDASM/urdf/input_connector_m.SLDASM.urdf"
+inputMUnitFilepath = RES_PATH + "input_connector_m.SLDASM/urdf/input_connector_m.SLDASM.urdf"
 inputMLinkList, inputMLinkTypeList, inputMJointList, inputMInterfaceSizeList = parseURDF(inputMUnitFilepath)
 InputMUnit = Unit("InputM_U", inputMLinkList, inputMLinkTypeList, inputMJointList, inputMInterfaceSizeList)
 InputMUnit.mass = 0
 
 inputSUnitCnt = 0
-inputSUnitFilepath = "/home/masa/learning/rl/undergraduate/cjy/robot_design_sythesis/test/urdf/input_connector_s.SLDASM/urdf/input_connector_s.SLDASM.urdf"
+inputSUnitFilepath = RES_PATH + "input_connector_s.SLDASM/urdf/input_connector_s.SLDASM.urdf"
 inputSLinkList, inputSLinkTypeList, inputSJointList, inputSInterfaceSizeList = parseURDF(inputSUnitFilepath)
 InputSUnit = Unit("InputS_U", inputSLinkList, inputSLinkTypeList, inputSJointList, inputSInterfaceSizeList)
 InputSUnit.mass = 0
 
 jointTLUnitCnt = 0
-jointTLUnitFilepath = "/home/masa/learning/rl/undergraduate/cjy/robot_design_sythesis/test/urdf/jointT-l.SLDASM/urdf/jointT-l.SLDASM.urdf"
+jointTLUnitFilepath = RES_PATH + "jointT-l.SLDASM/urdf/jointT-l.SLDASM.urdf"
 jointTLLinkList, jointTLLinkTypeList, jointTLJointList, jointTLInterfaceSizeList = parseURDF(jointTLUnitFilepath)
 JointTLUnit = Unit("JointTL_U", jointTLLinkList, jointTLLinkTypeList, jointTLJointList, jointTLInterfaceSizeList)
 
 jointMUnitCnt = 0
-jointMUnitFilepath = "/home/masa/learning/rl/undergraduate/cjy/robot_design_sythesis/test/urdf/jointT-m.SLDASM/urdf/jointT-m.SLDASM.urdf"
+jointMUnitFilepath = RES_PATH + "jointT-m.SLDASM/urdf/jointT-m.SLDASM.urdf"
 jointMLinkList, jointMLinkTypeList, jointMJointList, jointMInterfaceSizeList = parseURDF(jointMUnitFilepath)
 JointMUnit = Unit("JointM_U", jointMLinkList, jointMLinkTypeList, jointMJointList, jointMInterfaceSizeList)
 
 jointSUnitCnt = 0
-jointSUnitFilepath = "/home/masa/learning/rl/undergraduate/cjy/robot_design_sythesis/test/urdf/jointT-s.SLDASM/urdf/jointT-s.SLDASM.urdf"
+jointSUnitFilepath = RES_PATH + "jointT-s.SLDASM/urdf/jointT-s.SLDASM.urdf"
 jointSLinkList, jointSLinkTypeList, jointSJointList, jointSInterfaceSizeList = parseURDF(jointSUnitFilepath)
 JointSUnit = Unit("JointS_U", jointSLinkList, jointSLinkTypeList, jointSJointList, jointSInterfaceSizeList)
 
 cornerLLUnitCnt = 0
-cornerLLUnitFilepath = "/home/masa/learning/rl/undergraduate/cjy/robot_design_sythesis/test/urdf/corner_link-l.SLDASM/urdf/corner_link-l.SLDASM.urdf"
+cornerLLUnitFilepath = RES_PATH + "corner_link-l.SLDASM/urdf/corner_link-l.SLDASM.urdf"
 cornerLLLinkList, cornerLLLinkTypeList, cornerLLJointList, cornerLLInterfaceSizeList = parseURDF(cornerLLUnitFilepath)
 CornerLLUnit = Unit("CornerLL_U", cornerLLLinkList, cornerLLLinkTypeList, cornerLLJointList, cornerLLInterfaceSizeList)
 
 cornerLMUnitCnt = 0
-cornerLMUnitFilepath = "/home/masa/learning/rl/undergraduate/cjy/robot_design_sythesis/test/urdf/corner_link-lm.SLDASM/urdf/corner_link-lm.SLDASM.urdf"
+cornerLMUnitFilepath = RES_PATH + "corner_link-lm.SLDASM/urdf/corner_link-lm.SLDASM.urdf"
 cornerLMLinkList, cornerLMLinkTypeList, cornerLMJointList, cornerLMInterfaceSizeList = parseURDF(cornerLMUnitFilepath)
 CornerLMUnit = Unit("CornerLM_U", cornerLMLinkList, cornerLMLinkTypeList, cornerLMJointList, cornerLMInterfaceSizeList)
 
 cornerMMUnitCnt = 0
-cornerMMUnitFilepath = "/home/masa/learning/rl/undergraduate/cjy/robot_design_sythesis/test/urdf/corner_link-mm.SLDASM/urdf/corner_link-mm.SLDASM.urdf"
+cornerMMUnitFilepath = RES_PATH + "corner_link-mm.SLDASM/urdf/corner_link-mm.SLDASM.urdf"
 cornerMMLinkList, cornerMMLinkTypeList, cornerMMJointList, cornerMMInterfaceSizeList = parseURDF(cornerMMUnitFilepath)
 CornerMMUnit = Unit("CornerMM_U", cornerMMLinkList, cornerMMLinkTypeList, cornerMMJointList, cornerMMInterfaceSizeList)
 
 cornerMSUnitCnt = 0
-cornerMSUnitFilepath = "/home/masa/learning/rl/undergraduate/cjy/robot_design_sythesis/test/urdf/corner_link-ms.SLDASM/urdf/corner_link-ms.SLDASM.urdf"
+cornerMSUnitFilepath = RES_PATH + "corner_link-ms.SLDASM/urdf/corner_link-ms.SLDASM.urdf"
 cornerMSLinkList, cornerMSLinkTypeList, cornerMSJointList, cornerMSInterfaceSizeList = parseURDF(cornerMSUnitFilepath)
 CornerMSUnit = Unit("CornerMS_U", cornerMSLinkList, cornerMSLinkTypeList, cornerMSJointList, cornerMSInterfaceSizeList)
 
 straightLUnitCnt = 0
-straightLUnitFilepath = "/home/masa/learning/rl/undergraduate/cjy/robot_design_sythesis/test/urdf/straight_link-l.SLDASM/urdf/straight_link-l.SLDASM.urdf"
+straightLUnitFilepath = RES_PATH + "straight_link-l.SLDASM/urdf/straight_link-l.SLDASM.urdf"
 straightLLinkList, straightLLinkTypeList, straightLJointList, straightLInterfaceSizeList = parseURDF(straightLUnitFilepath)
 StraightLUnit = Unit("StraightL_U", straightLLinkList, straightLLinkTypeList, straightLJointList, straightLInterfaceSizeList)
 
 straightLMUnitCnt = 0
-straightLMUnitFilepath = "/home/masa/learning/rl/undergraduate/cjy/robot_design_sythesis/test/urdf/straight_link-lm.SLDASM/urdf/straight_link-lm.SLDASM.urdf"
+straightLMUnitFilepath = RES_PATH + "straight_link-lm.SLDASM/urdf/straight_link-lm.SLDASM.urdf"
 straightLMLinkList, straightLMLinkTypeList, straightLMJointList, straightLMInterfaceSizeList = parseURDF(straightLMUnitFilepath)
 StraightLMUnit = Unit("StraightLM_U", straightLMLinkList, straightLMLinkTypeList, straightLMJointList, straightLMInterfaceSizeList)
 
 straightMUnitCnt = 0
-straightMUnitFilepath = "/home/masa/learning/rl/undergraduate/cjy/robot_design_sythesis/test/urdf/straight_link-m.SLDASM/urdf/straight_link-m.SLDASM.urdf"
+straightMUnitFilepath = RES_PATH + "straight_link-m.SLDASM/urdf/straight_link-m.SLDASM.urdf"
 straightMLinkList, straightMLinkTypeList, straightMJointList, straightMInterfaceSizeList = parseURDF(straightMUnitFilepath)
 StraightMUnit = Unit("StraightM_U", straightMLinkList, straightMLinkTypeList, straightMJointList, straightMInterfaceSizeList)
 
 straightMSUnitCnt = 0
-straightMSUnitFilepath = "/home/masa/learning/rl/undergraduate/cjy/robot_design_sythesis/test/urdf/straight_link-ms.SLDASM/urdf/straight_link-ms.SLDASM.urdf"
+straightMSUnitFilepath = RES_PATH + "straight_link-ms.SLDASM/urdf/straight_link-ms.SLDASM.urdf"
 straightMSLinkList, straightMSLinkTypeList, straightMSJointList, straightMSInterfaceSizeList = parseURDF(straightMSUnitFilepath)
 StraightMSUnit = Unit("StraightMS_U", straightMSLinkList, straightMSLinkTypeList, straightMSJointList, straightMSInterfaceSizeList)
 
 
 endeffectorLUnitCnt = 0
-endeffectorLUnitFilepath = "/home/masa/learning/rl/undergraduate/cjy/robot_design_sythesis/src/RobotConfigDesignEnv/robotConfigDesign/res/end_effector_v_l.SLDASM/urdf/end_effector_v_l.SLDASM.urdf"
+endeffectorLUnitFilepath = RES_PATH + "end_effector_v_l.SLDASM/urdf/end_effector_v_l.SLDASM.urdf"
 endeffectorLLinkList, endeffectorLLinkTypeList, endeffectorLJointList, endeffectorLInterfaceSizeList = parseURDF(endeffectorLUnitFilepath)
 EndEffectorLUnit = Unit("EndeffectorL_U", endeffectorLLinkList, endeffectorLLinkTypeList, endeffectorLJointList, endeffectorLInterfaceSizeList)
 
 endeffectorMUnitCnt = 0
-endeffectorMUnitFilepath = "/home/masa/learning/rl/undergraduate/cjy/robot_design_sythesis/src/RobotConfigDesignEnv/robotConfigDesign/res/end_effector_v_m.SLDASM/urdf/end_effector_v_m.SLDASM.urdf"
+endeffectorMUnitFilepath = RES_PATH + "end_effector_v_m.SLDASM/urdf/end_effector_v_m.SLDASM.urdf"
 endeffectorMLinkList, endeffectorMLinkTypeList, endeffectorMJointList, endeffectorMInterfaceSizeList = parseURDF(endeffectorMUnitFilepath)
 EndEffectorMUnit = Unit("EndeffectorM_U", endeffectorMLinkList, endeffectorMLinkTypeList, endeffectorMJointList, endeffectorMInterfaceSizeList)
 
 endeffectorSUnitCnt = 0
-endeffectorSUnitFilepath = "/home/masa/learning/rl/undergraduate/cjy/robot_design_sythesis/src/RobotConfigDesignEnv/robotConfigDesign/res/end_effector_v_s.SLDASM/urdf/end_effector_v_s.SLDASM.urdf"
+endeffectorSUnitFilepath = RES_PATH + "end_effector_v_s.SLDASM/urdf/end_effector_v_s.SLDASM.urdf"
 endeffectorSLinkList, endeffectorSLinkTypeList, endeffectorSJointList, endeffectorSInterfaceSizeList = parseURDF(endeffectorSUnitFilepath)
 EndEffectorSUnit = Unit("EndeffectorS_U", endeffectorSLinkList, endeffectorSLinkTypeList, endeffectorSJointList, endeffectorSInterfaceSizeList)
 
@@ -337,21 +347,24 @@ def generateUnit(unitType, order=UnitOrder.NORMAL):
 
 # 测试
 if __name__ == "__main__":
-
+    pass
+    # bl = generateUnit(UnitType.BASEL)
+    # print(bl)
+    
     # moduletype1 = list([UnitType.JOINTL, UnitType.CONNECTORL])
-    moduletype1 = list([UnitType.CONNECTORL, UnitType.CORNERLINKL, UnitType.CONNECTORL, ])
-    # moduletype1 = list([UnitType.BASEL, UnitType.STRAIGHTLINKL, UnitType.CORNERLINKL, UnitType.JOINTL, UnitType.ENDEFFECTORL])
-    unitList = list()
+    # moduletype1 = list([UnitType.CONNECTORLL, UnitType.CORNERLINKL, UnitType.CONNECTORL, ])
+    # # moduletype1 = list([UnitType.BASEL, UnitType.STRAIGHTLINKL, UnitType.CORNERLINKL, UnitType.JOINTL, UnitType.ENDEFFECTORL])
+    # unitList = list()
 
-    for unitType in moduletype1:
-        unit = generateUnit(unitType)
-        # unit = generateUnit(unitType, UnitOrder.REVERSE)
-        unitList.append(unit)
+    # for unitType in moduletype1:
+    #     unit = generateUnit(unitType)
+    #     # unit = generateUnit(unitType, UnitOrder.REVERSE)
+    #     unitList.append(unit)
 
-    # unit7 = reduce(lambda x, y: x + y, unitList)
-    unit7 = reduce(lambda x, y: x + y, list(reversed(unitList)))
+    # # unit7 = reduce(lambda x, y: x + y, unitList)
+    # unit7 = reduce(lambda x, y: x + y, list(reversed(unitList)))
 
-    print(unit7.linkTypeDeque)
+    # print(unit7.linkTypeDeque)
     # unit7 = InputUnit + CornerLinkLUnit + InputUnit
     # unit7 = StraightLinkUnitL + (InputUnit.reverse() + JointTUnit.reverse())
 
