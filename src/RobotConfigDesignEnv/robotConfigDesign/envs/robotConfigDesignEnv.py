@@ -25,8 +25,8 @@ LOGGING_PATH = PARENT_DIR + "/info.log"
 EPSILON_P = 0.1
 EPSILON_N = 0.1
 
-W_J = 0.5
-W_M = 0.5
+W_J = 0.01
+W_M = 0.01
 
 Plane_Path = PARENT_DIR + '/res/plane.urdf'
 
@@ -120,7 +120,7 @@ class RobotConfigDesignEnv(gym.Env):
                 reward = -1 * W_J * self._A.jointNum + -1 * W_M * self._A.totalMass
                 done = False
             else:
-                reward = -10
+                reward = -1
                 done = True
 
         # p.stepSimulation() # TODO: 这个函数的在IK之后调用，还是在IK之前调用
