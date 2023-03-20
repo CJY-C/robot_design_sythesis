@@ -2,3 +2,7 @@
 	path = Vender/spinningup
 	url = CJY:CJY-C/spinningup.git
 	branch = masarity-dev
+[submodule "Vender/odio_urdf"]
+	path = Vender/odio_urdf
+	url = git@github.com:CJY-C/odio_urdf.git
+	branch = cjy-dev
