@@ -1,37 +1,15 @@
 <?xml version="1.0"?>
-<robot  name="UNNAMED_202" >
- <link  name="EEMM12_IMU6_IMU6_reverse_IMU6_IMU6_U_ic_in" >
+<robot  name="UNNAMED_109983" >
+ <link  name="EELM32276_ILU5_ILU5_reverse_ILU5_ILU5_U_ci_in" >
   <inertial >
-   <origin  rpy="0 0 0"  xyz="-4.5413E-34 1.0801E-17 0.0047" />
-   <mass  value="0.50882" />
-   <inertia  iyz="0"  ixx="0.00028474"  iyy="0.00028474"  ixy="0"  ixz="2.1721E-37"  izz="0.000562" />
-  </inertial>
-  <visual >
-   <origin  rpy="0 0 0"  xyz="0 0 0" />
-   <geometry >
-    <mesh  filename="package://input_connector_m.SLDASM/meshes/ic_in.STL" />
-   </geometry>
-   <material  name="blue" >
-    <color  rgba="0 0 0.5 1" />
-   </material>
-  </visual>
-  <collision >
-   <origin  rpy="0 0 0"  xyz="0 0 0" />
-   <geometry >
-    <mesh  filename="package://input_connector_m.SLDASM/meshes/ic_in.STL" />
-   </geometry>
-  </collision>
- </link>
- <link  name="EEMM12_IMU6_IMU6_reverse_IMU6_IMU6_U_ic_body" >
-  <inertial >
-   <origin  rpy="0 0 0"  xyz="0 -4.8218E-18 -0.0047" />
+   <origin  rpy="0 0 0"  xyz="-5.5075E-34 -1.7044E-17 0.0057" />
    <mass  value="0" />
-   <inertia  iyz="0"  ixx="0.00028474"  iyy="0.00028474"  ixy="0"  ixz="2.1721E-37"  izz="0.000562" />
+   <inertia  ixx="0.00074704"  ixy="0"  iyy="0.00074704"  iyz="1.7343E-36"  izz="0.0014744"  ixz="5.6985E-37" />
   </inertial>
   <visual >
    <origin  rpy="0 0 0"  xyz="0 0 0" />
    <geometry >
-    <mesh  filename="package://input_connector_m.SLDASM/meshes/ic_body.STL" />
+    <mesh  filename="package://input_connector_l.SLDASM/meshes/ci_in.STL" />
    </geometry>
    <material  name="blue" >
     <color  rgba="0 0 0.5 1" />
@@ -40,20 +18,20 @@
   <collision >
    <origin  rpy="0 0 0"  xyz="0 0 0" />
    <geometry >
-    <mesh  filename="package://input_connector_m.SLDASM/meshes/ic_body.STL" />
+    <mesh  filename="package://input_connector_l.SLDASM/meshes/ci_in.STL" />
    </geometry>
   </collision>
  </link>
- <link  name="EEMM12_IMU6_EMU0_EMU0_U_ee_in" >
+ <link  name="EELM32276_ILU5_ILU5_reverse_ILU5_ILU5_U_ci_body" >
   <inertial >
-   <origin  rpy="0 0 0"  xyz="-3.3818E-35 -4.4387E-20 5E-05" />
-   <mass  value="0.0019211" />
-   <inertia  iyz="-6.9194E-23"  ixx="3.7655E-07"  iyy="3.7655E-07"  ixy="2.1397E-39"  ixz="2.5988E-42"  izz="7.5309E-07" />
+   <origin  rpy="0 0 0"  xyz="0 4.2001E-18 -0.0057" />
+   <mass  value="0" />
+   <inertia  ixx="0.00074704"  ixy="0"  iyy="0.00074704"  iyz="1.7343E-36"  izz="0.0014744"  ixz="5.6985E-37" />
   </inertial>
   <visual >
    <origin  rpy="0 0 0"  xyz="0 0 0" />
    <geometry >
-    <mesh  filename="package://end_effector_v_m.SLDASM/meshes/ee_in.STL" />
+    <mesh  filename="package://input_connector_l.SLDASM/meshes/ci_body.STL" />
    </geometry>
    <material  name="blue" >
     <color  rgba="0 0 0.5 1" />
@@ -62,20 +40,42 @@
   <collision >
    <origin  rpy="0 0 0"  xyz="0 0 0" />
    <geometry >
-    <mesh  filename="package://end_effector_v_m.SLDASM/meshes/ee_in.STL" />
+    <mesh  filename="package://input_connector_l.SLDASM/meshes/ci_body.STL" />
    </geometry>
   </collision>
  </link>
- <link  name="EEMM12_IMU6_EMU0_EMU0_U_ee_body" >
+ <link  name="EELM32276_ILU5_ELU0_ELU0_U_ee_in" >
   <inertial >
-   <origin  rpy="0 0 0"  xyz="-3.3818E-35 -4.4387E-20 5E-05" />
-   <mass  value="0.0019211" />
-   <inertia  iyz="-6.9194E-23"  ixx="3.7655E-07"  iyy="3.7655E-07"  ixy="2.1397E-39"  ixz="2.5988E-42"  izz="7.5309E-07" />
+   <origin  rpy="0 0 0"  xyz="-6.9184E-18 -5.6766E-35 0.0005" />
+   <mass  value="0" />
+   <inertia  ixx="2.9898E-05"  ixy="-1.6987E-37"  iyy="2.9898E-05"  iyz="1.2291E-39"  izz="5.9787E-05"  ixz="1.2475E-23" />
   </inertial>
   <visual >
    <origin  rpy="0 0 0"  xyz="0 0 0" />
    <geometry >
-    <mesh  filename="package://end_effector_v_m.SLDASM/meshes/ee_body.STL" />
+    <mesh  filename="package://end_effector_v_l.SLDASM/meshes/ee_in.STL" />
+   </geometry>
+   <material  name="blue" >
+    <color  rgba="0 0 0.5 1" />
+   </material>
+  </visual>
+  <collision >
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+   <geometry >
+    <mesh  filename="package://end_effector_v_l.SLDASM/meshes/ee_in.STL" />
+   </geometry>
+  </collision>
+ </link>
+ <link  name="EELM32276_ILU5_ELU0_ELU0_U_ee_body" >
+  <inertial >
+   <origin  rpy="0 0 0"  xyz="-6.9184E-18 -5.6766E-35 0.0005" />
+   <mass  value="0.05413" />
+   <inertia  ixx="2.9898E-05"  ixy="-1.6987E-37"  iyy="2.9898E-05"  iyz="1.2291E-39"  izz="5.9787E-05"  ixz="1.2475E-23" />
+  </inertial>
+  <visual >
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+   <geometry >
+    <mesh  filename="package://end_effector_v_l.SLDASM/meshes/ee_body.STL" />
    </geometry>
    <material  name="body" >
     <color  rgba="0.5 0.5 0.5 1" />
@@ -84,26 +84,26 @@
   <collision >
    <origin  rpy="0 0 0"  xyz="0 0 0" />
    <geometry >
-    <mesh  filename="package://end_effector_v_m.SLDASM/meshes/ee_body.STL" />
+    <mesh  filename="package://end_effector_v_l.SLDASM/meshes/ee_body.STL" />
    </geometry>
   </collision>
  </link>
- <joint  type="fixed"  name="EEMM12_IMU6_IMU6_reverse_IMU6_IMU6_U_ic_medium_2" >
-  <origin  rpy="0.0 0.0 0.0"  xyz="-0.0 -0.0 0.0094" />
-  <parent  link="EEMM12_IMU6_IMU6_reverse_IMU6_IMU6_U_ic_in" />
-  <child  link="EEMM12_IMU6_IMU6_reverse_IMU6_IMU6_U_ic_body" />
+ <joint  name="EELM32276_ILU5_ILU5_reverse_ILU5_ILU5_U_ci_large_2"  type="fixed" >
+  <origin  rpy="0.0 0.0 0.0"  xyz="-0.0 -0.0 0.0114" />
+  <parent  link="EELM32276_ILU5_ILU5_reverse_ILU5_ILU5_U_ci_in" />
+  <child  link="EELM32276_ILU5_ILU5_reverse_ILU5_ILU5_U_ci_body" />
   <axis  xyz="0 0 0" />
  </joint>
- <joint  type="fixed"  name="EEMM12_IMU6_IMU6_reverse_IMU6_IMU6_U_ic_medium_1" >
+ <joint  name="EELM32276_ILU5_ILU5_reverse_ILU5_ILU5_U_ci_large_1"  type="fixed" >
   <origin  rpy="0.0 0.0 0.0"  xyz="-0.0 -0.0 -0.0" />
-  <parent  link="EEMM12_IMU6_IMU6_reverse_IMU6_IMU6_U_ic_body" />
-  <child  link="EEMM12_IMU6_EMU0_EMU0_U_ee_in" />
+  <parent  link="EELM32276_ILU5_ILU5_reverse_ILU5_ILU5_U_ci_body" />
+  <child  link="EELM32276_ILU5_ELU0_ELU0_U_ee_in" />
   <axis  xyz="0 0 0" />
  </joint>
- <joint  type="fixed"  name="EEMM12_IMU6_EMU0_EMU0_U_ee_medium" >
+ <joint  name="EELM32276_ILU5_ELU0_ELU0_U_ee_large"  type="fixed" >
   <origin  rpy="0 0 0"  xyz="0 0 0" />
-  <parent  link="EEMM12_IMU6_EMU0_EMU0_U_ee_in" />
-  <child  link="EEMM12_IMU6_EMU0_EMU0_U_ee_body" />
+  <parent  link="EELM32276_ILU5_ELU0_ELU0_U_ee_in" />
+  <child  link="EELM32276_ILU5_ELU0_ELU0_U_ee_body" />
   <axis  xyz="0 0 0" />
  </joint>
 </robot>
