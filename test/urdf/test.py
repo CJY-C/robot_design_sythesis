@@ -332,10 +332,10 @@ def testEnv():
 
     env = gym.make('RobotConfigDesign-v0')
 
-    env.render()
+    # env.render()
     env.reset()
 
-    for _ in range(5):
+    for _ in range(20):
         s, r, d, _ = env.step(0)
         print(f'r: {r}, d: {d == False}')
         # sleep(1)

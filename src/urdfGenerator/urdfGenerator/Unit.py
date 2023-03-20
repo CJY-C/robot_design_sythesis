@@ -179,16 +179,33 @@ class Unit:
 
     def rotate(self, angle):
         self.jointDeque[0].rotate(angle)
+    
+    @property
+    def mass(self):
+        mass = 0
+        zp = zip(self.linkDeque, self.linkTypeDeque)
+        for link, linkType in zp:
+            if linkType == LinkType.BODY:
+                mass = link.mass
+        return float(mass)
+    
+    @mass.setter
+    def mass(self, mass):
+        zp = zip(self.linkDeque, self.linkTypeDeque)
+        for link, linkType in zp:
+            if linkType == LinkType.BODY:
+                link.mass = mass
 
 
 if __name__ == '__main__':
     from urdfGenerator.UnitConfig import generateUnit
     print("Unit class test")
-    b =generateUnit(UnitType.CONNECTORL)
+    b =generateUnit(UnitType.CORNERLINKLL)
     c = generateUnit(UnitType.CORNERLINKLL)
-    print(b.linkTypeDeque)
-    print(c.linkTypeDeque)
-    print(b+c)
+    print(b.mass)
+    # print(b.linkTypeDeque)
+    # print(c.linkTypeDeque)
+    # print(b+c)
     # ju = generateUnit(UnitType.JOINTL)
 
     # ju.rotate(0.5)

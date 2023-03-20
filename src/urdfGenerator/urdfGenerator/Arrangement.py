@@ -42,6 +42,14 @@ class Arrangement:
             return True
         else:
             return False
+    
+    @property
+    def jointNum(self):
+        return len(list(filter(lambda x: x == ModuleType.JOINTL or x == ModuleType.JOINTM or x == ModuleType.JOINTS, self.moduleTypeList)))
+    
+    @property
+    def totalMass(self):
+        return reduce(lambda x, y: x + y, list(map(lambda x: x.mass, self.moduleList)))
 
     def __str__(self) -> str:
         return str(reduce(lambda x, y: x + y, self.moduleList))
@@ -79,6 +87,9 @@ if __name__ == '__main__':
 
     a.addModule(ModuleType.BASEL)
     a.addModule(ModuleType.JOINTL)
+    a.addModule(ModuleType.JOINTL)
 
     print(a.getModuleTypeList(10))
     print(a.moduleTypeList)
+    print(a.jointNum)
+    print(a.totalMass)

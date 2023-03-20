@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="end_effector_v_s.SLDASM">
+  <link
+    name="ee_in">
+    <inertial>
+      <origin
+        xyz="-3.3818E-35 8.2297E-19 5E-05"
+        rpy="0 0 0" />
+      <mass
+        value="0.0019211" />
+      <inertia
+        ixx="3.7655E-07"
+        ixy="2.1397E-39"
+        ixz="2.5988E-42"
+        iyy="3.7655E-07"
+        iyz="-6.9194E-23"
+        izz="7.5309E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://end_effector_v_s.SLDASM/meshes/ee_in.STL" />
+      </geometry>
+      <material
+        name="blue">
+        <color
+          rgba="0 0 0.5 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://end_effector_v_s.SLDASM/meshes/ee_in.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="ee_body">
+    <inertial>
+      <origin
+        xyz="-3.3818E-35 8.2297E-19 5E-05"
+        rpy="0 0 0" />
+      <mass
+        value="0.0019211" />
+      <inertia
+        ixx="3.7655E-07"
+        ixy="2.1397E-39"
+        ixz="2.5988E-42"
+        iyy="3.7655E-07"
+        iyz="-6.9194E-23"
+        izz="7.5309E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://end_effector_v_s.SLDASM/meshes/ee_body.STL" />
+      </geometry>
+      <material
+        name="body">
+        <color
+          rgba="0.5 0.5 0.5 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://end_effector_v_s.SLDASM/meshes/ee_body.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="ee_small"
+    type="fixed">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="ee_in" />
+    <child
+      link="ee_body" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+</robot>

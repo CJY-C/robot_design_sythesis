@@ -25,8 +25,8 @@ LOGGING_PATH = PARENT_DIR + "/info.log"
 EPSILON_P = 0.1
 EPSILON_N = 0.1
 
-W_J = 1
-W_M = 0
+W_J = 0.5
+W_M = 0.5
 
 Plane_Path = PARENT_DIR + '/res/plane.urdf'
 
@@ -38,9 +38,9 @@ OBS_PROB = 0.01
 EX = [-1, 1]
 EY = [-1, 1]
 EZ = [0, 1]
-GX = np.ptp(np.array(EX)) / OBS_WIDTH
-GY = np.ptp(np.array(EY)) / OBS_LENGTH
-GZ = np.ptp(np.array(EZ)) / OBS_HEIGHT
+GX = int(np.ptp(np.array(EX)) / OBS_WIDTH)
+GY = int(np.ptp(np.array(EY)) / OBS_LENGTH)
+GZ = int(np.ptp(np.array(EZ)) / OBS_HEIGHT)
 
 import logging
 logging.basicConfig(format='%(asctime)s-%(levelname)s: %(message)s', filename=LOGGING_PATH, level=logging.INFO)
@@ -57,6 +57,7 @@ class RobotConfigDesignEnv(gym.Env):
         logging.info("=======================================RobotConfigDesignEnv init============================================")
         self._A = Arrangement()
         self._robot_id = None
+        self._robot_cache_id = None
         self._joint_info = list()
         self._target_pos = None
         self._target_id = None
@@ -74,10 +75,11 @@ class RobotConfigDesignEnv(gym.Env):
         # 动作空间是一个离散空间，每个动作都是一个整数，表示添加的模块类型
         self.action_space = gym.spaces.Discrete(MODULETYPE_NUM)
         # 观测空间有连续部分也有离散部分，连续部分是目标点的位置，离散部分是障碍物的位置，和机器人目前的构型A
+        # self.observation_space = gym.spaces.Box(low=np.float32(-1), high=np.float32(1), shape=(3, ))
         self.observation_space = gym.spaces.Dict({
             'A': gym.spaces.MultiDiscrete([MODULETYPE_NUM for x in range(MAX_MODULECNT)]), # TODO: 解决描述问题
-            'obstacle_matrix': gym.spaces.MultiBinary((GX, GY, GZ)),
-            'target_pos': gym.spaces.Box(low=np.float32(-1), high=np.float32(1), shape=(3, ))
+            'T': gym.spaces.Box(low=np.float32(-1), high=np.float32(1), shape=(3, )),
+            'O': gym.spaces.MultiBinary((GX, GY, GZ)),
         })
 
 
@@ -102,7 +104,8 @@ class RobotConfigDesignEnv(gym.Env):
         if self._A.checkEEAttached(): # 判断是否添加末端执行器
             passEvaluation = self._IK()
             logging.info("IK result: " + str(passEvaluation))
-            reward = int(passEvaluation)
+            reward = 1 if passEvaluation else -1
+            # reward = int(passEvaluation)
             done = True
             # return (self._A.moduleList, self._target_pos, self._obstacle_matrix), 1, True, {}
         elif self._A.moduleCnt > MAX_MODULECNT: # 判断模块个数是否超过最大值
@@ -113,7 +116,8 @@ class RobotConfigDesignEnv(gym.Env):
         else: # 非终止状态
             # print("module count not exceed the max count")
             if success:
-                reward = -1 * W_J if self._A.checkJointAttached() else -1 * W_M # TODO: 调整
+                # reward = -1 * W_J if self._A.checkJointAttached() else -1 * W_M # TODO: 调整
+                reward = -1 * W_J * self._A.jointNum + -1 * W_M * self._A.totalMass
                 done = False
             else:
                 reward = -10
@@ -121,7 +125,8 @@ class RobotConfigDesignEnv(gym.Env):
 
         # p.stepSimulation() # TODO: 这个函数的在IK之后调用，还是在IK之前调用
 
-        return (self._A.getModuleTypeList(MAX_MODULECNT), self._target_pos, self._obstacle_matrix), reward, done, info
+        return self._state(), reward, done, info
+        # return (self._A.getModuleTypeList(MAX_MODULECNT), self._target_pos, self._obstacle_matrix), reward, done, info
 
     def reset(self):
         logging.info("reset simulation")
@@ -138,8 +143,9 @@ class RobotConfigDesignEnv(gym.Env):
         # p.configureDebugVisualizer(p2.COV_ENABLE_WIREFRAME,1)
         # 重置仿真环境
         self._clearEnv()
-        p.resetSimulation()
-        self._plane_id = p2.loadURDF(Plane_Path, useFixedBase=True, basePosition=[0, 0, 0], flags = p2.URDF_ENABLE_CACHED_GRAPHICS_SHAPES)
+        # p.resetSimulation()
+        # 先去除地面
+        # self._plane_id = p2.loadURDF(Plane_Path, useFixedBase=True, basePosition=[0, 0, 0], flags = p2.URDF_ENABLE_CACHED_GRAPHICS_SHAPES)
 
         # 随机初始化观测值&环境&返回观测值
         self._obstacle_matrix, self._target_pos = self._random_gen_obs_target(OBS_PATH, 
@@ -147,7 +153,8 @@ class RobotConfigDesignEnv(gym.Env):
                                         ex=EX, ey=EY, ez=EZ,
                                         obs_prob=OBS_PROB)
 
-        return (self._A.getModuleTypeList(MAX_MODULECNT), self._target_pos, self._obstacle_matrix)
+        return self._state()
+        # return (self._A.getModuleTypeList(MAX_MODULECNT), self._target_pos, self._obstacle_matrix)
 
     
     def render(self, mode='human', close=False):
@@ -222,7 +229,10 @@ class RobotConfigDesignEnv(gym.Env):
 
     def _updateRobot(self, action):
         if self._robot_id is not None:
-            self._p.removeBody(self._robot_id)
+            if self._renders:
+                self._robot_cache_id = self._robot_id
+            else:
+                self._p.removeBody(self._robot_id)
             self._robot_id = None
             self._joint_info = list()
 
@@ -237,16 +247,22 @@ class RobotConfigDesignEnv(gym.Env):
         for i in range(joint_num):
             self._joint_info.append(p2.getJointInfo(self._robot_id, i, self._physics_client_id))
 
+        if self._renders and self._robot_cache_id is not None:
+            self._p.removeBody(self._robot_cache_id)
+            self._robot_cache_id = None
         return success
     
     def _IK(self):
         p = self._p
 
         ee_link_id = len(self._joint_info) - 1
+        if ee_link_id < 0:
+            return False
         # logging.info("ee_link_id: {}".format(ee_link_id))
         target_angle = p2.calculateInverseKinematics(self._robot_id, ee_link_id, self._target_pos, maxNumIterations=100)
 
         done = False
+        success = True
         while True:
             cnt = 0
             for angle in target_angle:
@@ -264,28 +280,32 @@ class RobotConfigDesignEnv(gym.Env):
                 done = True
                 
             contacts = p.getContactPoints(self._robot_id)
-            print("contacts: {}".format(contacts))
+            # print("contacts: {}".format(contacts))
             for contact in contacts:
                 bodyA = contact[1]
                 bodyB = contact[2]
                 if bodyA == self._robot_id and bodyB == self._robot_id:
                     logging.info('机器人自碰撞')
                     done = True
+                    success = False
                     break
                 if bodyA == self._robot_id and bodyB in self._obstacle_ids:
                     logging.info('机器人与障碍物碰撞')
                     done = True
+                    success = False
                     break
                 if bodyA == self._robot_id and bodyB == self._plane_id:
                     logging.info('机器人与地面碰撞')
                     done = True
+                    success = False
                     break
 
             if done:
                 break
         
         # linkState[0], linkState[1] # p_EE, n_EE
-        success = self._check_distance(np.array(linkState[0]), self._target_pos, EPSILON_P)
+        if success:
+            success = self._check_distance(np.array(linkState[0]), self._target_pos, EPSILON_P)
 
         return success
 
@@ -305,9 +325,13 @@ class RobotConfigDesignEnv(gym.Env):
             self._plane_id = None
 
         # 重置机器人
+        if self._renders and self._robot_cache_id is not None:
+            p.removeBody(self._robot_cache_id)
+            self._robot_cache_id = None
         if self._robot_id is not None:
             p.removeBody(self._robot_id)
             self._robot_id = None
+
         self._A = Arrangement()
         self._joint_info = list()
 
@@ -321,4 +345,67 @@ class RobotConfigDesignEnv(gym.Env):
         if self._target_id is not None: 
             p.removeUserDebugItem(self._target_id) 
             self._target_id = None
+    def _state(self):
+        A = np.array(self._A.getModuleTypeList(MAX_MODULECNT))
+        T = np.array(self._target_pos)
+        O = np.array(self._obstacle_matrix)
+        A = A.reshape(combined_shape(1, A.shape))
+        T = T.reshape(combined_shape(1, T.shape))
+        O = O.reshape(combined_shape(1, O.shape))
+        # return (A, T, O)
+        return {
+            'A': A,
+            'T': T,
+            'O': O
+        }
 
+
+def combined_shape(length: int, shape=None):
+    '''
+    合并数组维度，用于生成经验数组。
+
+    参数
+    --------
+    length: int
+      经验数组长度
+    shape: None or int or a list of int
+      观测值的维度
+
+    返回值 
+    ---
+    newShape: tuple
+      用于初始化经验数组维度的元组
+
+    使用方法 
+    ---
+    >>> combined_shape(10, 4)
+    (10, 4)
+    >>> combined_shape(10, (2, 4))
+    (10, 2, 4)
+    >>> combined_shape(10, None)
+    (10, )
+    >>> np.zeros(combined_shape(buf_size, obs_dim), dtype=float32)
+
+    '''
+    if shape is None:
+        return (length,)
+    return (length, shape) if np.isscalar(shape) else (length, *shape)
+
+
+if __name__ == '__main__':
+    from robotConfigDesign.envs import RobotConfigDesignEnv
+    env = gym.make('RobotConfigDesign-v0')
+
+    if env.observation_space.shape is None:
+        s = (env.observation_space.sample())
+        for k,v in s.items():
+            print(k, v.shape)
+    else:
+        print(env.observation_space.shape)
+    print(env.action_space.shape)
+    env.action_space.shape
+
+    state = (env.reset())
+    print(state['A'].shape, state['T'].shape, state['O'].shape)
+
+    env.close()

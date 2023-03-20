@@ -82,47 +82,53 @@ class Module:
         self.module = reduce(lambda x, y: x + y, self.unitList)
         # return [generateUnit(unitType) for unitType in self.unitTypeList]
 
+    @property
+    def mass(self):
+        # 返回所有unit的质量和
+        return sum([unit.mass for unit in self.unitList])
+
 
 if __name__ == '__main__':
     module1 = Module("module1", [UnitType.BASEL, UnitType.CONNECTORL])
     module2 = Module("module2", [UnitType.JOINTL, UnitType.CONNECTORL])
-    module3 = Module("module3", [UnitType.JOINTL, UnitType.CONNECTORL])
-    module4 = Module("module4", [UnitType.STRAIGHTLINKL])
-    module5 = Module("module5", [UnitType.CONNECTORL, UnitType.CORNERLINKL, UnitType.CONNECTORL])
-    module6 = Module("module6", [UnitType.JOINTL, UnitType.CONNECTORL])
-    module7 = Module("module7", [UnitType.STRAIGHTLINKL])
-    module8 = Module("module8", [UnitType.JOINTL, UnitType.CONNECTORL])
-    module9 = Module("module9", [UnitType.JOINTL, UnitType.CONNECTORL])
-    module10 = Module("module10", [UnitType.JOINTL, UnitType.CONNECTORL])
-    module11 = Module("module11", [UnitType.ENDEFFECTORL])
+    print(module2.mass)
+    # module3 = Module("module3", [UnitType.JOINTL, UnitType.CONNECTORL])
+    # module4 = Module("module4", [UnitType.STRAIGHTLINKL])
+    # module5 = Module("module5", [UnitType.CONNECTORL, UnitType.CORNERLINKL, UnitType.CONNECTORL])
+    # module6 = Module("module6", [UnitType.JOINTL, UnitType.CONNECTORL])
+    # module7 = Module("module7", [UnitType.STRAIGHTLINKL])
+    # module8 = Module("module8", [UnitType.JOINTL, UnitType.CONNECTORL])
+    # module9 = Module("module9", [UnitType.JOINTL, UnitType.CONNECTORL])
+    # module10 = Module("module10", [UnitType.JOINTL, UnitType.CONNECTORL])
+    # module11 = Module("module11", [UnitType.ENDEFFECTORL])
 
-    print(module1)
+    # print(module1)
 
-    # module3 = module8.reverse()
+    # # module3 = module8.reverse()
 
-    # print(module4.unitList[-1].linkTypeDeque)
-    # print(module5.unitList[0].linkTypeDeque)
-    # print(module5.unitList[0].reverse().linkTypeDeque)
-    m5r = module5.reverse()
-    m6r = module6.reverse()
-    m8r = module8.reverse()
-    m9r = module9.reverse()
-    m10r = module10.reverse()
+    # # print(module4.unitList[-1].linkTypeDeque)
+    # # print(module5.unitList[0].linkTypeDeque)
+    # # print(module5.unitList[0].reverse().linkTypeDeque)
+    # m5r = module5.reverse()
+    # m6r = module6.reverse()
+    # m8r = module8.reverse()
+    # m9r = module9.reverse()
+    # m10r = module10.reverse()
 
-    print(module1.check_attachable(module2))
-    print(module2.check_attachable(module3))
-    print(module3.check_attachable(module4))
-    print(module4.check_attachable(m5r))
-    print(m5r.check_attachable(module6))
-    print(module6.check_attachable(module7))
-    print(module7.check_attachable(m8r))
-    print(m8r.check_attachable(m9r))
-    print(m9r.check_attachable(m10r))
-    print(m10r.check_attachable(module11))
+    # print(module1.check_attachable(module2))
+    # print(module2.check_attachable(module3))
+    # print(module3.check_attachable(module4))
+    # print(module4.check_attachable(m5r))
+    # print(m5r.check_attachable(module6))
+    # print(module6.check_attachable(module7))
+    # print(module7.check_attachable(m8r))
+    # print(m8r.check_attachable(m9r))
+    # print(m9r.check_attachable(m10r))
+    # print(m10r.check_attachable(module11))
 
-    module3 = module11
+    # module3 = module11
 
-    import os
-    dir = os.path.dirname(os.path.realpath(__file__))
-    with open(dir + '/unit7.urdf', 'w') as f:
-        f.write(module3.__str__())
+    # import os
+    # dir = os.path.dirname(os.path.realpath(__file__))
+    # with open(dir + '/unit7.urdf', 'w') as f:
+    #     f.write(module3.__str__())

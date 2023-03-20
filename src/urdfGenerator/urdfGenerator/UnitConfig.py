@@ -149,26 +149,31 @@ baseLUnitCnt = 0
 baseLUnitFilepath = "/home/masa/learning/rl/undergraduate/cjy/robot_design_sythesis/test/urdf/base-l.SLDASM/urdf/base-l.SLDASM.urdf"
 baseLLinkList, baseLLinkTypeList, baseLJointList, baseLInterfaceSizeList = parseURDF(baseLUnitFilepath)
 BaseLUnit = Unit("BaseL_U", baseLLinkList, baseLLinkTypeList, baseLJointList, baseLInterfaceSizeList)
+BaseLUnit.mass = 0
 
 baseMUnitCnt = 0
 baseMUnitFilepath = "/home/masa/learning/rl/undergraduate/cjy/robot_design_sythesis/test/urdf/base-m.SLDASM/urdf/base-m.SLDASM.urdf"
 baseMLinkList, baseMLinkTypeList, baseMJointList, baseMInterfaceSizeList = parseURDF(baseMUnitFilepath)
 BaseMUnit = Unit("BaseM_U", baseMLinkList, baseMLinkTypeList, baseMJointList, baseMInterfaceSizeList)
+BaseMUnit.mass = 0
 
 inputLUnitCnt = 0
 inputLUnitFilepath = "/home/masa/learning/rl/undergraduate/cjy/robot_design_sythesis/test/urdf/input_connector_l.SLDASM/urdf/input_connector_l.SLDASM.urdf"
 inputLLinkList, inputLLinkTypeList, inputLJointList, inputLInterfaceSizeList = parseURDF(inputLUnitFilepath)
 InputLUnit = Unit("InputL_U", inputLLinkList, inputLLinkTypeList, inputLJointList, inputLInterfaceSizeList)
+InputLUnit.mass = 0
 
 inputMUnitCnt = 0
 inputMUnitFilepath = "/home/masa/learning/rl/undergraduate/cjy/robot_design_sythesis/test/urdf/input_connector_m.SLDASM/urdf/input_connector_m.SLDASM.urdf"
 inputMLinkList, inputMLinkTypeList, inputMJointList, inputMInterfaceSizeList = parseURDF(inputMUnitFilepath)
 InputMUnit = Unit("InputM_U", inputMLinkList, inputMLinkTypeList, inputMJointList, inputMInterfaceSizeList)
+InputMUnit.mass = 0
 
 inputSUnitCnt = 0
 inputSUnitFilepath = "/home/masa/learning/rl/undergraduate/cjy/robot_design_sythesis/test/urdf/input_connector_s.SLDASM/urdf/input_connector_s.SLDASM.urdf"
 inputSLinkList, inputSLinkTypeList, inputSJointList, inputSInterfaceSizeList = parseURDF(inputSUnitFilepath)
 InputSUnit = Unit("InputS_U", inputSLinkList, inputSLinkTypeList, inputSJointList, inputSInterfaceSizeList)
+InputSUnit.mass = 0
 
 jointTLUnitCnt = 0
 jointTLUnitFilepath = "/home/masa/learning/rl/undergraduate/cjy/robot_design_sythesis/test/urdf/jointT-l.SLDASM/urdf/jointT-l.SLDASM.urdf"
@@ -227,17 +232,17 @@ StraightMSUnit = Unit("StraightMS_U", straightMSLinkList, straightMSLinkTypeList
 
 
 endeffectorLUnitCnt = 0
-endeffectorLUnitFilepath = "/home/masa/learning/rl/undergraduate/cjy/robot_design_sythesis/test/urdf/end_effector_l.SLDASM/urdf/end_effector_l.SLDASM.urdf"
+endeffectorLUnitFilepath = "/home/masa/learning/rl/undergraduate/cjy/robot_design_sythesis/src/RobotConfigDesignEnv/robotConfigDesign/res/end_effector_v_l.SLDASM/urdf/end_effector_v_l.SLDASM.urdf"
 endeffectorLLinkList, endeffectorLLinkTypeList, endeffectorLJointList, endeffectorLInterfaceSizeList = parseURDF(endeffectorLUnitFilepath)
 EndEffectorLUnit = Unit("EndeffectorL_U", endeffectorLLinkList, endeffectorLLinkTypeList, endeffectorLJointList, endeffectorLInterfaceSizeList)
 
 endeffectorMUnitCnt = 0
-endeffectorMUnitFilepath = "/home/masa/learning/rl/undergraduate/cjy/robot_design_sythesis/test/urdf/end_effector_m.SLDASM/urdf/end_effector_m.SLDASM.urdf"
+endeffectorMUnitFilepath = "/home/masa/learning/rl/undergraduate/cjy/robot_design_sythesis/src/RobotConfigDesignEnv/robotConfigDesign/res/end_effector_v_m.SLDASM/urdf/end_effector_v_m.SLDASM.urdf"
 endeffectorMLinkList, endeffectorMLinkTypeList, endeffectorMJointList, endeffectorMInterfaceSizeList = parseURDF(endeffectorMUnitFilepath)
 EndEffectorMUnit = Unit("EndeffectorM_U", endeffectorMLinkList, endeffectorMLinkTypeList, endeffectorMJointList, endeffectorMInterfaceSizeList)
 
 endeffectorSUnitCnt = 0
-endeffectorSUnitFilepath = "/home/masa/learning/rl/undergraduate/cjy/robot_design_sythesis/test/urdf/end_effector_s.SLDASM/urdf/end_effector_s.SLDASM.urdf"
+endeffectorSUnitFilepath = "/home/masa/learning/rl/undergraduate/cjy/robot_design_sythesis/src/RobotConfigDesignEnv/robotConfigDesign/res/end_effector_v_s.SLDASM/urdf/end_effector_v_s.SLDASM.urdf"
 endeffectorSLinkList, endeffectorSLinkTypeList, endeffectorSJointList, endeffectorSInterfaceSizeList = parseURDF(endeffectorSUnitFilepath)
 EndEffectorSUnit = Unit("EndeffectorS_U", endeffectorSLinkList, endeffectorSLinkTypeList, endeffectorSJointList, endeffectorSInterfaceSizeList)
 
