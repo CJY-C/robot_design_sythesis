@@ -8,7 +8,7 @@
         ]
     },
     "batch_size":	100,
-    "env_fn":	"<function <lambda> at 0x7f27bbb81cb0>",
+    "env_fn":	"<function <lambda> at 0x7f00a75cb9e0>",
     "epochs":	16000,
     "epsilon_decay":	0.0001,
     "epsilon_end":	0.1,
@@ -16,15 +16,15 @@
     "exp_name":	"RobotConfigDesign",
     "gamma":	0.99,
     "logger":	{
-        "<spinup.utils.logx.EpochLogger object at 0x7f2720148fd0>":	{
+        "<spinup.utils.logx.EpochLogger object at 0x7f002032f350>":	{
             "epoch_dict":	{},
             "exp_name":	"RobotConfigDesign",
             "first_row":	true,
             "log_current_row":	{},
             "log_headers":	[],
-            "output_dir":	"/home/masa/learning/rl/undergraduate/cjy/robot_design_sythesis/test/algo/data/RobotConfigDesign-v0",
+            "output_dir":	"/root/robot_design_sythesis/test/algo/data/RobotConfigDesign-v0",
             "output_file":	{
-                "<_io.TextIOWrapper name='/home/masa/learning/rl/undergraduate/cjy/robot_design_sythesis/test/algo/data/RobotConfigDesign-v0/progress.txt' mode='w' encoding='UTF-8'>":	{
+                "<_io.TextIOWrapper name='/root/robot_design_sythesis/test/algo/data/RobotConfigDesign-v0/progress.txt' mode='w' encoding='UTF-8'>":	{
                     "mode":	"w"
                 }
             }
@@ -32,7 +32,7 @@
     },
     "logger_kwargs":	{
         "exp_name":	"RobotConfigDesign",
-        "output_dir":	"/home/masa/learning/rl/undergraduate/cjy/robot_design_sythesis/test/algo/data/RobotConfigDesign-v0"
+        "output_dir":	"/root/robot_design_sythesis/test/algo/data/RobotConfigDesign-v0"
     },
     "max_ep_len":	20,
     "network":	"DQN_2015",
