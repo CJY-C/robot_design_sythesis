@@ -101,23 +101,23 @@ class RobotConfigDesignEnv(gym.Env):
 
         # p.stepSimulation()
 
-        if self._A.checkEEAttached(): # 判断是否添加末端执行器
-            passEvaluation = self._IK()
-            logging.info("IK result: " + str(passEvaluation))
-            reward = 1 if passEvaluation else -1
-            # reward = int(passEvaluation)
-            done = True
-            # return (self._A.moduleList, self._target_pos, self._obstacle_matrix), 1, True, {}
-        elif self._A.moduleCnt > MAX_MODULECNT: # 判断模块个数是否超过最大值
+        if self._A.moduleCnt > MAX_MODULECNT: # 判断模块个数是否超过最大值
             logging.info("module count exceed the max count")
             reward = -1
             done = True
-            # return (self._A.moduleList, self._target_pos, self._obstacle_matrix), -1, True, {}
+        elif self._A.checkEEAttached(): # 判断是否添加末端执行器
+            passEvaluation = self._IK()
+            logging.info("IK result: " + str(passEvaluation))
+            reward = 10 if passEvaluation else 0
+            reward += -1 * W_J * self._A.jointNum + -1 * W_M * self._A.totalMass
+            # reward = int(passEvaluation)
+            done = True
         else: # 非终止状态
             # print("module count not exceed the max count")
             if success:
                 # reward = -1 * W_J if self._A.checkJointAttached() else -1 * W_M # TODO: 调整
-                reward = -1 * W_J * self._A.jointNum + -1 * W_M * self._A.totalMass
+                # reward = -1 * W_J * self._A.jointNum + -1 * W_M * self._A.totalMass
+                reward = 0 
                 done = False
             else:
                 reward = -1
