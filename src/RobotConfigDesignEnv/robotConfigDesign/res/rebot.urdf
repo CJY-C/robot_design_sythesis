@@ -1,15 +1,81 @@
 <?xml version="1.0"?>
-<robot  name="UNNAMED_319" >
- <link  name="BLM27_BLU0_BLU0_BLU0_U_b_body" >
+<robot  name="UNNAMED_220" >
+ <link  name="EELM31_ILU5_ILU5_reverse_ILU5_ILU5_U_ci_in" >
   <inertial >
-   <origin  rpy="0 0 0"  xyz="-9.4624E-18 1.1154E-17 0.022042" />
+   <origin  rpy="0 0 0"  xyz="-5.5075E-34 -1.7044E-17 0.0057" />
    <mass  value="0" />
-   <inertia  ixx="0.009154"  iyy="0.009154"  ixz="-3.4018E-19"  izz="0.015925"  iyz="3.3647E-19"  ixy="1.7613E-19" />
+   <inertia  iyy="0.00074704"  ixz="5.6985E-37"  izz="0.0014744"  ixy="0"  ixx="0.00074704"  iyz="1.7343E-36" />
   </inertial>
   <visual >
    <origin  rpy="0 0 0"  xyz="0 0 0" />
    <geometry >
-    <mesh  filename="package://base-l.SLDASM/meshes/b_body.STL" />
+    <mesh  filename="package://input_connector_l.SLDASM/meshes/ci_in.STL" />
+   </geometry>
+   <material  name="blue" >
+    <color  rgba="0 0 0.5 1" />
+   </material>
+  </visual>
+  <collision >
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+   <geometry >
+    <mesh  filename="package://input_connector_l.SLDASM/meshes/ci_in.STL" />
+   </geometry>
+  </collision>
+ </link>
+ <link  name="EELM31_ILU5_ILU5_reverse_ILU5_ILU5_U_ci_body" >
+  <inertial >
+   <origin  rpy="0 0 0"  xyz="0 4.2001E-18 -0.0057" />
+   <mass  value="0" />
+   <inertia  iyy="0.00074704"  ixz="5.6985E-37"  izz="0.0014744"  ixy="0"  ixx="0.00074704"  iyz="1.7343E-36" />
+  </inertial>
+  <visual >
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+   <geometry >
+    <mesh  filename="package://input_connector_l.SLDASM/meshes/ci_body.STL" />
+   </geometry>
+   <material  name="blue" >
+    <color  rgba="0 0 0.5 1" />
+   </material>
+  </visual>
+  <collision >
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+   <geometry >
+    <mesh  filename="package://input_connector_l.SLDASM/meshes/ci_body.STL" />
+   </geometry>
+  </collision>
+ </link>
+ <link  name="EELM31_ILU5_ELU0_ELU0_U_ee_in" >
+  <inertial >
+   <origin  rpy="0 0 0"  xyz="-6.9184E-18 -5.6766E-35 0.0005" />
+   <mass  value="0" />
+   <inertia  iyy="2.9898E-05"  ixz="1.2475E-23"  iyz="1.2291E-39"  izz="5.9787E-05"  ixx="2.9898E-05"  ixy="-1.6987E-37" />
+  </inertial>
+  <visual >
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+   <geometry >
+    <mesh  filename="package://end_effector_v_l.SLDASM/meshes/ee_in.STL" />
+   </geometry>
+   <material  name="blue" >
+    <color  rgba="0 0 0.5 1" />
+   </material>
+  </visual>
+  <collision >
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+   <geometry >
+    <mesh  filename="package://end_effector_v_l.SLDASM/meshes/ee_in.STL" />
+   </geometry>
+  </collision>
+ </link>
+ <link  name="EELM31_ILU5_ELU0_ELU0_U_ee_body" >
+  <inertial >
+   <origin  rpy="0 0 0"  xyz="-6.9184E-18 -5.6766E-35 0.0005" />
+   <mass  value="0.05413" />
+   <inertia  iyy="2.9898E-05"  ixz="1.2475E-23"  iyz="1.2291E-39"  izz="5.9787E-05"  ixx="2.9898E-05"  ixy="-1.6987E-37" />
+  </inertial>
+  <visual >
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+   <geometry >
+    <mesh  filename="package://end_effector_v_l.SLDASM/meshes/ee_body.STL" />
    </geometry>
    <material  name="body" >
     <color  rgba="0.5 0.5 0.5 1" />
@@ -18,92 +84,26 @@
   <collision >
    <origin  rpy="0 0 0"  xyz="0 0 0" />
    <geometry >
-    <mesh  filename="package://base-l.SLDASM/meshes/b_body.STL" />
+    <mesh  filename="package://end_effector_v_l.SLDASM/meshes/ee_body.STL" />
    </geometry>
   </collision>
  </link>
- <link  name="BLM27_BLU0_BLU0_BLU0_U_b_in" >
-  <inertial >
-   <origin  rpy="0 0 0"  xyz="-9.4624E-18 -5.3214E-19 0.029258" />
-   <mass  value="5.9754" />
-   <inertia  ixx="0.009154"  iyy="0.009154"  ixz="3.3605E-19"  izz="0.015925"  iyz="3.3422E-19"  ixy="-1.7613E-19" />
-  </inertial>
-  <visual >
-   <origin  rpy="0 0 0"  xyz="0 0 0" />
-   <geometry >
-    <mesh  filename="package://base-l.SLDASM/meshes/b_in.STL" />
-   </geometry>
-   <material  name="blue" >
-    <color  rgba="0 0 0.5 1" />
-   </material>
-  </visual>
-  <collision >
-   <origin  rpy="0 0 0"  xyz="0 0 0" />
-   <geometry >
-    <mesh  filename="package://base-l.SLDASM/meshes/b_in.STL" />
-   </geometry>
-  </collision>
- </link>
- <link  name="BLM27_BLU0_ILU0_ILU0_U_ci_body" >
-  <inertial >
-   <origin  rpy="0 0 0"  xyz="0 4.2001E-18 -0.0057" />
-   <mass  value="0" />
-   <inertia  ixx="0.00074704"  iyy="0.00074704"  ixz="5.6985E-37"  izz="0.0014744"  iyz="1.7343E-36"  ixy="0" />
-  </inertial>
-  <visual >
-   <origin  rpy="0 0 0"  xyz="0 0 0" />
-   <geometry >
-    <mesh  filename="package://input_connector_l.SLDASM/meshes/ci_body.STL" />
-   </geometry>
-   <material  name="blue" >
-    <color  rgba="0 0 0.5 1" />
-   </material>
-  </visual>
-  <collision >
-   <origin  rpy="0 0 0"  xyz="0 0 0" />
-   <geometry >
-    <mesh  filename="package://input_connector_l.SLDASM/meshes/ci_body.STL" />
-   </geometry>
-  </collision>
- </link>
- <link  name="BLM27_BLU0_ILU0_ILU0_U_ci_in" >
-  <inertial >
-   <origin  rpy="0 0 0"  xyz="-5.5075E-34 -1.7044E-17 0.0057" />
-   <mass  value="0" />
-   <inertia  ixx="0.00074704"  iyy="0.00074704"  ixz="5.6985E-37"  izz="0.0014744"  iyz="1.7343E-36"  ixy="0" />
-  </inertial>
-  <visual >
-   <origin  rpy="0 0 0"  xyz="0 0 0" />
-   <geometry >
-    <mesh  filename="package://input_connector_l.SLDASM/meshes/ci_in.STL" />
-   </geometry>
-   <material  name="blue" >
-    <color  rgba="0 0 0.5 1" />
-   </material>
-  </visual>
-  <collision >
-   <origin  rpy="0 0 0"  xyz="0 0 0" />
-   <geometry >
-    <mesh  filename="package://input_connector_l.SLDASM/meshes/ci_in.STL" />
-   </geometry>
-  </collision>
- </link>
- <joint  type="fixed"  name="BLM27_BLU0_BLU0_BLU0_U_b_large" >
-  <origin  rpy="3.14159265358979 0 0"  xyz="0 0 0.0513" />
-  <parent  link="BLM27_BLU0_BLU0_BLU0_U_b_body" />
-  <child  link="BLM27_BLU0_BLU0_BLU0_U_b_in" />
-  <axis  xyz="0 0 1" />
- </joint>
- <joint  type="fixed"  name="BLM27_BLU0_ILU0_ILU0_U_ci_large_1" >
-  <origin  rpy="0 0 0"  xyz="0 0 0" />
-  <parent  link="BLM27_BLU0_BLU0_BLU0_U_b_in" />
-  <child  link="BLM27_BLU0_ILU0_ILU0_U_ci_body" />
+ <joint  type="fixed"  name="EELM31_ILU5_ILU5_reverse_ILU5_ILU5_U_ci_large_2" >
+  <origin  rpy="0.0 0.0 0.0"  xyz="-0.0 -0.0 0.0114" />
+  <parent  link="EELM31_ILU5_ILU5_reverse_ILU5_ILU5_U_ci_in" />
+  <child  link="EELM31_ILU5_ILU5_reverse_ILU5_ILU5_U_ci_body" />
   <axis  xyz="0 0 0" />
  </joint>
- <joint  type="fixed"  name="BLM27_BLU0_ILU0_ILU0_U_ci_large_2" >
-  <origin  rpy="0 0 0"  xyz="0 0 -0.0114" />
-  <parent  link="BLM27_BLU0_ILU0_ILU0_U_ci_body" />
-  <child  link="BLM27_BLU0_ILU0_ILU0_U_ci_in" />
+ <joint  type="fixed"  name="EELM31_ILU5_ILU5_reverse_ILU5_ILU5_U_ci_large_1" >
+  <origin  rpy="0.0 0.0 0.0"  xyz="-0.0 -0.0 -0.0" />
+  <parent  link="EELM31_ILU5_ILU5_reverse_ILU5_ILU5_U_ci_body" />
+  <child  link="EELM31_ILU5_ELU0_ELU0_U_ee_in" />
+  <axis  xyz="0 0 0" />
+ </joint>
+ <joint  type="fixed"  name="EELM31_ILU5_ELU0_ELU0_U_ee_large" >
+  <origin  rpy="0 0 0"  xyz="0 0 0" />
+  <parent  link="EELM31_ILU5_ELU0_ELU0_U_ee_in" />
+  <child  link="EELM31_ILU5_ELU0_ELU0_U_ee_body" />
   <axis  xyz="0 0 0" />
  </joint>
 </robot>

@@ -62,20 +62,21 @@ class Arrangement:
             f.write(str(self))
         return exportPath
     
-    def getModuleTypeList(self, maxModuleCnt = 0):
-        if maxModuleCnt == 0:
-            return self.moduleTypeList
+    def getModuleTypeList(self, maxModuleCnt = None):
+        # 深拷贝一份self.moduleTypeList
+        moduleTypeList = deepcopy(self.moduleTypeList)
+        if maxModuleCnt == None:
+            return moduleTypeList
         else:
             if maxModuleCnt > len(self.moduleTypeList):
-                # 深拷贝一份self.moduleTypeList，多出来的长度用NONE填充
-                moduleTypeList = deepcopy(self.moduleTypeList)
+                # 多出来的长度用NONE填充
                 moduleTypeList = moduleTypeList + [ModuleType.NONE] * (maxModuleCnt - len(self.moduleTypeList))
-                # 将moduleTypeList中的枚举值转换为int
-                moduleTypeList = list(map(lambda x: x.value, moduleTypeList))
-                return moduleTypeList
             else:
-                return self.moduleTypeList[:maxModuleCnt]
+                moduleTypeList = moduleTypeList[:maxModuleCnt]
     
+        # 将moduleTypeList中的枚举值转换为int
+        moduleTypeList = list(map(lambda x: x.value, moduleTypeList))
+        return moduleTypeList
     # @property
     # def moduleCnt(self):
     #     return self.moduleCnt

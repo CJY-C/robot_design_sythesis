@@ -8,15 +8,15 @@
         ]
     },
     "batch_size":	100,
-    "env_fn":	"<function <lambda> at 0x7f8c26424cb0>",
-    "epochs":	8,
+    "env_fn":	"<function <lambda> at 0x7f27bbb81cb0>",
+    "epochs":	16000,
     "epsilon_decay":	0.0001,
     "epsilon_end":	0.1,
     "epsilon_start":	1,
     "exp_name":	"RobotConfigDesign",
     "gamma":	0.99,
     "logger":	{
-        "<spinup.utils.logx.EpochLogger object at 0x7f8b85d9aa50>":	{
+        "<spinup.utils.logx.EpochLogger object at 0x7f2720148fd0>":	{
             "epoch_dict":	{},
             "exp_name":	"RobotConfigDesign",
             "first_row":	true,
