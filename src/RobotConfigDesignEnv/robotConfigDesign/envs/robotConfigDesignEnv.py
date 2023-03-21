@@ -255,8 +255,12 @@ class RobotConfigDesignEnv(gym.Env):
     def _IK(self):
         p = self._p
 
-        ee_link_id = len(self._joint_info) - 1
-        if ee_link_id < 0:
+        # 需要有两个关节
+        # ee_link_id = self._A.moduleCnt - 1
+        ee_link_id = self._A.jointNum - 1
+        # for i in range(ee_link_id):
+        #     logging.info(p2.getLinkState(self._robot_id, i, computeForwardKinematics=True) )
+        if ee_link_id <= 0:
             return False
         # logging.info("ee_link_id: {}".format(ee_link_id))
         target_angle = p2.calculateInverseKinematics(self._robot_id, ee_link_id, self._target_pos, maxNumIterations=100)
