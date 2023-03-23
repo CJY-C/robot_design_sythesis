@@ -1,0 +1,46 @@
+{
+    "ac_kwargs":	{
+        "activation":	"ReLU",
+        "hidden_sizes":	[
+            64,
+            64,
+            64
+        ]
+    },
+    "batch_size":	32,
+    "env_fn":	"<function <lambda> at 0x7f1c9c0e69e0>",
+    "epochs":	10000,
+    "epsilon_decay":	1e-06,
+    "epsilon_end":	0.1,
+    "epsilon_start":	1,
+    "exp_name":	"dqn",
+    "gamma":	0.99,
+    "logger":	{
+        "<spinup.utils.logx.EpochLogger object at 0x7f1c82d4c750>":	{
+            "epoch_dict":	{},
+            "exp_name":	"dqn",
+            "first_row":	true,
+            "log_current_row":	{},
+            "log_headers":	[],
+            "output_dir":	"/root/robot_design_sythesis/test/algo/data/RobotConfigDesign-v4",
+            "output_file":	{
+                "<_io.TextIOWrapper name='/root/robot_design_sythesis/test/algo/data/RobotConfigDesign-v4/progress.txt' mode='w' encoding='UTF-8'>":	{
+                    "mode":	"w"
+                }
+            }
+        }
+    },
+    "logger_kwargs":	{
+        "exp_name":	"dqn",
+        "output_dir":	"/root/robot_design_sythesis/test/algo/data/RobotConfigDesign-v4"
+    },
+    "max_ep_len":	20,
+    "network":	"DQN_2015",
+    "q_lr":	1e-05,
+    "replay_size":	1000000,
+    "save_freq":	1,
+    "seed":	0,
+    "start_steps":	4000,
+    "steps_per_epoch":	400,
+    "update_freq":	2000
+}
