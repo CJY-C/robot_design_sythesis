@@ -30,7 +30,7 @@ dqn(
   ac_kwargs=ac_kwargs, 
   seed=0,
   steps_per_epoch=20,
-  epochs=20, 
+  epochs=100, 
   replay_size=int(1e6),
   gamma=0.99,
   epsilon_start=1,

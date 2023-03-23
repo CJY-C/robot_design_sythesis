@@ -108,7 +108,7 @@ class RobotConfigDesignEnv(gym.Env):
         elif self._A.checkEEAttached(): # 判断是否添加末端执行器
             passEvaluation = self._IK()
             logging.info("IK result: " + str(passEvaluation))
-            reward = 10 if passEvaluation else 0
+            reward = 10 if passEvaluation else -1
             reward += -1 * W_J * self._A.jointNum + -1 * W_M * self._A.totalMass
             # reward = int(passEvaluation)
             done = True
@@ -122,6 +122,7 @@ class RobotConfigDesignEnv(gym.Env):
             else:
                 reward = -1
                 done = True
+                # done = False
 
         # p.stepSimulation() # TODO: 这个函数的在IK之后调用，还是在IK之前调用
 
