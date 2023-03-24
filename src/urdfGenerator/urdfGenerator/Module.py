@@ -49,6 +49,29 @@ class Module:
         if self.module.check_attachable(other.module):
             return True
         return False
+    
+    def get_head_link_type(self):
+        head_type = None
+        if self.module.check_head_type(LinkType.INPUT):
+            head_type = LinkType.INPUT
+        elif self.module.check_head_type(LinkType.OUTPUT):
+            head_type = LinkType.OUTPUT
+        else:
+            head_type = LinkType.BODY
+
+        return head_type
+
+    def get_tail_link_type(self):
+        tail_type = None
+        if self.module.check_tail_type(LinkType.INPUT):
+            tail_type = LinkType.INPUT
+        elif self.module.check_tail_type(LinkType.OUTPUT):
+            tail_type = LinkType.OUTPUT
+        else:
+            tail_type = LinkType.BODY
+
+        return tail_type
+
 
     def reverse(self):
         unitOrderList = deepcopy(self.unitOrderList)
@@ -91,7 +114,7 @@ class Module:
 if __name__ == '__main__':
     module1 = Module("module1", [UnitType.BASEL, UnitType.CONNECTORL])
     module2 = Module("module2", [UnitType.JOINTL, UnitType.CONNECTORL])
-    print(module2.mass)
+    print(module1.get_head_link_type())
     # module3 = Module("module3", [UnitType.JOINTL, UnitType.CONNECTORL])
     # module4 = Module("module4", [UnitType.STRAIGHTLINKL])
     # module5 = Module("module5", [UnitType.CONNECTORL, UnitType.CORNERLINKL, UnitType.CONNECTORL])

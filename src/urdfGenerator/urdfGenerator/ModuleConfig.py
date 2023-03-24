@@ -1,6 +1,6 @@
 from copy import deepcopy
 
-from urdfGenerator.Enums import UnitType, ModuleType, UnitOrder, MountingAngle
+from urdfGenerator.Enums import UnitType, ModuleType, UnitOrder, MountingAngle, LinkType
 from urdfGenerator.Module import Module
 
 # 标准模块
@@ -66,11 +66,11 @@ EndEffectorSModule = Module("EESM", [UnitType.CONNECTORS, UnitType.ENDEFFECTORS]
 
 def getModuleTypeList():
     return [
-        ModuleType.BASEL, ModuleType.BASEM, # 1
-        ModuleType.JOINTL, ModuleType.JOINTM, ModuleType.JOINTS, # 4
-        ModuleType.CORNERLINKLL, ModuleType.CORNERLINKLM, ModuleType.CORNERLINKMM, ModuleType.CORNERLINKMS, # 8
-        ModuleType.STRAIGHTLINKLL, ModuleType.STRAIGHTLINKLM, ModuleType.STRAIGHTLINKMM, ModuleType.STRAIGHTLINKMS, # 12
-        ModuleType.ENDEFFECTORL, ModuleType.ENDEFFECTORM, ModuleType.ENDEFFECTORS # 15
+        ModuleType.BASEL, # 0
+        ModuleType.JOINTL, ModuleType.CORNERLINKLL, ModuleType.CORNERLINKLM, ModuleType.STRAIGHTLINKLL, ModuleType.STRAIGHTLINKLM, ModuleType.ENDEFFECTORL,
+        ModuleType.BASEM, # 7
+        ModuleType.JOINTM, ModuleType.CORNERLINKMM, ModuleType.CORNERLINKMS, ModuleType.STRAIGHTLINKMM, ModuleType.STRAIGHTLINKMS, ModuleType.ENDEFFECTORM, 
+        ModuleType.JOINTS, ModuleType.ENDEFFECTORS
     ]
 
 def generateModule(moduleType, order=UnitOrder.NORMAL):
@@ -146,11 +146,59 @@ def generateModule(moduleType, order=UnitOrder.NORMAL):
 
     return module
 
+def getAttachableSubModuleActions(moduleType, linkType):
+    subModuleActions = list()
+    if moduleType == ModuleType.NONE:
+        subModuleActions = [0, 7]
+    elif moduleType == ModuleType.BASEL:
+        subModuleActions = [1, 4, 5]
+    elif moduleType == ModuleType.BASEM:
+        subModuleActions = [8, 11, 12]
+    elif moduleType == ModuleType.JOINTL and linkType == LinkType.OUTPUT:
+        subModuleActions = [2, 3, 6]
+    elif moduleType == ModuleType.JOINTL and linkType == LinkType.INPUT:
+        subModuleActions = [1, 4, 5]
+    elif moduleType == ModuleType.JOINTM and linkType == LinkType.OUTPUT:
+        subModuleActions = [9, 10, 13]
+    elif moduleType == ModuleType.JOINTM and linkType == LinkType.INPUT:
+        subModuleActions = [8, 11, 12]
+    elif moduleType == ModuleType.JOINTS and linkType == LinkType.OUTPUT:
+        subModuleActions = [15]
+    elif moduleType == ModuleType.JOINTS and linkType == LinkType.INPUT:
+        subModuleActions = [14]
+    elif moduleType == ModuleType.CORNERLINKLL and linkType == LinkType.INPUT:
+        subModuleActions = [1, 4, 5]
+    elif moduleType == ModuleType.CORNERLINKLM:
+        subModuleActions = [8, 11, 12]
+    elif moduleType == ModuleType.CORNERLINKMM:
+        subModuleActions = [8, 11, 12]
+    elif moduleType == ModuleType.CORNERLINKMS:
+        subModuleActions = [14]
+    elif moduleType == ModuleType.STRAIGHTLINKLL:
+        subModuleActions = [1, 2, 3, 6]
+    elif moduleType == ModuleType.STRAIGHTLINKLM:
+        subModuleActions = [8, 9, 10, 13]
+    elif moduleType == ModuleType.STRAIGHTLINKMM:
+        subModuleActions = [8, 9, 10, 13]
+    elif moduleType == ModuleType.STRAIGHTLINKMS:
+        subModuleActions = [14, 15]
+    elif moduleType == ModuleType.ENDEFFECTORL or moduleType == ModuleType.ENDEFFECTORM or moduleType == ModuleType.ENDEFFECTORS:
+        subModuleActions = []
+    else:
+        raise Exception("moduleType not found")
+    
+    return subModuleActions
+        
+        
+
+
 
 # 测试
 if __name__ == "__main__":
 
     m = generateModule(ModuleType.ENDEFFECTORL)
+
+    m = getAttachableSubModuleActions(moduleType=ModuleType.NONE, linkType=LinkType.INPUT)
 
     print(m)
     # unit7 = InputUnit + CornerLinkLUnit + InputUnit

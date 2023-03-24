@@ -1,16 +1,19 @@
-from urdfGenerator.ModuleConfig import generateModule
+from urdfGenerator.ModuleConfig import generateModule, getAttachableSubModuleActions, getModuleTypeList
 
-from urdfGenerator.Enums import ModuleType, UnitOrder
+from urdfGenerator.Enums import ModuleType, UnitOrder, LinkType
 
 from functools import reduce
 
 from copy import deepcopy
+
+import numpy as np
 
 class Arrangement:
     def __init__(self) -> None:
         self.moduleList = []
         self.moduleTypeList = []
         self.moduleCnt = 0
+        self.arrangement = None
 
     def addModule(self, moduleType):
         if self.moduleCnt == 0:
@@ -25,6 +28,11 @@ class Arrangement:
                 return False
         self.moduleTypeList.append(moduleType)
         self.moduleCnt += 1
+
+        if self.arrangement is not None:
+            del self.arrangement
+        self.arrangement = reduce(lambda x, y: x + y, self.moduleList)
+
         return True
 
     def checkEEAttached(self):
@@ -46,10 +54,15 @@ class Arrangement:
     @property
     def jointNum(self):
         return len(list(filter(lambda x: x == ModuleType.JOINTL or x == ModuleType.JOINTM or x == ModuleType.JOINTS, self.moduleTypeList)))
-    
+        # return len(list(filter(lambda x: x == ModuleType.JOINTL or x == ModuleType.JOINTM or x == ModuleType.JOINTS, self.moduleTypeList)))
+
     @property
     def totalMass(self):
         return reduce(lambda x, y: x + y, list(map(lambda x: x.mass, self.moduleList)))
+    
+    @property
+    def attachedMass(self):
+        return self.moduleList[-1].mass
 
     def __str__(self) -> str:
         return str(reduce(lambda x, y: x + y, self.moduleList))
@@ -75,8 +88,16 @@ class Arrangement:
                 moduleTypeList = moduleTypeList[:maxModuleCnt]
     
         # 将moduleTypeList中的枚举值转换为int
-        moduleTypeList = list(map(lambda x: x.value, moduleTypeList))
+        test = getModuleTypeList()
+        moduleTypeList = list(map(lambda x: test.index(x) if test.count(x) else -1, moduleTypeList))
+        # moduleTypeList = list(map(lambda x: x.value, moduleTypeList))
         return moduleTypeList
+    
+    def getAttachableSubModuleActions(self):
+        moduleType = self.moduleTypeList[-1]
+        linkType = self.arrangement.get_head_link_type()
+        return np.array(getAttachableSubModuleActions(moduleType, linkType))
+
     # @property
     # def moduleCnt(self):
     #     return self.moduleCnt
@@ -94,3 +115,7 @@ if __name__ == '__main__':
     print(a.moduleTypeList)
     print(a.jointNum)
     print(a.totalMass)
+    action_space = a.getAttachableSubModuleActions()
+    print(action_space)
+    print(action_space.shape)
+    print( np.choose(np.random.randint(len(action_space)), action_space) )

@@ -18,15 +18,15 @@ ROBOT_PATH = PARENT_DIR + '/res'
 ROBOT_NAME = "rebot"
 MODULETYPE_LIST = getModuleTypeList()
 MODULETYPE_NUM = len(MODULETYPE_LIST)
-MAX_MODULECNT = 20
+MAX_MODULECNT = 15
 
 LOGGING_PATH = PARENT_DIR + "/info.log"
 
 EPSILON_P = 0.1
 EPSILON_N = 0.1
 
-W_J = 0.01
-W_M = 0.01
+W_J = 0.1
+W_M = 0.1
 
 Plane_Path = PARENT_DIR + '/res/plane.urdf'
 
@@ -58,6 +58,7 @@ class RobotConfigDesignEnv(gym.Env):
         self._A = Arrangement()
         self._robot_id = None
         self._robot_cache_id = None
+        self._show = False
         self._joint_info = list()
         self._target_pos = None
         self._target_id = None
@@ -108,18 +109,22 @@ class RobotConfigDesignEnv(gym.Env):
         elif self._A.checkEEAttached(): # 判断是否添加末端执行器
             passEvaluation = self._IK()
             logging.info("IK result: " + str(passEvaluation))
-            reward = 10 if passEvaluation else -1
-            reward += -1 * W_J * self._A.jointNum + -1 * W_M * self._A.totalMass
+            reward = 10 if passEvaluation else 0
+            # reward += -1 * W_J * self._A.jointNum + -1 * W_M * self._A.totalMass
             # reward = int(passEvaluation)
             done = True
         else: # 非终止状态
             # print("module count not exceed the max count")
             if success:
-                # reward = -1 * W_J if self._A.checkJointAttached() else -1 * W_M # TODO: 调整
                 # reward = -1 * W_J * self._A.jointNum + -1 * W_M * self._A.totalMass
-                reward = 0 
+                # reward = 0 
+                info = { 'action_space': self._A.getAttachableSubModuleActions() }
+                reward =  -1 * W_J if self._A.checkJointAttached() else 0
+                reward += -1 * W_M * self._A.attachedMass# TODO: 调整
+                # reward += -1 * W_J * self._A.jointNum + -1 * W_M * self._A.totalMass
                 done = False
             else:
+                raise("add module failed")
                 reward = -1
                 done = True
                 # done = False
@@ -230,7 +235,7 @@ class RobotConfigDesignEnv(gym.Env):
 
     def _updateRobot(self, action):
         if self._robot_id is not None:
-            if self._renders:
+            if self._renders and self._show:
                 self._robot_cache_id = self._robot_id
             else:
                 self._p.removeBody(self._robot_id)
@@ -248,7 +253,7 @@ class RobotConfigDesignEnv(gym.Env):
         for i in range(joint_num):
             self._joint_info.append(p2.getJointInfo(self._robot_id, i, self._physics_client_id))
 
-        if self._renders and self._robot_cache_id is not None:
+        if self._renders and self._show and self._robot_cache_id is not None:
             self._p.removeBody(self._robot_cache_id)
             self._robot_cache_id = None
         return success
@@ -258,13 +263,15 @@ class RobotConfigDesignEnv(gym.Env):
 
         # 需要有两个关节
         # ee_link_id = self._A.moduleCnt - 1
-        ee_link_id = self._A.jointNum - 1
-        # for i in range(ee_link_id):
+        print(self._A.getModuleTypeList())
+        ee_link_id = len(self._joint_info) - 1
+        # ee_link_id = self._A.jointNum - 1
+        # for i in range(ee_link_id+1):
         #     logging.info(p2.getLinkState(self._robot_id, i, computeForwardKinematics=True) )
         if ee_link_id <= 0:
             return False
-        # logging.info("ee_link_id: {}".format(ee_link_id))
-        target_angle = p2.calculateInverseKinematics(self._robot_id, ee_link_id, self._target_pos, maxNumIterations=100)
+        print("ee_link_id: {0}, robot_id: {1}".format(ee_link_id, self._robot_id))
+        target_angle = p2.calculateInverseKinematics(self._robot_id, ee_link_id, self._target_pos, maxNumIterations=500)
 
         done = False
         success = True
@@ -330,7 +337,7 @@ class RobotConfigDesignEnv(gym.Env):
             self._plane_id = None
 
         # 重置机器人
-        if self._renders and self._robot_cache_id is not None:
+        if self._renders and self._show and self._robot_cache_id is not None:
             p.removeBody(self._robot_cache_id)
             self._robot_cache_id = None
         if self._robot_id is not None:
