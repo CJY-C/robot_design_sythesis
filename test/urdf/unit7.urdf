@@ -1,10 +1,10 @@
 <?xml version="1.0"?>
 <robot  name="UNNAMED_0" >
- <link  name="BLM1_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_U_b_body" >
+ <link  name="BLM1_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_U_b_body" >
   <inertial >
    <origin  rpy="0 0 0"  xyz="-9.4624E-18 1.1154E-17 0.022042" />
-   <mass  value="5.9754" />
-   <inertia  ixy="1.7613E-19"  ixz="-3.4018E-19"  ixx="0.009154"  iyy="0.009154"  izz="0.015925"  iyz="3.3647E-19" />
+   <mass  value="0" />
+   <inertia  ixx="0.009154"  iyz="3.3647E-19"  ixz="-3.4018E-19"  iyy="0.009154"  ixy="1.7613E-19"  izz="0.015925" />
   </inertial>
   <visual >
    <origin  rpy="0 0 0"  xyz="0 0 0" />
@@ -22,11 +22,11 @@
    </geometry>
   </collision>
  </link>
- <link  name="BLM1_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_U_b_in" >
+ <link  name="BLM1_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_U_b_in" >
   <inertial >
    <origin  rpy="0 0 0"  xyz="-9.4624E-18 -5.3214E-19 0.029258" />
    <mass  value="5.9754" />
-   <inertia  ixy="-1.7613E-19"  ixz="3.3605E-19"  ixx="0.009154"  iyy="0.009154"  izz="0.015925"  iyz="3.3422E-19" />
+   <inertia  ixx="0.009154"  iyz="3.3422E-19"  ixz="3.3605E-19"  iyy="0.009154"  ixy="-1.7613E-19"  izz="0.015925" />
   </inertial>
   <visual >
    <origin  rpy="0 0 0"  xyz="0 0 0" />
@@ -44,11 +44,11 @@
    </geometry>
   </collision>
  </link>
- <link  name="BLM1_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_ILU33_U_ci_body" >
+ <link  name="BLM1_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_ILU188_U_ci_body" >
   <inertial >
    <origin  rpy="0 0 0"  xyz="0 4.2001E-18 -0.0057" />
-   <mass  value="0.90761" />
-   <inertia  ixy="0"  ixz="5.6985E-37"  ixx="0.00074704"  iyy="0.00074704"  izz="0.0014744"  iyz="1.7343E-36" />
+   <mass  value="0" />
+   <inertia  ixx="0.00074704"  iyz="1.7343E-36"  ixz="5.6985E-37"  iyy="0.00074704"  ixy="0"  izz="0.0014744" />
   </inertial>
   <visual >
    <origin  rpy="0 0 0"  xyz="0 0 0" />
@@ -66,11 +66,11 @@
    </geometry>
   </collision>
  </link>
- <link  name="BLM1_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_ILU33_U_ci_in" >
+ <link  name="BLM1_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_ILU188_U_ci_in" >
   <inertial >
    <origin  rpy="0 0 0"  xyz="-5.5075E-34 -1.7044E-17 0.0057" />
    <mass  value="0" />
-   <inertia  ixy="0"  ixz="5.6985E-37"  ixx="0.00074704"  iyy="0.00074704"  izz="0.0014744"  iyz="1.7343E-36" />
+   <inertia  ixx="0.00074704"  iyz="1.7343E-36"  ixz="5.6985E-37"  iyy="0.00074704"  ixy="0"  izz="0.0014744" />
   </inertial>
   <visual >
    <origin  rpy="0 0 0"  xyz="0 0 0" />
@@ -88,11 +88,11 @@
    </geometry>
   </collision>
  </link>
- <link  name="BLM1_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_JTLU18_U_tj_body" >
+ <link  name="BLM1_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_JTLU118_U_tj_body" >
   <inertial >
    <origin  rpy="0 0 0"  xyz="-0.0026078 -7.1138E-08 -0.0735" />
    <mass  value="1.5884" />
-   <inertia  ixy="2.097E-09"  ixz="-8.5243E-19"  ixx="0.004117"  iyy="0.0041567"  izz="0.0027805"  iyz="-4.7613E-10" />
+   <inertia  ixx="0.004117"  iyz="-4.7613E-10"  ixz="-8.5243E-19"  iyy="0.0041567"  ixy="2.097E-09"  izz="0.0027805" />
   </inertial>
   <visual >
    <origin  rpy="0 0 0"  xyz="0 0 0" />
@@ -110,11 +110,11 @@
    </geometry>
   </collision>
  </link>
- <link  name="BLM1_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_JTLU18_U_tj_in" >
+ <link  name="BLM1_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_JTLU118_U_tj_in" >
   <inertial >
    <origin  rpy="0 0 0"  xyz="-1.904E-18 1.0123E-08 0.05439" />
    <mass  value="1.5884" />
-   <inertia  ixy="4.7613E-10"  ixz="8.5243E-19"  ixx="0.0027805"  iyy="0.0041567"  izz="0.004117"  iyz="2.097E-09" />
+   <inertia  ixx="0.0027805"  iyz="2.097E-09"  ixz="8.5243E-19"  iyy="0.0041567"  ixy="4.7613E-10"  izz="0.004117" />
   </inertial>
   <visual >
    <origin  rpy="0 0 0"  xyz="0 0 0" />
@@ -132,11 +132,11 @@
    </geometry>
   </collision>
  </link>
- <link  name="BLM1_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_ILU34_U_ci_body" >
+ <link  name="BLM1_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_ILU189_U_ci_body" >
   <inertial >
    <origin  rpy="0 0 0"  xyz="0 4.2001E-18 -0.0057" />
-   <mass  value="0.90761" />
-   <inertia  ixy="0"  ixz="5.6985E-37"  ixx="0.00074704"  iyy="0.00074704"  izz="0.0014744"  iyz="1.7343E-36" />
+   <mass  value="0" />
+   <inertia  ixx="0.00074704"  iyz="1.7343E-36"  ixz="5.6985E-37"  iyy="0.00074704"  ixy="0"  izz="0.0014744" />
   </inertial>
   <visual >
    <origin  rpy="0 0 0"  xyz="0 0 0" />
@@ -154,11 +154,11 @@
    </geometry>
   </collision>
  </link>
- <link  name="BLM1_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_ILU34_U_ci_in" >
+ <link  name="BLM1_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_ILU189_U_ci_in" >
   <inertial >
    <origin  rpy="0 0 0"  xyz="-5.5075E-34 -1.7044E-17 0.0057" />
    <mass  value="0" />
-   <inertia  ixy="0"  ixz="5.6985E-37"  ixx="0.00074704"  iyy="0.00074704"  izz="0.0014744"  iyz="1.7343E-36" />
+   <inertia  ixx="0.00074704"  iyz="1.7343E-36"  ixz="5.6985E-37"  iyy="0.00074704"  ixy="0"  izz="0.0014744" />
   </inertial>
   <visual >
    <origin  rpy="0 0 0"  xyz="0 0 0" />
@@ -176,11 +176,11 @@
    </geometry>
   </collision>
  </link>
- <link  name="BLM1_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_JTLU19_U_tj_body" >
+ <link  name="BLM1_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_JTLU119_U_tj_body" >
   <inertial >
    <origin  rpy="0 0 0"  xyz="-0.0026078 -7.1138E-08 -0.0735" />
    <mass  value="1.5884" />
-   <inertia  ixy="2.097E-09"  ixz="-8.5243E-19"  ixx="0.004117"  iyy="0.0041567"  izz="0.0027805"  iyz="-4.7613E-10" />
+   <inertia  ixx="0.004117"  iyz="-4.7613E-10"  ixz="-8.5243E-19"  iyy="0.0041567"  ixy="2.097E-09"  izz="0.0027805" />
   </inertial>
   <visual >
    <origin  rpy="0 0 0"  xyz="0 0 0" />
@@ -198,11 +198,11 @@
    </geometry>
   </collision>
  </link>
- <link  name="BLM1_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_JTLU19_U_tj_in" >
+ <link  name="BLM1_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_JTLU119_U_tj_in" >
   <inertial >
    <origin  rpy="0 0 0"  xyz="-1.904E-18 1.0123E-08 0.05439" />
    <mass  value="1.5884" />
-   <inertia  ixy="4.7613E-10"  ixz="8.5243E-19"  ixx="0.0027805"  iyy="0.0041567"  izz="0.004117"  iyz="2.097E-09" />
+   <inertia  ixx="0.0027805"  iyz="2.097E-09"  ixz="8.5243E-19"  iyy="0.0041567"  ixy="4.7613E-10"  izz="0.004117" />
   </inertial>
   <visual >
    <origin  rpy="0 0 0"  xyz="0 0 0" />
@@ -220,11 +220,11 @@
    </geometry>
   </collision>
  </link>
- <link  name="BLM1_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_ILU35_U_ci_body" >
+ <link  name="BLM1_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_ILU190_U_ci_body" >
   <inertial >
    <origin  rpy="0 0 0"  xyz="0 4.2001E-18 -0.0057" />
-   <mass  value="0.90761" />
-   <inertia  ixy="0"  ixz="5.6985E-37"  ixx="0.00074704"  iyy="0.00074704"  izz="0.0014744"  iyz="1.7343E-36" />
+   <mass  value="0" />
+   <inertia  ixx="0.00074704"  iyz="1.7343E-36"  ixz="5.6985E-37"  iyy="0.00074704"  ixy="0"  izz="0.0014744" />
   </inertial>
   <visual >
    <origin  rpy="0 0 0"  xyz="0 0 0" />
@@ -242,11 +242,11 @@
    </geometry>
   </collision>
  </link>
- <link  name="BLM1_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_ILU35_U_ci_in" >
+ <link  name="BLM1_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_ILU190_U_ci_in" >
   <inertial >
    <origin  rpy="0 0 0"  xyz="-5.5075E-34 -1.7044E-17 0.0057" />
    <mass  value="0" />
-   <inertia  ixy="0"  ixz="5.6985E-37"  ixx="0.00074704"  iyy="0.00074704"  izz="0.0014744"  iyz="1.7343E-36" />
+   <inertia  ixx="0.00074704"  iyz="1.7343E-36"  ixz="5.6985E-37"  iyy="0.00074704"  ixy="0"  izz="0.0014744" />
   </inertial>
   <visual >
    <origin  rpy="0 0 0"  xyz="0 0 0" />
@@ -264,11 +264,11 @@
    </geometry>
   </collision>
  </link>
- <link  name="BLM1_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_SLMU8_U_sl_body" >
+ <link  name="BLM1_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_SLMU44_U_sl_body" >
   <inertial >
    <origin  rpy="0 0 0"  xyz="-2.5778E-07 7.2984E-07 -0.097919" />
    <mass  value="1.4196" />
-   <inertia  ixy="7.144E-09"  ixz="-6.1665E-09"  ixx="0.005704"  iyy="0.0057039"  izz="0.0016136"  iyz="1.8679E-08" />
+   <inertia  ixx="0.005704"  iyz="1.8679E-08"  ixz="-6.1665E-09"  iyy="0.0057039"  ixy="7.144E-09"  izz="0.0016136" />
   </inertial>
   <visual >
    <origin  rpy="0 0 0"  xyz="0 0 0" />
@@ -286,11 +286,11 @@
    </geometry>
   </collision>
  </link>
- <link  name="BLM1_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_IMU26_U_reverse_U_ic_in" >
+ <link  name="BLM1_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_IMU96_U_reverse_U_ic_in" >
   <inertial >
    <origin  rpy="0 0 0"  xyz="-4.5413E-34 1.0801E-17 0.0047" />
    <mass  value="0.50882" />
-   <inertia  ixy="0"  ixz="2.1721E-37"  ixx="0.00028474"  iyy="0.00028474"  izz="0.000562"  iyz="0" />
+   <inertia  ixx="0.00028474"  iyz="0"  ixz="2.1721E-37"  iyy="0.00028474"  ixy="0"  izz="0.000562" />
   </inertial>
   <visual >
    <origin  rpy="0 0 0"  xyz="0 0 0" />
@@ -308,11 +308,11 @@
    </geometry>
   </collision>
  </link>
- <link  name="BLM1_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_IMU26_U_reverse_U_ic_body" >
+ <link  name="BLM1_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_IMU96_U_reverse_U_ic_body" >
   <inertial >
    <origin  rpy="0 0 0"  xyz="0 -4.8218E-18 -0.0047" />
-   <mass  value="0.50882" />
-   <inertia  ixy="0"  ixz="2.1721E-37"  ixx="0.00028474"  iyy="0.00028474"  izz="0.000562"  iyz="0" />
+   <mass  value="0" />
+   <inertia  ixx="0.00028474"  iyz="0"  ixz="2.1721E-37"  iyy="0.00028474"  ixy="0"  izz="0.000562" />
   </inertial>
   <visual >
    <origin  rpy="0 0 0"  xyz="0 0 0" />
@@ -330,11 +330,11 @@
    </geometry>
   </collision>
  </link>
- <link  name="BLM1_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_JTMU9_U_reverse_U_tj_in" >
+ <link  name="BLM1_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_JTMU37_U_reverse_U_tj_in" >
   <inertial >
    <origin  rpy="0 0 0"  xyz="-6.5585E-18 8.3685E-09 0.044941" />
    <mass  value="0.93066" />
-   <inertia  ixy="1.9911E-10"  ixz="1.0711E-19"  ixx="0.0011044"  iyy="0.0017615"  izz="0.0017462"  iyz="8.3821E-10" />
+   <inertia  ixx="0.0011044"  iyz="8.3821E-10"  ixz="1.0711E-19"  iyy="0.0017615"  ixy="1.9911E-10"  izz="0.0017462" />
   </inertial>
   <visual >
    <origin  rpy="0 0 0"  xyz="0 0 0" />
@@ -352,11 +352,11 @@
    </geometry>
   </collision>
  </link>
- <link  name="BLM1_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_JTMU9_U_reverse_U_tj_body" >
+ <link  name="BLM1_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_JTMU37_U_reverse_U_tj_body" >
   <inertial >
    <origin  rpy="0 0 0"  xyz="-0.0020574 -5.8806E-08 -0.0635" />
    <mass  value="0.93065" />
-   <inertia  ixy="8.3821E-10"  ixz="1.078E-20"  ixx="0.0017462"  iyy="0.0017615"  izz="0.0011044"  iyz="-1.9911E-10" />
+   <inertia  ixx="0.0017462"  iyz="-1.9911E-10"  ixz="1.078E-20"  iyy="0.0017615"  ixy="8.3821E-10"  izz="0.0011044" />
   </inertial>
   <visual >
    <origin  rpy="0 0 0"  xyz="0 0 0" />
@@ -374,11 +374,11 @@
    </geometry>
   </collision>
  </link>
- <link  name="BLM1_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_IMU27_reverse_IMU27_U_ic_in" >
+ <link  name="BLM1_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_IMU97_reverse_IMU97_U_ic_in" >
   <inertial >
    <origin  rpy="0 0 0"  xyz="-4.5413E-34 1.0801E-17 0.0047" />
    <mass  value="0.50882" />
-   <inertia  ixy="0"  ixz="2.1721E-37"  ixx="0.00028474"  iyy="0.00028474"  izz="0.000562"  iyz="0" />
+   <inertia  ixx="0.00028474"  iyz="0"  ixz="2.1721E-37"  iyy="0.00028474"  ixy="0"  izz="0.000562" />
   </inertial>
   <visual >
    <origin  rpy="0 0 0"  xyz="0 0 0" />
@@ -396,11 +396,11 @@
    </geometry>
   </collision>
  </link>
- <link  name="BLM1_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_IMU27_reverse_IMU27_U_ic_body" >
+ <link  name="BLM1_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_IMU97_reverse_IMU97_U_ic_body" >
   <inertial >
    <origin  rpy="0 0 0"  xyz="0 -4.8218E-18 -0.0047" />
-   <mass  value="0.50882" />
-   <inertia  ixy="0"  ixz="2.1721E-37"  ixx="0.00028474"  iyy="0.00028474"  izz="0.000562"  iyz="0" />
+   <mass  value="0" />
+   <inertia  ixx="0.00028474"  iyz="0"  ixz="2.1721E-37"  iyy="0.00028474"  ixy="0"  izz="0.000562" />
   </inertial>
   <visual >
    <origin  rpy="0 0 0"  xyz="0 0 0" />
@@ -418,11 +418,11 @@
    </geometry>
   </collision>
  </link>
- <link  name="BLM1_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_CMMU6_U_cl_in_1" >
+ <link  name="BLM1_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_CMMU27_U_cl_in_1" >
   <inertial >
    <origin  rpy="0 0 0"  xyz="-6.9389E-18 8.3685E-09 0.044941" />
    <mass  value="0.93066" />
-   <inertia  ixy="1.9911E-10"  ixz="1.0654E-19"  ixx="0.0011044"  iyy="0.0017615"  izz="0.0017462"  iyz="8.3821E-10" />
+   <inertia  ixx="0.0011044"  iyz="8.3821E-10"  ixz="1.0654E-19"  iyy="0.0017615"  ixy="1.9911E-10"  izz="0.0017462" />
   </inertial>
   <visual >
    <origin  rpy="0 0 0"  xyz="0 0 0" />
@@ -440,11 +440,11 @@
    </geometry>
   </collision>
  </link>
- <link  name="BLM1_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_CMMU6_U_cl_body" >
+ <link  name="BLM1_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_CMMU27_U_cl_body" >
   <inertial >
    <origin  rpy="0 0 0"  xyz="-1.7347E-18 -5.8806E-08 0.044943" />
    <mass  value="0.93065" />
-   <inertia  ixy="1.9911E-10"  ixz="9.889E-20"  ixx="0.0011044"  iyy="0.0017615"  izz="0.0017462"  iyz="8.3821E-10" />
+   <inertia  ixx="0.0011044"  iyz="8.3821E-10"  ixz="9.889E-20"  iyy="0.0017615"  ixy="1.9911E-10"  izz="0.0017462" />
   </inertial>
   <visual >
    <origin  rpy="0 0 0"  xyz="0 0 0" />
@@ -462,11 +462,11 @@
    </geometry>
   </collision>
  </link>
- <link  name="BLM1_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_CMMU6_U_cl_in_2" >
+ <link  name="BLM1_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_CMMU27_U_cl_in_2" >
   <inertial >
    <origin  rpy="0 0 0"  xyz="0.0020588 8.3685E-09 0.0635" />
    <mass  value="0.93066" />
-   <inertia  ixy="-8.3821E-10"  ixz="1.078E-20"  ixx="0.0017462"  iyy="0.0017615"  izz="0.0011044"  iyz="1.9911E-10" />
+   <inertia  ixx="0.0017462"  iyz="1.9911E-10"  ixz="1.078E-20"  iyy="0.0017615"  ixy="-8.3821E-10"  izz="0.0011044" />
   </inertial>
   <visual >
    <origin  rpy="0 0 0"  xyz="0 0 0" />
@@ -484,11 +484,11 @@
    </geometry>
   </collision>
  </link>
- <link  name="BLM1_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_IMU28_U_ic_body" >
+ <link  name="BLM1_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_IMU98_U_ic_body" >
   <inertial >
    <origin  rpy="0 0 0"  xyz="0 -4.8218E-18 -0.0047" />
-   <mass  value="0.50882" />
-   <inertia  ixy="0"  ixz="2.1721E-37"  ixx="0.00028474"  iyy="0.00028474"  izz="0.000562"  iyz="0" />
+   <mass  value="0" />
+   <inertia  ixx="0.00028474"  iyz="0"  ixz="2.1721E-37"  iyy="0.00028474"  ixy="0"  izz="0.000562" />
   </inertial>
   <visual >
    <origin  rpy="0 0 0"  xyz="0 0 0" />
@@ -506,11 +506,11 @@
    </geometry>
   </collision>
  </link>
- <link  name="BLM1_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_IMU28_U_ic_in" >
+ <link  name="BLM1_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_IMU98_U_ic_in" >
   <inertial >
    <origin  rpy="0 0 0"  xyz="-4.5413E-34 1.0801E-17 0.0047" />
    <mass  value="0.50882" />
-   <inertia  ixy="0"  ixz="2.1721E-37"  ixx="0.00028474"  iyy="0.00028474"  izz="0.000562"  iyz="0" />
+   <inertia  ixx="0.00028474"  iyz="0"  ixz="2.1721E-37"  iyy="0.00028474"  ixy="0"  izz="0.000562" />
   </inertial>
   <visual >
    <origin  rpy="0 0 0"  xyz="0 0 0" />
@@ -528,11 +528,11 @@
    </geometry>
   </collision>
  </link>
- <link  name="BLM1_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_SMSU5_U_sl_body" >
+ <link  name="BLM1_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_SMSU20_U_sl_body" >
   <inertial >
    <origin  rpy="0 0 0"  xyz="-2.61E-07 7.571E-07 -0.097144" />
    <mass  value="0.86346" />
-   <inertia  ixy="3.4516E-09"  ixz="-3.4917E-09"  ixx="0.0033145"  iyy="0.0033145"  izz="0.00060028"  iyz="9.5259E-09" />
+   <inertia  ixx="0.0033145"  iyz="9.5259E-09"  ixz="-3.4917E-09"  iyy="0.0033145"  ixy="3.4516E-09"  izz="0.00060028" />
   </inertial>
   <visual >
    <origin  rpy="0 0 0"  xyz="0 0 0" />
@@ -550,11 +550,11 @@
    </geometry>
   </collision>
  </link>
- <link  name="BLM1_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_ISU15_U_reverse_U_ic_in" >
+ <link  name="BLM1_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_ISU35_U_reverse_U_ic_in" >
   <inertial >
    <origin  rpy="0 0 0"  xyz="-3.5268E-34 -1.0426E-17 0.00365" />
    <mass  value="0.23832" />
-   <inertia  ixy="0"  ixz="6.1355E-38"  ixx="8.0432E-05"  iyy="8.0432E-05"  izz="0.00015875"  iyz="0" />
+   <inertia  ixx="8.0432E-05"  iyz="0"  ixz="6.1355E-38"  iyy="8.0432E-05"  ixy="0"  izz="0.00015875" />
   </inertial>
   <visual >
    <origin  rpy="0 0 0"  xyz="0 0 0" />
@@ -572,11 +572,11 @@
    </geometry>
   </collision>
  </link>
- <link  name="BLM1_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_ISU15_U_reverse_U_ic_body" >
+ <link  name="BLM1_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_ISU35_U_reverse_U_ic_body" >
   <inertial >
    <origin  rpy="0 0 0"  xyz="0 2.5266E-18 -0.00365" />
-   <mass  value="0.23832" />
-   <inertia  ixy="0"  ixz="6.1355E-38"  ixx="8.0432E-05"  iyy="8.0432E-05"  izz="0.00015875"  iyz="0" />
+   <mass  value="0" />
+   <inertia  ixx="8.0432E-05"  iyz="0"  ixz="6.1355E-38"  iyy="8.0432E-05"  ixy="0"  izz="0.00015875" />
   </inertial>
   <visual >
    <origin  rpy="0 0 0"  xyz="0 0 0" />
@@ -594,11 +594,11 @@
    </geometry>
   </collision>
  </link>
- <link  name="BLM1_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_JSU13_U_reverse_U_tj_in" >
+ <link  name="BLM1_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_JSU32_U_reverse_U_tj_in" >
   <inertial >
    <origin  rpy="0 0 0"  xyz="1.1276E-17 6.5484E-09 0.035118" />
    <mass  value="0.50441" />
-   <inertia  ixy="7.6335E-11"  ixz="1.7534E-20"  ixx="0.00035776"  iyy="0.00071638"  izz="0.00071191"  iyz="2.7679E-10" />
+   <inertia  ixx="0.00035776"  iyz="2.7679E-10"  ixz="1.7534E-20"  iyy="0.00071638"  ixy="7.6335E-11"  izz="0.00071191" />
   </inertial>
   <visual >
    <origin  rpy="0 0 0"  xyz="0 0 0" />
@@ -616,11 +616,11 @@
    </geometry>
   </collision>
  </link>
- <link  name="BLM1_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_JSU13_U_reverse_U_tj_body" >
+ <link  name="BLM1_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_JSU32_U_reverse_U_tj_body" >
   <inertial >
    <origin  rpy="0 0 0"  xyz="-0.0013808 -7.3281E-08 -0.0575" />
    <mass  value="0.50441" />
-   <inertia  ixy="2.7679E-10"  ixz="4.9663E-20"  ixx="0.00071191"  iyy="0.00071638"  izz="0.00035776"  iyz="-7.6335E-11" />
+   <inertia  ixx="0.00071191"  iyz="-7.6335E-11"  ixz="4.9663E-20"  iyy="0.00071638"  ixy="2.7679E-10"  izz="0.00035776" />
   </inertial>
   <visual >
    <origin  rpy="0 0 0"  xyz="0 0 0" />
@@ -638,11 +638,11 @@
    </geometry>
   </collision>
  </link>
- <link  name="BLM1_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_ISU16_U_reverse_U_ic_in" >
+ <link  name="BLM1_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_ISU36_U_reverse_U_ic_in" >
   <inertial >
    <origin  rpy="0 0 0"  xyz="-3.5268E-34 -1.0426E-17 0.00365" />
    <mass  value="0.23832" />
-   <inertia  ixy="0"  ixz="6.1355E-38"  ixx="8.0432E-05"  iyy="8.0432E-05"  izz="0.00015875"  iyz="0" />
+   <inertia  ixx="8.0432E-05"  iyz="0"  ixz="6.1355E-38"  iyy="8.0432E-05"  ixy="0"  izz="0.00015875" />
   </inertial>
   <visual >
    <origin  rpy="0 0 0"  xyz="0 0 0" />
@@ -660,11 +660,11 @@
    </geometry>
   </collision>
  </link>
- <link  name="BLM1_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_ISU16_U_reverse_U_ic_body" >
+ <link  name="BLM1_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_ISU36_U_reverse_U_ic_body" >
   <inertial >
    <origin  rpy="0 0 0"  xyz="0 2.5266E-18 -0.00365" />
-   <mass  value="0.23832" />
-   <inertia  ixy="0"  ixz="6.1355E-38"  ixx="8.0432E-05"  iyy="8.0432E-05"  izz="0.00015875"  iyz="0" />
+   <mass  value="0" />
+   <inertia  ixx="8.0432E-05"  iyz="0"  ixz="6.1355E-38"  iyy="8.0432E-05"  ixy="0"  izz="0.00015875" />
   </inertial>
   <visual >
    <origin  rpy="0 0 0"  xyz="0 0 0" />
@@ -682,11 +682,11 @@
    </geometry>
   </collision>
  </link>
- <link  name="BLM1_BLU10_BLU10_BLU10_BLU10_BLU10_JSU14_U_reverse_U_tj_in" >
+ <link  name="BLM1_BLU65_BLU65_BLU65_BLU65_BLU65_JSU33_U_reverse_U_tj_in" >
   <inertial >
    <origin  rpy="0 0 0"  xyz="1.1276E-17 6.5484E-09 0.035118" />
    <mass  value="0.50441" />
-   <inertia  ixy="7.6335E-11"  ixz="1.7534E-20"  ixx="0.00035776"  iyy="0.00071638"  izz="0.00071191"  iyz="2.7679E-10" />
+   <inertia  ixx="0.00035776"  iyz="2.7679E-10"  ixz="1.7534E-20"  iyy="0.00071638"  ixy="7.6335E-11"  izz="0.00071191" />
   </inertial>
   <visual >
    <origin  rpy="0 0 0"  xyz="0 0 0" />
@@ -704,11 +704,11 @@
    </geometry>
   </collision>
  </link>
- <link  name="BLM1_BLU10_BLU10_BLU10_BLU10_BLU10_JSU14_U_reverse_U_tj_body" >
+ <link  name="BLM1_BLU65_BLU65_BLU65_BLU65_BLU65_JSU33_U_reverse_U_tj_body" >
   <inertial >
    <origin  rpy="0 0 0"  xyz="-0.0013808 -7.3281E-08 -0.0575" />
    <mass  value="0.50441" />
-   <inertia  ixy="2.7679E-10"  ixz="4.9663E-20"  ixx="0.00071191"  iyy="0.00071638"  izz="0.00035776"  iyz="-7.6335E-11" />
+   <inertia  ixx="0.00071191"  iyz="-7.6335E-11"  ixz="4.9663E-20"  iyy="0.00071638"  ixy="2.7679E-10"  izz="0.00035776" />
   </inertial>
   <visual >
    <origin  rpy="0 0 0"  xyz="0 0 0" />
@@ -726,11 +726,11 @@
    </geometry>
   </collision>
  </link>
- <link  name="BLM1_BLU10_BLU10_BLU10_BLU10_ISU17_U_reverse_U_ic_in" >
+ <link  name="BLM1_BLU65_BLU65_BLU65_BLU65_ISU37_U_reverse_U_ic_in" >
   <inertial >
    <origin  rpy="0 0 0"  xyz="-3.5268E-34 -1.0426E-17 0.00365" />
    <mass  value="0.23832" />
-   <inertia  ixy="0"  ixz="6.1355E-38"  ixx="8.0432E-05"  iyy="8.0432E-05"  izz="0.00015875"  iyz="0" />
+   <inertia  ixx="8.0432E-05"  iyz="0"  ixz="6.1355E-38"  iyy="8.0432E-05"  ixy="0"  izz="0.00015875" />
   </inertial>
   <visual >
    <origin  rpy="0 0 0"  xyz="0 0 0" />
@@ -748,11 +748,11 @@
    </geometry>
   </collision>
  </link>
- <link  name="BLM1_BLU10_BLU10_BLU10_BLU10_ISU17_U_reverse_U_ic_body" >
+ <link  name="BLM1_BLU65_BLU65_BLU65_BLU65_ISU37_U_reverse_U_ic_body" >
   <inertial >
    <origin  rpy="0 0 0"  xyz="0 2.5266E-18 -0.00365" />
-   <mass  value="0.23832" />
-   <inertia  ixy="0"  ixz="6.1355E-38"  ixx="8.0432E-05"  iyy="8.0432E-05"  izz="0.00015875"  iyz="0" />
+   <mass  value="0" />
+   <inertia  ixx="8.0432E-05"  iyz="0"  ixz="6.1355E-38"  iyy="8.0432E-05"  ixy="0"  izz="0.00015875" />
   </inertial>
   <visual >
    <origin  rpy="0 0 0"  xyz="0 0 0" />
@@ -770,11 +770,11 @@
    </geometry>
   </collision>
  </link>
- <link  name="BLM1_BLU10_BLU10_BLU10_JSU15_U_reverse_U_tj_in" >
+ <link  name="BLM1_BLU65_BLU65_BLU65_JSU34_U_reverse_U_tj_in" >
   <inertial >
    <origin  rpy="0 0 0"  xyz="1.1276E-17 6.5484E-09 0.035118" />
    <mass  value="0.50441" />
-   <inertia  ixy="7.6335E-11"  ixz="1.7534E-20"  ixx="0.00035776"  iyy="0.00071638"  izz="0.00071191"  iyz="2.7679E-10" />
+   <inertia  ixx="0.00035776"  iyz="2.7679E-10"  ixz="1.7534E-20"  iyy="0.00071638"  ixy="7.6335E-11"  izz="0.00071191" />
   </inertial>
   <visual >
    <origin  rpy="0 0 0"  xyz="0 0 0" />
@@ -792,11 +792,11 @@
    </geometry>
   </collision>
  </link>
- <link  name="BLM1_BLU10_BLU10_BLU10_JSU15_U_reverse_U_tj_body" >
+ <link  name="BLM1_BLU65_BLU65_BLU65_JSU34_U_reverse_U_tj_body" >
   <inertial >
    <origin  rpy="0 0 0"  xyz="-0.0013808 -7.3281E-08 -0.0575" />
    <mass  value="0.50441" />
-   <inertia  ixy="2.7679E-10"  ixz="4.9663E-20"  ixx="0.00071191"  iyy="0.00071638"  izz="0.00035776"  iyz="-7.6335E-11" />
+   <inertia  ixx="0.00071191"  iyz="-7.6335E-11"  ixz="4.9663E-20"  iyy="0.00071638"  ixy="2.7679E-10"  izz="0.00035776" />
   </inertial>
   <visual >
    <origin  rpy="0 0 0"  xyz="0 0 0" />
@@ -814,11 +814,11 @@
    </geometry>
   </collision>
  </link>
- <link  name="BLM1_BLU10_BLU10_ISU18_reverse_ISU18_U_ic_in" >
+ <link  name="BLM1_BLU65_BLU65_ISU38_reverse_ISU38_U_ic_in" >
   <inertial >
    <origin  rpy="0 0 0"  xyz="-3.5268E-34 -1.0426E-17 0.00365" />
    <mass  value="0.23832" />
-   <inertia  ixy="0"  ixz="6.1355E-38"  ixx="8.0432E-05"  iyy="8.0432E-05"  izz="0.00015875"  iyz="0" />
+   <inertia  ixx="8.0432E-05"  iyz="0"  ixz="6.1355E-38"  iyy="8.0432E-05"  ixy="0"  izz="0.00015875" />
   </inertial>
   <visual >
    <origin  rpy="0 0 0"  xyz="0 0 0" />
@@ -836,11 +836,11 @@
    </geometry>
   </collision>
  </link>
- <link  name="BLM1_BLU10_BLU10_ISU18_reverse_ISU18_U_ic_body" >
+ <link  name="BLM1_BLU65_BLU65_ISU38_reverse_ISU38_U_ic_body" >
   <inertial >
    <origin  rpy="0 0 0"  xyz="0 2.5266E-18 -0.00365" />
-   <mass  value="0.23832" />
-   <inertia  ixy="0"  ixz="6.1355E-38"  ixx="8.0432E-05"  iyy="8.0432E-05"  izz="0.00015875"  iyz="0" />
+   <mass  value="0" />
+   <inertia  ixx="8.0432E-05"  iyz="0"  ixz="6.1355E-38"  iyy="8.0432E-05"  ixy="0"  izz="0.00015875" />
   </inertial>
   <visual >
    <origin  rpy="0 0 0"  xyz="0 0 0" />
@@ -858,16 +858,16 @@
    </geometry>
   </collision>
  </link>
- <link  name="BLM1_BLU10_ESU1_U_e_in" >
+ <link  name="BLM1_BLU65_ESU2_U_ee_in" >
   <inertial >
-   <origin  rpy="0 0 0"  xyz="-0.00013632 -0.00018091 0.054387" />
-   <mass  value="1.1173" />
-   <inertia  ixy="3.4757E-05"  ixz="1.2559E-06"  ixx="0.0010053"  iyy="0.0070466"  izz="0.0072069"  iyz="1.9517E-07" />
+   <origin  rpy="0 0 0"  xyz="-3.3818E-35 8.2297E-19 5E-05" />
+   <mass  value="0.0019211" />
+   <inertia  ixx="3.7655E-07"  iyz="-6.9194E-23"  ixz="2.5988E-42"  iyy="3.7655E-07"  ixy="2.1397E-39"  izz="7.5309E-07" />
   </inertial>
   <visual >
    <origin  rpy="0 0 0"  xyz="0 0 0" />
    <geometry >
-    <mesh  filename="package://end_effector_s.SLDASM/meshes/e_in.STL" />
+    <mesh  filename="package://end_effector_v_s.SLDASM/meshes/ee_in.STL" />
    </geometry>
    <material  name="blue" >
     <color  rgba="0 0 0.5 1" />
@@ -876,20 +876,20 @@
   <collision >
    <origin  rpy="0 0 0"  xyz="0 0 0" />
    <geometry >
-    <mesh  filename="package://end_effector_s.SLDASM/meshes/e_in.STL" />
+    <mesh  filename="package://end_effector_v_s.SLDASM/meshes/ee_in.STL" />
    </geometry>
   </collision>
  </link>
- <link  name="BLM1_BLU10_ESU1_U_e_body" >
+ <link  name="BLM1_BLU65_ESU2_U_ee_body" >
   <inertial >
-   <origin  rpy="0 0 0"  xyz="-0.00013632 -0.00018091 0.054387" />
-   <mass  value="1.1173" />
-   <inertia  ixy="9.4322E-08"  ixz="4.1405E-08"  ixx="0.00074573"  iyy="0.0021948"  izz="0.0025137"  iyz="1.351E-07" />
+   <origin  rpy="0 0 0"  xyz="-3.3818E-35 8.2297E-19 5E-05" />
+   <mass  value="0.0019211" />
+   <inertia  ixx="3.7655E-07"  iyz="-6.9194E-23"  ixz="2.5988E-42"  iyy="3.7655E-07"  ixy="2.1397E-39"  izz="7.5309E-07" />
   </inertial>
   <visual >
    <origin  rpy="0 0 0"  xyz="0 0 0" />
    <geometry >
-    <mesh  filename="package://end_effector_s.SLDASM/meshes/e_body.STL" />
+    <mesh  filename="package://end_effector_v_s.SLDASM/meshes/ee_body.STL" />
    </geometry>
    <material  name="body" >
     <color  rgba="0.5 0.5 0.5 1" />
@@ -898,254 +898,254 @@
   <collision >
    <origin  rpy="0 0 0"  xyz="0 0 0" />
    <geometry >
-    <mesh  filename="package://end_effector_s.SLDASM/meshes/e_body.STL" />
+    <mesh  filename="package://end_effector_v_s.SLDASM/meshes/ee_body.STL" />
    </geometry>
   </collision>
  </link>
- <joint  type="fixed"  name="BLM1_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_U_b_large" >
+ <joint  name="BLM1_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_U_b_large"  type="fixed" >
   <origin  rpy="3.14159265358979 0 0"  xyz="0 0 0.0513" />
-  <parent  link="BLM1_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_U_b_body" />
-  <child  link="BLM1_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_U_b_in" />
+  <parent  link="BLM1_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_U_b_body" />
+  <child  link="BLM1_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_U_b_in" />
   <axis  xyz="0 0 1" />
  </joint>
- <joint  type="fixed"  name="BLM1_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_ILU33_U_ci_large_1" >
+ <joint  name="BLM1_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_ILU188_U_ci_large_1"  type="fixed" >
   <origin  rpy="0 0 0"  xyz="0 0 0" />
-  <parent  link="BLM1_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_U_b_in" />
-  <child  link="BLM1_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_ILU33_U_ci_body" />
+  <parent  link="BLM1_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_U_b_in" />
+  <child  link="BLM1_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_ILU188_U_ci_body" />
   <axis  xyz="0 0 0" />
  </joint>
- <joint  type="fixed"  name="BLM1_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_ILU33_U_ci_large_2" >
+ <joint  name="BLM1_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_ILU188_U_ci_large_2"  type="fixed" >
   <origin  rpy="0 0 0"  xyz="0 0 -0.0114" />
-  <parent  link="BLM1_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_ILU33_U_ci_body" />
-  <child  link="BLM1_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_ILU33_U_ci_in" />
+  <parent  link="BLM1_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_ILU188_U_ci_body" />
+  <child  link="BLM1_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_ILU188_U_ci_in" />
   <axis  xyz="0 0 0" />
  </joint>
- <joint  type="revolute"  name="BLM1_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_JTLU18_U_tj_large_1" >
+ <joint  name="BLM1_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_JTLU118_U_tj_large_1"  type="revolute" >
   <origin  rpy="0.0 0.0 3.141592653589793"  xyz="0.0 0.0 0.0" />
-  <parent  link="BLM1_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_ILU33_U_ci_in" />
-  <child  link="BLM1_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_JTLU18_U_tj_body" />
+  <parent  link="BLM1_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_ILU188_U_ci_in" />
+  <child  link="BLM1_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_JTLU118_U_tj_body" />
   <axis  xyz="0 0 1" />
-  <limit  effort="60.5"  lower="-3.1416"  velocity="0.33"  upper="3.1416" />
+  <limit  velocity="0.33"  lower="-3.1416"  upper="3.1416"  effort="60.5" />
  </joint>
- <joint  type="fixed"  name="BLM1_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_JTLU18_U_tj_large_2" >
+ <joint  name="BLM1_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_JTLU118_U_tj_large_2"  type="fixed" >
   <origin  rpy="0 1.5707963267949 0"  xyz="-0.057 0 -0.0735" />
-  <parent  link="BLM1_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_JTLU18_U_tj_body" />
-  <child  link="BLM1_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_JTLU18_U_tj_in" />
+  <parent  link="BLM1_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_JTLU118_U_tj_body" />
+  <child  link="BLM1_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_JTLU118_U_tj_in" />
   <axis  xyz="0 0 0" />
  </joint>
- <joint  type="fixed"  name="BLM1_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_ILU34_U_ci_large_1" >
+ <joint  name="BLM1_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_ILU189_U_ci_large_1"  type="fixed" >
   <origin  rpy="0 0 0"  xyz="0 0 0" />
-  <parent  link="BLM1_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_JTLU18_U_tj_in" />
-  <child  link="BLM1_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_ILU34_U_ci_body" />
+  <parent  link="BLM1_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_JTLU118_U_tj_in" />
+  <child  link="BLM1_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_ILU189_U_ci_body" />
   <axis  xyz="0 0 0" />
  </joint>
- <joint  type="fixed"  name="BLM1_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_ILU34_U_ci_large_2" >
+ <joint  name="BLM1_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_ILU189_U_ci_large_2"  type="fixed" >
   <origin  rpy="0 0 0"  xyz="0 0 -0.0114" />
-  <parent  link="BLM1_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_ILU34_U_ci_body" />
-  <child  link="BLM1_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_ILU34_U_ci_in" />
+  <parent  link="BLM1_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_ILU189_U_ci_body" />
+  <child  link="BLM1_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_ILU189_U_ci_in" />
   <axis  xyz="0 0 0" />
  </joint>
- <joint  type="revolute"  name="BLM1_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_JTLU19_U_tj_large_1" >
+ <joint  name="BLM1_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_JTLU119_U_tj_large_1"  type="revolute" >
   <origin  rpy="0.0 0.0 3.141592653589793"  xyz="0.0 0.0 0.0" />
-  <parent  link="BLM1_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_ILU34_U_ci_in" />
-  <child  link="BLM1_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_JTLU19_U_tj_body" />
+  <parent  link="BLM1_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_ILU189_U_ci_in" />
+  <child  link="BLM1_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_JTLU119_U_tj_body" />
   <axis  xyz="0 0 1" />
-  <limit  effort="60.5"  lower="-3.1416"  velocity="0.33"  upper="3.1416" />
+  <limit  velocity="0.33"  lower="-3.1416"  upper="3.1416"  effort="60.5" />
  </joint>
- <joint  type="fixed"  name="BLM1_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_JTLU19_U_tj_large_2" >
+ <joint  name="BLM1_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_JTLU119_U_tj_large_2"  type="fixed" >
   <origin  rpy="0 1.5707963267949 0"  xyz="-0.057 0 -0.0735" />
-  <parent  link="BLM1_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_JTLU19_U_tj_body" />
-  <child  link="BLM1_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_JTLU19_U_tj_in" />
+  <parent  link="BLM1_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_JTLU119_U_tj_body" />
+  <child  link="BLM1_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_JTLU119_U_tj_in" />
   <axis  xyz="0 0 0" />
  </joint>
- <joint  type="fixed"  name="BLM1_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_ILU35_U_ci_large_1" >
+ <joint  name="BLM1_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_ILU190_U_ci_large_1"  type="fixed" >
   <origin  rpy="0 0 0"  xyz="0 0 0" />
-  <parent  link="BLM1_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_JTLU19_U_tj_in" />
-  <child  link="BLM1_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_ILU35_U_ci_body" />
+  <parent  link="BLM1_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_JTLU119_U_tj_in" />
+  <child  link="BLM1_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_ILU190_U_ci_body" />
   <axis  xyz="0 0 0" />
  </joint>
- <joint  type="fixed"  name="BLM1_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_ILU35_U_ci_large_2" >
+ <joint  name="BLM1_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_ILU190_U_ci_large_2"  type="fixed" >
   <origin  rpy="0 0 0"  xyz="0 0 -0.0114" />
-  <parent  link="BLM1_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_ILU35_U_ci_body" />
-  <child  link="BLM1_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_ILU35_U_ci_in" />
+  <parent  link="BLM1_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_ILU190_U_ci_body" />
+  <child  link="BLM1_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_ILU190_U_ci_in" />
   <axis  xyz="0 0 0" />
  </joint>
- <joint  type="fixed"  name="BLM1_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_SLMU8_U_sl_large" >
+ <joint  name="BLM1_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_SLMU44_U_sl_large"  type="fixed" >
   <origin  rpy="0.0 0.0 3.141592653589793"  xyz="0.0 0.0 0.0" />
-  <parent  link="BLM1_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_ILU35_U_ci_in" />
-  <child  link="BLM1_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_SLMU8_U_sl_body" />
+  <parent  link="BLM1_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_ILU190_U_ci_in" />
+  <child  link="BLM1_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_SLMU44_U_sl_body" />
   <axis  xyz="0 0 0" />
  </joint>
- <joint  type="fixed"  name="BLM1_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_SLMU8_U_sl_medium" >
+ <joint  name="BLM1_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_SLMU44_U_sl_medium"  type="fixed" >
   <origin  rpy="3.14159265358979 0 0"  xyz="0 0 -0.2" />
-  <parent  link="BLM1_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_SLMU8_U_sl_body" />
-  <child  link="BLM1_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_IMU26_U_reverse_U_ic_in" />
+  <parent  link="BLM1_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_SLMU44_U_sl_body" />
+  <child  link="BLM1_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_IMU96_U_reverse_U_ic_in" />
   <axis  xyz="0 0 0" />
  </joint>
- <joint  type="fixed"  name="BLM1_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_IMU26_U_reverse_U_ic_medium_2" >
+ <joint  name="BLM1_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_IMU96_U_reverse_U_ic_medium_2"  type="fixed" >
   <origin  rpy="0.0 0.0 3.141592653589793"  xyz="0.0 0.0 0.0094" />
-  <parent  link="BLM1_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_IMU26_U_reverse_U_ic_in" />
-  <child  link="BLM1_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_IMU26_U_reverse_U_ic_body" />
+  <parent  link="BLM1_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_IMU96_U_reverse_U_ic_in" />
+  <child  link="BLM1_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_IMU96_U_reverse_U_ic_body" />
   <axis  xyz="0 0 0" />
  </joint>
- <joint  type="fixed"  name="BLM1_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_IMU26_U_reverse_U_ic_medium_1" >
+ <joint  name="BLM1_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_IMU96_U_reverse_U_ic_medium_1"  type="fixed" >
   <origin  rpy="0.0 0.0 0.0"  xyz="-0.0 -0.0 -0.0" />
-  <parent  link="BLM1_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_IMU26_U_reverse_U_ic_body" />
-  <child  link="BLM1_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_JTMU9_U_reverse_U_tj_in" />
+  <parent  link="BLM1_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_IMU96_U_reverse_U_ic_body" />
+  <child  link="BLM1_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_JTMU37_U_reverse_U_tj_in" />
   <axis  xyz="0 0 0" />
  </joint>
- <joint  type="fixed"  name="BLM1_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_JTMU9_U_reverse_U_tj_medium_2" >
+ <joint  name="BLM1_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_JTMU37_U_reverse_U_tj_medium_2"  type="fixed" >
   <origin  rpy="0.0 -1.5707963267949 0.0"  xyz="-0.06350000000000017 -0.0 0.04699999999999977" />
-  <parent  link="BLM1_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_JTMU9_U_reverse_U_tj_in" />
-  <child  link="BLM1_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_JTMU9_U_reverse_U_tj_body" />
+  <parent  link="BLM1_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_JTMU37_U_reverse_U_tj_in" />
+  <child  link="BLM1_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_JTMU37_U_reverse_U_tj_body" />
   <axis  xyz="0 -1 0" />
  </joint>
- <joint  type="revolute"  name="BLM1_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_JTMU9_U_reverse_U_tj_medium_1" >
+ <joint  name="BLM1_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_JTMU37_U_reverse_U_tj_medium_1"  type="revolute" >
   <origin  rpy="0.0 0.0 0.0"  xyz="-0.0 -0.0 -0.0" />
-  <parent  link="BLM1_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_JTMU9_U_reverse_U_tj_body" />
-  <child  link="BLM1_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_IMU27_reverse_IMU27_U_ic_in" />
+  <parent  link="BLM1_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_JTMU37_U_reverse_U_tj_body" />
+  <child  link="BLM1_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_IMU97_reverse_IMU97_U_ic_in" />
   <axis  xyz="0 0 1" />
-  <limit  effort="25.5"  lower="-3.1416"  velocity="0.33"  upper="3.1416" />
+  <limit  velocity="0.33"  lower="-3.1416"  upper="3.1416"  effort="25.5" />
  </joint>
- <joint  type="fixed"  name="BLM1_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_IMU27_reverse_IMU27_U_ic_medium_2" >
+ <joint  name="BLM1_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_IMU97_reverse_IMU97_U_ic_medium_2"  type="fixed" >
   <origin  rpy="0.0 0.0 0.0"  xyz="-0.0 -0.0 0.0094" />
-  <parent  link="BLM1_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_IMU27_reverse_IMU27_U_ic_in" />
-  <child  link="BLM1_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_IMU27_reverse_IMU27_U_ic_body" />
+  <parent  link="BLM1_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_IMU97_reverse_IMU97_U_ic_in" />
+  <child  link="BLM1_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_IMU97_reverse_IMU97_U_ic_body" />
   <axis  xyz="0 0 0" />
  </joint>
- <joint  type="fixed"  name="BLM1_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_IMU27_reverse_IMU27_U_ic_medium_1" >
+ <joint  name="BLM1_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_IMU97_reverse_IMU97_U_ic_medium_1"  type="fixed" >
   <origin  rpy="0.0 0.0 3.141592653589793"  xyz="-0.0 -0.0 -0.0" />
-  <parent  link="BLM1_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_IMU27_reverse_IMU27_U_ic_body" />
-  <child  link="BLM1_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_CMMU6_U_cl_in_1" />
+  <parent  link="BLM1_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_IMU97_reverse_IMU97_U_ic_body" />
+  <child  link="BLM1_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_CMMU27_U_cl_in_1" />
   <axis  xyz="0 0 0" />
  </joint>
- <joint  type="fixed"  name="BLM1_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_CMMU6_U_cl_medium_1" >
+ <joint  name="BLM1_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_CMMU27_U_cl_medium_1"  type="fixed" >
   <origin  rpy="0 0 0"  xyz="0 0 0" />
-  <parent  link="BLM1_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_CMMU6_U_cl_in_1" />
-  <child  link="BLM1_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_CMMU6_U_cl_body" />
+  <parent  link="BLM1_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_CMMU27_U_cl_in_1" />
+  <child  link="BLM1_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_CMMU27_U_cl_body" />
   <axis  xyz="0 0 0" />
  </joint>
- <joint  type="fixed"  name="BLM1_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_CMMU6_U_cl_medium_2" >
+ <joint  name="BLM1_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_CMMU27_U_cl_medium_2"  type="fixed" >
   <origin  rpy="0 1.5707963267949 0"  xyz="-0.0635 0 0.047" />
-  <parent  link="BLM1_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_CMMU6_U_cl_body" />
-  <child  link="BLM1_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_CMMU6_U_cl_in_2" />
+  <parent  link="BLM1_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_CMMU27_U_cl_body" />
+  <child  link="BLM1_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_CMMU27_U_cl_in_2" />
   <axis  xyz="0 0 0" />
  </joint>
- <joint  type="fixed"  name="BLM1_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_IMU28_U_ic_medium_1" >
+ <joint  name="BLM1_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_IMU98_U_ic_medium_1"  type="fixed" >
   <origin  rpy="0 0 0"  xyz="0 0 0" />
-  <parent  link="BLM1_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_CMMU6_U_cl_in_2" />
-  <child  link="BLM1_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_IMU28_U_ic_body" />
+  <parent  link="BLM1_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_CMMU27_U_cl_in_2" />
+  <child  link="BLM1_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_IMU98_U_ic_body" />
   <axis  xyz="0 0 0" />
  </joint>
- <joint  type="fixed"  name="BLM1_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_IMU28_U_ic_medium_2" >
+ <joint  name="BLM1_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_IMU98_U_ic_medium_2"  type="fixed" >
   <origin  rpy="0 0 0"  xyz="0 0 -0.0094" />
-  <parent  link="BLM1_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_IMU28_U_ic_body" />
-  <child  link="BLM1_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_IMU28_U_ic_in" />
+  <parent  link="BLM1_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_IMU98_U_ic_body" />
+  <child  link="BLM1_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_IMU98_U_ic_in" />
   <axis  xyz="0 0 0" />
  </joint>
- <joint  type="fixed"  name="BLM1_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_SMSU5_U_sl_medium" >
+ <joint  name="BLM1_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_SMSU20_U_sl_medium"  type="fixed" >
   <origin  rpy="0 0 0"  xyz="0 0 0" />
-  <parent  link="BLM1_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_IMU28_U_ic_in" />
-  <child  link="BLM1_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_SMSU5_U_sl_body" />
+  <parent  link="BLM1_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_IMU98_U_ic_in" />
+  <child  link="BLM1_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_SMSU20_U_sl_body" />
   <axis  xyz="0 0 0" />
  </joint>
- <joint  type="fixed"  name="BLM1_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_SMSU5_U_sl_small" >
+ <joint  name="BLM1_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_SMSU20_U_sl_small"  type="fixed" >
   <origin  rpy="3.1416 0 0"  xyz="0 0 -0.2" />
-  <parent  link="BLM1_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_SMSU5_U_sl_body" />
-  <child  link="BLM1_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_ISU15_U_reverse_U_ic_in" />
+  <parent  link="BLM1_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_SMSU20_U_sl_body" />
+  <child  link="BLM1_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_ISU35_U_reverse_U_ic_in" />
   <axis  xyz="0 0 0" />
  </joint>
- <joint  type="fixed"  name="BLM1_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_ISU15_U_reverse_U_ic_small_2" >
+ <joint  name="BLM1_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_ISU35_U_reverse_U_ic_small_2"  type="fixed" >
   <origin  rpy="0.0 0.0 3.141592653589793"  xyz="0.0 0.0 0.0073" />
-  <parent  link="BLM1_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_ISU15_U_reverse_U_ic_in" />
-  <child  link="BLM1_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_ISU15_U_reverse_U_ic_body" />
+  <parent  link="BLM1_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_ISU35_U_reverse_U_ic_in" />
+  <child  link="BLM1_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_ISU35_U_reverse_U_ic_body" />
   <axis  xyz="0 0 0" />
  </joint>
- <joint  type="fixed"  name="BLM1_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_ISU15_U_reverse_U_ic_small_1" >
+ <joint  name="BLM1_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_ISU35_U_reverse_U_ic_small_1"  type="fixed" >
   <origin  rpy="0.0 0.0 0.0"  xyz="-0.0 -0.0 -0.0" />
-  <parent  link="BLM1_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_ISU15_U_reverse_U_ic_body" />
-  <child  link="BLM1_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_JSU13_U_reverse_U_tj_in" />
+  <parent  link="BLM1_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_ISU35_U_reverse_U_ic_body" />
+  <child  link="BLM1_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_JSU32_U_reverse_U_tj_in" />
   <axis  xyz="0 0 0" />
  </joint>
- <joint  type="fixed"  name="BLM1_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_JSU13_U_reverse_U_tj_small_2" >
+ <joint  name="BLM1_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_JSU32_U_reverse_U_tj_small_2"  type="fixed" >
   <origin  rpy="0.0 -1.5707963267949 0.0"  xyz="-0.057500000000000134 -0.0 0.036499999999999796" />
-  <parent  link="BLM1_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_JSU13_U_reverse_U_tj_in" />
-  <child  link="BLM1_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_JSU13_U_reverse_U_tj_body" />
+  <parent  link="BLM1_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_JSU32_U_reverse_U_tj_in" />
+  <child  link="BLM1_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_JSU32_U_reverse_U_tj_body" />
   <axis  xyz="0 0 0" />
  </joint>
- <joint  type="revolute"  name="BLM1_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_JSU13_U_reverse_U_tj_small_1" >
+ <joint  name="BLM1_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_JSU32_U_reverse_U_tj_small_1"  type="revolute" >
   <origin  rpy="0.0 0.0 0.0"  xyz="-0.0 -0.0 -0.0" />
-  <parent  link="BLM1_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_JSU13_U_reverse_U_tj_body" />
-  <child  link="BLM1_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_ISU16_U_reverse_U_ic_in" />
+  <parent  link="BLM1_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_JSU32_U_reverse_U_tj_body" />
+  <child  link="BLM1_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_ISU36_U_reverse_U_ic_in" />
   <axis  xyz="0 0 1" />
-  <limit  effort="4.5"  lower="-3.1416"  velocity="0.4"  upper="3.1416" />
+  <limit  velocity="0.4"  lower="-3.1416"  upper="3.1416"  effort="4.5" />
  </joint>
- <joint  type="fixed"  name="BLM1_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_ISU16_U_reverse_U_ic_small_2" >
+ <joint  name="BLM1_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_ISU36_U_reverse_U_ic_small_2"  type="fixed" >
   <origin  rpy="0.0 0.0 3.141592653589793"  xyz="0.0 0.0 0.0073" />
-  <parent  link="BLM1_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_ISU16_U_reverse_U_ic_in" />
-  <child  link="BLM1_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_ISU16_U_reverse_U_ic_body" />
+  <parent  link="BLM1_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_ISU36_U_reverse_U_ic_in" />
+  <child  link="BLM1_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_ISU36_U_reverse_U_ic_body" />
   <axis  xyz="0 0 0" />
  </joint>
- <joint  type="fixed"  name="BLM1_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_ISU16_U_reverse_U_ic_small_1" >
+ <joint  name="BLM1_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_ISU36_U_reverse_U_ic_small_1"  type="fixed" >
   <origin  rpy="0.0 0.0 0.0"  xyz="-0.0 -0.0 -0.0" />
-  <parent  link="BLM1_BLU10_BLU10_BLU10_BLU10_BLU10_BLU10_ISU16_U_reverse_U_ic_body" />
-  <child  link="BLM1_BLU10_BLU10_BLU10_BLU10_BLU10_JSU14_U_reverse_U_tj_in" />
+  <parent  link="BLM1_BLU65_BLU65_BLU65_BLU65_BLU65_BLU65_ISU36_U_reverse_U_ic_body" />
+  <child  link="BLM1_BLU65_BLU65_BLU65_BLU65_BLU65_JSU33_U_reverse_U_tj_in" />
   <axis  xyz="0 0 0" />
  </joint>
- <joint  type="fixed"  name="BLM1_BLU10_BLU10_BLU10_BLU10_BLU10_JSU14_U_reverse_U_tj_small_2" >
+ <joint  name="BLM1_BLU65_BLU65_BLU65_BLU65_BLU65_JSU33_U_reverse_U_tj_small_2"  type="fixed" >
   <origin  rpy="0.0 -1.5707963267949 0.0"  xyz="-0.057500000000000134 -0.0 0.036499999999999796" />
-  <parent  link="BLM1_BLU10_BLU10_BLU10_BLU10_BLU10_JSU14_U_reverse_U_tj_in" />
-  <child  link="BLM1_BLU10_BLU10_BLU10_BLU10_BLU10_JSU14_U_reverse_U_tj_body" />
+  <parent  link="BLM1_BLU65_BLU65_BLU65_BLU65_BLU65_JSU33_U_reverse_U_tj_in" />
+  <child  link="BLM1_BLU65_BLU65_BLU65_BLU65_BLU65_JSU33_U_reverse_U_tj_body" />
   <axis  xyz="0 0 0" />
  </joint>
- <joint  type="revolute"  name="BLM1_BLU10_BLU10_BLU10_BLU10_BLU10_JSU14_U_reverse_U_tj_small_1" >
+ <joint  name="BLM1_BLU65_BLU65_BLU65_BLU65_BLU65_JSU33_U_reverse_U_tj_small_1"  type="revolute" >
   <origin  rpy="0.0 0.0 0.0"  xyz="-0.0 -0.0 -0.0" />
-  <parent  link="BLM1_BLU10_BLU10_BLU10_BLU10_BLU10_JSU14_U_reverse_U_tj_body" />
-  <child  link="BLM1_BLU10_BLU10_BLU10_BLU10_ISU17_U_reverse_U_ic_in" />
+  <parent  link="BLM1_BLU65_BLU65_BLU65_BLU65_BLU65_JSU33_U_reverse_U_tj_body" />
+  <child  link="BLM1_BLU65_BLU65_BLU65_BLU65_ISU37_U_reverse_U_ic_in" />
   <axis  xyz="0 0 1" />
-  <limit  effort="4.5"  lower="-3.1416"  velocity="0.4"  upper="3.1416" />
+  <limit  velocity="0.4"  lower="-3.1416"  upper="3.1416"  effort="4.5" />
  </joint>
- <joint  type="fixed"  name="BLM1_BLU10_BLU10_BLU10_BLU10_ISU17_U_reverse_U_ic_small_2" >
+ <joint  name="BLM1_BLU65_BLU65_BLU65_BLU65_ISU37_U_reverse_U_ic_small_2"  type="fixed" >
   <origin  rpy="0.0 0.0 3.141592653589793"  xyz="0.0 0.0 0.0073" />
-  <parent  link="BLM1_BLU10_BLU10_BLU10_BLU10_ISU17_U_reverse_U_ic_in" />
-  <child  link="BLM1_BLU10_BLU10_BLU10_BLU10_ISU17_U_reverse_U_ic_body" />
+  <parent  link="BLM1_BLU65_BLU65_BLU65_BLU65_ISU37_U_reverse_U_ic_in" />
+  <child  link="BLM1_BLU65_BLU65_BLU65_BLU65_ISU37_U_reverse_U_ic_body" />
   <axis  xyz="0 0 0" />
  </joint>
- <joint  type="fixed"  name="BLM1_BLU10_BLU10_BLU10_BLU10_ISU17_U_reverse_U_ic_small_1" >
+ <joint  name="BLM1_BLU65_BLU65_BLU65_BLU65_ISU37_U_reverse_U_ic_small_1"  type="fixed" >
   <origin  rpy="0.0 0.0 0.0"  xyz="-0.0 -0.0 -0.0" />
-  <parent  link="BLM1_BLU10_BLU10_BLU10_BLU10_ISU17_U_reverse_U_ic_body" />
-  <child  link="BLM1_BLU10_BLU10_BLU10_JSU15_U_reverse_U_tj_in" />
+  <parent  link="BLM1_BLU65_BLU65_BLU65_BLU65_ISU37_U_reverse_U_ic_body" />
+  <child  link="BLM1_BLU65_BLU65_BLU65_JSU34_U_reverse_U_tj_in" />
   <axis  xyz="0 0 0" />
  </joint>
- <joint  type="fixed"  name="BLM1_BLU10_BLU10_BLU10_JSU15_U_reverse_U_tj_small_2" >
+ <joint  name="BLM1_BLU65_BLU65_BLU65_JSU34_U_reverse_U_tj_small_2"  type="fixed" >
   <origin  rpy="0.0 -1.5707963267949 0.0"  xyz="-0.057500000000000134 -0.0 0.036499999999999796" />
-  <parent  link="BLM1_BLU10_BLU10_BLU10_JSU15_U_reverse_U_tj_in" />
-  <child  link="BLM1_BLU10_BLU10_BLU10_JSU15_U_reverse_U_tj_body" />
+  <parent  link="BLM1_BLU65_BLU65_BLU65_JSU34_U_reverse_U_tj_in" />
+  <child  link="BLM1_BLU65_BLU65_BLU65_JSU34_U_reverse_U_tj_body" />
   <axis  xyz="0 0 0" />
  </joint>
- <joint  type="revolute"  name="BLM1_BLU10_BLU10_BLU10_JSU15_U_reverse_U_tj_small_1" >
+ <joint  name="BLM1_BLU65_BLU65_BLU65_JSU34_U_reverse_U_tj_small_1"  type="revolute" >
   <origin  rpy="0.0 0.0 0.0"  xyz="-0.0 -0.0 -0.0" />
-  <parent  link="BLM1_BLU10_BLU10_BLU10_JSU15_U_reverse_U_tj_body" />
-  <child  link="BLM1_BLU10_BLU10_ISU18_reverse_ISU18_U_ic_in" />
+  <parent  link="BLM1_BLU65_BLU65_BLU65_JSU34_U_reverse_U_tj_body" />
+  <child  link="BLM1_BLU65_BLU65_ISU38_reverse_ISU38_U_ic_in" />
   <axis  xyz="0 0 1" />
-  <limit  effort="4.5"  lower="-3.1416"  velocity="0.4"  upper="3.1416" />
+  <limit  velocity="0.4"  lower="-3.1416"  upper="3.1416"  effort="4.5" />
  </joint>
- <joint  type="fixed"  name="BLM1_BLU10_BLU10_ISU18_reverse_ISU18_U_ic_small_2" >
+ <joint  name="BLM1_BLU65_BLU65_ISU38_reverse_ISU38_U_ic_small_2"  type="fixed" >
   <origin  rpy="0.0 0.0 0.0"  xyz="-0.0 -0.0 0.0073" />
-  <parent  link="BLM1_BLU10_BLU10_ISU18_reverse_ISU18_U_ic_in" />
-  <child  link="BLM1_BLU10_BLU10_ISU18_reverse_ISU18_U_ic_body" />
+  <parent  link="BLM1_BLU65_BLU65_ISU38_reverse_ISU38_U_ic_in" />
+  <child  link="BLM1_BLU65_BLU65_ISU38_reverse_ISU38_U_ic_body" />
   <axis  xyz="0 0 0" />
  </joint>
- <joint  type="fixed"  name="BLM1_BLU10_BLU10_ISU18_reverse_ISU18_U_ic_small_1" >
+ <joint  name="BLM1_BLU65_BLU65_ISU38_reverse_ISU38_U_ic_small_1"  type="fixed" >
   <origin  rpy="0.0 0.0 0.0"  xyz="-0.0 -0.0 -0.0" />
-  <parent  link="BLM1_BLU10_BLU10_ISU18_reverse_ISU18_U_ic_body" />
-  <child  link="BLM1_BLU10_ESU1_U_e_in" />
+  <parent  link="BLM1_BLU65_BLU65_ISU38_reverse_ISU38_U_ic_body" />
+  <child  link="BLM1_BLU65_ESU2_U_ee_in" />
   <axis  xyz="0 0 0" />
  </joint>
- <joint  type="fixed"  name="BLM1_BLU10_ESU1_U_e_small" >
+ <joint  name="BLM1_BLU65_ESU2_U_ee_small"  type="fixed" >
   <origin  rpy="0 0 0"  xyz="0 0 0" />
-  <parent  link="BLM1_BLU10_ESU1_U_e_in" />
-  <child  link="BLM1_BLU10_ESU1_U_e_body" />
+  <parent  link="BLM1_BLU65_ESU2_U_ee_in" />
+  <child  link="BLM1_BLU65_ESU2_U_ee_body" />
   <axis  xyz="0 0 0" />
  </joint>
 </robot>

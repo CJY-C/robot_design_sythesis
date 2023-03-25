@@ -7,24 +7,24 @@
             64
         ]
     },
-    "batch_size":	100,
-    "env_fn":	"<function <lambda> at 0x7fdad0c1ccb0>",
-    "epochs":	10,
-    "epsilon_decay":	0.0001,
+    "batch_size":	32,
+    "env_fn":	"<function <lambda> at 0x7f1d2800ecb0>",
+    "epochs":	8000,
+    "epsilon_decay":	1e-05,
     "epsilon_end":	0.1,
     "epsilon_start":	1,
     "exp_name":	"RobotConfigDesign",
     "gamma":	0.99,
     "logger":	{
-        "<spinup.utils.logx.EpochLogger object at 0x7fda380a4b10>":	{
+        "<spinup.utils.logx.EpochLogger object at 0x7f1c8c7e7f10>":	{
             "epoch_dict":	{},
             "exp_name":	"RobotConfigDesign",
             "first_row":	true,
             "log_current_row":	{},
             "log_headers":	[],
-            "output_dir":	"/home/masa/learning/rl/undergraduate/cjy/robot_design_sythesis/test/algo/data/RobotConfigDesign-v0",
+            "output_dir":	"/home/masa/learning/rl/undergraduate/cjy/robot_design_sythesis/test/algo/data/RobotConfigDesign-v5",
             "output_file":	{
-                "<_io.TextIOWrapper name='/home/masa/learning/rl/undergraduate/cjy/robot_design_sythesis/test/algo/data/RobotConfigDesign-v0/progress.txt' mode='w' encoding='UTF-8'>":	{
+                "<_io.TextIOWrapper name='/home/masa/learning/rl/undergraduate/cjy/robot_design_sythesis/test/algo/data/RobotConfigDesign-v5/progress.txt' mode='w' encoding='UTF-8'>":	{
                     "mode":	"w"
                 }
             }
@@ -32,7 +32,7 @@
     },
     "logger_kwargs":	{
         "exp_name":	"RobotConfigDesign",
-        "output_dir":	"/home/masa/learning/rl/undergraduate/cjy/robot_design_sythesis/test/algo/data/RobotConfigDesign-v0"
+        "output_dir":	"/home/masa/learning/rl/undergraduate/cjy/robot_design_sythesis/test/algo/data/RobotConfigDesign-v5"
     },
     "max_ep_len":	20,
     "network":	"DQN_2015",
@@ -40,7 +40,7 @@
     "replay_size":	1000000,
     "save_freq":	1,
     "seed":	0,
-    "start_steps":	20,
+    "start_steps":	2000,
     "steps_per_epoch":	20,
-    "update_freq":	1000
+    "update_freq":	400
 }

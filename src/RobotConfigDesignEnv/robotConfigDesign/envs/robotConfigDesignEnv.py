@@ -57,8 +57,8 @@ class RobotConfigDesignEnv(gym.Env):
         logging.info("=======================================RobotConfigDesignEnv init============================================")
         self._A = Arrangement()
         self._robot_id = None
-        self._robot_cache_id = None
-        self._show = False
+        # self._robot_cache_id = None
+        # self._show = False
         self._joint_info = list()
         self._target_pos = None
         self._target_id = None
@@ -149,7 +149,7 @@ class RobotConfigDesignEnv(gym.Env):
         # p.configureDebugVisualizer(p2.COV_ENABLE_WIREFRAME,1)
         # 重置仿真环境
         self._clearEnv()
-        # p.resetSimulation()
+        p.resetSimulation()
         # 先去除地面
         # self._plane_id = p2.loadURDF(Plane_Path, useFixedBase=True, basePosition=[0, 0, 0], flags = p2.URDF_ENABLE_CACHED_GRAPHICS_SHAPES)
 
@@ -235,43 +235,42 @@ class RobotConfigDesignEnv(gym.Env):
 
     def _updateRobot(self, action):
         if self._robot_id is not None:
-            if self._renders and self._show:
-                self._robot_cache_id = self._robot_id
-            else:
-                self._p.removeBody(self._robot_id)
+            self._p.removeBody(self._robot_id)
             self._robot_id = None
             self._joint_info = list()
 
         success = self._A.addModule(MODULETYPE_LIST[action])
-        exportPath = self._A.exportURDF(ROBOT_PATH, ROBOT_NAME)
 
-        p2.setPhysicsEngineParameter(enableFileCaching=0, physicsClientId=self._physics_client_id)
-        self._robot_id = p2.loadURDF(exportPath, useFixedBase=True, flags=p2.URDF_MERGE_FIXED_LINKS | p2.URDF_USE_SELF_COLLISION)
-        p2.setPhysicsEngineParameter(enableFileCaching=1, physicsClientId=self._physics_client_id)
+        # exportPath = self._A.exportURDF(ROBOT_PATH, ROBOT_NAME)
+        # p2.setPhysicsEngineParameter(enableFileCaching=0, physicsClientId=self._physics_client_id)
+        # self._robot_id = p2.loadURDF(exportPath, useFixedBase=True, flags=p2.URDF_MERGE_FIXED_LINKS | p2.URDF_USE_SELF_COLLISION)
+        # p2.setPhysicsEngineParameter(enableFileCaching=1, physicsClientId=self._physics_client_id)
 
-        joint_num = p2.getNumJoints(self._robot_id, self._physics_client_id)
-        for i in range(joint_num):
-            self._joint_info.append(p2.getJointInfo(self._robot_id, i, self._physics_client_id))
+        # joint_num = p2.getNumJoints(self._robot_id, self._physics_client_id)
+        # for i in range(joint_num):
+        #     self._joint_info.append(p2.getJointInfo(self._robot_id, i, self._physics_client_id))
 
-        if self._renders and self._show and self._robot_cache_id is not None:
-            self._p.removeBody(self._robot_cache_id)
-            self._robot_cache_id = None
         return success
     
     def _IK(self):
         p = self._p
 
+        exportPath = self._A.exportURDF(ROBOT_PATH, ROBOT_NAME)
+        p2.setPhysicsEngineParameter(enableFileCaching=0, physicsClientId=self._physics_client_id)
+        self._robot_id = p2.loadURDF(exportPath, useFixedBase=True, flags=p2.URDF_MERGE_FIXED_LINKS | p2.URDF_USE_SELF_COLLISION)
+        p2.setPhysicsEngineParameter(enableFileCaching=1, physicsClientId=self._physics_client_id)
+
         # 需要有两个关节
         # ee_link_id = self._A.moduleCnt - 1
         print(self._A.getModuleTypeList())
-        ee_link_id = len(self._joint_info) - 1
-        # ee_link_id = self._A.jointNum - 1
+        # ee_link_id = len(self._joint_info) - 1
+        ee_link_id = self._A.jointNum - 1
         # for i in range(ee_link_id+1):
         #     logging.info(p2.getLinkState(self._robot_id, i, computeForwardKinematics=True) )
         if ee_link_id <= 0:
             return False
         print("ee_link_id: {0}, robot_id: {1}".format(ee_link_id, self._robot_id))
-        target_angle = p2.calculateInverseKinematics(self._robot_id, ee_link_id, self._target_pos, maxNumIterations=500)
+        target_angle = p2.calculateInverseKinematics(self._robot_id, ee_link_id, self._target_pos, maxNumIterations=100)
 
         done = False
         success = True
@@ -337,26 +336,27 @@ class RobotConfigDesignEnv(gym.Env):
             self._plane_id = None
 
         # 重置机器人
-        if self._renders and self._show and self._robot_cache_id is not None:
-            p.removeBody(self._robot_cache_id)
-            self._robot_cache_id = None
         if self._robot_id is not None:
             p.removeBody(self._robot_id)
             self._robot_id = None
 
+        del self._A
         self._A = Arrangement()
+        del self._joint_info
         self._joint_info = list()
 
         # 重置障碍物
         if len(self._obstacle_ids) > 0:
             for obs_id in self._obstacle_ids:
                 p.removeBody(obs_id)
+            del self._obstacle_ids
             self._obstacle_ids = list()
 
         # 重置目标
         if self._target_id is not None: 
             p.removeUserDebugItem(self._target_id) 
             self._target_id = None
+
     def _state(self):
         A = np.array(self._A.getModuleTypeList(MAX_MODULECNT))
         T = np.array(self._target_pos)
