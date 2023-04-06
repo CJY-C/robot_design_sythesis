@@ -16,7 +16,7 @@ JointLModule.rotate_head(MountingAngle.ONEEIGHTY)
 
 JointMModuleCnt = 0
 JointMModule = Module("JMM", [UnitType.JOINTM, UnitType.CONNECTORM])
-JointMModule.rotate_head(MountingAngle.ONEEIGHTY)
+# JointMModule.rotate_head(MountingAngle.ONEEIGHTY)
 
 JointSModuleCnt = 0
 JointSModule = Module("JSM", [UnitType.JOINTS, UnitType.CONNECTORS])

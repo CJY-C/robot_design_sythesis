@@ -1,0 +1,8 @@
+digraph G {
+node [shape=box];
+"BLU1_U_b_body" [label="BLU1_U_b_body"];
+"BLU1_U_b_in" [label="BLU1_U_b_in"];
+node [shape=ellipse, color=blue, fontcolor=blue];
+"BLU1_U_b_body" -> "BLU1_U_b_large" [label="xyz: 0 0 0.0513 \nrpy: 3.14159 -0 0"]
+"BLU1_U_b_large" -> "BLU1_U_b_in"
+}

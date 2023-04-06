@@ -1,0 +1,18 @@
+@startuml
+
+!theme plain
+skinparam conditionStyle InsideDiamond
+
+:添加模块m到构型C;
+if (C模块数量超过上限?) then (yes)
+    :按照式5.3给出奖励，任务结束;
+elseif (C是完整机器人?) then (yes)
+    :评估IK,并按照式5.3给出奖励，任务结束;
+else (no)
+    :按照式5.2给出奖励，任务继续;
+endif
+:返回下一时刻的状态、奖励、终止信号和子模块约束列表;
+
+@enduml
+@startuml
+

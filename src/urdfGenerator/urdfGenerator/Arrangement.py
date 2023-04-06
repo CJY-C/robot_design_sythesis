@@ -98,24 +98,55 @@ class Arrangement:
         linkType = self.arrangement.get_head_link_type()
         return np.array(getAttachableSubModuleActions(moduleType, linkType))
 
-    # @property
-    # def moduleCnt(self):
-    #     return self.moduleCnt
-
 
 if __name__ == '__main__':
 
     a = Arrangement()
 
-    a.addModule(ModuleType.BASEL)
-    a.addModule(ModuleType.JOINTL)
+    a.addModule(ModuleType.BASEL) # BASEL对应 323000
+    a.addModule(ModuleType.JOINTL) # JOINTL对应 323001
     a.addModule(ModuleType.JOINTL)
 
-    print(a.getModuleTypeList(10))
+    # 打印模块id
     print(a.moduleTypeList)
-    print(a.jointNum)
-    print(a.totalMass)
-    action_space = a.getAttachableSubModuleActions()
-    print(action_space)
-    print(action_space.shape)
-    print( np.choose(np.random.randint(len(action_space)), action_space) )
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    # print(a.getModuleTypeList(10))
+    # print(a.jointNum)
+    # print(a.totalMass)
+    # action_space = a.getAttachableSubModuleActions()
+    # print(action_space)
+    # print(action_space.shape)
+    # print( np.choose(np.random.randint(len(action_space)), action_space) )

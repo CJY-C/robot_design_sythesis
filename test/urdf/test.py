@@ -1,6 +1,9 @@
 from urdfGenerator import Module, UnitType, UnitOrder, ModuleType
 from urdfGenerator.Arrangement import Arrangement
 from urdfGenerator.ModuleConfig import getModuleTypeList
+from urdfGenerator.UnitConfig import generateUnit
+
+from odio_urdf import urdf_to_odio
 
 from math import pi
 
@@ -110,7 +113,7 @@ def test2():
     a.addModule(ModuleType.JOINTS)
     a.addModule(ModuleType.ENDEFFECTORS)
 
-    a.exportURDF(os.getcwd() + '/test/urdf', 'unit7')
+    # a.exportURDF(os.getcwd() + '/test/urdf', 'unit7')
 
     # import os
     # dir = os.path.dirname(os.path.realpath(__file__))
@@ -160,7 +163,7 @@ def test2():
         motor_list.append(p.addUserDebugParameter( f"motor{i}", -np.pi, np.pi, 0))
     
     
-    p.addUserDebugPoints([[-1, 0, 0]], [[1, 0, 0]], 10)
+    # p.addUserDebugPoints([[-1, 0, 0]], [[1, 0, 0]], 10)
 
     # print (p.getNumJoints(p_id))
     # for i in joint_info:
@@ -214,6 +217,7 @@ def test2():
 def random_gen_obs_target(obs_filepath, obs_length, obs_width, obs_height, ex, ey, ez, obs_prob):
     import pybullet as p
     client = p.connect(p.GUI)
+    p_id = p.loadURDF( '/home/masa/learning/rl/undergraduate/cjy/robot_design_sythesis/test/urdf/unit7.urdf', useFixedBase=True, flags=p.URDF_MERGE_FIXED_LINKS | p.URDF_USE_SELF_COLLISION)
 
     lx = np.ptp(np.array(ex))
     ly = np.ptp(np.array(ey))
@@ -239,7 +243,8 @@ def random_gen_obs_target(obs_filepath, obs_length, obs_width, obs_height, ex, e
     # 在所在obs方盒中随机生成一个位置
     pos_x += np.random.uniform(-obs_length/2, obs_length/2)
     pos_y += np.random.uniform(-obs_width/2, obs_width/2)
-    pos_z += np.random.uniform(-obs_height/2, obs_height/2)
+    pos_z += np.random.uniform(0, obs_height)
+    # pos_z += np.random.uniform(-obs_height/2, obs_height/2)
     target = [pos_x, pos_y, pos_z]
 
     target_id = p.addUserDebugPoints([target], [[1, 1, 0]], 10)
@@ -432,20 +437,45 @@ def testAllLog():
     # 在此处写下您的 Python 代码
     print('Hello, world!')
 
+def classAndUrdf():
+    unit1 = generateUnit(UnitType.BASEL)
+    unit2 = generateUnit(UnitType.JOINTL)
+
+    a = Arrangement()
+    a.addModule(ModuleType.BASEL)
+    a.addModule(ModuleType.JOINTL)
+    a.addModule(ModuleType.JOINTL)
+    a.addModule(ModuleType.STRAIGHTLINKLM)
+    a.addModule(ModuleType.JOINTM)
+    a.addModule(ModuleType.ENDEFFECTORM)
+
+    unit3 = unit1 + unit2
+
+    import os
+    dir = os.path.dirname(os.path.realpath(__file__))
+    exportPath = dir + '/'+'a.urdf'
+    with open(exportPath, 'w') as f:
+        f.write(str(a))
+    
+    # a = urdf_to_odio(str(unit1))
+
+
+
 
 
 
 if __name__ == '__main__':
     # test1()
     # test2()
-    # obs_filepath = '/home/masa/learning/rl/undergraduate/cjy/robot_design_sythesis/test/urdf/obstacle-25.SLDASM/urdf/obstacle-25.SLDASM.urdf'
-    # random_gen_obs_target(obs_filepath=obs_filepath,
-    #                 obs_width=0.25, obs_height=0.25, obs_length=0.25,
-    #                 ex=(-1, 1), ey=(-1, 1), ez=(0, 0.25), 
-    #                 obs_prob=1
-    #                )
+    obs_filepath = '/home/masa/learning/rl/undergraduate/cjy/robot_design_sythesis/src/RobotConfigDesignEnv/robotConfigDesign/res/obstacle-25.SLDASM/urdf/obstacle-25.SLDASM.urdf'
+    random_gen_obs_target(obs_filepath=obs_filepath,
+                    obs_width=0.25, obs_height=0.25, obs_length=0.25,
+                    ex=(-1, 1), ey=(-1, 1), ez=(0, 1), 
+                    obs_prob=0.005
+                   )
     # show_matrix()
     # test_ob()
-    testEnv()
+    # testEnv()
     # testLog()
     # testAllLog()
+    # classAndUrdf()

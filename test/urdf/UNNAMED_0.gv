@@ -1,0 +1,14 @@
+digraph G {
+node [shape=box];
+"BLU1_U_b_body" [label="BLU1_U_b_body"];
+"BLU1_U_b_in" [label="BLU1_U_b_in"];
+"BLU1_U_tj_body" [label="BLU1_U_tj_body"];
+"BLU1_U_tj_in" [label="BLU1_U_tj_in"];
+node [shape=ellipse, color=blue, fontcolor=blue];
+"BLU1_U_b_body" -> "BLU1_U_b_large" [label="xyz: 0 0 0.0513 \nrpy: 3.14159 -0 0"]
+"BLU1_U_b_large" -> "BLU1_U_b_in"
+"BLU1_U_b_in" -> "BLU1_U_tj_large_1" [label="xyz: 0 0 0 \nrpy: 0 -0 0"]
+"BLU1_U_tj_large_1" -> "BLU1_U_tj_body"
+"BLU1_U_tj_body" -> "BLU1_U_tj_large_2" [label="xyz: -0.057 0 -0.0735 \nrpy: 0 1.5708 -0"]
+"BLU1_U_tj_large_2" -> "BLU1_U_tj_in"
+}

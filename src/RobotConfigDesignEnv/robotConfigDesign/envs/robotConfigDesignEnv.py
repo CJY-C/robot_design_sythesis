@@ -34,7 +34,8 @@ OBS_PATH = PARENT_DIR + "/res/obstacle-25.SLDASM/urdf/obstacle-25.SLDASM.urdf"
 OBS_WIDTH = 0.25
 OBS_LENGTH = 0.25
 OBS_HEIGHT = 0.25
-OBS_PROB = 0.01
+OBS_PROB = 0
+# OBS_PROB = 0.01
 EX = [-1, 1]
 EY = [-1, 1]
 EZ = [0, 1]
@@ -109,7 +110,7 @@ class RobotConfigDesignEnv(gym.Env):
         elif self._A.checkEEAttached(): # 判断是否添加末端执行器
             passEvaluation = self._IK()
             logging.info("IK result: " + str(passEvaluation))
-            reward = 10 if passEvaluation else 0
+            reward = 1 if passEvaluation else 0
             # reward += -1 * W_J * self._A.jointNum + -1 * W_M * self._A.totalMass
             # reward = int(passEvaluation)
             done = True
@@ -124,7 +125,7 @@ class RobotConfigDesignEnv(gym.Env):
                 # reward += -1 * W_J * self._A.jointNum + -1 * W_M * self._A.totalMass
                 done = False
             else:
-                raise("add module failed")
+                # raise("add module failed")
                 reward = -1
                 done = True
                 # done = False
@@ -203,7 +204,7 @@ class RobotConfigDesignEnv(gym.Env):
         # 在所在obs方盒中随机生成一个位置
         pos_x += np.random.uniform(-obs_length/2, obs_length/2)
         pos_y += np.random.uniform(-obs_width/2, obs_width/2)
-        pos_z += np.random.uniform(-obs_height/2, obs_height/2)
+        pos_z += np.random.uniform(0, obs_height)
         target = np.array([pos_x, pos_y, pos_z])
 
         self._target_id = p2.addUserDebugPoints([target], [[1, 1, 0]], 10)
@@ -255,22 +256,21 @@ class RobotConfigDesignEnv(gym.Env):
     def _IK(self):
         p = self._p
 
+        # 需要有两个关节
+        logging.info(self._A.getModuleTypeList())
+        ee_link_id = self._A.jointNum - 1
+        # for i in range(ee_link_id+1):
+        #     logging.info(p2.getLinkState(self._robot_id, i, computeForwardKinematics=True) )
+        if ee_link_id < 0:
+            return False
+        logging.info("ee_link_id: {0}, robot_id: {1}".format(ee_link_id, self._robot_id))
+
         exportPath = self._A.exportURDF(ROBOT_PATH, ROBOT_NAME)
         p2.setPhysicsEngineParameter(enableFileCaching=0, physicsClientId=self._physics_client_id)
         self._robot_id = p2.loadURDF(exportPath, useFixedBase=True, flags=p2.URDF_MERGE_FIXED_LINKS | p2.URDF_USE_SELF_COLLISION)
         p2.setPhysicsEngineParameter(enableFileCaching=1, physicsClientId=self._physics_client_id)
 
-        # 需要有两个关节
-        # ee_link_id = self._A.moduleCnt - 1
-        print(self._A.getModuleTypeList())
-        # ee_link_id = len(self._joint_info) - 1
-        ee_link_id = self._A.jointNum - 1
-        # for i in range(ee_link_id+1):
-        #     logging.info(p2.getLinkState(self._robot_id, i, computeForwardKinematics=True) )
-        if ee_link_id <= 0:
-            return False
-        print("ee_link_id: {0}, robot_id: {1}".format(ee_link_id, self._robot_id))
-        target_angle = p2.calculateInverseKinematics(self._robot_id, ee_link_id, self._target_pos, maxNumIterations=100)
+        target_angle = p2.calculateInverseKinematics(self._robot_id, ee_link_id, self._target_pos, maxNumIterations=400)
 
         done = False
         success = True
@@ -312,6 +312,7 @@ class RobotConfigDesignEnv(gym.Env):
                     break
 
             if done:
+                logging.info(f'大致IK计算次数：{ cnt }')
                 break
         
         # linkState[0], linkState[1] # p_EE, n_EE

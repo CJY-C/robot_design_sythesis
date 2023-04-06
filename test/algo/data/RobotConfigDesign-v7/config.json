@@ -1,0 +1,46 @@
+{
+    "ac_kwargs":	{
+        "activation":	"LeakyReLU",
+        "hidden_sizes":	[
+            64,
+            64,
+            64
+        ]
+    },
+    "batch_size":	32,
+    "env_fn":	"<function <lambda> at 0x7f5d133dbcb0>",
+    "epochs":	5000,
+    "epsilon_decay":	1e-05,
+    "epsilon_end":	0.1,
+    "epsilon_start":	1,
+    "exp_name":	"RobotConfigDesign",
+    "gamma":	1,
+    "logger":	{
+        "<spinup.utils.logx.EpochLogger object at 0x7f5c78078fd0>":	{
+            "epoch_dict":	{},
+            "exp_name":	"RobotConfigDesign",
+            "first_row":	true,
+            "log_current_row":	{},
+            "log_headers":	[],
+            "output_dir":	"/home/masa/learning/rl/undergraduate/cjy/robot_design_sythesis/test/algo/data/RobotConfigDesign-v7",
+            "output_file":	{
+                "<_io.TextIOWrapper name='/home/masa/learning/rl/undergraduate/cjy/robot_design_sythesis/test/algo/data/RobotConfigDesign-v7/progress.txt' mode='w' encoding='UTF-8'>":	{
+                    "mode":	"w"
+                }
+            }
+        }
+    },
+    "logger_kwargs":	{
+        "exp_name":	"RobotConfigDesign",
+        "output_dir":	"/home/masa/learning/rl/undergraduate/cjy/robot_design_sythesis/test/algo/data/RobotConfigDesign-v7"
+    },
+    "max_ep_len":	15,
+    "network":	"DQN_2015",
+    "q_lr":	1e-05,
+    "replay_size":	1000000,
+    "save_freq":	1,
+    "seed":	0,
+    "start_steps":	1500,
+    "steps_per_epoch":	150,
+    "update_freq":	150
+}

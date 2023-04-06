@@ -159,13 +159,13 @@ baseLUnitCnt = 0
 baseLUnitFilepath = RES_PATH + "base-l.SLDASM/urdf/base-l.SLDASM.urdf"
 baseLLinkList, baseLLinkTypeList, baseLJointList, baseLInterfaceSizeList = parseURDF(baseLUnitFilepath)
 BaseLUnit = Unit("BaseL_U", baseLLinkList, baseLLinkTypeList, baseLJointList, baseLInterfaceSizeList)
-BaseLUnit.mass = 0
+BaseLUnit.mass = 1
 
 baseMUnitCnt = 0
 baseMUnitFilepath = RES_PATH + "base-m.SLDASM/urdf/base-m.SLDASM.urdf"
 baseMLinkList, baseMLinkTypeList, baseMJointList, baseMInterfaceSizeList = parseURDF(baseMUnitFilepath)
 BaseMUnit = Unit("BaseM_U", baseMLinkList, baseMLinkTypeList, baseMJointList, baseMInterfaceSizeList)
-BaseMUnit.mass = 0
+BaseMUnit.mass = 0.5
 
 inputLUnitCnt = 0
 inputLUnitFilepath = RES_PATH + "input_connector_l.SLDASM/urdf/input_connector_l.SLDASM.urdf"

@@ -58,13 +58,15 @@ class UnitType(Enum):
 
 class ModuleType(Enum):
     NONE = 0  # 无
-    BASEL = 10 # 基座-大
+    # BASEL = 10 # 基座-大
+    BASEL = 3230000 # 基座-大
     BASEM = 11 # 基座-中
     BASES = 12 # 基座-小
     CONNECTORL = 21 # 输入端-大
     CONNECTORM = 22 # 输入端-中
     CONNECTORS = 23 # 输入端-小
-    JOINTL = 30 # 关节-大
+    JOINTL = 3230001 # 关节-大
+    # JOINTL = 30 # 关节-大
     JOINTM = 31 # 关节-中
     JOINTS = 32 # 关节-小
     STRAIGHTLINKLL = 40 # 连杆-大大

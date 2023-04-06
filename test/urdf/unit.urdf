@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<robot  name="UNNAMED_1" >
+ <link  name="BLU1_U_b_body" >
+  <inertial >
+   <origin  rpy="0 0 0"  xyz="-9.4624E-18 1.1154E-17 0.022042" />
+   <mass  value="1" />
+   <inertia  ixx="0.009154"  iyz="3.3647E-19"  iyy="0.009154"  ixy="1.7613E-19"  ixz="-3.4018E-19"  izz="0.015925" />
+  </inertial>
+  <visual >
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+   <geometry >
+    <mesh  filename="package://base-l.SLDASM/meshes/b_body.STL" />
+   </geometry>
+   <material  name="body" >
+    <color  rgba="0.5 0.5 0.5 1" />
+   </material>
+  </visual>
+  <collision >
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+   <geometry >
+    <mesh  filename="package://base-l.SLDASM/meshes/b_body.STL" />
+   </geometry>
+  </collision>
+ </link>
+ <link  name="BLU1_U_b_in" >
+  <inertial >
+   <origin  rpy="0 0 0"  xyz="-9.4624E-18 -5.3214E-19 0.029258" />
+   <mass  value="5.9754" />
+   <inertia  ixx="0.009154"  iyz="3.3422E-19"  iyy="0.009154"  ixy="-1.7613E-19"  ixz="3.3605E-19"  izz="0.015925" />
+  </inertial>
+  <visual >
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+   <geometry >
+    <mesh  filename="package://base-l.SLDASM/meshes/b_in.STL" />
+   </geometry>
+   <material  name="blue" >
+    <color  rgba="0 0 0.5 1" />
+   </material>
+  </visual>
+  <collision >
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+   <geometry >
+    <mesh  filename="package://base-l.SLDASM/meshes/b_in.STL" />
+   </geometry>
+  </collision>
+ </link>
+ <joint  name="BLU1_U_b_large"  type="fixed" >
+  <origin  rpy="3.14159265358979 0 0"  xyz="0 0 0.0513" />
+  <parent  link="BLU1_U_b_body" />
+  <child  link="BLU1_U_b_in" />
+  <axis  xyz="0 0 1" />
+ </joint>
+</robot>
