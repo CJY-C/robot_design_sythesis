@@ -1,66 +1,63 @@
-# from spinup import dqn_simple_pytorch as dqn
 from spinup import dqn_2015_pytorch as dqn
 import torch
 import os
-import tensorflow as tf
 import gym
 from robotConfigDesign.envs import RobotConfigDesignEnv
 
-dir = os.path.dirname(os.path.realpath(__file__))
+def train(envName, ac_kwargs, logger_kwargs, seed, steps_per_epoch, epochs, replay_size, gamma, epsilon_start, epsilon_decay, epsilon_end, q_lr, batch_size, start_steps, max_ep_len, update_freq, save_freq):
+  env_fn = lambda : gym.make(envName)
 
-envName = 'RobotConfigDesign-v0'
-# envName = 'LunarLander-v2'
-# envName = 'MountainCar-v0'
-# envName = 'CartPole-v1'
-# envName = 'SimpleDriving-v0'
-# envName = 'CartPoleBulletEnv-v1'
-# envName = 'HumanoidBulletEnv-v0'
-# env_fn = lambda : gym.make('SimpleDriving-v0')
-env_fn = lambda : gym.make(envName)
+  dqn(
+    env_fn=env_fn, 
+    ac_kwargs=ac_kwargs, 
+    seed=seed,
+    steps_per_epoch=steps_per_epoch,
+    epochs=epochs, 
+    replay_size=int(replay_size),
+    gamma=gamma,
+    epsilon_start=epsilon_start,
+    epsilon_decay=epsilon_decay,
+    epsilon_end=epsilon_end,
+    q_lr=q_lr,
+    batch_size=int(batch_size),
+    start_steps=start_steps,
+    max_ep_len=max_ep_len,
+    logger_kwargs=logger_kwargs,
+    update_freq=update_freq,
+    save_freq=int(save_freq)
+    )
 
-# ac_kwargs = dict(hidden_sizes=[24,24], activation=tf.nn.relu)
-# ac_kwargs = dict(hidden_sizes=[24, 24], activation=torch.nn.ReLU)
-ac_kwargs = dict(hidden_sizes=[64, 64, 64], activation=torch.nn.LeakyReLU)
-# ac_kwargs = dict()
 
-logger_kwargs = dict(output_dir=dir + '/data/' + envName[:-3] + '-v7', exp_name=envName[:-3])
+if __name__ == '__main__':
+  alphaList = [0.0001, 0.0002, 0.0005, 0.001]
+  gammaList = [0.9, 0.95, 1]
 
-# ppo(env_fn=env_fn, ac_kwargs=ac_kwargs, steps_per_epoch=5000, epochs=50, logger_kwargs=logger_kwargs)
-dqn(
-  env_fn=env_fn, 
-  ac_kwargs=ac_kwargs, 
-  seed=0,
-  steps_per_epoch=150,
-  epochs=5000, 
-  replay_size=int(1e6),
-  gamma=1,
-  epsilon_start=1,
-  epsilon_decay=1e-5,
-  epsilon_end=0.1,
-  q_lr=1e-5,
-  batch_size=int(32),
-  start_steps=1500,
-  max_ep_len=15,
-  logger_kwargs=logger_kwargs,
-  update_freq=150,
-  save_freq=int(1)
-  )
-# dqn(
-#   env_fn=env_fn, 
-#   ac_kwargs=ac_kwargs, 
-#   seed=0,
-#   steps_per_epoch=5000,
-#   epochs=500, 
-#   replay_size=int(1e8),
-#   gamma=1,
-#   epsilon_start=1,
-#   epsilon_decay=1e-5,
-#   epsilon_end=0.1,
-#   q_lr=1e-4,
-#   batch_size=int(32),
-#   start_steps=5000,
-#   max_ep_len=500,
-#   logger_kwargs=logger_kwargs,
-#   update_freq=1000,
-#   save_freq=int(1)
-#   )
+  envName = 'RobotConfigDesign-v0'
+
+  ac_kwargs = dict(hidden_sizes=[64, 64, 64], activation=torch.nn.ReLU)
+
+  dir = os.path.dirname(os.path.realpath(__file__))
+
+  for alpha in alphaList:
+    for gamma in gammaList:
+      logger_kwargs = dict(output_dir=dir + '/dt/' + envName[:-3] + f'-gamma({gamma})-alpha({alpha})', exp_name=f'DQN-gamma({gamma})-alpha({alpha})')
+      train(
+        envName=envName,
+        ac_kwargs=ac_kwargs,
+        logger_kwargs=logger_kwargs,
+        seed=0,
+        steps_per_epoch=1500,
+        epochs=101,
+        replay_size=int(1e6),
+        gamma=gamma,
+        epsilon_start=1,
+        epsilon_decay=1e-5,
+        epsilon_end=0.1,
+        q_lr=alpha,
+        batch_size=int(15),
+        start_steps=1500,
+        max_ep_len=15,
+        update_freq=100,
+        save_freq=int(1)
+      )
+

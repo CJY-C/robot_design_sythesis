@@ -77,7 +77,6 @@ class RobotConfigDesignEnv(gym.Env):
         # 动作空间是一个离散空间，每个动作都是一个整数，表示添加的模块类型
         self.action_space = gym.spaces.Discrete(MODULETYPE_NUM)
         # 观测空间有连续部分也有离散部分，连续部分是目标点的位置，离散部分是障碍物的位置，和机器人目前的构型A
-        # self.observation_space = gym.spaces.Box(low=np.float32(-1), high=np.float32(1), shape=(3, ))
         self.observation_space = gym.spaces.Dict({
             'A': gym.spaces.MultiDiscrete([MODULETYPE_NUM for x in range(MAX_MODULECNT)]), # TODO: 解决描述问题
             'T': gym.spaces.Box(low=np.float32(-1), high=np.float32(1), shape=(3, )),
@@ -110,7 +109,13 @@ class RobotConfigDesignEnv(gym.Env):
         elif self._A.checkEEAttached(): # 判断是否添加末端执行器
             passEvaluation = self._IK()
             logging.info("IK result: " + str(passEvaluation))
-            reward = 1 if passEvaluation else 0
+            if passEvaluation:
+                reward = 10 
+                pos = self._target_pos
+                obs = self._obstacle_matrix
+                logging.info(f'pos: {pos}\nobs: {obs}')
+            else:
+                reward = 0
             # reward += -1 * W_J * self._A.jointNum + -1 * W_M * self._A.totalMass
             # reward = int(passEvaluation)
             done = True
@@ -274,12 +279,13 @@ class RobotConfigDesignEnv(gym.Env):
 
         done = False
         success = True
+        c = 0
         while True:
             cnt = 0
             for angle in target_angle:
                 p2.setJointMotorControl2(self._robot_id, cnt, controlMode=p2.POSITION_CONTROL, targetPosition=angle)
                 cnt += 1
-            p.stepSimulation()
+                p.stepSimulation()
             
             # logging.info(p2.getLinkState(self._robot_id, ee_link_id, computeForwardKinematics=True) )
             linkState = p2.getLinkState(self._robot_id, ee_link_id, computeForwardKinematics=True, computeLinkVelocity=True)
@@ -311,8 +317,13 @@ class RobotConfigDesignEnv(gym.Env):
                     success = False
                     break
 
+            c += 1  
+            if c > 1000:
+                logging.info('IK计算次数过多')
+                done = True
+                success = False
+                break
             if done:
-                logging.info(f'大致IK计算次数：{ cnt }')
                 break
         
         # linkState[0], linkState[1] # p_EE, n_EE
