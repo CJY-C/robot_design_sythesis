@@ -127,3 +127,9 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# train data
+test/algo/dt/
+test/algo/data/
+test/localdt/
+nohup.out
