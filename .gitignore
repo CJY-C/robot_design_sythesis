@@ -133,3 +133,5 @@ dt/
 data/
 localdt/
 nohup.out
+.log_415
+.log_pass
