@@ -129,7 +129,7 @@ dmypy.json
 .pyre/
 
 # train data
-test/algo/dt/
-test/algo/data/
-test/localdt/
+dt/
+data/
+localdt/
 nohup.out
