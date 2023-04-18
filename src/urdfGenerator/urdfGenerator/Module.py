@@ -110,11 +110,23 @@ class Module:
         # 返回所有unit的质量和
         return sum([unit.mass for unit in self.unitList])
 
+    @property
+    def origin(self):
+        origin = self.unitList[0].linkDeque[-1].origin
+        if origin is not None:
+            xyz = [float(x) for x in origin.xyz.split()]
+        else:
+            xyz = [0, 0, 0]
+        return xyz
+
 
 if __name__ == '__main__':
+    from urdfGenerator import Arrangement
+    from urdfGenerator import ModuleType
     module1 = Module("module1", [UnitType.BASEL, UnitType.CONNECTORL])
     module2 = Module("module2", [UnitType.JOINTL, UnitType.CONNECTORL])
-    print(module1.get_head_link_type())
+    print(module1.origin)
+    print(module2.origin)
     # module3 = Module("module3", [UnitType.JOINTL, UnitType.CONNECTORL])
     # module4 = Module("module4", [UnitType.STRAIGHTLINKL])
     # module5 = Module("module5", [UnitType.CONNECTORL, UnitType.CORNERLINKL, UnitType.CONNECTORL])

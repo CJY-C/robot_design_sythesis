@@ -1,4 +1,3 @@
-import os
 import gym
 from gym.utils import seeding
 import numpy as np
@@ -8,6 +7,28 @@ from pybullet_utils import bullet_client as bc
 from urdfGenerator.Arrangement import Arrangement
 from urdfGenerator.ModuleConfig import getModuleTypeList, generateModule
 from urdfGenerator.Enums import ModuleType
+
+import os
+import sys
+# Function to disable and enable low-level file descriptors for stdout and stderr
+class HiddenOutputs:
+    def __enter__(self):
+        self._original_stdout_fd = os.dup(sys.stdout.fileno())
+        self._original_stderr_fd = os.dup(sys.stderr.fileno())
+        sys.stdout.flush()
+        sys.stderr.flush()
+        devnull = os.open(os.devnull, os.O_WRONLY)
+        os.dup2(devnull, sys.stdout.fileno())
+        os.dup2(devnull, sys.stderr.fileno())
+        os.close(devnull)
+
+    def __exit__(self, exc_type, exc_val, exc_tb):
+        sys.stdout.flush()
+        sys.stderr.flush()
+        os.dup2(self._original_stdout_fd, sys.stdout.fileno())
+        os.dup2(self._original_stderr_fd, sys.stderr.fileno())
+        os.close(self._original_stdout_fd)
+        os.close(self._original_stderr_fd)
 
 
 CURRENT_DIR = os.path.dirname(os.path.abspath(__file__))  # 获取执行文件所在目录的绝对路径
@@ -34,8 +55,8 @@ OBS_PATH = PARENT_DIR + "/res/obstacle-25.SLDASM/urdf/obstacle-25.SLDASM.urdf"
 OBS_WIDTH = 0.25
 OBS_LENGTH = 0.25
 OBS_HEIGHT = 0.25
-OBS_PROB = 0
-# OBS_PROB = 0.01
+# OBS_PROB = 0
+OBS_PROB = 0.005
 EX = [-1, 1]
 EY = [-1, 1]
 EZ = [0, 1]
@@ -272,7 +293,8 @@ class RobotConfigDesignEnv(gym.Env):
 
         exportPath = self._A.exportURDF(ROBOT_PATH, ROBOT_NAME)
         p2.setPhysicsEngineParameter(enableFileCaching=0, physicsClientId=self._physics_client_id)
-        self._robot_id = p2.loadURDF(exportPath, useFixedBase=True, flags=p2.URDF_MERGE_FIXED_LINKS | p2.URDF_USE_SELF_COLLISION)
+        with HiddenOutputs(): 
+            self._robot_id = p2.loadURDF(exportPath, useFixedBase=True, flags=p2.URDF_MERGE_FIXED_LINKS | p2.URDF_USE_SELF_COLLISION)
         p2.setPhysicsEngineParameter(enableFileCaching=1, physicsClientId=self._physics_client_id)
 
         target_angle = p2.calculateInverseKinematics(self._robot_id, ee_link_id, self._target_pos, maxNumIterations=400)

@@ -1,0 +1,1067 @@
+<?xml version="1.0"?>
+<robot  name="UNNAMED_0" >
+ <link  name="BLM0_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_U_b_body" >
+  <inertial >
+   <origin  rpy="0 0 0"  xyz="-9.4624E-18 1.1154E-17 0.022042" />
+   <mass  value="1" />
+   <inertia  ixy="1.7613E-19"  izz="0.015925"  ixx="0.009154"  ixz="-3.4018E-19"  iyy="0.009154"  iyz="3.3647E-19" />
+  </inertial>
+  <visual >
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+   <geometry >
+    <mesh  filename="package://base-l.SLDASM/meshes/b_body.STL" />
+   </geometry>
+   <material  name="body" >
+    <color  rgba="0.5 0.5 0.5 1" />
+   </material>
+  </visual>
+  <collision >
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+   <geometry >
+    <mesh  filename="package://base-l.SLDASM/meshes/b_body.STL" />
+   </geometry>
+  </collision>
+ </link>
+ <link  name="BLM0_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_U_b_in" >
+  <inertial >
+   <origin  rpy="0 0 0"  xyz="-9.4624E-18 -5.3214E-19 0.029258" />
+   <mass  value="5.9754" />
+   <inertia  ixy="-1.7613E-19"  izz="0.015925"  ixx="0.009154"  ixz="3.3605E-19"  iyy="0.009154"  iyz="3.3422E-19" />
+  </inertial>
+  <visual >
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+   <geometry >
+    <mesh  filename="package://base-l.SLDASM/meshes/b_in.STL" />
+   </geometry>
+   <material  name="blue" >
+    <color  rgba="0 0 0.5 1" />
+   </material>
+  </visual>
+  <collision >
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+   <geometry >
+    <mesh  filename="package://base-l.SLDASM/meshes/b_in.STL" />
+   </geometry>
+  </collision>
+ </link>
+ <link  name="BLM0_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_ILU155_U_ci_body" >
+  <inertial >
+   <origin  rpy="0 0 0"  xyz="0 4.2001E-18 -0.0057" />
+   <mass  value="0" />
+   <inertia  ixy="0"  izz="0.0014744"  ixx="0.00074704"  ixz="5.6985E-37"  iyy="0.00074704"  iyz="1.7343E-36" />
+  </inertial>
+  <visual >
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+   <geometry >
+    <mesh  filename="package://input_connector_l.SLDASM/meshes/ci_body.STL" />
+   </geometry>
+   <material  name="blue" >
+    <color  rgba="0 0 0.5 1" />
+   </material>
+  </visual>
+  <collision >
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+   <geometry >
+    <mesh  filename="package://input_connector_l.SLDASM/meshes/ci_body.STL" />
+   </geometry>
+  </collision>
+ </link>
+ <link  name="BLM0_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_ILU155_U_ci_in" >
+  <inertial >
+   <origin  rpy="0 0 0"  xyz="-5.5075E-34 -1.7044E-17 0.0057" />
+   <mass  value="0" />
+   <inertia  ixy="0"  izz="0.0014744"  ixx="0.00074704"  ixz="5.6985E-37"  iyy="0.00074704"  iyz="1.7343E-36" />
+  </inertial>
+  <visual >
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+   <geometry >
+    <mesh  filename="package://input_connector_l.SLDASM/meshes/ci_in.STL" />
+   </geometry>
+   <material  name="blue" >
+    <color  rgba="0 0 0.5 1" />
+   </material>
+  </visual>
+  <collision >
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+   <geometry >
+    <mesh  filename="package://input_connector_l.SLDASM/meshes/ci_in.STL" />
+   </geometry>
+  </collision>
+ </link>
+ <link  name="BLM0_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_JTLU97_U_tj_body" >
+  <inertial >
+   <origin  rpy="0 0 0"  xyz="-0.0026078 -7.1138E-08 -0.0735" />
+   <mass  value="1.5884" />
+   <inertia  ixy="2.097E-09"  izz="0.0027805"  ixx="0.004117"  ixz="-8.5243E-19"  iyy="0.0041567"  iyz="-4.7613E-10" />
+  </inertial>
+  <visual >
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+   <geometry >
+    <mesh  filename="package://jointT-l.SLDASM/meshes/tj_body.STL" />
+   </geometry>
+   <material  name="body" >
+    <color  rgba="0.5 0.5 0.5 1" />
+   </material>
+  </visual>
+  <collision >
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+   <geometry >
+    <mesh  filename="package://jointT-l.SLDASM/meshes/tj_body.STL" />
+   </geometry>
+  </collision>
+ </link>
+ <link  name="BLM0_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_JTLU97_U_tj_in" >
+  <inertial >
+   <origin  rpy="0 0 0"  xyz="-1.904E-18 1.0123E-08 0.05439" />
+   <mass  value="1.5884" />
+   <inertia  ixy="4.7613E-10"  izz="0.004117"  ixx="0.0027805"  ixz="8.5243E-19"  iyy="0.0041567"  iyz="2.097E-09" />
+  </inertial>
+  <visual >
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+   <geometry >
+    <mesh  filename="package://jointT-l.SLDASM/meshes/tj_in.STL" />
+   </geometry>
+   <material  name="blue" >
+    <color  rgba="0 0 0.5 1" />
+   </material>
+  </visual>
+  <collision >
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+   <geometry >
+    <mesh  filename="package://jointT-l.SLDASM/meshes/tj_in.STL" />
+   </geometry>
+  </collision>
+ </link>
+ <link  name="BLM0_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_ILU156_U_ci_body" >
+  <inertial >
+   <origin  rpy="0 0 0"  xyz="0 4.2001E-18 -0.0057" />
+   <mass  value="0" />
+   <inertia  ixy="0"  izz="0.0014744"  ixx="0.00074704"  ixz="5.6985E-37"  iyy="0.00074704"  iyz="1.7343E-36" />
+  </inertial>
+  <visual >
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+   <geometry >
+    <mesh  filename="package://input_connector_l.SLDASM/meshes/ci_body.STL" />
+   </geometry>
+   <material  name="blue" >
+    <color  rgba="0 0 0.5 1" />
+   </material>
+  </visual>
+  <collision >
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+   <geometry >
+    <mesh  filename="package://input_connector_l.SLDASM/meshes/ci_body.STL" />
+   </geometry>
+  </collision>
+ </link>
+ <link  name="BLM0_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_ILU156_U_ci_in" >
+  <inertial >
+   <origin  rpy="0 0 0"  xyz="-5.5075E-34 -1.7044E-17 0.0057" />
+   <mass  value="0" />
+   <inertia  ixy="0"  izz="0.0014744"  ixx="0.00074704"  ixz="5.6985E-37"  iyy="0.00074704"  iyz="1.7343E-36" />
+  </inertial>
+  <visual >
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+   <geometry >
+    <mesh  filename="package://input_connector_l.SLDASM/meshes/ci_in.STL" />
+   </geometry>
+   <material  name="blue" >
+    <color  rgba="0 0 0.5 1" />
+   </material>
+  </visual>
+  <collision >
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+   <geometry >
+    <mesh  filename="package://input_connector_l.SLDASM/meshes/ci_in.STL" />
+   </geometry>
+  </collision>
+ </link>
+ <link  name="BLM0_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_JTLU98_U_tj_body" >
+  <inertial >
+   <origin  rpy="0 0 0"  xyz="-0.0026078 -7.1138E-08 -0.0735" />
+   <mass  value="1.5884" />
+   <inertia  ixy="2.097E-09"  izz="0.0027805"  ixx="0.004117"  ixz="-8.5243E-19"  iyy="0.0041567"  iyz="-4.7613E-10" />
+  </inertial>
+  <visual >
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+   <geometry >
+    <mesh  filename="package://jointT-l.SLDASM/meshes/tj_body.STL" />
+   </geometry>
+   <material  name="body" >
+    <color  rgba="0.5 0.5 0.5 1" />
+   </material>
+  </visual>
+  <collision >
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+   <geometry >
+    <mesh  filename="package://jointT-l.SLDASM/meshes/tj_body.STL" />
+   </geometry>
+  </collision>
+ </link>
+ <link  name="BLM0_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_JTLU98_U_tj_in" >
+  <inertial >
+   <origin  rpy="0 0 0"  xyz="-1.904E-18 1.0123E-08 0.05439" />
+   <mass  value="1.5884" />
+   <inertia  ixy="4.7613E-10"  izz="0.004117"  ixx="0.0027805"  ixz="8.5243E-19"  iyy="0.0041567"  iyz="2.097E-09" />
+  </inertial>
+  <visual >
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+   <geometry >
+    <mesh  filename="package://jointT-l.SLDASM/meshes/tj_in.STL" />
+   </geometry>
+   <material  name="blue" >
+    <color  rgba="0 0 0.5 1" />
+   </material>
+  </visual>
+  <collision >
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+   <geometry >
+    <mesh  filename="package://jointT-l.SLDASM/meshes/tj_in.STL" />
+   </geometry>
+  </collision>
+ </link>
+ <link  name="BLM0_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_ILU157_U_ci_body" >
+  <inertial >
+   <origin  rpy="0 0 0"  xyz="0 4.2001E-18 -0.0057" />
+   <mass  value="0" />
+   <inertia  ixy="0"  izz="0.0014744"  ixx="0.00074704"  ixz="5.6985E-37"  iyy="0.00074704"  iyz="1.7343E-36" />
+  </inertial>
+  <visual >
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+   <geometry >
+    <mesh  filename="package://input_connector_l.SLDASM/meshes/ci_body.STL" />
+   </geometry>
+   <material  name="blue" >
+    <color  rgba="0 0 0.5 1" />
+   </material>
+  </visual>
+  <collision >
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+   <geometry >
+    <mesh  filename="package://input_connector_l.SLDASM/meshes/ci_body.STL" />
+   </geometry>
+  </collision>
+ </link>
+ <link  name="BLM0_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_ILU157_U_ci_in" >
+  <inertial >
+   <origin  rpy="0 0 0"  xyz="-5.5075E-34 -1.7044E-17 0.0057" />
+   <mass  value="0" />
+   <inertia  ixy="0"  izz="0.0014744"  ixx="0.00074704"  ixz="5.6985E-37"  iyy="0.00074704"  iyz="1.7343E-36" />
+  </inertial>
+  <visual >
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+   <geometry >
+    <mesh  filename="package://input_connector_l.SLDASM/meshes/ci_in.STL" />
+   </geometry>
+   <material  name="blue" >
+    <color  rgba="0 0 0.5 1" />
+   </material>
+  </visual>
+  <collision >
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+   <geometry >
+    <mesh  filename="package://input_connector_l.SLDASM/meshes/ci_in.STL" />
+   </geometry>
+  </collision>
+ </link>
+ <link  name="BLM0_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_SLMU35_U_sl_body" >
+  <inertial >
+   <origin  rpy="0 0 0"  xyz="-2.5778E-07 7.2984E-07 -0.097919" />
+   <mass  value="1.4196" />
+   <inertia  ixy="7.144E-09"  izz="0.0016136"  ixx="0.005704"  ixz="-6.1665E-09"  iyy="0.0057039"  iyz="1.8679E-08" />
+  </inertial>
+  <visual >
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+   <geometry >
+    <mesh  filename="package://straight_link-lm.SLDASM/meshes/sl_body.STL" />
+   </geometry>
+   <material  name="body" >
+    <color  rgba="0.5 0.5 0.5 1" />
+   </material>
+  </visual>
+  <collision >
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+   <geometry >
+    <mesh  filename="package://straight_link-lm.SLDASM/meshes/sl_body.STL" />
+   </geometry>
+  </collision>
+ </link>
+ <link  name="BLM0_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_IMU73_U_reverse_U_ic_in" >
+  <inertial >
+   <origin  rpy="0 0 0"  xyz="-4.5413E-34 1.0801E-17 0.0047" />
+   <mass  value="0.50882" />
+   <inertia  ixy="0"  izz="0.000562"  ixx="0.00028474"  ixz="2.1721E-37"  iyy="0.00028474"  iyz="0" />
+  </inertial>
+  <visual >
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+   <geometry >
+    <mesh  filename="package://input_connector_m.SLDASM/meshes/ic_in.STL" />
+   </geometry>
+   <material  name="blue" >
+    <color  rgba="0 0 0.5 1" />
+   </material>
+  </visual>
+  <collision >
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+   <geometry >
+    <mesh  filename="package://input_connector_m.SLDASM/meshes/ic_in.STL" />
+   </geometry>
+  </collision>
+ </link>
+ <link  name="BLM0_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_IMU73_U_reverse_U_ic_body" >
+  <inertial >
+   <origin  rpy="0 0 0"  xyz="0 -4.8218E-18 -0.0047" />
+   <mass  value="0" />
+   <inertia  ixy="0"  izz="0.000562"  ixx="0.00028474"  ixz="2.1721E-37"  iyy="0.00028474"  iyz="0" />
+  </inertial>
+  <visual >
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+   <geometry >
+    <mesh  filename="package://input_connector_m.SLDASM/meshes/ic_body.STL" />
+   </geometry>
+   <material  name="blue" >
+    <color  rgba="0 0 0.5 1" />
+   </material>
+  </visual>
+  <collision >
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+   <geometry >
+    <mesh  filename="package://input_connector_m.SLDASM/meshes/ic_body.STL" />
+   </geometry>
+  </collision>
+ </link>
+ <link  name="BLM0_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_JTMU29_U_reverse_U_tj_in" >
+  <inertial >
+   <origin  rpy="0 0 0"  xyz="-6.5585E-18 8.3685E-09 0.044941" />
+   <mass  value="0.93066" />
+   <inertia  ixy="1.9911E-10"  izz="0.0017462"  ixx="0.0011044"  ixz="1.0711E-19"  iyy="0.0017615"  iyz="8.3821E-10" />
+  </inertial>
+  <visual >
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+   <geometry >
+    <mesh  filename="package://jointT-m.SLDASM/meshes/tj_in.STL" />
+   </geometry>
+   <material  name="blue" >
+    <color  rgba="0 0 0.5 1" />
+   </material>
+  </visual>
+  <collision >
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+   <geometry >
+    <mesh  filename="package://jointT-m.SLDASM/meshes/tj_in.STL" />
+   </geometry>
+  </collision>
+ </link>
+ <link  name="BLM0_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_JTMU29_U_reverse_U_tj_body" >
+  <inertial >
+   <origin  rpy="0 0 0"  xyz="-0.0020574 -5.8806E-08 -0.0635" />
+   <mass  value="0.93065" />
+   <inertia  ixy="8.3821E-10"  izz="0.0011044"  ixx="0.0017462"  ixz="1.078E-20"  iyy="0.0017615"  iyz="-1.9911E-10" />
+  </inertial>
+  <visual >
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+   <geometry >
+    <mesh  filename="package://jointT-m.SLDASM/meshes/tj_body.STL" />
+   </geometry>
+   <material  name="body" >
+    <color  rgba="0.5 0.5 0.5 1" />
+   </material>
+  </visual>
+  <collision >
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+   <geometry >
+    <mesh  filename="package://jointT-m.SLDASM/meshes/tj_body.STL" />
+   </geometry>
+  </collision>
+ </link>
+ <link  name="BLM0_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_IMU74_reverse_IMU74_U_ic_in" >
+  <inertial >
+   <origin  rpy="0 0 0"  xyz="-4.5413E-34 1.0801E-17 0.0047" />
+   <mass  value="0.50882" />
+   <inertia  ixy="0"  izz="0.000562"  ixx="0.00028474"  ixz="2.1721E-37"  iyy="0.00028474"  iyz="0" />
+  </inertial>
+  <visual >
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+   <geometry >
+    <mesh  filename="package://input_connector_m.SLDASM/meshes/ic_in.STL" />
+   </geometry>
+   <material  name="blue" >
+    <color  rgba="0 0 0.5 1" />
+   </material>
+  </visual>
+  <collision >
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+   <geometry >
+    <mesh  filename="package://input_connector_m.SLDASM/meshes/ic_in.STL" />
+   </geometry>
+  </collision>
+ </link>
+ <link  name="BLM0_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_IMU74_reverse_IMU74_U_ic_body" >
+  <inertial >
+   <origin  rpy="0 0 0"  xyz="0 -4.8218E-18 -0.0047" />
+   <mass  value="0" />
+   <inertia  ixy="0"  izz="0.000562"  ixx="0.00028474"  ixz="2.1721E-37"  iyy="0.00028474"  iyz="0" />
+  </inertial>
+  <visual >
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+   <geometry >
+    <mesh  filename="package://input_connector_m.SLDASM/meshes/ic_body.STL" />
+   </geometry>
+   <material  name="blue" >
+    <color  rgba="0 0 0.5 1" />
+   </material>
+  </visual>
+  <collision >
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+   <geometry >
+    <mesh  filename="package://input_connector_m.SLDASM/meshes/ic_body.STL" />
+   </geometry>
+  </collision>
+ </link>
+ <link  name="BLM0_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_CMMU20_U_cl_in_1" >
+  <inertial >
+   <origin  rpy="0 0 0"  xyz="-6.9389E-18 8.3685E-09 0.044941" />
+   <mass  value="0.93066" />
+   <inertia  ixy="1.9911E-10"  izz="0.0017462"  ixx="0.0011044"  ixz="1.0654E-19"  iyy="0.0017615"  iyz="8.3821E-10" />
+  </inertial>
+  <visual >
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+   <geometry >
+    <mesh  filename="package://corner_link-mm.SLDASM/meshes/cl_in_1.STL" />
+   </geometry>
+   <material  name="blue" >
+    <color  rgba="0 0 0.5 1" />
+   </material>
+  </visual>
+  <collision >
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+   <geometry >
+    <mesh  filename="package://corner_link-mm.SLDASM/meshes/cl_in_1.STL" />
+   </geometry>
+  </collision>
+ </link>
+ <link  name="BLM0_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_CMMU20_U_cl_body" >
+  <inertial >
+   <origin  rpy="0 0 0"  xyz="-1.7347E-18 -5.8806E-08 0.044943" />
+   <mass  value="0.93065" />
+   <inertia  ixy="1.9911E-10"  izz="0.0017462"  ixx="0.0011044"  ixz="9.889E-20"  iyy="0.0017615"  iyz="8.3821E-10" />
+  </inertial>
+  <visual >
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+   <geometry >
+    <mesh  filename="package://corner_link-mm.SLDASM/meshes/cl_body.STL" />
+   </geometry>
+   <material  name="body" >
+    <color  rgba="0.5 0.5 0.5 1" />
+   </material>
+  </visual>
+  <collision >
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+   <geometry >
+    <mesh  filename="package://corner_link-mm.SLDASM/meshes/cl_body.STL" />
+   </geometry>
+  </collision>
+ </link>
+ <link  name="BLM0_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_CMMU20_U_cl_in_2" >
+  <inertial >
+   <origin  rpy="0 0 0"  xyz="0.0020588 8.3685E-09 0.0635" />
+   <mass  value="0.93066" />
+   <inertia  ixy="-8.3821E-10"  izz="0.0011044"  ixx="0.0017462"  ixz="1.078E-20"  iyy="0.0017615"  iyz="1.9911E-10" />
+  </inertial>
+  <visual >
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+   <geometry >
+    <mesh  filename="package://corner_link-mm.SLDASM/meshes/cl_in_2.STL" />
+   </geometry>
+   <material  name="blue" >
+    <color  rgba="0 0 0.5 1" />
+   </material>
+  </visual>
+  <collision >
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+   <geometry >
+    <mesh  filename="package://corner_link-mm.SLDASM/meshes/cl_in_2.STL" />
+   </geometry>
+  </collision>
+ </link>
+ <link  name="BLM0_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_IMU75_U_ic_body" >
+  <inertial >
+   <origin  rpy="0 0 0"  xyz="0 -4.8218E-18 -0.0047" />
+   <mass  value="0" />
+   <inertia  ixy="0"  izz="0.000562"  ixx="0.00028474"  ixz="2.1721E-37"  iyy="0.00028474"  iyz="0" />
+  </inertial>
+  <visual >
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+   <geometry >
+    <mesh  filename="package://input_connector_m.SLDASM/meshes/ic_body.STL" />
+   </geometry>
+   <material  name="blue" >
+    <color  rgba="0 0 0.5 1" />
+   </material>
+  </visual>
+  <collision >
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+   <geometry >
+    <mesh  filename="package://input_connector_m.SLDASM/meshes/ic_body.STL" />
+   </geometry>
+  </collision>
+ </link>
+ <link  name="BLM0_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_IMU75_U_ic_in" >
+  <inertial >
+   <origin  rpy="0 0 0"  xyz="-4.5413E-34 1.0801E-17 0.0047" />
+   <mass  value="0.50882" />
+   <inertia  ixy="0"  izz="0.000562"  ixx="0.00028474"  ixz="2.1721E-37"  iyy="0.00028474"  iyz="0" />
+  </inertial>
+  <visual >
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+   <geometry >
+    <mesh  filename="package://input_connector_m.SLDASM/meshes/ic_in.STL" />
+   </geometry>
+   <material  name="blue" >
+    <color  rgba="0 0 0.5 1" />
+   </material>
+  </visual>
+  <collision >
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+   <geometry >
+    <mesh  filename="package://input_connector_m.SLDASM/meshes/ic_in.STL" />
+   </geometry>
+  </collision>
+ </link>
+ <link  name="BLM0_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_SMSU14_U_sl_body" >
+  <inertial >
+   <origin  rpy="0 0 0"  xyz="-2.61E-07 7.571E-07 -0.097144" />
+   <mass  value="0.86346" />
+   <inertia  ixy="3.4516E-09"  izz="0.00060028"  ixx="0.0033145"  ixz="-3.4917E-09"  iyy="0.0033145"  iyz="9.5259E-09" />
+  </inertial>
+  <visual >
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+   <geometry >
+    <mesh  filename="package://straight_link-ms.SLDASM/meshes/sl_body.STL" />
+   </geometry>
+   <material  name="body" >
+    <color  rgba="0.5 0.5 0.5 1" />
+   </material>
+  </visual>
+  <collision >
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+   <geometry >
+    <mesh  filename="package://straight_link-ms.SLDASM/meshes/sl_body.STL" />
+   </geometry>
+  </collision>
+ </link>
+ <link  name="BLM0_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_ISU22_U_reverse_U_ic_in" >
+  <inertial >
+   <origin  rpy="0 0 0"  xyz="-3.5268E-34 -1.0426E-17 0.00365" />
+   <mass  value="0.23832" />
+   <inertia  ixy="0"  izz="0.00015875"  ixx="8.0432E-05"  ixz="6.1355E-38"  iyy="8.0432E-05"  iyz="0" />
+  </inertial>
+  <visual >
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+   <geometry >
+    <mesh  filename="package://input_connector_s.SLDASM/meshes/ic_in.STL" />
+   </geometry>
+   <material  name="blue" >
+    <color  rgba="0 0 0.5 1" />
+   </material>
+  </visual>
+  <collision >
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+   <geometry >
+    <mesh  filename="package://input_connector_s.SLDASM/meshes/ic_in.STL" />
+   </geometry>
+  </collision>
+ </link>
+ <link  name="BLM0_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_ISU22_U_reverse_U_ic_body" >
+  <inertial >
+   <origin  rpy="0 0 0"  xyz="0 2.5266E-18 -0.00365" />
+   <mass  value="0" />
+   <inertia  ixy="0"  izz="0.00015875"  ixx="8.0432E-05"  ixz="6.1355E-38"  iyy="8.0432E-05"  iyz="0" />
+  </inertial>
+  <visual >
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+   <geometry >
+    <mesh  filename="package://input_connector_s.SLDASM/meshes/ic_body.STL" />
+   </geometry>
+   <material  name="blue" >
+    <color  rgba="0 0 0.5 1" />
+   </material>
+  </visual>
+  <collision >
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+   <geometry >
+    <mesh  filename="package://input_connector_s.SLDASM/meshes/ic_body.STL" />
+   </geometry>
+  </collision>
+ </link>
+ <link  name="BLM0_BLU54_BLU54_BLU54_BLU54_BLU54_JSU20_U_reverse_U_tj_in" >
+  <inertial >
+   <origin  rpy="0 0 0"  xyz="1.1276E-17 6.5484E-09 0.035118" />
+   <mass  value="0.50441" />
+   <inertia  ixy="7.6335E-11"  izz="0.00071191"  ixx="0.00035776"  ixz="1.7534E-20"  iyy="0.00071638"  iyz="2.7679E-10" />
+  </inertial>
+  <visual >
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+   <geometry >
+    <mesh  filename="package://jointT-s.SLDASM/meshes/tj_in.STL" />
+   </geometry>
+   <material  name="blue" >
+    <color  rgba="0 0 0.5 1" />
+   </material>
+  </visual>
+  <collision >
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+   <geometry >
+    <mesh  filename="package://jointT-s.SLDASM/meshes/tj_in.STL" />
+   </geometry>
+  </collision>
+ </link>
+ <link  name="BLM0_BLU54_BLU54_BLU54_BLU54_BLU54_JSU20_U_reverse_U_tj_body" >
+  <inertial >
+   <origin  rpy="0 0 0"  xyz="-0.0013808 -7.3281E-08 -0.0575" />
+   <mass  value="0.50441" />
+   <inertia  ixy="2.7679E-10"  izz="0.00035776"  ixx="0.00071191"  ixz="4.9663E-20"  iyy="0.00071638"  iyz="-7.6335E-11" />
+  </inertial>
+  <visual >
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+   <geometry >
+    <mesh  filename="package://jointT-s.SLDASM/meshes/tj_body.STL" />
+   </geometry>
+   <material  name="body" >
+    <color  rgba="0.5 0.5 0.5 1" />
+   </material>
+  </visual>
+  <collision >
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+   <geometry >
+    <mesh  filename="package://jointT-s.SLDASM/meshes/tj_body.STL" />
+   </geometry>
+  </collision>
+ </link>
+ <link  name="BLM0_BLU54_BLU54_BLU54_BLU54_ISU23_U_reverse_U_ic_in" >
+  <inertial >
+   <origin  rpy="0 0 0"  xyz="-3.5268E-34 -1.0426E-17 0.00365" />
+   <mass  value="0.23832" />
+   <inertia  ixy="0"  izz="0.00015875"  ixx="8.0432E-05"  ixz="6.1355E-38"  iyy="8.0432E-05"  iyz="0" />
+  </inertial>
+  <visual >
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+   <geometry >
+    <mesh  filename="package://input_connector_s.SLDASM/meshes/ic_in.STL" />
+   </geometry>
+   <material  name="blue" >
+    <color  rgba="0 0 0.5 1" />
+   </material>
+  </visual>
+  <collision >
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+   <geometry >
+    <mesh  filename="package://input_connector_s.SLDASM/meshes/ic_in.STL" />
+   </geometry>
+  </collision>
+ </link>
+ <link  name="BLM0_BLU54_BLU54_BLU54_BLU54_ISU23_U_reverse_U_ic_body" >
+  <inertial >
+   <origin  rpy="0 0 0"  xyz="0 2.5266E-18 -0.00365" />
+   <mass  value="0" />
+   <inertia  ixy="0"  izz="0.00015875"  ixx="8.0432E-05"  ixz="6.1355E-38"  iyy="8.0432E-05"  iyz="0" />
+  </inertial>
+  <visual >
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+   <geometry >
+    <mesh  filename="package://input_connector_s.SLDASM/meshes/ic_body.STL" />
+   </geometry>
+   <material  name="blue" >
+    <color  rgba="0 0 0.5 1" />
+   </material>
+  </visual>
+  <collision >
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+   <geometry >
+    <mesh  filename="package://input_connector_s.SLDASM/meshes/ic_body.STL" />
+   </geometry>
+  </collision>
+ </link>
+ <link  name="BLM0_BLU54_BLU54_BLU54_JSU21_U_reverse_U_tj_in" >
+  <inertial >
+   <origin  rpy="0 0 0"  xyz="1.1276E-17 6.5484E-09 0.035118" />
+   <mass  value="0.50441" />
+   <inertia  ixy="7.6335E-11"  izz="0.00071191"  ixx="0.00035776"  ixz="1.7534E-20"  iyy="0.00071638"  iyz="2.7679E-10" />
+  </inertial>
+  <visual >
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+   <geometry >
+    <mesh  filename="package://jointT-s.SLDASM/meshes/tj_in.STL" />
+   </geometry>
+   <material  name="blue" >
+    <color  rgba="0 0 0.5 1" />
+   </material>
+  </visual>
+  <collision >
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+   <geometry >
+    <mesh  filename="package://jointT-s.SLDASM/meshes/tj_in.STL" />
+   </geometry>
+  </collision>
+ </link>
+ <link  name="BLM0_BLU54_BLU54_BLU54_JSU21_U_reverse_U_tj_body" >
+  <inertial >
+   <origin  rpy="0 0 0"  xyz="-0.0013808 -7.3281E-08 -0.0575" />
+   <mass  value="0.50441" />
+   <inertia  ixy="2.7679E-10"  izz="0.00035776"  ixx="0.00071191"  ixz="4.9663E-20"  iyy="0.00071638"  iyz="-7.6335E-11" />
+  </inertial>
+  <visual >
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+   <geometry >
+    <mesh  filename="package://jointT-s.SLDASM/meshes/tj_body.STL" />
+   </geometry>
+   <material  name="body" >
+    <color  rgba="0.5 0.5 0.5 1" />
+   </material>
+  </visual>
+  <collision >
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+   <geometry >
+    <mesh  filename="package://jointT-s.SLDASM/meshes/tj_body.STL" />
+   </geometry>
+  </collision>
+ </link>
+ <link  name="BLM0_BLU54_BLU54_ISU24_U_reverse_U_ic_in" >
+  <inertial >
+   <origin  rpy="0 0 0"  xyz="-3.5268E-34 -1.0426E-17 0.00365" />
+   <mass  value="0.23832" />
+   <inertia  ixy="0"  izz="0.00015875"  ixx="8.0432E-05"  ixz="6.1355E-38"  iyy="8.0432E-05"  iyz="0" />
+  </inertial>
+  <visual >
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+   <geometry >
+    <mesh  filename="package://input_connector_s.SLDASM/meshes/ic_in.STL" />
+   </geometry>
+   <material  name="blue" >
+    <color  rgba="0 0 0.5 1" />
+   </material>
+  </visual>
+  <collision >
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+   <geometry >
+    <mesh  filename="package://input_connector_s.SLDASM/meshes/ic_in.STL" />
+   </geometry>
+  </collision>
+ </link>
+ <link  name="BLM0_BLU54_BLU54_ISU24_U_reverse_U_ic_body" >
+  <inertial >
+   <origin  rpy="0 0 0"  xyz="0 2.5266E-18 -0.00365" />
+   <mass  value="0" />
+   <inertia  ixy="0"  izz="0.00015875"  ixx="8.0432E-05"  ixz="6.1355E-38"  iyy="8.0432E-05"  iyz="0" />
+  </inertial>
+  <visual >
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+   <geometry >
+    <mesh  filename="package://input_connector_s.SLDASM/meshes/ic_body.STL" />
+   </geometry>
+   <material  name="blue" >
+    <color  rgba="0 0 0.5 1" />
+   </material>
+  </visual>
+  <collision >
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+   <geometry >
+    <mesh  filename="package://input_connector_s.SLDASM/meshes/ic_body.STL" />
+   </geometry>
+  </collision>
+ </link>
+ <link  name="BLM0_BLU54_JSU22_U_reverse_U_tj_in" >
+  <inertial >
+   <origin  rpy="0 0 0"  xyz="1.1276E-17 6.5484E-09 0.035118" />
+   <mass  value="0.50441" />
+   <inertia  ixy="7.6335E-11"  izz="0.00071191"  ixx="0.00035776"  ixz="1.7534E-20"  iyy="0.00071638"  iyz="2.7679E-10" />
+  </inertial>
+  <visual >
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+   <geometry >
+    <mesh  filename="package://jointT-s.SLDASM/meshes/tj_in.STL" />
+   </geometry>
+   <material  name="blue" >
+    <color  rgba="0 0 0.5 1" />
+   </material>
+  </visual>
+  <collision >
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+   <geometry >
+    <mesh  filename="package://jointT-s.SLDASM/meshes/tj_in.STL" />
+   </geometry>
+  </collision>
+ </link>
+ <link  name="BLM0_BLU54_JSU22_U_reverse_U_tj_body" >
+  <inertial >
+   <origin  rpy="0 0 0"  xyz="-0.0013808 -7.3281E-08 -0.0575" />
+   <mass  value="0.50441" />
+   <inertia  ixy="2.7679E-10"  izz="0.00035776"  ixx="0.00071191"  ixz="4.9663E-20"  iyy="0.00071638"  iyz="-7.6335E-11" />
+  </inertial>
+  <visual >
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+   <geometry >
+    <mesh  filename="package://jointT-s.SLDASM/meshes/tj_body.STL" />
+   </geometry>
+   <material  name="body" >
+    <color  rgba="0.5 0.5 0.5 1" />
+   </material>
+  </visual>
+  <collision >
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+   <geometry >
+    <mesh  filename="package://jointT-s.SLDASM/meshes/tj_body.STL" />
+   </geometry>
+  </collision>
+ </link>
+ <link  name="BLM0_BLU54_JSU22_U_reverse_U_tj_out" >
+  <inertial >
+   <origin  rpy="0 0 0"  xyz="-0.0013817 6.5484E-09 -0.0575" />
+   <mass  value="0.50441" />
+   <inertia  ixy="2.7679E-10"  izz="0.00035776"  ixx="0.00071191"  ixz="4.7522E-20"  iyy="0.00071638"  iyz="-7.6335E-11" />
+  </inertial>
+  <visual >
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+   <geometry >
+    <mesh  filename="package://jointT-s.SLDASM/meshes/tj_out.STL" />
+   </geometry>
+   <material  name="red" >
+    <color  rgba="0.5 0 0 1" />
+   </material>
+  </visual>
+  <collision >
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+   <geometry >
+    <mesh  filename="package://jointT-s.SLDASM/meshes/tj_out.STL" />
+   </geometry>
+  </collision>
+ </link>
+ <joint  type="fixed"  name="BLM0_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_U_b_large" >
+  <origin  rpy="3.14159265358979 0 0"  xyz="0 0 0.0513" />
+  <parent  link="BLM0_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_U_b_body" />
+  <child  link="BLM0_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_U_b_in" />
+  <axis  xyz="0 0 1" />
+ </joint>
+ <joint  type="fixed"  name="BLM0_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_ILU155_U_ci_large_1" >
+  <origin  rpy="0 0 0"  xyz="0 0 0" />
+  <parent  link="BLM0_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_U_b_in" />
+  <child  link="BLM0_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_ILU155_U_ci_body" />
+  <axis  xyz="0 0 0" />
+ </joint>
+ <joint  type="fixed"  name="BLM0_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_ILU155_U_ci_large_2" >
+  <origin  rpy="0 0 0"  xyz="0 0 -0.0114" />
+  <parent  link="BLM0_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_ILU155_U_ci_body" />
+  <child  link="BLM0_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_ILU155_U_ci_in" />
+  <axis  xyz="0 0 0" />
+ </joint>
+ <joint  type="revolute"  name="BLM0_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_JTLU97_U_tj_large_1" >
+  <origin  rpy="0.0 0.0 3.141592653589793"  xyz="0.0 0.0 0.0" />
+  <parent  link="BLM0_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_ILU155_U_ci_in" />
+  <child  link="BLM0_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_JTLU97_U_tj_body" />
+  <axis  xyz="0 0 1" />
+  <limit  effort="60.5"  upper="3.1416"  velocity="0.33"  lower="-3.1416" />
+ </joint>
+ <joint  type="fixed"  name="BLM0_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_JTLU97_U_tj_large_2" >
+  <origin  rpy="0 1.5707963267949 0"  xyz="-0.057 0 -0.0735" />
+  <parent  link="BLM0_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_JTLU97_U_tj_body" />
+  <child  link="BLM0_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_JTLU97_U_tj_in" />
+  <axis  xyz="0 0 0" />
+ </joint>
+ <joint  type="fixed"  name="BLM0_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_ILU156_U_ci_large_1" >
+  <origin  rpy="0 0 0"  xyz="0 0 0" />
+  <parent  link="BLM0_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_JTLU97_U_tj_in" />
+  <child  link="BLM0_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_ILU156_U_ci_body" />
+  <axis  xyz="0 0 0" />
+ </joint>
+ <joint  type="fixed"  name="BLM0_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_ILU156_U_ci_large_2" >
+  <origin  rpy="0 0 0"  xyz="0 0 -0.0114" />
+  <parent  link="BLM0_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_ILU156_U_ci_body" />
+  <child  link="BLM0_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_ILU156_U_ci_in" />
+  <axis  xyz="0 0 0" />
+ </joint>
+ <joint  type="revolute"  name="BLM0_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_JTLU98_U_tj_large_1" >
+  <origin  rpy="0.0 0.0 3.141592653589793"  xyz="0.0 0.0 0.0" />
+  <parent  link="BLM0_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_ILU156_U_ci_in" />
+  <child  link="BLM0_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_JTLU98_U_tj_body" />
+  <axis  xyz="0 0 1" />
+  <limit  effort="60.5"  upper="3.1416"  velocity="0.33"  lower="-3.1416" />
+ </joint>
+ <joint  type="fixed"  name="BLM0_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_JTLU98_U_tj_large_2" >
+  <origin  rpy="0 1.5707963267949 0"  xyz="-0.057 0 -0.0735" />
+  <parent  link="BLM0_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_JTLU98_U_tj_body" />
+  <child  link="BLM0_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_JTLU98_U_tj_in" />
+  <axis  xyz="0 0 0" />
+ </joint>
+ <joint  type="fixed"  name="BLM0_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_ILU157_U_ci_large_1" >
+  <origin  rpy="0 0 0"  xyz="0 0 0" />
+  <parent  link="BLM0_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_JTLU98_U_tj_in" />
+  <child  link="BLM0_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_ILU157_U_ci_body" />
+  <axis  xyz="0 0 0" />
+ </joint>
+ <joint  type="fixed"  name="BLM0_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_ILU157_U_ci_large_2" >
+  <origin  rpy="0 0 0"  xyz="0 0 -0.0114" />
+  <parent  link="BLM0_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_ILU157_U_ci_body" />
+  <child  link="BLM0_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_ILU157_U_ci_in" />
+  <axis  xyz="0 0 0" />
+ </joint>
+ <joint  type="fixed"  name="BLM0_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_SLMU35_U_sl_large" >
+  <origin  rpy="0.0 0.0 3.141592653589793"  xyz="0.0 0.0 0.0" />
+  <parent  link="BLM0_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_ILU157_U_ci_in" />
+  <child  link="BLM0_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_SLMU35_U_sl_body" />
+  <axis  xyz="0 0 0" />
+ </joint>
+ <joint  type="fixed"  name="BLM0_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_SLMU35_U_sl_medium" >
+  <origin  rpy="3.14159265358979 0 0"  xyz="0 0 -0.2" />
+  <parent  link="BLM0_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_SLMU35_U_sl_body" />
+  <child  link="BLM0_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_IMU73_U_reverse_U_ic_in" />
+  <axis  xyz="0 0 0" />
+ </joint>
+ <joint  type="fixed"  name="BLM0_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_IMU73_U_reverse_U_ic_medium_2" >
+  <origin  rpy="0.0 0.0 0.0"  xyz="-0.0 -0.0 0.0094" />
+  <parent  link="BLM0_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_IMU73_U_reverse_U_ic_in" />
+  <child  link="BLM0_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_IMU73_U_reverse_U_ic_body" />
+  <axis  xyz="0 0 0" />
+ </joint>
+ <joint  type="fixed"  name="BLM0_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_IMU73_U_reverse_U_ic_medium_1" >
+  <origin  rpy="0.0 0.0 0.0"  xyz="-0.0 -0.0 -0.0" />
+  <parent  link="BLM0_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_IMU73_U_reverse_U_ic_body" />
+  <child  link="BLM0_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_JTMU29_U_reverse_U_tj_in" />
+  <axis  xyz="0 0 0" />
+ </joint>
+ <joint  type="fixed"  name="BLM0_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_JTMU29_U_reverse_U_tj_medium_2" >
+  <origin  rpy="0.0 -1.5707963267949 0.0"  xyz="-0.06350000000000017 -0.0 0.04699999999999977" />
+  <parent  link="BLM0_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_JTMU29_U_reverse_U_tj_in" />
+  <child  link="BLM0_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_JTMU29_U_reverse_U_tj_body" />
+  <axis  xyz="0 -1 0" />
+ </joint>
+ <joint  type="revolute"  name="BLM0_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_JTMU29_U_reverse_U_tj_medium_1" >
+  <origin  rpy="0.0 0.0 0.0"  xyz="-0.0 -0.0 -0.0" />
+  <parent  link="BLM0_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_JTMU29_U_reverse_U_tj_body" />
+  <child  link="BLM0_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_IMU74_reverse_IMU74_U_ic_in" />
+  <axis  xyz="0 0 1" />
+  <limit  effort="25.5"  velocity="0.33"  upper="3.1416"  lower="-3.1416" />
+ </joint>
+ <joint  type="fixed"  name="BLM0_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_IMU74_reverse_IMU74_U_ic_medium_2" >
+  <origin  rpy="0.0 0.0 0.0"  xyz="-0.0 -0.0 0.0094" />
+  <parent  link="BLM0_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_IMU74_reverse_IMU74_U_ic_in" />
+  <child  link="BLM0_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_IMU74_reverse_IMU74_U_ic_body" />
+  <axis  xyz="0 0 0" />
+ </joint>
+ <joint  type="fixed"  name="BLM0_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_IMU74_reverse_IMU74_U_ic_medium_1" >
+  <origin  rpy="0.0 0.0 3.141592653589793"  xyz="-0.0 -0.0 -0.0" />
+  <parent  link="BLM0_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_IMU74_reverse_IMU74_U_ic_body" />
+  <child  link="BLM0_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_CMMU20_U_cl_in_1" />
+  <axis  xyz="0 0 0" />
+ </joint>
+ <joint  type="fixed"  name="BLM0_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_CMMU20_U_cl_medium_1" >
+  <origin  rpy="0 0 0"  xyz="0 0 0" />
+  <parent  link="BLM0_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_CMMU20_U_cl_in_1" />
+  <child  link="BLM0_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_CMMU20_U_cl_body" />
+  <axis  xyz="0 0 0" />
+ </joint>
+ <joint  type="fixed"  name="BLM0_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_CMMU20_U_cl_medium_2" >
+  <origin  rpy="0 1.5707963267949 0"  xyz="-0.0635 0 0.047" />
+  <parent  link="BLM0_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_CMMU20_U_cl_body" />
+  <child  link="BLM0_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_CMMU20_U_cl_in_2" />
+  <axis  xyz="0 0 0" />
+ </joint>
+ <joint  type="fixed"  name="BLM0_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_IMU75_U_ic_medium_1" >
+  <origin  rpy="0 0 0"  xyz="0 0 0" />
+  <parent  link="BLM0_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_CMMU20_U_cl_in_2" />
+  <child  link="BLM0_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_IMU75_U_ic_body" />
+  <axis  xyz="0 0 0" />
+ </joint>
+ <joint  type="fixed"  name="BLM0_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_IMU75_U_ic_medium_2" >
+  <origin  rpy="0 0 0"  xyz="0 0 -0.0094" />
+  <parent  link="BLM0_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_IMU75_U_ic_body" />
+  <child  link="BLM0_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_IMU75_U_ic_in" />
+  <axis  xyz="0 0 0" />
+ </joint>
+ <joint  type="fixed"  name="BLM0_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_SMSU14_U_sl_medium" >
+  <origin  rpy="0 0 0"  xyz="0 0 0" />
+  <parent  link="BLM0_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_IMU75_U_ic_in" />
+  <child  link="BLM0_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_SMSU14_U_sl_body" />
+  <axis  xyz="0 0 0" />
+ </joint>
+ <joint  type="fixed"  name="BLM0_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_SMSU14_U_sl_small" >
+  <origin  rpy="3.1416 0 0"  xyz="0 0 -0.2" />
+  <parent  link="BLM0_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_SMSU14_U_sl_body" />
+  <child  link="BLM0_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_ISU22_U_reverse_U_ic_in" />
+  <axis  xyz="0 0 0" />
+ </joint>
+ <joint  type="fixed"  name="BLM0_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_ISU22_U_reverse_U_ic_small_2" >
+  <origin  rpy="0.0 0.0 3.141592653589793"  xyz="0.0 0.0 0.0073" />
+  <parent  link="BLM0_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_ISU22_U_reverse_U_ic_in" />
+  <child  link="BLM0_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_ISU22_U_reverse_U_ic_body" />
+  <axis  xyz="0 0 0" />
+ </joint>
+ <joint  type="fixed"  name="BLM0_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_ISU22_U_reverse_U_ic_small_1" >
+  <origin  rpy="0.0 0.0 0.0"  xyz="-0.0 -0.0 -0.0" />
+  <parent  link="BLM0_BLU54_BLU54_BLU54_BLU54_BLU54_BLU54_ISU22_U_reverse_U_ic_body" />
+  <child  link="BLM0_BLU54_BLU54_BLU54_BLU54_BLU54_JSU20_U_reverse_U_tj_in" />
+  <axis  xyz="0 0 0" />
+ </joint>
+ <joint  type="fixed"  name="BLM0_BLU54_BLU54_BLU54_BLU54_BLU54_JSU20_U_reverse_U_tj_small_2" >
+  <origin  rpy="0.0 -1.5707963267949 0.0"  xyz="-0.057500000000000134 -0.0 0.036499999999999796" />
+  <parent  link="BLM0_BLU54_BLU54_BLU54_BLU54_BLU54_JSU20_U_reverse_U_tj_in" />
+  <child  link="BLM0_BLU54_BLU54_BLU54_BLU54_BLU54_JSU20_U_reverse_U_tj_body" />
+  <axis  xyz="0 0 0" />
+ </joint>
+ <joint  type="revolute"  name="BLM0_BLU54_BLU54_BLU54_BLU54_BLU54_JSU20_U_reverse_U_tj_small_1" >
+  <origin  rpy="0.0 0.0 0.0"  xyz="-0.0 -0.0 -0.0" />
+  <parent  link="BLM0_BLU54_BLU54_BLU54_BLU54_BLU54_JSU20_U_reverse_U_tj_body" />
+  <child  link="BLM0_BLU54_BLU54_BLU54_BLU54_ISU23_U_reverse_U_ic_in" />
+  <axis  xyz="0 0 1" />
+  <limit  effort="4.5"  velocity="0.4"  upper="3.1416"  lower="-3.1416" />
+ </joint>
+ <joint  type="fixed"  name="BLM0_BLU54_BLU54_BLU54_BLU54_ISU23_U_reverse_U_ic_small_2" >
+  <origin  rpy="0.0 0.0 3.141592653589793"  xyz="0.0 0.0 0.0073" />
+  <parent  link="BLM0_BLU54_BLU54_BLU54_BLU54_ISU23_U_reverse_U_ic_in" />
+  <child  link="BLM0_BLU54_BLU54_BLU54_BLU54_ISU23_U_reverse_U_ic_body" />
+  <axis  xyz="0 0 0" />
+ </joint>
+ <joint  type="fixed"  name="BLM0_BLU54_BLU54_BLU54_BLU54_ISU23_U_reverse_U_ic_small_1" >
+  <origin  rpy="0.0 0.0 0.0"  xyz="-0.0 -0.0 -0.0" />
+  <parent  link="BLM0_BLU54_BLU54_BLU54_BLU54_ISU23_U_reverse_U_ic_body" />
+  <child  link="BLM0_BLU54_BLU54_BLU54_JSU21_U_reverse_U_tj_in" />
+  <axis  xyz="0 0 0" />
+ </joint>
+ <joint  type="fixed"  name="BLM0_BLU54_BLU54_BLU54_JSU21_U_reverse_U_tj_small_2" >
+  <origin  rpy="0.0 -1.5707963267949 0.0"  xyz="-0.057500000000000134 -0.0 0.036499999999999796" />
+  <parent  link="BLM0_BLU54_BLU54_BLU54_JSU21_U_reverse_U_tj_in" />
+  <child  link="BLM0_BLU54_BLU54_BLU54_JSU21_U_reverse_U_tj_body" />
+  <axis  xyz="0 0 0" />
+ </joint>
+ <joint  type="revolute"  name="BLM0_BLU54_BLU54_BLU54_JSU21_U_reverse_U_tj_small_1" >
+  <origin  rpy="0.0 0.0 0.0"  xyz="-0.0 -0.0 -0.0" />
+  <parent  link="BLM0_BLU54_BLU54_BLU54_JSU21_U_reverse_U_tj_body" />
+  <child  link="BLM0_BLU54_BLU54_ISU24_U_reverse_U_ic_in" />
+  <axis  xyz="0 0 1" />
+  <limit  effort="4.5"  velocity="0.4"  upper="3.1416"  lower="-3.1416" />
+ </joint>
+ <joint  type="fixed"  name="BLM0_BLU54_BLU54_ISU24_U_reverse_U_ic_small_2" >
+  <origin  rpy="0.0 0.0 3.141592653589793"  xyz="0.0 0.0 0.0073" />
+  <parent  link="BLM0_BLU54_BLU54_ISU24_U_reverse_U_ic_in" />
+  <child  link="BLM0_BLU54_BLU54_ISU24_U_reverse_U_ic_body" />
+  <axis  xyz="0 0 0" />
+ </joint>
+ <joint  type="fixed"  name="BLM0_BLU54_BLU54_ISU24_U_reverse_U_ic_small_1" >
+  <origin  rpy="0.0 0.0 0.0"  xyz="-0.0 -0.0 -0.0" />
+  <parent  link="BLM0_BLU54_BLU54_ISU24_U_reverse_U_ic_body" />
+  <child  link="BLM0_BLU54_JSU22_U_reverse_U_tj_in" />
+  <axis  xyz="0 0 0" />
+ </joint>
+ <joint  type="fixed"  name="BLM0_BLU54_JSU22_U_reverse_U_tj_small_2" >
+  <origin  rpy="0.0 -1.5707963267949 0.0"  xyz="-0.057500000000000134 -0.0 0.036499999999999796" />
+  <parent  link="BLM0_BLU54_JSU22_U_reverse_U_tj_in" />
+  <child  link="BLM0_BLU54_JSU22_U_reverse_U_tj_body" />
+  <axis  xyz="0 0 0" />
+ </joint>
+ <joint  type="revolute"  name="BLM0_BLU54_JSU22_U_reverse_U_tj_small_1" >
+  <origin  rpy="0.0 0.0 0.0"  xyz="-0.0 -0.0 -0.0" />
+  <parent  link="BLM0_BLU54_JSU22_U_reverse_U_tj_body" />
+  <child  link="BLM0_BLU54_JSU22_U_reverse_U_tj_out" />
+  <axis  xyz="0 0 1" />
+  <limit  effort="4.5"  velocity="0.4"  upper="3.1416"  lower="-3.1416" />
+ </joint>
+</robot>

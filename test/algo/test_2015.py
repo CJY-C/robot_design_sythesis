@@ -29,7 +29,9 @@ def train(envName, ac_kwargs, logger_kwargs, seed, steps_per_epoch, epochs, repl
 
 
 if __name__ == '__main__':
-  alphaList = [0.0001, 0.0002, 0.0005, 0.001]
+  alphaList = [0.0001, 0.0002, 0.0005]
+  # alphaList = [0.0001, 0.0002, 0.0005, 0.001]
+  alphaList.reverse()
   gammaList = [0.9, 0.95, 1]
 
   envName = 'RobotConfigDesign-v0'
@@ -40,7 +42,7 @@ if __name__ == '__main__':
 
   for alpha in alphaList:
     for gamma in gammaList:
-      logger_kwargs = dict(output_dir=dir + '/dt/' + envName[:-3] + f'-gamma({gamma})-alpha({alpha})', exp_name=f'DQN-gamma({gamma})-alpha({alpha})')
+      logger_kwargs = dict(output_dir=dir + '/localdt/' + envName[:-3] + f'-gamma({gamma})-alpha({alpha})', exp_name=f'DQN-gamma({gamma})-alpha({alpha})')
       train(
         envName=envName,
         ac_kwargs=ac_kwargs,

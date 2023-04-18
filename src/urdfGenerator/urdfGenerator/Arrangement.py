@@ -102,13 +102,19 @@ class Arrangement:
 if __name__ == '__main__':
 
     a = Arrangement()
-
-    a.addModule(ModuleType.BASEL) # BASEL对应 323000
-    a.addModule(ModuleType.JOINTL) # JOINTL对应 323001
+    a.addModule(ModuleType.BASEL)
     a.addModule(ModuleType.JOINTL)
+    for m in a.moduleList:
+        print(m.origin)
 
-    # 打印模块id
-    print(a.moduleTypeList)
+    # a = Arrangement()
+
+    # a.addModule(ModuleType.BASEL) # BASEL对应 323000
+    # a.addModule(ModuleType.JOINTL) # JOINTL对应 323001
+    # a.addModule(ModuleType.JOINTL)
+
+    # # 打印模块id
+    # print(a.moduleTypeList)
     
 
 
