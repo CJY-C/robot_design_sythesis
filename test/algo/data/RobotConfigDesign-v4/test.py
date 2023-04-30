@@ -5,7 +5,7 @@ plt.rcParams['axes.unicode_minus'] = False
 
 
 # read in the data file
-df = pd.read_table('/home/masa/learning/rl/undergraduate/cjy/robot_design_sythesis/test/algo/data/RobotConfigDesign-v10/progress.txt')
+df = pd.read_table('/home/masa/learning/rl/undergraduate/cjy/robot_design_sythesis/test/algo/localdt/RobotConfigDesign-gamma(0.9)-alpha(0.0001)/progress.txt')
 
 # extract the two desired columns
 col1 = df['TotalEnvInteracts']

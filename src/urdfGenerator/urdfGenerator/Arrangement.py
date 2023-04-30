@@ -1,6 +1,9 @@
+from urdfGenerator import register
+register.PathRegister.add_path('/home/masa/learning/rl/undergraduate/cjy/robot_design_sythesis/src/RobotConfigDesignEnv/robotConfigDesign/res/config.json')
+
 from urdfGenerator.ModuleConfig import generateModule, getAttachableSubModuleActions, getModuleTypeList
 
-from urdfGenerator.Enums import ModuleType, UnitOrder, LinkType
+from urdfGenerator.Enums import ModuleType, Order, LinkType
 
 from functools import reduce
 
@@ -21,8 +24,8 @@ class Arrangement:
         else: 
             if self.moduleList[-1].check_attachable(generateModule(moduleType)):
                 self.moduleList.append(generateModule(moduleType))
-            elif self.moduleList[-1].check_attachable(generateModule(moduleType, UnitOrder.REVERSE)):
-                self.moduleList.append(generateModule(moduleType, UnitOrder.REVERSE))
+            elif self.moduleList[-1].check_attachable(generateModule(moduleType, Order.REVERSE)):
+                self.moduleList.append(generateModule(moduleType, Order.REVERSE))
             else:
                 # print("Cannot attach module")
                 return False
@@ -90,6 +93,8 @@ class Arrangement:
         # 将moduleTypeList中的枚举值转换为int
         test = getModuleTypeList()
         moduleTypeList = list(map(lambda x: test.index(x) if test.count(x) else -1, moduleTypeList))
+        # submodules = list(map(lambda s: moduleTypeList.index(s), submodules))
+        # moduleTypeList = list(map(lambda x: test.index(x) if test.count(x) else -1, moduleTypeList))
         # moduleTypeList = list(map(lambda x: x.value, moduleTypeList))
         return moduleTypeList
     
@@ -101,20 +106,20 @@ class Arrangement:
 
 if __name__ == '__main__':
 
-    a = Arrangement()
-    a.addModule(ModuleType.BASEL)
-    a.addModule(ModuleType.JOINTL)
-    for m in a.moduleList:
-        print(m.origin)
-
     # a = Arrangement()
-
-    # a.addModule(ModuleType.BASEL) # BASEL对应 323000
-    # a.addModule(ModuleType.JOINTL) # JOINTL对应 323001
+    # a.addModule(ModuleType.BASEL)
     # a.addModule(ModuleType.JOINTL)
+    # for m in a.moduleList:
+    #     print(m.origin)
 
-    # # 打印模块id
-    # print(a.moduleTypeList)
+    a = Arrangement()
+
+    a.addModule(ModuleType.BASEL) # BASEL对应 323000
+    a.addModule(ModuleType.JOINTL) # JOINTL对应 323001
+    a.addModule(ModuleType.JOINTL)
+
+    # 打印模块id
+    print(a.getModuleTypeList(15))
     
 
 

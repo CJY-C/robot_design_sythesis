@@ -1,5 +1,5 @@
 from urdfGenerator.UnitConfig import generateUnit
-from urdfGenerator.Enums import UnitType, UnitOrder, LinkType, reverse_order, MountingAngle
+from urdfGenerator.Enums import UnitType, Order, LinkType, reverse_order, MountingAngle
 
 from copy import deepcopy
 
@@ -14,7 +14,7 @@ class Module:
     def __init__(self, name, unitTypeList, mountingAngle=None, unitOrder=None) -> None:
         self.unitTypeList = unitTypeList
         self.unitList = []
-        self.unitOrderList = [UnitOrder.NORMAL] * len(unitTypeList) if unitOrder is None else unitOrder
+        self.unitOrderList = [Order.NORMAL] * len(unitTypeList) if unitOrder is None else unitOrder
         self.mountingAngle = [MountingAngle.ZERO] * len(unitTypeList) if mountingAngle is None else mountingAngle
         # self.rotate_tail(mountingAngle)
         self.generateUnitList()
@@ -27,9 +27,9 @@ class Module:
         mountingAngleList = deepcopy(self.mountingAngle)
         otherMountingAngleList = deepcopy(other.mountingAngle)
         unitOrderList = deepcopy(self.unitOrderList)
-        otherUnitOrderList = deepcopy(other.unitOrderList)
-        return Module(self.name, unitTypeList + otherUnitTypeList, mountingAngleList + otherMountingAngleList, unitOrderList + otherUnitOrderList)
-        # return Module(self.name + "+" + other.name, unitTypeList + otherUnitTypeList, unitOrderList + otherUnitOrderList)
+        otherOrderList = deepcopy(other.unitOrderList)
+        return Module(self.name, unitTypeList + otherUnitTypeList, mountingAngleList + otherMountingAngleList, unitOrderList + otherOrderList)
+        # return Module(self.name + "+" + other.name, unitTypeList + otherUnitTypeList, unitOrderList + otherOrderList)
 
     def __str__(self) -> str:
         # return str(self.module)

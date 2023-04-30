@@ -1,0 +1,217 @@
+{
+    "res_path": "/home/masa/learning/rl/undergraduate/cjy/robot_design_sythesis/src/RobotConfigDesignEnv/robotConfigDesign/res/",
+    "units":[
+        {
+            "name": "BASEL",
+            "id": 10,
+            "filepath": "base-l.SLDASM/urdf/base-l.SLDASM.urdf",
+            "mass": 1
+        },
+        {
+            "name": "BASEM",
+            "id": 11,
+            "filepath": "base-m.SLDASM/urdf/base-m.SLDASM.urdf",
+            "mass": 0.5
+        },
+        {
+            "name":"CONNECTORL",
+            "id": 20,
+            "filepath": "input_connector_l.SLDASM/urdf/input_connector_l.SLDASM.urdf",
+            "mass": 0
+        },
+        {
+            "name":"CONNECTORM",
+            "id": 21,
+            "filepath": "input_connector_m.SLDASM/urdf/input_connector_m.SLDASM.urdf",
+            "mass": 0
+        },
+        {
+            "name":"CONNECTORS",
+            "id": 22,
+            "filepath": "input_connector_s.SLDASM/urdf/input_connector_s.SLDASM.urdf",
+            "mass": 0
+        },
+        {
+            "name": "JOINTL",
+            "id": 30,
+            "filepath": "jointT-l.SLDASM/urdf/jointT-l.SLDASM.urdf"
+        },
+        {
+            "name": "JOINTM",
+            "id": 31,
+            "filepath": "jointT-m.SLDASM/urdf/jointT-m.SLDASM.urdf"
+        },
+        {
+            "name": "JOINTS",
+            "id": 32,
+            "filepath": "jointT-s.SLDASM/urdf/jointT-s.SLDASM.urdf"
+        },
+        {
+            "name": "CORNERLINKLL",
+            "id": 40,
+            "filepath": "corner_link-l.SLDASM/urdf/corner_link-l.SLDASM.urdf"
+        },
+        {
+            "name": "CORNERLINKLM",
+            "id": 41,
+            "filepath": "corner_link-lm.SLDASM/urdf/corner_link-lm.SLDASM.urdf"
+        },
+        {
+            "name": "CORNERLINKMM",
+            "id": 42,
+            "filepath": "corner_link-mm.SLDASM/urdf/corner_link-mm.SLDASM.urdf"
+        },
+        {
+            "name": "CORNERLINKMS",
+            "id": 50,
+            "filepath": "corner_link-ms.SLDASM/urdf/corner_link-ms.SLDASM.urdf"
+        },
+        {
+            "name": "STRAIGHTLINKLL",
+            "id": 51,
+            "filepath": "straight_link-l.SLDASM/urdf/straight_link-l.SLDASM.urdf"
+        },
+        {
+            "name": "STRAIGHTLINKLM",
+            "id": 52,
+            "filepath": "straight_link-lm.SLDASM/urdf/straight_link-lm.SLDASM.urdf"
+        },
+        {
+            "name": "STRAIGHTLINKMM",
+            "id": 53,
+            "filepath": "straight_link-m.SLDASM/urdf/straight_link-m.SLDASM.urdf"
+        },
+        {
+            "name": "STRAIGHTLINKMS",
+            "id": 54,
+            "filepath": "straight_link-ms.SLDASM/urdf/straight_link-ms.SLDASM.urdf"
+        },
+        {
+            "name": "ENDEFFECTORL",
+            "id": 60,
+            "filepath": "end_effector_v_l.SLDASM/urdf/end_effector_v_l.SLDASM.urdf"
+        },
+        {
+            "name": "ENDEFFECTORM",
+            "id": 61,
+            "filepath": "end_effector_v_m.SLDASM/urdf/end_effector_v_m.SLDASM.urdf"
+        },
+        {
+            "name": "ENDEFFECTORS",
+            "id": 62,
+            "filepath": "end_effector_v_s.SLDASM/urdf/end_effector_v_s.SLDASM.urdf"
+        }
+    ], 
+    "modules":[
+        {
+            "name": "NONE" ,
+            "id": 0,
+            "submodulesI": ["BASEL", "BASEM"],
+            "submodulesO": ["BASEL", "BASEM"]
+        },
+        {
+            "name": "BASEL" ,
+            "id": 10,
+            "components": ["BASEL", "CONNECTORL"], 
+            "submodulesI": ["JOINTL", "CORNERLINKLL", "CORNERLINKLM", "STRAIGHTLINKLL", "STRAIGHTLINKLM"]
+        },
+        {
+            "name": "BASEM" ,
+            "id": 11,
+            "components": ["BASEM", "CONNECTORM"],
+            "submodulesI": ["JOINTM", "CORNERLINKMM", "CORNERLINKMS", "STRAIGHTLINKMM", "STRAIGHTLINKMS"]
+        },
+        {
+            "name": "JOINTL",
+            "id": 30,
+            "components": ["JOINTL", "CONNECTORL"],
+            "submodulesI": ["JOINTL", "STRAIGHTLINKLL",  "STRAIGHTLINKLM"],
+            "submodulesO": ["CORNERLINKLL", "CORNERLINKLM", "ENDEFFECTORL"]
+        },
+        {
+            "name": "JOINTM",
+            "id": 31,
+            "mountingAngle": "ONEEIGHTY",
+            "components": ["JOINTM", "CONNECTORM"],
+            "submodulesI": ["JOINTM", "STRAIGHTLINKMM", "STRAIGHTLINKMS"],
+            "submodulesO": ["CORNERLINKMM", "CORNERLINKMS", "ENDEFFECTORM"]
+        },
+        {
+            "name": "JOINTS",
+            "id": 32,
+            "mountingAngle": "ONEEIGHTY",
+            "components": ["JOINTS", "CONNECTORS"],
+            "submodulesI": ["JOINTS"],
+            "submodulesO": ["ENDEFFECTORS"]
+        },
+        {
+            "name": "CORNERLINKLL",
+            "id": 40,
+            "mountingAngle": "ONEEIGHTY",
+            "components": ["CONNECTORL", "CORNERLINKLL", "CONNECTORL"],
+            "submodulesI": ["JOINTL", "STRAIGHTLINKLL",  "STRAIGHTLINKLM"]
+        },
+        {
+            "name": "CORNERLINKLM",
+            "id": 41,
+            "mountingAngle": "ONEEIGHTY",
+            "components": ["CONNECTORM", "CORNERLINKLM", "CONNECTORL"],
+            "submodulesI": ["JOINTM", "STRAIGHTLINKMM", "STRAIGHTLINKMS"]
+        },
+        {
+            "name": "CORNERLINKMM",
+            "id": 42,
+            "mountingAngle": "ONEEIGHTY",
+            "components": ["CONNECTORM", "CORNERLINKMM", "CONNECTORM"],
+            "submodulesI": ["JOINTM", "STRAIGHTLINKMM", "STRAIGHTLINKMS"]
+        },
+        {
+            "name": "CORNERLINKMS",
+            "id": 43,
+            "mountingAngle": "ONEEIGHTY",
+            "components": ["CONNECTORS", "CORNERLINKMS", "CONNECTORM"],
+            "submodulesI": ["JOINTS"]
+        },
+        {
+            "name": "STRAIGHTLINKLL",
+            "id": 50,
+            "components": ["STRAIGHTLINKLL"],
+            "submodulesO": ["JOINTL", "CORNERLINKLL", "CORNERLINKLM", "ENDEFFECTORL"]
+        },
+        {
+            "name": "STRAIGHTLINKLM",
+            "id": 51,
+            "mountingAngle": "ONEEIGHTY",
+            "components": ["STRAIGHTLINKLM"],
+            "submodulesO": ["JOINTM", "CORNERLINKMM", "CORNERLINKMS", "ENDEFFECTORM"]
+        },
+        {
+            "name": "STRAIGHTLINKMM",
+            "id": 52,
+            "mountingAngle": "ONEEIGHTY",
+            "components": ["STRAIGHTLINKMM"],
+            "submodulesO": ["JOINTM", "CORNERLINKMM", "CORNERLINKMS", "ENDEFFECTORM"]
+        },
+        {
+            "name": "STRAIGHTLINKMS",
+            "id": 53,
+            "components": ["STRAIGHTLINKMS"],
+            "submodulesO": ["JOINTS", "ENDEFFECTORS"]
+        },
+        {
+            "name": "ENDEFFECTORL",
+            "id": 60,
+            "components": ["CONNECTORL", "ENDEFFECTORL"]
+        },
+        {
+            "name": "ENDEFFECTORM",
+            "id": 61,
+            "components": ["CONNECTORM", "ENDEFFECTORM"]
+        },
+        {
+            "name": "ENDEFFECTORS",
+            "id": 62,
+            "components": ["CONNECTORS", "ENDEFFECTORS"]
+        }
+    ]
+}

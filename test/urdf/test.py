@@ -1,5 +1,6 @@
 from IPython.core.interactiveshell import import_item
-from urdfGenerator import Module, UnitType, UnitOrder, ModuleType
+from robotConfigDesign.envs import RobotConfigDesignEnv
+from urdfGenerator import Module, UnitType, Order, ModuleType
 from urdfGenerator.Arrangement import Arrangement
 from urdfGenerator.ModuleConfig import getModuleTypeList
 from urdfGenerator.UnitConfig import generateUnit
@@ -434,7 +435,6 @@ def failed(env):
 def testEnv():
     # gym 走起
     import gym
-    from robotConfigDesign.envs import RobotConfigDesignEnv
     from time import sleep
 
     env = gym.make('RobotConfigDesign-v0')
@@ -442,19 +442,19 @@ def testEnv():
     env.render()
     env.reset()
 
-    for _ in range(5):
-        d = failed(env)
-        if d:
-            env.reset()
-        d = ur(env)
-        if d:
-            env.reset()
-    # sleep(1)
-    # for _ in range(100):
-    #     env.render()
-    #     s, r, d, _ = env.step(env.action_space.sample())
+    # for _ in range(5):
+    #     d = failed(env)
     #     if d:
     #         env.reset()
+    #     d = ur(env)
+    #     if d:
+    #         env.reset()
+    # sleep(1)
+    for _ in range(1):
+        env.render()
+        s, r, d, _ = env.step(1)
+        if d:
+            env.reset()
 
     while True:
         pass
@@ -705,10 +705,10 @@ if __name__ == '__main__':
     #                )
     # show_matrix()
     # test_ob()
-    # testEnv()
+    testEnv()
     # testLog()
     # testAllLog()
     # classAndUrdf()
     # test_name()
     # export_robot()
-    smooth()
+    # smooth()

@@ -1,5 +1,14 @@
 import queue
 
+from urdfGenerator import register
+from urdfGenerator import UnitConfig
+from urdfGenerator import Enums
+
+register.PathRegister.add_path('小老板')
+
+UnitConfig.generateUnit(Enums.UnitType.BASEL)
+
+
 q = queue.Queue()
 
 q.put('A')

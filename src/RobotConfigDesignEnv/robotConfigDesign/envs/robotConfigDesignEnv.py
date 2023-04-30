@@ -4,13 +4,19 @@ import numpy as np
 import pybullet as p2
 from pybullet_utils import bullet_client as bc
 
+from urdfGenerator import register
+register.PathRegister.add_path('/home/masa/learning/rl/undergraduate/cjy/robot_design_sythesis/src/RobotConfigDesignEnv/robotConfigDesign/res/config.json')
+
 from urdfGenerator.Arrangement import Arrangement
 from urdfGenerator.ModuleConfig import getModuleTypeList, generateModule
 from urdfGenerator.Enums import ModuleType
 
 import os
 import sys
+
+
 # Function to disable and enable low-level file descriptors for stdout and stderr
+
 class HiddenOutputs:
     def __enter__(self):
         self._original_stdout_fd = os.dup(sys.stdout.fileno())
@@ -79,8 +85,8 @@ class RobotConfigDesignEnv(gym.Env):
         logging.info("=======================================RobotConfigDesignEnv init============================================")
         self._A = Arrangement()
         self._robot_id = None
-        # self._robot_cache_id = None
-        # self._show = False
+        self._robot_cache_id = None
+        self._visualization = True
         self._joint_info = list()
         self._target_pos = None
         self._target_id = None
@@ -166,7 +172,6 @@ class RobotConfigDesignEnv(gym.Env):
         if self._physics_client_id < 0:
             if self._renders:
                 self._p = bc.BulletClient(connection_mode=p2.GUI)
-                # self._p = bc.BulletClient(connection_mode=p2.GUI, options='--log-level=5')
             else:
                 self._p = bc.BulletClient()
             self._physics_client_id = self._p._client
@@ -261,17 +266,27 @@ class RobotConfigDesignEnv(gym.Env):
         return ob_matrix, target
 
     def _updateRobot(self, action):
-        if self._robot_id is not None:
-            self._p.removeBody(self._robot_id)
-            self._robot_id = None
-            self._joint_info = list()
+        if self._visualization:
+            if self._robot_id is not None:
+                self._robot_cache_id = self._robot_id
+        else:
+            if self._robot_id is not None:
+                self._p.removeBody(self._robot_id)
+                self._robot_id = None
+                self._joint_info = list()
 
         success = self._A.addModule(MODULETYPE_LIST[action])
 
-        # exportPath = self._A.exportURDF(ROBOT_PATH, ROBOT_NAME)
-        # p2.setPhysicsEngineParameter(enableFileCaching=0, physicsClientId=self._physics_client_id)
-        # self._robot_id = p2.loadURDF(exportPath, useFixedBase=True, flags=p2.URDF_MERGE_FIXED_LINKS | p2.URDF_USE_SELF_COLLISION)
-        # p2.setPhysicsEngineParameter(enableFileCaching=1, physicsClientId=self._physics_client_id)
+        if self._visualization:
+            exportPath = self._A.exportURDF(ROBOT_PATH, ROBOT_NAME)
+            p2.setPhysicsEngineParameter(enableFileCaching=0, physicsClientId=self._physics_client_id)
+            with HiddenOutputs(): 
+                self._robot_id = p2.loadURDF(exportPath, useFixedBase=True, flags=p2.URDF_MERGE_FIXED_LINKS | p2.URDF_USE_SELF_COLLISION)
+            p2.setPhysicsEngineParameter(enableFileCaching=1, physicsClientId=self._physics_client_id)
+            if self._robot_cache_id is not None:
+                p2.removeBody(self._robot_cache_id)
+                self._robot_cache_id = None
+
 
         # joint_num = p2.getNumJoints(self._robot_id, self._physics_client_id)
         # for i in range(joint_num):
@@ -291,11 +306,12 @@ class RobotConfigDesignEnv(gym.Env):
             return False
         logging.info("ee_link_id: {0}, robot_id: {1}".format(ee_link_id, self._robot_id))
 
-        exportPath = self._A.exportURDF(ROBOT_PATH, ROBOT_NAME)
-        p2.setPhysicsEngineParameter(enableFileCaching=0, physicsClientId=self._physics_client_id)
-        with HiddenOutputs(): 
-            self._robot_id = p2.loadURDF(exportPath, useFixedBase=True, flags=p2.URDF_MERGE_FIXED_LINKS | p2.URDF_USE_SELF_COLLISION)
-        p2.setPhysicsEngineParameter(enableFileCaching=1, physicsClientId=self._physics_client_id)
+        if not self._visualization:
+            exportPath = self._A.exportURDF(ROBOT_PATH, ROBOT_NAME)
+            p2.setPhysicsEngineParameter(enableFileCaching=0, physicsClientId=self._physics_client_id)
+            with HiddenOutputs(): 
+                self._robot_id = p2.loadURDF(exportPath, useFixedBase=True, flags=p2.URDF_MERGE_FIXED_LINKS | p2.URDF_USE_SELF_COLLISION)
+            p2.setPhysicsEngineParameter(enableFileCaching=1, physicsClientId=self._physics_client_id)
 
         target_angle = p2.calculateInverseKinematics(self._robot_id, ee_link_id, self._target_pos, maxNumIterations=400)
 
@@ -370,6 +386,9 @@ class RobotConfigDesignEnv(gym.Env):
             self._plane_id = None
 
         # 重置机器人
+        if self._robot_cache_id is not None:
+            p.removeBody(self._robot_cache_id)
+            self._robot_cache_id = None
         if self._robot_id is not None:
             p.removeBody(self._robot_id)
             self._robot_id = None
@@ -446,6 +465,7 @@ if __name__ == '__main__':
         s = (env.observation_space.sample())
         for k,v in s.items():
             print(k, v.shape)
+            print(v)
     else:
         print(env.observation_space.shape)
     print(env.action_space.shape)
