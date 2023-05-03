@@ -67,6 +67,18 @@ def getAttachableSubModuleActions(moduleType:ModuleType, linkType:LinkType) -> l
     submodules = list(map(lambda s: mtl.index(s), submodules))
     return submodules
 
+def moduleType2action(moduleType:ModuleType) -> int:
+    '''
+    将moduleType转换为action
+
+    Args:
+        moduleType: moduleType类型，表示当前module的类型
+
+    Returns:
+        一个int，表示moduleType对应的action
+    '''
+    return getModuleTypeList().index(moduleType)
+
 def generateModule(moduleType:ModuleType, order=Order.NORMAL) -> module:
     '''
     生成一个module对象
@@ -290,6 +302,12 @@ if __name__ == "__main__":
 
     print(moduleTypeList)
     print(b)
+
+    for module in getModuleTypeList():
+        print(module)
+    
+    print(moduleType2action(ModuleType.BASEM))
+    print(list(map(moduleType2action, getModuleTypeList())))
     # unit7 = InputUnit + CornerLinkLUnit + InputUnit
     # unit7 = StraightLinkUnitL + (InputUnit.reverse() + JointTUnit.reverse())
 

@@ -132,6 +132,7 @@ dmypy.json
 dt/
 data/
 localdt/
+pipidt/
 finaldt/
 nohup.out
 *.log_415

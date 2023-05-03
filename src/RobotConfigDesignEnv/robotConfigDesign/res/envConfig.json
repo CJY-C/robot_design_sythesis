@@ -1,0 +1,14 @@
+{
+    "VISUALIZATION": false,
+    "ROBOT_NAME": "rebot",
+    "ROBOT_POS": [0, 0, 0],
+    "MAX_MODULECNT": 15,
+    "EPSILON_P": 0.1,
+    "EPSILON_N": 0.1,
+    "W_J": 0.1,
+    "W_M": 0.1,
+    "OBS_PROB": 0,
+    "EX": [-0.5, 0.5],
+    "EY": [-0.5, 0.5],
+    "EZ": [0, 0.75]
+}

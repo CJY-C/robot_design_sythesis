@@ -1,0 +1,109 @@
+<?xml version="1.0"?>
+<robot  name="UNNAMED_0" >
+ <link  name="BASEL0_BASEL0_BASEL0_BASEL0_b_body" >
+  <inertial >
+   <origin  xyz="-9.4624E-18 1.1154E-17 0.022042"  rpy="0 0 0" />
+   <mass  value="1" />
+   <inertia  iyy="0.009154"  iyz="3.3647E-19"  ixy="1.7613E-19"  ixz="-3.4018E-19"  ixx="0.009154"  izz="0.015925" />
+  </inertial>
+  <visual >
+   <origin  xyz="0 0 0"  rpy="0 0 0" />
+   <geometry >
+    <mesh  filename="package://base-l.SLDASM/meshes/b_body.STL" />
+   </geometry>
+   <material  name="body" >
+    <color  rgba="0.5 0.5 0.5 1" />
+   </material>
+  </visual>
+  <collision >
+   <origin  xyz="0 0 0"  rpy="0 0 0" />
+   <geometry >
+    <mesh  filename="package://base-l.SLDASM/meshes/b_body.STL" />
+   </geometry>
+  </collision>
+ </link>
+ <link  name="BASEL0_BASEL0_BASEL0_BASEL0_b_in" >
+  <inertial >
+   <origin  xyz="-9.4624E-18 -5.3214E-19 0.029258"  rpy="0 0 0" />
+   <mass  value="5.9754" />
+   <inertia  iyy="0.009154"  iyz="3.3422E-19"  ixy="-1.7613E-19"  ixz="3.3605E-19"  ixx="0.009154"  izz="0.015925" />
+  </inertial>
+  <visual >
+   <origin  xyz="0 0 0"  rpy="0 0 0" />
+   <geometry >
+    <mesh  filename="package://base-l.SLDASM/meshes/b_in.STL" />
+   </geometry>
+   <material  name="blue" >
+    <color  rgba="0 0 0.5 1" />
+   </material>
+  </visual>
+  <collision >
+   <origin  xyz="0 0 0"  rpy="0 0 0" />
+   <geometry >
+    <mesh  filename="package://base-l.SLDASM/meshes/b_in.STL" />
+   </geometry>
+  </collision>
+ </link>
+ <link  name="BASEL0_BASEL0_CONNECTORL0_CONNECTORL0_ci_body" >
+  <inertial >
+   <origin  xyz="0 4.2001E-18 -0.0057"  rpy="0 0 0" />
+   <mass  value="0" />
+   <inertia  iyy="0.00074704"  iyz="1.7343E-36"  ixy="0"  ixz="5.6985E-37"  ixx="0.00074704"  izz="0.0014744" />
+  </inertial>
+  <visual >
+   <origin  xyz="0 0 0"  rpy="0 0 0" />
+   <geometry >
+    <mesh  filename="package://input_connector_l.SLDASM/meshes/ci_body.STL" />
+   </geometry>
+   <material  name="blue" >
+    <color  rgba="0 0 0.5 1" />
+   </material>
+  </visual>
+  <collision >
+   <origin  xyz="0 0 0"  rpy="0 0 0" />
+   <geometry >
+    <mesh  filename="package://input_connector_l.SLDASM/meshes/ci_body.STL" />
+   </geometry>
+  </collision>
+ </link>
+ <link  name="BASEL0_BASEL0_CONNECTORL0_CONNECTORL0_ci_in" >
+  <inertial >
+   <origin  xyz="-5.5075E-34 -1.7044E-17 0.0057"  rpy="0 0 0" />
+   <mass  value="0" />
+   <inertia  iyy="0.00074704"  iyz="1.7343E-36"  ixy="0"  ixz="5.6985E-37"  ixx="0.00074704"  izz="0.0014744" />
+  </inertial>
+  <visual >
+   <origin  xyz="0 0 0"  rpy="0 0 0" />
+   <geometry >
+    <mesh  filename="package://input_connector_l.SLDASM/meshes/ci_in.STL" />
+   </geometry>
+   <material  name="blue" >
+    <color  rgba="0 0 0.5 1" />
+   </material>
+  </visual>
+  <collision >
+   <origin  xyz="0 0 0"  rpy="0 0 0" />
+   <geometry >
+    <mesh  filename="package://input_connector_l.SLDASM/meshes/ci_in.STL" />
+   </geometry>
+  </collision>
+ </link>
+ <joint  name="BASEL0_BASEL0_BASEL0_BASEL0_b_large"  type="fixed" >
+  <origin  xyz="0 0 0.0513"  rpy="3.14159265358979 0 0" />
+  <parent  link="BASEL0_BASEL0_BASEL0_BASEL0_b_body" />
+  <child  link="BASEL0_BASEL0_BASEL0_BASEL0_b_in" />
+  <axis  xyz="0 0 1" />
+ </joint>
+ <joint  name="BASEL0_BASEL0_CONNECTORL0_CONNECTORL0_ci_large_1"  type="fixed" >
+  <origin  xyz="0 0 0"  rpy="0 0 0" />
+  <parent  link="BASEL0_BASEL0_BASEL0_BASEL0_b_in" />
+  <child  link="BASEL0_BASEL0_CONNECTORL0_CONNECTORL0_ci_body" />
+  <axis  xyz="0 0 0" />
+ </joint>
+ <joint  name="BASEL0_BASEL0_CONNECTORL0_CONNECTORL0_ci_large_2"  type="fixed" >
+  <origin  xyz="0 0 -0.0114"  rpy="0 0 0" />
+  <parent  link="BASEL0_BASEL0_CONNECTORL0_CONNECTORL0_ci_body" />
+  <child  link="BASEL0_BASEL0_CONNECTORL0_CONNECTORL0_ci_in" />
+  <axis  xyz="0 0 0" />
+ </joint>
+</robot>

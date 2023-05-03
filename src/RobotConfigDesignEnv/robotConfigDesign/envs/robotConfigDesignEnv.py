@@ -1,92 +1,30 @@
+import logging
 import gym
 from gym.utils import seeding
 import numpy as np
 import pybullet as p2
 from pybullet_utils import bullet_client as bc
+from robotConfigDesign.envs.utils import getConfig, getPath, HiddenOutputs
 
 from urdfGenerator import register
 register.PathRegister.add_path('/home/masa/learning/rl/undergraduate/cjy/robot_design_sythesis/src/RobotConfigDesignEnv/robotConfigDesign/res/config.json')
 
 from urdfGenerator.Arrangement import Arrangement
-from urdfGenerator.ModuleConfig import getModuleTypeList, generateModule
-from urdfGenerator.Enums import ModuleType
-
-import os
-import sys
-
-
-# Function to disable and enable low-level file descriptors for stdout and stderr
-
-class HiddenOutputs:
-    def __enter__(self):
-        self._original_stdout_fd = os.dup(sys.stdout.fileno())
-        self._original_stderr_fd = os.dup(sys.stderr.fileno())
-        sys.stdout.flush()
-        sys.stderr.flush()
-        devnull = os.open(os.devnull, os.O_WRONLY)
-        os.dup2(devnull, sys.stdout.fileno())
-        os.dup2(devnull, sys.stderr.fileno())
-        os.close(devnull)
-
-    def __exit__(self, exc_type, exc_val, exc_tb):
-        sys.stdout.flush()
-        sys.stderr.flush()
-        os.dup2(self._original_stdout_fd, sys.stdout.fileno())
-        os.dup2(self._original_stderr_fd, sys.stderr.fileno())
-        os.close(self._original_stdout_fd)
-        os.close(self._original_stderr_fd)
-
-
-CURRENT_DIR = os.path.dirname(os.path.abspath(__file__))  # 获取执行文件所在目录的绝对路径
-PARENT_DIR = os.path.abspath(os.path.join(CURRENT_DIR, os.pardir))  # 获取上级目录的绝对路径
-
-ROBOT_POS = [0, 0, 0]
-ROBOT_PATH = PARENT_DIR + '/res'
-ROBOT_NAME = "rebot"
-MODULETYPE_LIST = getModuleTypeList()
-MODULETYPE_NUM = len(MODULETYPE_LIST)
-MAX_MODULECNT = 15
-
-LOGGING_PATH = PARENT_DIR + "/info.log"
-
-EPSILON_P = 0.1
-EPSILON_N = 0.1
-
-W_J = 0.1
-W_M = 0.1
-
-Plane_Path = PARENT_DIR + '/res/plane.urdf'
-
-OBS_PATH = PARENT_DIR + "/res/obstacle-25.SLDASM/urdf/obstacle-25.SLDASM.urdf"
-OBS_WIDTH = 0.25
-OBS_LENGTH = 0.25
-OBS_HEIGHT = 0.25
-# OBS_PROB = 0
-OBS_PROB = 0.005
-EX = [-1, 1]
-EY = [-1, 1]
-EZ = [0, 1]
-GX = int(np.ptp(np.array(EX)) / OBS_WIDTH)
-GY = int(np.ptp(np.array(EY)) / OBS_LENGTH)
-GZ = int(np.ptp(np.array(EZ)) / OBS_HEIGHT)
-
-import logging
-logging.basicConfig(format='%(asctime)s-%(levelname)s: %(message)s', filename=LOGGING_PATH, level=logging.INFO)
-logging.basicConfig(format='%(asctime)s-%(levelname)s: %(message)s', filename=LOGGING_PATH, level=logging.DEBUG)
-logging.basicConfig(format='%(asctime)s-%(levelname)s: %(message)s', filename=LOGGING_PATH, level=logging.WARNING)
-logging.basicConfig(format='%(asctime)s-%(levelname)s: %(message)s', filename=LOGGING_PATH, level=logging.ERROR)
-
+from urdfGenerator.ModuleConfig import getModuleTypeList
 
 
 class RobotConfigDesignEnv(gym.Env):
     metadata = {'render.modes': ['human'], 'video.frames_per_second': 50}
 
     def __init__(self, renders=False):
+        self._config = getConfig()
+        self._defaultConfig = getConfig(default=True)
+        self._initConfig()
         logging.info("=======================================RobotConfigDesignEnv init============================================")
         self._A = Arrangement()
+        self._MODULETYPE_LIST = getModuleTypeList()
+        self._MODULETYPE_NUM = len(self._MODULETYPE_LIST)
         self._robot_id = None
-        self._robot_cache_id = None
-        self._visualization = True
         self._joint_info = list()
         self._target_pos = None
         self._target_id = None
@@ -97,18 +35,54 @@ class RobotConfigDesignEnv(gym.Env):
 
         self._renders = renders
         self._physics_client_id = -1
-        # self._render_height = 720
-        # self._render_width = 960
 
         # 定义动作空间和观测空间
         # 动作空间是一个离散空间，每个动作都是一个整数，表示添加的模块类型
-        self.action_space = gym.spaces.Discrete(MODULETYPE_NUM)
+        self.action_space = gym.spaces.Discrete(self._MODULETYPE_NUM)
         # 观测空间有连续部分也有离散部分，连续部分是目标点的位置，离散部分是障碍物的位置，和机器人目前的构型A
         self.observation_space = gym.spaces.Dict({
-            'A': gym.spaces.MultiDiscrete([MODULETYPE_NUM for x in range(MAX_MODULECNT)]), # TODO: 解决描述问题
+            'A': gym.spaces.MultiDiscrete([self._MODULETYPE_NUM for x in range(self._config['MAX_MODULECNT'])]), # TODO: 解决描述问题
             'T': gym.spaces.Box(low=np.float32(-1), high=np.float32(1), shape=(3, )),
-            'O': gym.spaces.MultiBinary((GX, GY, GZ)),
+            'O': gym.spaces.MultiBinary((self._GX, self._GY, self._GZ)),
         })
+    
+    def _initConfig(self):
+
+        self._visualization = self._config['VISUALIZATION'] if 'VISUALIZATION' in self._config else self._defaultConfig['VISUALIZATION']
+        self._robot_cache_id = None
+
+        self._robot_pos = self._config['ROBOT_POS'] if 'ROBOT_POS' in self._config else self._defaultConfig['ROBOT_POS']
+        self._max_modulecnt = self._config['MAX_MODULECNT'] if 'MAX_MODULECNT' in self._config else self._defaultConfig['MAX_MODULECNT']
+        self._epsilon_p = self._config['EPSILON_P'] if 'EPSILON_P' in self._config else self._defaultConfig['EPSILON_P']
+        self._epsilon_n = self._config['EPSILON_N'] if 'EPSILON_N' in self._config else self._defaultConfig['EPSILON_N']
+        self._w_j = self._config['W_J'] if 'W_J' in self._config else self._defaultConfig['W_J']
+        self._w_m = self._config['W_M'] if 'W_M' in self._config else self._defaultConfig['W_M']
+        self._obs_prob = self._config['OBS_PROB'] if 'OBS_PROB' in self._config else self._defaultConfig['OBS_PROB']
+        self._ex = self._config['EX'] if 'EX' in self._config else self._defaultConfig['EX']
+        self._ey = self._config['EY'] if 'EY' in self._config else self._defaultConfig['EY']
+        self._ez = self._config['EZ'] if 'EZ' in self._config else self._defaultConfig['EZ']
+
+        PARENT_DIR = getPath(__file__, level=1)
+        self._ROBOT_PATH = self._config['ROBOT_PATH'] if 'ROBOT_PATH' in self._config else PARENT_DIR + '/res'
+        self._LOGGING_PATH = self._config['LOGGING_PATH'] + "/info.log" if 'LOGGING_PATH' in self._config else PARENT_DIR + "/info.log"
+        self._PLANE_PATH = self._config['PLANE_PATH'] if 'PLANE_PATH' in self._config else PARENT_DIR + '/res/plane.urdf'
+        self._OBS_PATH = self._config['OBS_PATH'] if 'OBS_PATH' in self._config else PARENT_DIR + "/res/obstacle-25.SLDASM/urdf/obstacle-25.SLDASM.urdf"
+
+        self._ROBOT_NAME = self._config['ROBOT_NAME'] if 'ROBOT_NAME' in self._config else self._defaultConfig['ROBOT_NAME']
+
+        self._OBS_WIDTH = self._config['OBS_WIDTH'] if 'OBS_WIDTH' in self._config else 0.25
+        self._OBS_LENGTH = self._config['OBS_LENGTH'] if 'OBS_LENGTH' in self._config else 0.25
+        self._OBS_HEIGHT = self._config['OBS_HEIGHT'] if 'OBS_HEIGHT' in self._config else 0.25
+
+        self._GX = int(np.ptp(np.array(self._ex)) / self._OBS_WIDTH)
+        self._GY = int(np.ptp(np.array(self._ey)) / self._OBS_LENGTH)
+        self._GZ = int(np.ptp(np.array(self._ez)) / self._OBS_HEIGHT)
+
+        # init log
+        logging.basicConfig(format='%(asctime)s-%(levelname)s: %(message)s', filename=self._LOGGING_PATH, level=logging.INFO)
+        logging.basicConfig(format='%(asctime)s-%(levelname)s: %(message)s', filename=self._LOGGING_PATH, level=logging.DEBUG)
+        logging.basicConfig(format='%(asctime)s-%(levelname)s: %(message)s', filename=self._LOGGING_PATH, level=logging.WARNING)
+        logging.basicConfig(format='%(asctime)s-%(levelname)s: %(message)s', filename=self._LOGGING_PATH, level=logging.ERROR)
 
 
     def seed(self, seed=None):
@@ -121,15 +95,9 @@ class RobotConfigDesignEnv(gym.Env):
         done = False
         info = {}
 
-        # 执行动作
-        p = self._p
-
-        # 2. 添加模块
         success = self._updateRobot(action)
 
-        # p.stepSimulation()
-
-        if self._A.moduleCnt > MAX_MODULECNT: # 判断模块个数是否超过最大值
+        if self._A.moduleCnt > self._max_modulecnt: # 判断模块个数是否超过最大值
             logging.info("module count exceed the max count")
             reward = -1
             done = True
@@ -143,29 +111,28 @@ class RobotConfigDesignEnv(gym.Env):
                 logging.info(f'pos: {pos}\nobs: {obs}')
             else:
                 reward = 0
-            # reward += -1 * W_J * self._A.jointNum + -1 * W_M * self._A.totalMass
+            # reward += -1 * self._config['W_J'] * self._A.jointNum + -1 * self._config['W_M] * self._A.totalMass
             # reward = int(passEvaluation)
             done = True
         else: # 非终止状态
             # print("module count not exceed the max count")
             if success:
-                # reward = -1 * W_J * self._A.jointNum + -1 * W_M * self._A.totalMass
+                # reward = -1 * self._config['W_J'] * self._A.jointNum + -1 * self._config['W_M] * self._A.totalMass
                 # reward = 0 
                 info = { 'action_space': self._A.getAttachableSubModuleActions() }
-                reward =  -1 * W_J if self._A.checkJointAttached() else 0
-                reward += -1 * W_M * self._A.attachedMass# TODO: 调整
-                # reward += -1 * W_J * self._A.jointNum + -1 * W_M * self._A.totalMass
+                reward =  -1 * self._w_j if self._A.checkJointAttached() else 0
+                reward += -1 * self._w_m * self._A.attachedMass# TODO: 调整
+                # reward += -1 * self._config['W_J'] * self._A.jointNum + -1 * self._config['W_M] * self._A.totalMass
                 done = False
             else:
                 # raise("add module failed")
-                reward = -1
-                done = True
-                # done = False
+                info = { 'action_space': self._A.getAttachableSubModuleActions() }
+                reward = -10
+                # done = True
+                done = False
 
-        # p.stepSimulation() # TODO: 这个函数的在IK之后调用，还是在IK之前调用
 
         return self._state(), reward, done, info
-        # return (self._A.getModuleTypeList(MAX_MODULECNT), self._target_pos, self._obstacle_matrix), reward, done, info
 
     def reset(self):
         logging.info("reset simulation")
@@ -186,13 +153,13 @@ class RobotConfigDesignEnv(gym.Env):
         # self._plane_id = p2.loadURDF(Plane_Path, useFixedBase=True, basePosition=[0, 0, 0], flags = p2.URDF_ENABLE_CACHED_GRAPHICS_SHAPES)
 
         # 随机初始化观测值&环境&返回观测值
-        self._obstacle_matrix, self._target_pos = self._random_gen_obs_target(OBS_PATH, 
-                                        obs_width=OBS_WIDTH, obs_length=OBS_LENGTH, obs_height=OBS_HEIGHT,
-                                        ex=EX, ey=EY, ez=EZ,
-                                        obs_prob=OBS_PROB)
+        self._obstacle_matrix, self._target_pos = self._random_gen_obs_target(self._OBS_PATH, 
+                                        obs_width=self._OBS_WIDTH, obs_length=self._OBS_LENGTH, obs_height=self._OBS_HEIGHT,
+                                        ex=self._ex, ey=self._ey, ez=self._ez,
+                                        obs_prob=self._obs_prob)
 
         return self._state()
-        # return (self._A.getModuleTypeList(MAX_MODULECNT), self._target_pos, self._obstacle_matrix)
+        # return (self._A.getModuleTypeList(self._config['MAX_MODULECNT']), self._target_pos, self._obstacle_matrix)
 
     
     def render(self, mode='human', close=False):
@@ -241,7 +208,7 @@ class RobotConfigDesignEnv(gym.Env):
         self._target_id = p2.addUserDebugPoints([target], [[1, 1, 0]], 10)
 
         # 机器人基座的位置也要保持为0，需要将机器人的位置转换为ob_matrix的索引, 周围的障碍物也要保持为0
-        robot_pos = [ROBOT_POS[0] - ex[0], ROBOT_POS[1] - ey[0], ROBOT_POS[2] - ez[0]]
+        robot_pos = [self._config['ROBOT_POS'][0] - ex[0], self._config['ROBOT_POS'][1] - ey[0], self._config['ROBOT_POS'][2] - ez[0]]
         robot_pos = [int(robot_pos[0] / lx * gx), int(robot_pos[1] / ly * gy), int(robot_pos[2] / lz * gz)]
 
         for i in range(gz):
@@ -275,10 +242,10 @@ class RobotConfigDesignEnv(gym.Env):
                 self._robot_id = None
                 self._joint_info = list()
 
-        success = self._A.addModule(MODULETYPE_LIST[action])
+        success = self._A.addModule(self._MODULETYPE_LIST[action])
 
         if self._visualization:
-            exportPath = self._A.exportURDF(ROBOT_PATH, ROBOT_NAME)
+            exportPath = self._A.exportURDF(self._ROBOT_PATH, self._ROBOT_NAME)
             p2.setPhysicsEngineParameter(enableFileCaching=0, physicsClientId=self._physics_client_id)
             with HiddenOutputs(): 
                 self._robot_id = p2.loadURDF(exportPath, useFixedBase=True, flags=p2.URDF_MERGE_FIXED_LINKS | p2.URDF_USE_SELF_COLLISION)
@@ -307,7 +274,7 @@ class RobotConfigDesignEnv(gym.Env):
         logging.info("ee_link_id: {0}, robot_id: {1}".format(ee_link_id, self._robot_id))
 
         if not self._visualization:
-            exportPath = self._A.exportURDF(ROBOT_PATH, ROBOT_NAME)
+            exportPath = self._A.exportURDF(self._ROBOT_PATH, self._ROBOT_NAME)
             p2.setPhysicsEngineParameter(enableFileCaching=0, physicsClientId=self._physics_client_id)
             with HiddenOutputs(): 
                 self._robot_id = p2.loadURDF(exportPath, useFixedBase=True, flags=p2.URDF_MERGE_FIXED_LINKS | p2.URDF_USE_SELF_COLLISION)
@@ -321,7 +288,11 @@ class RobotConfigDesignEnv(gym.Env):
         while True:
             cnt = 0
             for angle in target_angle:
-                p2.setJointMotorControl2(self._robot_id, cnt, controlMode=p2.POSITION_CONTROL, targetPosition=angle)
+                if self._visualization:
+                    p2.setJointMotorControl2(self._robot_id, cnt, controlMode=p2.POSITION_CONTROL, targetPosition=angle, force=0.1, maxVelocity=0.01)
+                    # p2.setJointMotorControl2(self._robot_id, cnt, controlMode=p2.POSITION_CONTROL, targetPosition=angle, maxVelocity=0.01)
+                else:
+                    p2.setJointMotorControl2(self._robot_id, cnt, controlMode=p2.POSITION_CONTROL, targetPosition=angle)
                 cnt += 1
                 p.stepSimulation()
             
@@ -356,7 +327,7 @@ class RobotConfigDesignEnv(gym.Env):
                     break
 
             c += 1  
-            if c > 1000:
+            if c > 1000 and not self._visualization:
                 logging.info('IK计算次数过多')
                 done = True
                 success = False
@@ -366,7 +337,7 @@ class RobotConfigDesignEnv(gym.Env):
         
         # linkState[0], linkState[1] # p_EE, n_EE
         if success:
-            success = self._check_distance(np.array(linkState[0]), self._target_pos, EPSILON_P)
+            success = self._check_distance(np.array(linkState[0]), self._target_pos, self._epsilon_p)
 
         return success
 
@@ -411,7 +382,7 @@ class RobotConfigDesignEnv(gym.Env):
             self._target_id = None
 
     def _state(self):
-        A = np.array(self._A.getModuleTypeList(MAX_MODULECNT))
+        A = np.array(self._A.getModuleTypeList(self._max_modulecnt))
         T = np.array(self._target_pos)
         O = np.array(self._obstacle_matrix)
         A = A.reshape(combined_shape(1, A.shape))

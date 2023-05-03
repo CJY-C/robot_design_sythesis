@@ -4,14 +4,22 @@ from urdfGenerator.LinkPlus import Link
 from urdfGenerator.JointPlus import Joint
 from urdfGenerator import register
 import json
+import os
 
 def getConfig():
     config = None
-    if register.PathRegister.get_paths() is []:
-        raise ValueError('No path registered')
-    with open(register.PathRegister.get_paths()[0], 'r') as f:
+    with open(register.PathRegister.get_paths(), 'r') as f:
         config = json.load(f)
     return config
+
+def getPath(filepath, level=0):
+    current_dir = os.path.dirname(os.path.abspath(filepath))  # 获取执行文件所在目录的绝对路径
+
+    for i in range(level):
+        current_dir = os.path.abspath(os.path.join(current_dir, os.pardir))  # 获取上级目录的绝对路径
+
+    return current_dir
+
 
 
 def list_to_dict(lst):

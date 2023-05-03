@@ -1,7 +1,7 @@
 from urdfGenerator import register
 register.PathRegister.add_path('/home/masa/learning/rl/undergraduate/cjy/robot_design_sythesis/src/RobotConfigDesignEnv/robotConfigDesign/res/config.json')
 
-from urdfGenerator.ModuleConfig import generateModule, getAttachableSubModuleActions, getModuleTypeList
+from urdfGenerator.ModuleConfig import generateModule, getAttachableSubModuleActions, getModuleTypeList, moduleType2action
 
 from urdfGenerator.Enums import ModuleType, Order, LinkType
 
@@ -99,6 +99,8 @@ class Arrangement:
         return moduleTypeList
     
     def getAttachableSubModuleActions(self):
+        # 修改
+        return list(map(moduleType2action, getModuleTypeList()))
         moduleType = self.moduleTypeList[-1]
         linkType = self.arrangement.get_head_link_type()
         return np.array(getAttachableSubModuleActions(moduleType, linkType))

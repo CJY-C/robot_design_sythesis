@@ -124,6 +124,7 @@
         {
             "name": "JOINTL",
             "id": 30,
+            "mountingAngle": "ONEEIGHTY",
             "components": ["JOINTL", "CONNECTORL"],
             "submodulesI": ["JOINTL", "STRAIGHTLINKLL",  "STRAIGHTLINKLM"],
             "submodulesO": ["CORNERLINKLL", "CORNERLINKLM", "ENDEFFECTORL"]

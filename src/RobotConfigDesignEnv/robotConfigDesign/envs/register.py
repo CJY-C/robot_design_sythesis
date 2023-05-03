@@ -12,10 +12,10 @@ class PathRegister:
         cls.paths.append(path)
 
     @classmethod
-    def get_paths(cls):
+    def get_paths(cls, default=False):
         if len(cls.paths) == 0:
             raise Exception("No path registered")
-        return cls.paths[-1]
+        return cls.paths[0 if default else -1]
 
 
 if __name__ == '__main__':
