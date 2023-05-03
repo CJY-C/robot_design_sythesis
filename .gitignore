@@ -136,4 +136,5 @@ pipidt/
 finaldt/
 nohup.out
 *.log_415
+*.log_53
 *.log_pass

@@ -17,6 +17,14 @@ class Arrangement:
         self.moduleTypeList = []
         self.moduleCnt = 0
         self.arrangement = None
+    
+    def createFromModuleTypeList(self, moduleTypeList):
+        # 去除-1的元素
+        moduleTypeList = list(filter(lambda x: x != -1, moduleTypeList))
+        moduleTypeList = [getModuleTypeList()[int(x)] for x in moduleTypeList]
+        for moduleType in moduleTypeList:
+            self.addModule(moduleType)
+
 
     def addModule(self, moduleType):
         if self.moduleCnt == 0:
@@ -100,7 +108,7 @@ class Arrangement:
     
     def getAttachableSubModuleActions(self):
         # 修改
-        return list(map(moduleType2action, getModuleTypeList()))
+        # return list(map(moduleType2action, getModuleTypeList()))
         moduleType = self.moduleTypeList[-1]
         linkType = self.arrangement.get_head_link_type()
         return np.array(getAttachableSubModuleActions(moduleType, linkType))
@@ -116,12 +124,18 @@ if __name__ == '__main__':
 
     a = Arrangement()
 
-    a.addModule(ModuleType.BASEL) # BASEL对应 323000
-    a.addModule(ModuleType.JOINTL) # JOINTL对应 323001
-    a.addModule(ModuleType.JOINTL)
+    a.addModule(ModuleType.STRAIGHTLINKMM) # BASEL对应 323000
+    a.addModule(ModuleType.JOINTM) # JOINTL对应 323001
+    print(a.addModule(ModuleType.CORNERLINKMS))
 
     # 打印模块id
-    print(a.getModuleTypeList(15))
+    ml = (a.getModuleTypeList(15))
+    print(ml)
+
+    a2 = Arrangement()
+    a2.createFromModuleTypeList(ml)
+    print(a2.getAttachableSubModuleActions())
+    print(a2.moduleTypeList)
     
 
 

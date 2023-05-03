@@ -119,7 +119,7 @@
             "name": "BASEM" ,
             "id": 11,
             "components": ["BASEM", "CONNECTORM"],
-            "submodulesI": ["JOINTM", "CORNERLINKMM", "STRAIGHTLINKMS"]
+            "submodulesI": ["JOINTM", "CORNERLINKMM", "STRAIGHTLINKMM", "STRAIGHTLINKMS"]
         },
         {
             "name": "JOINTL",
@@ -134,7 +134,7 @@
             "id": 31,
             "mountingAngle": "ONEEIGHTY",
             "components": ["JOINTM", "CONNECTORM"],
-            "submodulesI": ["JOINTM", "STRAIGHTLINKMS"],
+            "submodulesI": ["JOINTM", "STRAIGHTLINKMM", "STRAIGHTLINKMS"],
             "submodulesO": ["JOINTM", "CORNERLINKMM", "ENDEFFECTORM"]
         },
         {
@@ -157,14 +157,14 @@
             "id": 41,
             "mountingAngle": "ONEEIGHTY",
             "components": ["CONNECTORM", "CORNERLINKLM", "CONNECTORL"],
-            "submodulesI": ["JOINTM", "STRAIGHTLINKMS"]
+            "submodulesI": ["JOINTM", "STRAIGHTLINKMM", "STRAIGHTLINKMS"]
         },
         {
             "name": "CORNERLINKMM",
             "id": 42,
             "mountingAngle": "ONEEIGHTY",
             "components": ["CONNECTORM", "CORNERLINKMM", "CONNECTORM"],
-            "submodulesI": ["JOINTM", "STRAIGHTLINKMS"]
+            "submodulesI": ["JOINTM", "STRAIGHTLINKMM", "STRAIGHTLINKMS"]
         },
         {
             "name": "STRAIGHTLINKLL",
@@ -177,6 +177,13 @@
             "id": 51,
             "mountingAngle": "ONEEIGHTY",
             "components": ["STRAIGHTLINKLM"],
+            "submodulesO": ["JOINTM", "CORNERLINKMM", "ENDEFFECTORM"]
+        },
+        {
+            "name": "STRAIGHTLINKMM",
+            "id": 52,
+            "mountingAngle": "ONEEIGHTY",
+            "components": ["STRAIGHTLINKMM"],
             "submodulesO": ["JOINTM", "CORNERLINKMM", "ENDEFFECTORM"]
         },
         {

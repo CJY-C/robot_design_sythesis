@@ -99,7 +99,7 @@ class RobotConfigDesignEnv(gym.Env):
 
         if self._A.moduleCnt > self._max_modulecnt: # 判断模块个数是否超过最大值
             logging.info("module count exceed the max count")
-            reward = -1
+            reward = -10
             done = True
         elif self._A.checkEEAttached(): # 判断是否添加末端执行器
             passEvaluation = self._IK()

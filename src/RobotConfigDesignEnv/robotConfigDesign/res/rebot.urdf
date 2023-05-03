@@ -1,211 +1,79 @@
 <?xml version="1.0"?>
-<robot  name="UNNAMED_193" >
- <link  name="BASEL3553_BASEL8028_BASEL8028_BASEL8028_BASEL8028_BASEL8028_BASEL8028_BASEL8028_b_body" >
+<robot  name="UNNAMED_224" >
+ <link  name="BASEM4147_BASEM23594_BASEM23594_BASEM23594_BASEM23594_BASEM23594_BASEM23594_BASEM23594_b_body" >
   <inertial >
-   <origin  xyz="-9.4624E-18 1.1154E-17 0.022042"  rpy="0 0 0" />
-   <mass  value="1" />
-   <inertia  iyy="0.009154"  ixy="1.7613E-19"  ixx="0.009154"  izz="0.015925"  ixz="-3.4018E-19"  iyz="3.3647E-19" />
+   <origin  rpy="0 0 0"  xyz="-1.2862E-17 -2.139E-18 0.018175" />
+   <mass  value="0.5" />
+   <inertia  iyz="-2.2352E-19"  izz="0.0060699"  iyy="0.0034892"  ixy="-6.7063E-20"  ixz="-2.7087E-19"  ixx="0.0034892" />
   </inertial>
   <visual >
-   <origin  xyz="0 0 0"  rpy="0 0 0" />
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
    <geometry >
-    <mesh  filename="package://base-l.SLDASM/meshes/b_body.STL" />
+    <mesh  filename="package://base-m.SLDASM/meshes/b_body.STL" />
    </geometry>
    <material  name="body" >
     <color  rgba="0.5 0.5 0.5 1" />
    </material>
   </visual>
   <collision >
-   <origin  xyz="0 0 0"  rpy="0 0 0" />
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
    <geometry >
-    <mesh  filename="package://base-l.SLDASM/meshes/b_body.STL" />
+    <mesh  filename="package://base-m.SLDASM/meshes/b_body.STL" />
    </geometry>
   </collision>
  </link>
- <link  name="BASEL3553_BASEL8028_BASEL8028_BASEL8028_BASEL8028_BASEL8028_BASEL8028_BASEL8028_b_in" >
+ <link  name="BASEM4147_BASEM23594_BASEM23594_BASEM23594_BASEM23594_BASEM23594_BASEM23594_BASEM23594_b_in" >
   <inertial >
-   <origin  xyz="-9.4624E-18 -5.3214E-19 0.029258"  rpy="0 0 0" />
-   <mass  value="5.9754" />
-   <inertia  iyy="0.009154"  ixy="-1.7613E-19"  ixx="0.009154"  izz="0.015925"  ixz="3.3605E-19"  iyz="3.3422E-19" />
+   <origin  rpy="0 0 0"  xyz="-1.2862E-17 1.7762E-17 0.024125" />
+   <mass  value="3.3499" />
+   <inertia  iyz="-2.2352E-19"  izz="0.0060699"  iyy="0.0034892"  ixy="6.7063E-20"  ixz="2.7087E-19"  ixx="0.0034892" />
   </inertial>
   <visual >
-   <origin  xyz="0 0 0"  rpy="0 0 0" />
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
    <geometry >
-    <mesh  filename="package://base-l.SLDASM/meshes/b_in.STL" />
+    <mesh  filename="package://base-m.SLDASM/meshes/b_in.STL" />
    </geometry>
    <material  name="blue" >
     <color  rgba="0 0 0.5 1" />
    </material>
   </visual>
   <collision >
-   <origin  xyz="0 0 0"  rpy="0 0 0" />
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
    <geometry >
-    <mesh  filename="package://base-l.SLDASM/meshes/b_in.STL" />
+    <mesh  filename="package://base-m.SLDASM/meshes/b_in.STL" />
    </geometry>
   </collision>
  </link>
- <link  name="BASEL3553_BASEL8028_BASEL8028_BASEL8028_BASEL8028_BASEL8028_BASEL8028_CONNECTORL22282_ci_body" >
+ <link  name="BASEM4147_BASEM23594_BASEM23594_BASEM23594_BASEM23594_BASEM23594_BASEM23594_CONNECTORM114404_ic_body" >
   <inertial >
-   <origin  xyz="0 4.2001E-18 -0.0057"  rpy="0 0 0" />
+   <origin  rpy="0 0 0"  xyz="0 -4.8218E-18 -0.0047" />
    <mass  value="0" />
-   <inertia  iyy="0.00074704"  ixy="0"  ixx="0.00074704"  izz="0.0014744"  ixz="5.6985E-37"  iyz="1.7343E-36" />
+   <inertia  iyz="0"  izz="0.000562"  iyy="0.00028474"  ixy="0"  ixz="2.1721E-37"  ixx="0.00028474" />
   </inertial>
   <visual >
-   <origin  xyz="0 0 0"  rpy="0 0 0" />
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
    <geometry >
-    <mesh  filename="package://input_connector_l.SLDASM/meshes/ci_body.STL" />
+    <mesh  filename="package://input_connector_m.SLDASM/meshes/ic_body.STL" />
    </geometry>
    <material  name="blue" >
     <color  rgba="0 0 0.5 1" />
    </material>
   </visual>
   <collision >
-   <origin  xyz="0 0 0"  rpy="0 0 0" />
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
    <geometry >
-    <mesh  filename="package://input_connector_l.SLDASM/meshes/ci_body.STL" />
+    <mesh  filename="package://input_connector_m.SLDASM/meshes/ic_body.STL" />
    </geometry>
   </collision>
  </link>
- <link  name="BASEL3553_BASEL8028_BASEL8028_BASEL8028_BASEL8028_BASEL8028_BASEL8028_CONNECTORL22282_ci_in" >
+ <link  name="BASEM4147_BASEM23594_BASEM23594_BASEM23594_BASEM23594_BASEM23594_BASEM23594_CONNECTORM114404_ic_in" >
   <inertial >
-   <origin  xyz="-5.5075E-34 -1.7044E-17 0.0057"  rpy="0 0 0" />
-   <mass  value="0" />
-   <inertia  iyy="0.00074704"  ixy="0"  ixx="0.00074704"  izz="0.0014744"  ixz="5.6985E-37"  iyz="1.7343E-36" />
-  </inertial>
-  <visual >
-   <origin  xyz="0 0 0"  rpy="0 0 0" />
-   <geometry >
-    <mesh  filename="package://input_connector_l.SLDASM/meshes/ci_in.STL" />
-   </geometry>
-   <material  name="blue" >
-    <color  rgba="0 0 0.5 1" />
-   </material>
-  </visual>
-  <collision >
-   <origin  xyz="0 0 0"  rpy="0 0 0" />
-   <geometry >
-    <mesh  filename="package://input_connector_l.SLDASM/meshes/ci_in.STL" />
-   </geometry>
-  </collision>
- </link>
- <link  name="BASEL3553_BASEL8028_BASEL8028_BASEL8028_BASEL8028_BASEL8028_JOINTL3965_tj_body" >
-  <inertial >
-   <origin  xyz="-0.0026078 -7.1138E-08 -0.0735"  rpy="0 0 0" />
-   <mass  value="1.5884" />
-   <inertia  iyy="0.0041567"  ixy="2.097E-09"  ixx="0.004117"  izz="0.0027805"  ixz="-8.5243E-19"  iyz="-4.7613E-10" />
-  </inertial>
-  <visual >
-   <origin  xyz="0 0 0"  rpy="0 0 0" />
-   <geometry >
-    <mesh  filename="package://jointT-l.SLDASM/meshes/tj_body.STL" />
-   </geometry>
-   <material  name="body" >
-    <color  rgba="0.5 0.5 0.5 1" />
-   </material>
-  </visual>
-  <collision >
-   <origin  xyz="0 0 0"  rpy="0 0 0" />
-   <geometry >
-    <mesh  filename="package://jointT-l.SLDASM/meshes/tj_body.STL" />
-   </geometry>
-  </collision>
- </link>
- <link  name="BASEL3553_BASEL8028_BASEL8028_BASEL8028_BASEL8028_BASEL8028_JOINTL3965_tj_in" >
-  <inertial >
-   <origin  xyz="-1.904E-18 1.0123E-08 0.05439"  rpy="0 0 0" />
-   <mass  value="1.5884" />
-   <inertia  iyy="0.0041567"  ixy="4.7613E-10"  ixx="0.0027805"  izz="0.004117"  ixz="8.5243E-19"  iyz="2.097E-09" />
-  </inertial>
-  <visual >
-   <origin  xyz="0 0 0"  rpy="0 0 0" />
-   <geometry >
-    <mesh  filename="package://jointT-l.SLDASM/meshes/tj_in.STL" />
-   </geometry>
-   <material  name="blue" >
-    <color  rgba="0 0 0.5 1" />
-   </material>
-  </visual>
-  <collision >
-   <origin  xyz="0 0 0"  rpy="0 0 0" />
-   <geometry >
-    <mesh  filename="package://jointT-l.SLDASM/meshes/tj_in.STL" />
-   </geometry>
-  </collision>
- </link>
- <link  name="BASEL3553_BASEL8028_BASEL8028_BASEL8028_BASEL8028_CONNECTORL22283_ci_body" >
-  <inertial >
-   <origin  xyz="0 4.2001E-18 -0.0057"  rpy="0 0 0" />
-   <mass  value="0" />
-   <inertia  iyy="0.00074704"  ixy="0"  ixx="0.00074704"  izz="0.0014744"  ixz="5.6985E-37"  iyz="1.7343E-36" />
-  </inertial>
-  <visual >
-   <origin  xyz="0 0 0"  rpy="0 0 0" />
-   <geometry >
-    <mesh  filename="package://input_connector_l.SLDASM/meshes/ci_body.STL" />
-   </geometry>
-   <material  name="blue" >
-    <color  rgba="0 0 0.5 1" />
-   </material>
-  </visual>
-  <collision >
-   <origin  xyz="0 0 0"  rpy="0 0 0" />
-   <geometry >
-    <mesh  filename="package://input_connector_l.SLDASM/meshes/ci_body.STL" />
-   </geometry>
-  </collision>
- </link>
- <link  name="BASEL3553_BASEL8028_BASEL8028_BASEL8028_BASEL8028_CONNECTORL22283_ci_in" >
-  <inertial >
-   <origin  xyz="-5.5075E-34 -1.7044E-17 0.0057"  rpy="0 0 0" />
-   <mass  value="0" />
-   <inertia  iyy="0.00074704"  ixy="0"  ixx="0.00074704"  izz="0.0014744"  ixz="5.6985E-37"  iyz="1.7343E-36" />
-  </inertial>
-  <visual >
-   <origin  xyz="0 0 0"  rpy="0 0 0" />
-   <geometry >
-    <mesh  filename="package://input_connector_l.SLDASM/meshes/ci_in.STL" />
-   </geometry>
-   <material  name="blue" >
-    <color  rgba="0 0 0.5 1" />
-   </material>
-  </visual>
-  <collision >
-   <origin  xyz="0 0 0"  rpy="0 0 0" />
-   <geometry >
-    <mesh  filename="package://input_connector_l.SLDASM/meshes/ci_in.STL" />
-   </geometry>
-  </collision>
- </link>
- <link  name="BASEL3553_BASEL8028_BASEL8028_BASEL8028_STRAIGHTLINKLM11493_sl_body" >
-  <inertial >
-   <origin  xyz="-2.5778E-07 7.2984E-07 -0.097919"  rpy="0 0 0" />
-   <mass  value="1.4196" />
-   <inertia  iyy="0.0057039"  ixy="7.144E-09"  ixx="0.005704"  izz="0.0016136"  ixz="-6.1665E-09"  iyz="1.8679E-08" />
-  </inertial>
-  <visual >
-   <origin  xyz="0 0 0"  rpy="0 0 0" />
-   <geometry >
-    <mesh  filename="package://straight_link-lm.SLDASM/meshes/sl_body.STL" />
-   </geometry>
-   <material  name="body" >
-    <color  rgba="0.5 0.5 0.5 1" />
-   </material>
-  </visual>
-  <collision >
-   <origin  xyz="0 0 0"  rpy="0 0 0" />
-   <geometry >
-    <mesh  filename="package://straight_link-lm.SLDASM/meshes/sl_body.STL" />
-   </geometry>
-  </collision>
- </link>
- <link  name="BASEL3553_BASEL8028_BASEL8028_CONNECTORM24516_reverse_CONNECTORM24516_ic_in" >
-  <inertial >
-   <origin  xyz="-4.5413E-34 1.0801E-17 0.0047"  rpy="0 0 0" />
+   <origin  rpy="0 0 0"  xyz="-4.5413E-34 1.0801E-17 0.0047" />
    <mass  value="0.50882" />
-   <inertia  iyy="0.00028474"  ixy="0"  ixx="0.00028474"  izz="0.000562"  ixz="2.1721E-37"  iyz="0" />
+   <inertia  iyz="0"  izz="0.000562"  iyy="0.00028474"  ixy="0"  ixz="2.1721E-37"  ixx="0.00028474" />
   </inertial>
   <visual >
-   <origin  xyz="0 0 0"  rpy="0 0 0" />
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
    <geometry >
     <mesh  filename="package://input_connector_m.SLDASM/meshes/ic_in.STL" />
    </geometry>
@@ -214,149 +82,281 @@
    </material>
   </visual>
   <collision >
-   <origin  xyz="0 0 0"  rpy="0 0 0" />
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
    <geometry >
     <mesh  filename="package://input_connector_m.SLDASM/meshes/ic_in.STL" />
    </geometry>
   </collision>
  </link>
- <link  name="BASEL3553_BASEL8028_BASEL8028_CONNECTORM24516_reverse_CONNECTORM24516_ic_body" >
+ <link  name="BASEM4147_BASEM23594_BASEM23594_BASEM23594_BASEM23594_BASEM23594_JOINTM64603_tj_body" >
   <inertial >
-   <origin  xyz="0 -4.8218E-18 -0.0047"  rpy="0 0 0" />
-   <mass  value="0" />
-   <inertia  iyy="0.00028474"  ixy="0"  ixx="0.00028474"  izz="0.000562"  ixz="2.1721E-37"  iyz="0" />
+   <origin  rpy="0 0 0"  xyz="-0.0020574 -5.8806E-08 -0.0635" />
+   <mass  value="0.93065" />
+   <inertia  iyz="-1.9911E-10"  izz="0.0011044"  iyy="0.0017615"  ixy="8.3821E-10"  ixz="1.078E-20"  ixx="0.0017462" />
   </inertial>
   <visual >
-   <origin  xyz="0 0 0"  rpy="0 0 0" />
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
    <geometry >
-    <mesh  filename="package://input_connector_m.SLDASM/meshes/ic_body.STL" />
-   </geometry>
-   <material  name="blue" >
-    <color  rgba="0 0 0.5 1" />
-   </material>
-  </visual>
-  <collision >
-   <origin  xyz="0 0 0"  rpy="0 0 0" />
-   <geometry >
-    <mesh  filename="package://input_connector_m.SLDASM/meshes/ic_body.STL" />
-   </geometry>
-  </collision>
- </link>
- <link  name="BASEL3553_BASEL8028_ENDEFFECTORM2500_ee_in" >
-  <inertial >
-   <origin  xyz="-3.3818E-35 -4.4387E-20 5E-05"  rpy="0 0 0" />
-   <mass  value="0.0019211" />
-   <inertia  iyy="3.7655E-07"  ixy="2.1397E-39"  ixx="3.7655E-07"  izz="7.5309E-07"  ixz="2.5988E-42"  iyz="-6.9194E-23" />
-  </inertial>
-  <visual >
-   <origin  xyz="0 0 0"  rpy="0 0 0" />
-   <geometry >
-    <mesh  filename="package://end_effector_v_m.SLDASM/meshes/ee_in.STL" />
-   </geometry>
-   <material  name="blue" >
-    <color  rgba="0 0 0.5 1" />
-   </material>
-  </visual>
-  <collision >
-   <origin  xyz="0 0 0"  rpy="0 0 0" />
-   <geometry >
-    <mesh  filename="package://end_effector_v_m.SLDASM/meshes/ee_in.STL" />
-   </geometry>
-  </collision>
- </link>
- <link  name="BASEL3553_BASEL8028_ENDEFFECTORM2500_ee_body" >
-  <inertial >
-   <origin  xyz="-3.3818E-35 -4.4387E-20 5E-05"  rpy="0 0 0" />
-   <mass  value="0.0019211" />
-   <inertia  iyy="3.7655E-07"  ixy="2.1397E-39"  ixx="3.7655E-07"  izz="7.5309E-07"  ixz="2.5988E-42"  iyz="-6.9194E-23" />
-  </inertial>
-  <visual >
-   <origin  xyz="0 0 0"  rpy="0 0 0" />
-   <geometry >
-    <mesh  filename="package://end_effector_v_m.SLDASM/meshes/ee_body.STL" />
+    <mesh  filename="package://jointT-m.SLDASM/meshes/tj_body.STL" />
    </geometry>
    <material  name="body" >
     <color  rgba="0.5 0.5 0.5 1" />
    </material>
   </visual>
   <collision >
-   <origin  xyz="0 0 0"  rpy="0 0 0" />
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
    <geometry >
-    <mesh  filename="package://end_effector_v_m.SLDASM/meshes/ee_body.STL" />
+    <mesh  filename="package://jointT-m.SLDASM/meshes/tj_body.STL" />
    </geometry>
   </collision>
  </link>
- <joint  type="fixed"  name="BASEL3553_BASEL8028_BASEL8028_BASEL8028_BASEL8028_BASEL8028_BASEL8028_BASEL8028_b_large" >
-  <origin  xyz="0 0 0.0513"  rpy="3.14159265358979 0 0" />
-  <parent  link="BASEL3553_BASEL8028_BASEL8028_BASEL8028_BASEL8028_BASEL8028_BASEL8028_BASEL8028_b_body" />
-  <child  link="BASEL3553_BASEL8028_BASEL8028_BASEL8028_BASEL8028_BASEL8028_BASEL8028_BASEL8028_b_in" />
+ <link  name="BASEM4147_BASEM23594_BASEM23594_BASEM23594_BASEM23594_BASEM23594_JOINTM64603_tj_in" >
+  <inertial >
+   <origin  rpy="0 0 0"  xyz="-6.5585E-18 8.3685E-09 0.044941" />
+   <mass  value="0.93066" />
+   <inertia  iyz="8.3821E-10"  izz="0.0017462"  iyy="0.0017615"  ixy="1.9911E-10"  ixz="1.0711E-19"  ixx="0.0011044" />
+  </inertial>
+  <visual >
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+   <geometry >
+    <mesh  filename="package://jointT-m.SLDASM/meshes/tj_in.STL" />
+   </geometry>
+   <material  name="blue" >
+    <color  rgba="0 0 0.5 1" />
+   </material>
+  </visual>
+  <collision >
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+   <geometry >
+    <mesh  filename="package://jointT-m.SLDASM/meshes/tj_in.STL" />
+   </geometry>
+  </collision>
+ </link>
+ <link  name="BASEM4147_BASEM23594_BASEM23594_BASEM23594_BASEM23594_CONNECTORM114405_ic_body" >
+  <inertial >
+   <origin  rpy="0 0 0"  xyz="0 -4.8218E-18 -0.0047" />
+   <mass  value="0" />
+   <inertia  iyz="0"  izz="0.000562"  iyy="0.00028474"  ixy="0"  ixz="2.1721E-37"  ixx="0.00028474" />
+  </inertial>
+  <visual >
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+   <geometry >
+    <mesh  filename="package://input_connector_m.SLDASM/meshes/ic_body.STL" />
+   </geometry>
+   <material  name="blue" >
+    <color  rgba="0 0 0.5 1" />
+   </material>
+  </visual>
+  <collision >
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+   <geometry >
+    <mesh  filename="package://input_connector_m.SLDASM/meshes/ic_body.STL" />
+   </geometry>
+  </collision>
+ </link>
+ <link  name="BASEM4147_BASEM23594_BASEM23594_BASEM23594_BASEM23594_CONNECTORM114405_ic_in" >
+  <inertial >
+   <origin  rpy="0 0 0"  xyz="-4.5413E-34 1.0801E-17 0.0047" />
+   <mass  value="0.50882" />
+   <inertia  iyz="0"  izz="0.000562"  iyy="0.00028474"  ixy="0"  ixz="2.1721E-37"  ixx="0.00028474" />
+  </inertial>
+  <visual >
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+   <geometry >
+    <mesh  filename="package://input_connector_m.SLDASM/meshes/ic_in.STL" />
+   </geometry>
+   <material  name="blue" >
+    <color  rgba="0 0 0.5 1" />
+   </material>
+  </visual>
+  <collision >
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+   <geometry >
+    <mesh  filename="package://input_connector_m.SLDASM/meshes/ic_in.STL" />
+   </geometry>
+  </collision>
+ </link>
+ <link  name="BASEM4147_BASEM23594_BASEM23594_BASEM23594_STRAIGHTLINKMS15785_sl_body" >
+  <inertial >
+   <origin  rpy="0 0 0"  xyz="-2.61E-07 7.571E-07 -0.097144" />
+   <mass  value="0.86346" />
+   <inertia  iyz="9.5259E-09"  izz="0.00060028"  iyy="0.0033145"  ixy="3.4516E-09"  ixz="-3.4917E-09"  ixx="0.0033145" />
+  </inertial>
+  <visual >
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+   <geometry >
+    <mesh  filename="package://straight_link-ms.SLDASM/meshes/sl_body.STL" />
+   </geometry>
+   <material  name="body" >
+    <color  rgba="0.5 0.5 0.5 1" />
+   </material>
+  </visual>
+  <collision >
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+   <geometry >
+    <mesh  filename="package://straight_link-ms.SLDASM/meshes/sl_body.STL" />
+   </geometry>
+  </collision>
+ </link>
+ <link  name="BASEM4147_BASEM23594_BASEM23594_CONNECTORS21493_reverse_CONNECTORS21493_ic_in" >
+  <inertial >
+   <origin  rpy="0 0 0"  xyz="-3.5268E-34 -1.0426E-17 0.00365" />
+   <mass  value="0.23832" />
+   <inertia  iyz="0"  izz="0.00015875"  iyy="8.0432E-05"  ixy="0"  ixz="6.1355E-38"  ixx="8.0432E-05" />
+  </inertial>
+  <visual >
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+   <geometry >
+    <mesh  filename="package://input_connector_s.SLDASM/meshes/ic_in.STL" />
+   </geometry>
+   <material  name="blue" >
+    <color  rgba="0 0 0.5 1" />
+   </material>
+  </visual>
+  <collision >
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+   <geometry >
+    <mesh  filename="package://input_connector_s.SLDASM/meshes/ic_in.STL" />
+   </geometry>
+  </collision>
+ </link>
+ <link  name="BASEM4147_BASEM23594_BASEM23594_CONNECTORS21493_reverse_CONNECTORS21493_ic_body" >
+  <inertial >
+   <origin  rpy="0 0 0"  xyz="0 2.5266E-18 -0.00365" />
+   <mass  value="0" />
+   <inertia  iyz="0"  izz="0.00015875"  iyy="8.0432E-05"  ixy="0"  ixz="6.1355E-38"  ixx="8.0432E-05" />
+  </inertial>
+  <visual >
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+   <geometry >
+    <mesh  filename="package://input_connector_s.SLDASM/meshes/ic_body.STL" />
+   </geometry>
+   <material  name="blue" >
+    <color  rgba="0 0 0.5 1" />
+   </material>
+  </visual>
+  <collision >
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+   <geometry >
+    <mesh  filename="package://input_connector_s.SLDASM/meshes/ic_body.STL" />
+   </geometry>
+  </collision>
+ </link>
+ <link  name="BASEM4147_BASEM23594_ENDEFFECTORS1328_ee_in" >
+  <inertial >
+   <origin  rpy="0 0 0"  xyz="-3.3818E-35 8.2297E-19 5E-05" />
+   <mass  value="0.0019211" />
+   <inertia  iyz="-6.9194E-23"  izz="7.5309E-07"  iyy="3.7655E-07"  ixy="2.1397E-39"  ixz="2.5988E-42"  ixx="3.7655E-07" />
+  </inertial>
+  <visual >
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+   <geometry >
+    <mesh  filename="package://end_effector_v_s.SLDASM/meshes/ee_in.STL" />
+   </geometry>
+   <material  name="blue" >
+    <color  rgba="0 0 0.5 1" />
+   </material>
+  </visual>
+  <collision >
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+   <geometry >
+    <mesh  filename="package://end_effector_v_s.SLDASM/meshes/ee_in.STL" />
+   </geometry>
+  </collision>
+ </link>
+ <link  name="BASEM4147_BASEM23594_ENDEFFECTORS1328_ee_body" >
+  <inertial >
+   <origin  rpy="0 0 0"  xyz="-3.3818E-35 8.2297E-19 5E-05" />
+   <mass  value="0.0019211" />
+   <inertia  iyz="-6.9194E-23"  izz="7.5309E-07"  iyy="3.7655E-07"  ixy="2.1397E-39"  ixz="2.5988E-42"  ixx="3.7655E-07" />
+  </inertial>
+  <visual >
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+   <geometry >
+    <mesh  filename="package://end_effector_v_s.SLDASM/meshes/ee_body.STL" />
+   </geometry>
+   <material  name="body" >
+    <color  rgba="0.5 0.5 0.5 1" />
+   </material>
+  </visual>
+  <collision >
+   <origin  rpy="0 0 0"  xyz="0 0 0" />
+   <geometry >
+    <mesh  filename="package://end_effector_v_s.SLDASM/meshes/ee_body.STL" />
+   </geometry>
+  </collision>
+ </link>
+ <joint  name="BASEM4147_BASEM23594_BASEM23594_BASEM23594_BASEM23594_BASEM23594_BASEM23594_BASEM23594_b_medium"  type="fixed" >
+  <origin  rpy="3.14159265358979 0 0"  xyz="0 0 0.0423" />
+  <parent  link="BASEM4147_BASEM23594_BASEM23594_BASEM23594_BASEM23594_BASEM23594_BASEM23594_BASEM23594_b_body" />
+  <child  link="BASEM4147_BASEM23594_BASEM23594_BASEM23594_BASEM23594_BASEM23594_BASEM23594_BASEM23594_b_in" />
+  <axis  xyz="0 0 0" />
+ </joint>
+ <joint  name="BASEM4147_BASEM23594_BASEM23594_BASEM23594_BASEM23594_BASEM23594_BASEM23594_CONNECTORM114404_ic_medium_1"  type="fixed" >
+  <origin  rpy="0 0 0"  xyz="0 0 0" />
+  <parent  link="BASEM4147_BASEM23594_BASEM23594_BASEM23594_BASEM23594_BASEM23594_BASEM23594_BASEM23594_b_in" />
+  <child  link="BASEM4147_BASEM23594_BASEM23594_BASEM23594_BASEM23594_BASEM23594_BASEM23594_CONNECTORM114404_ic_body" />
+  <axis  xyz="0 0 0" />
+ </joint>
+ <joint  name="BASEM4147_BASEM23594_BASEM23594_BASEM23594_BASEM23594_BASEM23594_BASEM23594_CONNECTORM114404_ic_medium_2"  type="fixed" >
+  <origin  rpy="0 0 0"  xyz="0 0 -0.0094" />
+  <parent  link="BASEM4147_BASEM23594_BASEM23594_BASEM23594_BASEM23594_BASEM23594_BASEM23594_CONNECTORM114404_ic_body" />
+  <child  link="BASEM4147_BASEM23594_BASEM23594_BASEM23594_BASEM23594_BASEM23594_BASEM23594_CONNECTORM114404_ic_in" />
+  <axis  xyz="0 0 0" />
+ </joint>
+ <joint  name="BASEM4147_BASEM23594_BASEM23594_BASEM23594_BASEM23594_BASEM23594_JOINTM64603_tj_medium_1"  type="revolute" >
+  <origin  rpy="0.0 0.0 3.141592653589793"  xyz="0.0 0.0 0.0" />
+  <parent  link="BASEM4147_BASEM23594_BASEM23594_BASEM23594_BASEM23594_BASEM23594_BASEM23594_CONNECTORM114404_ic_in" />
+  <child  link="BASEM4147_BASEM23594_BASEM23594_BASEM23594_BASEM23594_BASEM23594_JOINTM64603_tj_body" />
   <axis  xyz="0 0 1" />
+  <limit  effort="25.5"  upper="3.1416"  lower="-3.1416"  velocity="0.33" />
  </joint>
- <joint  type="fixed"  name="BASEL3553_BASEL8028_BASEL8028_BASEL8028_BASEL8028_BASEL8028_BASEL8028_CONNECTORL22282_ci_large_1" >
-  <origin  xyz="0 0 0"  rpy="0 0 0" />
-  <parent  link="BASEL3553_BASEL8028_BASEL8028_BASEL8028_BASEL8028_BASEL8028_BASEL8028_BASEL8028_b_in" />
-  <child  link="BASEL3553_BASEL8028_BASEL8028_BASEL8028_BASEL8028_BASEL8028_BASEL8028_CONNECTORL22282_ci_body" />
+ <joint  name="BASEM4147_BASEM23594_BASEM23594_BASEM23594_BASEM23594_BASEM23594_JOINTM64603_tj_medium_2"  type="fixed" >
+  <origin  rpy="0 1.5707963267949 0"  xyz="-0.047 0 -0.0635" />
+  <parent  link="BASEM4147_BASEM23594_BASEM23594_BASEM23594_BASEM23594_BASEM23594_JOINTM64603_tj_body" />
+  <child  link="BASEM4147_BASEM23594_BASEM23594_BASEM23594_BASEM23594_BASEM23594_JOINTM64603_tj_in" />
+  <axis  xyz="0 -1 0" />
+ </joint>
+ <joint  name="BASEM4147_BASEM23594_BASEM23594_BASEM23594_BASEM23594_CONNECTORM114405_ic_medium_1"  type="fixed" >
+  <origin  rpy="0 0 0"  xyz="0 0 0" />
+  <parent  link="BASEM4147_BASEM23594_BASEM23594_BASEM23594_BASEM23594_BASEM23594_JOINTM64603_tj_in" />
+  <child  link="BASEM4147_BASEM23594_BASEM23594_BASEM23594_BASEM23594_CONNECTORM114405_ic_body" />
   <axis  xyz="0 0 0" />
  </joint>
- <joint  type="fixed"  name="BASEL3553_BASEL8028_BASEL8028_BASEL8028_BASEL8028_BASEL8028_BASEL8028_CONNECTORL22282_ci_large_2" >
-  <origin  xyz="0 0 -0.0114"  rpy="0 0 0" />
-  <parent  link="BASEL3553_BASEL8028_BASEL8028_BASEL8028_BASEL8028_BASEL8028_BASEL8028_CONNECTORL22282_ci_body" />
-  <child  link="BASEL3553_BASEL8028_BASEL8028_BASEL8028_BASEL8028_BASEL8028_BASEL8028_CONNECTORL22282_ci_in" />
+ <joint  name="BASEM4147_BASEM23594_BASEM23594_BASEM23594_BASEM23594_CONNECTORM114405_ic_medium_2"  type="fixed" >
+  <origin  rpy="0 0 0"  xyz="0 0 -0.0094" />
+  <parent  link="BASEM4147_BASEM23594_BASEM23594_BASEM23594_BASEM23594_CONNECTORM114405_ic_body" />
+  <child  link="BASEM4147_BASEM23594_BASEM23594_BASEM23594_BASEM23594_CONNECTORM114405_ic_in" />
   <axis  xyz="0 0 0" />
  </joint>
- <joint  name="BASEL3553_BASEL8028_BASEL8028_BASEL8028_BASEL8028_BASEL8028_JOINTL3965_tj_large_1"  type="revolute" >
-  <origin  xyz="0.0 0.0 0.0"  rpy="0.0 0.0 3.141592653589793" />
-  <parent  link="BASEL3553_BASEL8028_BASEL8028_BASEL8028_BASEL8028_BASEL8028_BASEL8028_CONNECTORL22282_ci_in" />
-  <child  link="BASEL3553_BASEL8028_BASEL8028_BASEL8028_BASEL8028_BASEL8028_JOINTL3965_tj_body" />
-  <axis  xyz="0 0 1" />
-  <limit  effort="60.5"  lower="-3.1416"  upper="3.1416"  velocity="0.33" />
- </joint>
- <joint  name="BASEL3553_BASEL8028_BASEL8028_BASEL8028_BASEL8028_BASEL8028_JOINTL3965_tj_large_2"  type="fixed" >
-  <origin  xyz="-0.057 0 -0.0735"  rpy="0 1.5707963267949 0" />
-  <parent  link="BASEL3553_BASEL8028_BASEL8028_BASEL8028_BASEL8028_BASEL8028_JOINTL3965_tj_body" />
-  <child  link="BASEL3553_BASEL8028_BASEL8028_BASEL8028_BASEL8028_BASEL8028_JOINTL3965_tj_in" />
+ <joint  name="BASEM4147_BASEM23594_BASEM23594_BASEM23594_STRAIGHTLINKMS15785_sl_medium"  type="fixed" >
+  <origin  rpy="0 0 0"  xyz="0 0 0" />
+  <parent  link="BASEM4147_BASEM23594_BASEM23594_BASEM23594_BASEM23594_CONNECTORM114405_ic_in" />
+  <child  link="BASEM4147_BASEM23594_BASEM23594_BASEM23594_STRAIGHTLINKMS15785_sl_body" />
   <axis  xyz="0 0 0" />
  </joint>
- <joint  type="fixed"  name="BASEL3553_BASEL8028_BASEL8028_BASEL8028_BASEL8028_CONNECTORL22283_ci_large_1" >
-  <origin  xyz="0 0 0"  rpy="0 0 0" />
-  <parent  link="BASEL3553_BASEL8028_BASEL8028_BASEL8028_BASEL8028_BASEL8028_JOINTL3965_tj_in" />
-  <child  link="BASEL3553_BASEL8028_BASEL8028_BASEL8028_BASEL8028_CONNECTORL22283_ci_body" />
+ <joint  name="BASEM4147_BASEM23594_BASEM23594_BASEM23594_STRAIGHTLINKMS15785_sl_small"  type="fixed" >
+  <origin  rpy="3.1416 0 0"  xyz="0 0 -0.2" />
+  <parent  link="BASEM4147_BASEM23594_BASEM23594_BASEM23594_STRAIGHTLINKMS15785_sl_body" />
+  <child  link="BASEM4147_BASEM23594_BASEM23594_CONNECTORS21493_reverse_CONNECTORS21493_ic_in" />
   <axis  xyz="0 0 0" />
  </joint>
- <joint  type="fixed"  name="BASEL3553_BASEL8028_BASEL8028_BASEL8028_BASEL8028_CONNECTORL22283_ci_large_2" >
-  <origin  xyz="0 0 -0.0114"  rpy="0 0 0" />
-  <parent  link="BASEL3553_BASEL8028_BASEL8028_BASEL8028_BASEL8028_CONNECTORL22283_ci_body" />
-  <child  link="BASEL3553_BASEL8028_BASEL8028_BASEL8028_BASEL8028_CONNECTORL22283_ci_in" />
+ <joint  name="BASEM4147_BASEM23594_BASEM23594_CONNECTORS21493_reverse_CONNECTORS21493_ic_small_2"  type="fixed" >
+  <origin  rpy="0.0 0.0 0.0"  xyz="-0.0 -0.0 0.0073" />
+  <parent  link="BASEM4147_BASEM23594_BASEM23594_CONNECTORS21493_reverse_CONNECTORS21493_ic_in" />
+  <child  link="BASEM4147_BASEM23594_BASEM23594_CONNECTORS21493_reverse_CONNECTORS21493_ic_body" />
   <axis  xyz="0 0 0" />
  </joint>
- <joint  name="BASEL3553_BASEL8028_BASEL8028_BASEL8028_STRAIGHTLINKLM11493_sl_large"  type="fixed" >
-  <origin  xyz="0.0 0.0 0.0"  rpy="0.0 0.0 3.141592653589793" />
-  <parent  link="BASEL3553_BASEL8028_BASEL8028_BASEL8028_BASEL8028_CONNECTORL22283_ci_in" />
-  <child  link="BASEL3553_BASEL8028_BASEL8028_BASEL8028_STRAIGHTLINKLM11493_sl_body" />
+ <joint  name="BASEM4147_BASEM23594_BASEM23594_CONNECTORS21493_reverse_CONNECTORS21493_ic_small_1"  type="fixed" >
+  <origin  rpy="0.0 0.0 0.0"  xyz="-0.0 -0.0 -0.0" />
+  <parent  link="BASEM4147_BASEM23594_BASEM23594_CONNECTORS21493_reverse_CONNECTORS21493_ic_body" />
+  <child  link="BASEM4147_BASEM23594_ENDEFFECTORS1328_ee_in" />
   <axis  xyz="0 0 0" />
  </joint>
- <joint  name="BASEL3553_BASEL8028_BASEL8028_BASEL8028_STRAIGHTLINKLM11493_sl_medium"  type="fixed" >
-  <origin  xyz="0 0 -0.2"  rpy="3.14159265358979 0 0" />
-  <parent  link="BASEL3553_BASEL8028_BASEL8028_BASEL8028_STRAIGHTLINKLM11493_sl_body" />
-  <child  link="BASEL3553_BASEL8028_BASEL8028_CONNECTORM24516_reverse_CONNECTORM24516_ic_in" />
-  <axis  xyz="0 0 0" />
- </joint>
- <joint  name="BASEL3553_BASEL8028_BASEL8028_CONNECTORM24516_reverse_CONNECTORM24516_ic_medium_2"  type="fixed" >
-  <origin  xyz="-0.0 -0.0 0.0094"  rpy="0.0 0.0 0.0" />
-  <parent  link="BASEL3553_BASEL8028_BASEL8028_CONNECTORM24516_reverse_CONNECTORM24516_ic_in" />
-  <child  link="BASEL3553_BASEL8028_BASEL8028_CONNECTORM24516_reverse_CONNECTORM24516_ic_body" />
-  <axis  xyz="0 0 0" />
- </joint>
- <joint  name="BASEL3553_BASEL8028_BASEL8028_CONNECTORM24516_reverse_CONNECTORM24516_ic_medium_1"  type="fixed" >
-  <origin  xyz="-0.0 -0.0 -0.0"  rpy="0.0 0.0 0.0" />
-  <parent  link="BASEL3553_BASEL8028_BASEL8028_CONNECTORM24516_reverse_CONNECTORM24516_ic_body" />
-  <child  link="BASEL3553_BASEL8028_ENDEFFECTORM2500_ee_in" />
-  <axis  xyz="0 0 0" />
- </joint>
- <joint  name="BASEL3553_BASEL8028_ENDEFFECTORM2500_ee_medium"  type="fixed" >
-  <origin  xyz="0 0 0"  rpy="0 0 0" />
-  <parent  link="BASEL3553_BASEL8028_ENDEFFECTORM2500_ee_in" />
-  <child  link="BASEL3553_BASEL8028_ENDEFFECTORM2500_ee_body" />
+ <joint  name="BASEM4147_BASEM23594_ENDEFFECTORS1328_ee_small"  type="fixed" >
+  <origin  rpy="0 0 0"  xyz="0 0 0" />
+  <parent  link="BASEM4147_BASEM23594_ENDEFFECTORS1328_ee_in" />
+  <child  link="BASEM4147_BASEM23594_ENDEFFECTORS1328_ee_body" />
   <axis  xyz="0 0 0" />
  </joint>
 </robot>

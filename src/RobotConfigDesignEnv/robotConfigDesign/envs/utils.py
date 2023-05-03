@@ -2,6 +2,7 @@ from robotConfigDesign.envs import register
 import json
 import os
 import sys
+import numpy as np
 
 def getConfig(default=False):
     config = None
@@ -39,12 +40,63 @@ class HiddenOutputs:
         os.close(self._original_stdout_fd)
         os.close(self._original_stderr_fd)
 
+def generate_action_mask(state, action_space_size, base_action_index=None):
+    from urdfGenerator.Arrangement import Arrangement
+    # 根据状态生成动作掩码
+    # 根据action_space_size的长度初始化一个numpy数组值全为-1e9
+
+    a = Arrangement()
+    a.createFromModuleTypeList(state)
+
+    action_mask = np.ones(action_space_size) * -1e9
+
+    if a.moduleCnt == 0:
+        if base_action_index is not None:
+            # 将base_action_index中索引的位置设置为0
+            action_mask[base_action_index] = 0
+            # action_mask[base_action_mask == 1] = 0
+        else:
+            raise ValueError('base_action_mask is None')
+    else:
+        if base_action_index is not None:
+            action_mask[base_action_index] = 0
+        else:
+            mask = a.getAttachableSubModuleActions()
+            if mask.size > 0:
+                action_mask[mask] = 0
+            else:
+                # 全部置零
+                action_mask[:] = 0
+    
+    del a
+
+    return action_mask
+
 
 if __name__ == '__main__':
-    register.PathRegister.add_path('/home/masa/learning/rl/undergraduate/cjy/robot_design_sythesis/test/defense/config.json')
+    register.PathRegister.add_path('/home/masa/learning/rl/undergraduate/cjy/robot_design_sythesis/test/defense/envConfig.json')
 
     print(register.PathRegister.get_paths())
 
     config = getConfig()
     print(config['ROBOT_POS'])
     print(config['EX'])
+
+    from urdfGenerator.Arrangement import Arrangement
+    from urdfGenerator.Enums import ModuleType
+    a = Arrangement()
+    # a.addModule(ModuleType.BASEL)
+    a.addModule(ModuleType.STRAIGHTLINKMS)
+    a.addModule(ModuleType.JOINTS)
+    a.addModule(ModuleType.ENDEFFECTORS)
+
+    state = {
+        'A': a.getModuleTypeList(15)
+    }
+
+    action_mask = (generate_action_mask(state['A'], 16))
+    print(action_mask)
+
+    valid_actions = np.where(action_mask == 0)[0]
+    action = np.random.choice(valid_actions)
+    print(action)

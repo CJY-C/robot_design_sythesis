@@ -64,7 +64,10 @@ def getAttachableSubModuleActions(moduleType:ModuleType, linkType:LinkType) -> l
     '''
     submodules = moduleSubTypeDict[moduleType]["submodulesI"] if linkType == LinkType.INPUT else moduleSubTypeDict[moduleType]["submodulesO"]
     mtl = getModuleTypeList()
-    submodules = list(map(lambda s: mtl.index(s), submodules))
+    if submodules is not None:
+        submodules = list(map(lambda s: mtl.index(s), submodules))
+    else:
+        submodules = []
     return submodules
 
 def moduleType2action(moduleType:ModuleType) -> int:
