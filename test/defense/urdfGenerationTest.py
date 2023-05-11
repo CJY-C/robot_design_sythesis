@@ -32,5 +32,6 @@ def test_dynamic():
     while True:
         pass
 
+
 if __name__ == "__main__":
     test_dynamic()
