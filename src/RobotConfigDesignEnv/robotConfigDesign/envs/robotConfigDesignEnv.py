@@ -144,7 +144,7 @@ class RobotConfigDesignEnv(gym.Env):
             self._physics_client_id = self._p._client
 
         p = self._p
-        p.configureDebugVisualizer(p2.COV_ENABLE_GUI,0)
+        # p.configureDebugVisualizer(p2.COV_ENABLE_GUI,0)
         # p.configureDebugVisualizer(p2.COV_ENABLE_WIREFRAME,1)
         # 重置仿真环境
         self._clearEnv()

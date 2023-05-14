@@ -132,6 +132,7 @@ dmypy.json
 dt/
 data/
 localdt/
+showdt/
 pipidt/
 finaldt/
 nohup.out
