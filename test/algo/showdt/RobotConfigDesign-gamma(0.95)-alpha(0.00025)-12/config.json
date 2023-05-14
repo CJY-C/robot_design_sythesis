@@ -1,0 +1,46 @@
+{
+    "ac_kwargs":	{
+        "activation":	"LeakyReLU",
+        "hidden_sizes":	[
+            64,
+            64,
+            64
+        ]
+    },
+    "batch_size":	15,
+    "env_fn":	"<function train.<locals>.<lambda> at 0x7f7e253f4b90>",
+    "epochs":	101,
+    "epsilon_decay":	5e-05,
+    "epsilon_end":	0.1,
+    "epsilon_start":	1,
+    "exp_name":	"DQN-gamma(0.95)-alpha(0.00025)",
+    "gamma":	0.95,
+    "logger":	{
+        "<spinup.utils.logx.EpochLogger object at 0x7f7df45ee890>":	{
+            "epoch_dict":	{},
+            "exp_name":	"DQN-gamma(0.95)-alpha(0.00025)",
+            "first_row":	true,
+            "log_current_row":	{},
+            "log_headers":	[],
+            "output_dir":	"/home/masa/learning/rl/undergraduate/cjy/robot_design_sythesis/test/algo/pipidt/RobotConfigDesign-gamma(0.95)-alpha(0.00025)",
+            "output_file":	{
+                "<_io.TextIOWrapper name='/home/masa/learning/rl/undergraduate/cjy/robot_design_sythesis/test/algo/pipidt/RobotConfigDesign-gamma(0.95)-alpha(0.00025)/progress.txt' mode='w' encoding='UTF-8'>":	{
+                    "mode":	"w"
+                }
+            }
+        }
+    },
+    "logger_kwargs":	{
+        "exp_name":	"DQN-gamma(0.95)-alpha(0.00025)",
+        "output_dir":	"/home/masa/learning/rl/undergraduate/cjy/robot_design_sythesis/test/algo/pipidt/RobotConfigDesign-gamma(0.95)-alpha(0.00025)"
+    },
+    "max_ep_len":	15,
+    "network":	"DQN_2015",
+    "q_lr":	0.00025,
+    "replay_size":	1000000,
+    "save_freq":	1,
+    "seed":	0,
+    "start_steps":	1500,
+    "steps_per_epoch":	1500,
+    "update_freq":	100
+}
