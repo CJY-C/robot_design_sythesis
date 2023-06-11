@@ -65,7 +65,6 @@ class Arrangement:
     @property
     def jointNum(self):
         return len(list(filter(lambda x: x == ModuleType.JOINTL or x == ModuleType.JOINTM or x == ModuleType.JOINTS, self.moduleTypeList)))
-        # return len(list(filter(lambda x: x == ModuleType.JOINTL or x == ModuleType.JOINTM or x == ModuleType.JOINTS, self.moduleTypeList)))
 
     @property
     def totalMass(self):
@@ -79,8 +78,6 @@ class Arrangement:
         return str(reduce(lambda x, y: x + y, self.moduleList))
 
     def exportURDF(self, filepath, filename):
-        import os
-        # dir = os.path.dirname(os.path.realpath(filepath))
         exportPath = filepath + '/'+filename+'.urdf'
         with open(exportPath, 'w') as f:
             f.write(str(self))
@@ -101,27 +98,15 @@ class Arrangement:
         # 将moduleTypeList中的枚举值转换为int
         test = getModuleTypeList()
         moduleTypeList = list(map(lambda x: test.index(x) if test.count(x) else -1, moduleTypeList))
-        # submodules = list(map(lambda s: moduleTypeList.index(s), submodules))
-        # moduleTypeList = list(map(lambda x: test.index(x) if test.count(x) else -1, moduleTypeList))
-        # moduleTypeList = list(map(lambda x: x.value, moduleTypeList))
         return moduleTypeList
     
     def getAttachableSubModuleActions(self):
-        # 修改
-        # return list(map(moduleType2action, getModuleTypeList()))
         moduleType = self.moduleTypeList[-1]
         linkType = self.arrangement.get_head_link_type()
         return np.array(getAttachableSubModuleActions(moduleType, linkType))
 
 
 if __name__ == '__main__':
-
-    # a = Arrangement()
-    # a.addModule(ModuleType.BASEL)
-    # a.addModule(ModuleType.JOINTL)
-    # for m in a.moduleList:
-    #     print(m.origin)
-
     a = Arrangement()
 
     a.addModule(ModuleType.STRAIGHTLINKMM) # BASEL对应 323000
@@ -136,44 +121,3 @@ if __name__ == '__main__':
     a2.createFromModuleTypeList(ml)
     print(a2.getAttachableSubModuleActions())
     print(a2.moduleTypeList)
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    # print(a.getModuleTypeList(10))
-    # print(a.jointNum)
-    # print(a.totalMass)
-    # action_space = a.getAttachableSubModuleActions()
-    # print(action_space)
-    # print(action_space.shape)
-    # print( np.choose(np.random.randint(len(action_space)), action_space) )

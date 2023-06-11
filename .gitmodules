@@ -1,6 +1,6 @@
 [submodule "Vender/spinningup"]
 	path = Vender/spinningup
-	url = CJY:CJY-C/spinningup.git
+	url = git@github.com:CJY-C/spinningup.git
 	branch = masarity-dev
 [submodule "Vender/odio_urdf"]
 	path = Vender/odio_urdf
